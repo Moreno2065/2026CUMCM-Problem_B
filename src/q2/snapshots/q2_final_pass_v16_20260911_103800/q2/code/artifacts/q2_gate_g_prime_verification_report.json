@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "gate": "G-prime",
+  "status": "PASS",
+  "evidence_config_id": "q2-final-evidence-v6-dynamic-closure",
+  "checks": {
+    "adaptive_candidate_regions": "PASS",
+    "hero_surface_closure": "PASS",
+    "hero_promotion_loop": "PASS",
+    "target_boundary_scale_m": 5.0,
+    "symmetry": "PASS",
+    "baseline_infeasible_marker": "PASS",
+    "saved_sidecar_rerender": "PASS",
+    "figure_semantics": "PASS",
+    "figure_visual_qa": "PASS",
+    "parallel_backend_equivalence": "PASS",
+    "parallel_backend_benchmark": "PASS",
+    "certified_global_optimum": false
+  },
+  "production_artifacts": "code/artifacts/gate_g_representative",
+  "fixture": "code/artifacts/q2_gate_g_prime_fixtures.json"
+}

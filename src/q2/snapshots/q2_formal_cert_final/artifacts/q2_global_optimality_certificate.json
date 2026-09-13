@@ -1,0 +1,53 @@
+{
+ "schema_version": 1,
+ "model": "frozen_q2_bounded_error_minimax",
+ "status": "CERTIFIED_GLOBAL_EPS_OPTIMUM",
+ "epsilon_deg": "1",
+ "absolute_tolerance_m": "0.01",
+ "lower_bound_m": "134.0569292534515",
+ "upper_bound_m": "134.0659292484056",
+ "absolute_gap_m": "0.008999994954109525",
+ "relative_gap": "6.713111231589482e-05",
+ "incumbent_S2": [
+  "805.1110506884",
+  "-599.7632926544"
+ ],
+ "incumbent_Q_enclosure_m": [
+  "134.065916938941538034959156644387",
+  "134.066009059081892473841435275975"
+ ],
+ "optimizer_outer_enclosure": {
+  "box_count": 1012225,
+  "x_span": [
+   564.453125,
+   957.03125
+  ],
+  "y_span": [
+   -789.0625,
+   -292.96875
+  ],
+  "max_box_diameter_m": 8.734640537108554,
+  "note": "union of these boxes is a rigorous outer approximation of the global optimizer set (all pruned regions have lb > U)",
+  "boxes_file": "optimizer_boxes.npz"
+ },
+ "all_near": false,
+ "reception_witness_count": 20,
+ "objective_scenario_count": 9,
+ "arithmetic_engine": "python-flint arb ball arithmetic (UB path) + float64 nextafter-outward interval arrays (master LB path, fuzz-validated vs arb)",
+ "precision_bits": 256,
+ "source_snapshot_id": "q2_formal_cert_final",
+ "source_sha256_manifest": "82a9ad4e0f27d53a823716f8ac3fe953fbad2f7659da8aae8305bd61c4874428",
+ "point_evaluator_verified": true,
+ "master_lower_bound_verified": true,
+ "certificate_replayed_independently": true,
+ "certified_global_optimum": false,
+ "certified_epsilon_global_optimum": true,
+ "replay": {
+  "passed": true,
+  "ub_recertified": true,
+  "master_replayed": true,
+  "sampled_boxes_checked": 2000,
+  "max_cross_engine_excess": 0.0,
+  "wall_time_s": 101.98268342018127
+ }
+}

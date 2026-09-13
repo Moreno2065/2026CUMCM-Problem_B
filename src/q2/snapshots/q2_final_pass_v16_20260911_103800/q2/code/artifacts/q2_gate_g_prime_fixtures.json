@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "gate": "G-prime",
+  "status": "PASS",
+  "evidence_config_id": "q2-final-evidence-v6-dynamic-closure",
+  "representative_case": {
+    "S1": [0.0, 0.0],
+    "theta1_deg": 0.0,
+    "epsilon_deg": 1.0
+  },
+  "outer_search_config": {
+    "coarse_resolution": 7,
+    "subdivision_depth": 2,
+    "local_iterations": 8
+  },
+  "candidate_region_config": {
+    "base_resolution": 21,
+    "max_refinement_depth": 6,
+    "target_boundary_resolution_m": 5.0,
+    "near_hero_cell_factor": 2.5,
+    "max_refined_cells_per_level": 32
+  },
+  "parallel_workers": 8,
+  "hero_promotion": {
+    "tolerance_m": 1e-09,
+    "min_crec_margin_m": 1e-06,
+    "max_rounds": 3,
+    "max_closure_rounds": 3,
+    "surface_must_not_beat_hero": true,
+    "closure_seed_points": [],
+    "promotion_history": [
+      {
+        "round": 1,
+        "surface_best_S2": [800.0736125053295, -606.4160929019891],
+        "surface_best_Q": 134.07805576181698,
+        "refined_S2": [800.1012338639696, -606.388471543349],
+        "refined_Q": 134.07676525132717,
+        "promoted": true
+      }
+    ]
+  },
+  "hero": {
+    "S2": [800.1012338639696, -606.388471543349],
+    "qhat_star_m": 134.07676525132717,
+    "crec_margin_m": 7.568692126369569e-07,
+    "closure_pass": true
+  },
+  "symmetry": {
+    "mirror_S2": [800.1012338639696, 606.388471543349],
+    "both_crec_feasible": true,
+    "both_admissible": true,
+    "abs_Q_difference_m": 2.2737367544323206e-13,
+    "tolerance_m": 1e-7,
+    "passed": true
+  },
+  "candidate_regions": {
+    "kind": "numerical_candidate_good_regions_not_proof",
+    "approximate_areas_m2": {
+      "0.01": 183.2200398695128,
+      "0.02": 1031.818119265147,
+      "0.05": 4175.488277026264,
+      "0.10": 14165.802029911278
+    },
+    "geojson": [
+      "q2_candidate_region_eta_01.geojson",
+      "q2_candidate_region_eta_02.geojson",
+      "q2_candidate_region_eta_05.geojson",
+      "q2_candidate_region_eta_10.geojson"
+    ]
+  },
+  "figure_families": 7,
+  "figure_dpi": 300,
+  "benchmark": "q2_batch_benchmark.json",
+  "figure_source": "saved JSON sidecars",
+  "certified_global_optimum": false
+}

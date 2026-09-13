@@ -1,0 +1,260 @@
+{
+ "root_box": [
+  0.0,
+  2000.0,
+  -1000.0,
+  0.0
+ ],
+ "root_note": "B0^- = [G0x-1000, G0x+1000] x [G0y-1000, 0] with G0=(1000,0) a verified A1 anchor (spec s.20); dyadic endpoints",
+ "u_cert_decimal": "134.0659292484056",
+ "upper_bound_at_decision": "constant for every node = u_cert_decimal (single strict global UB throughout)",
+ "tol": 0.009000000000000001,
+ "round_cap": 8192,
+ "max_boxes": 10000000,
+ "witness_count": 20,
+ "scenario_count": 9,
+ "g0_anchor": [
+  1000.0,
+  0.0
+ ],
+ "node_count": 3022561,
+ "status_counts": {
+  "SPLIT": 1511280,
+  "PRUNED_OBJECTIVE_BOUND": 463354,
+  "PRUNED_INFEASIBLE_RECEPTION": 35704,
+  "LIVE_FINAL": 1012223
+ },
+ "live_final_count": 1012223,
+ "master_lower_bound_fast": 134.0569292534515,
+ "live_boxes": 1012223,
+ "endpoints_exact": "float64 values are exact dyadic rationals m*2^e; split midpoints exact in binary64 for widths >= 1e-9 (min_width), far above the 2^-53 ulp scale at these magnitudes",
+ "prune_convention": "PRUNE_A iff fast_lb > U (strict), matching the master's own rule keep &= lb <= U",
+ "scenario_lower_bounds_recovery": "per-scenario fast bounds are recoverable from endpoints via batch_kernel.scenario_loss_lower_batch",
+ "events": [
+  {
+   "kind": "root",
+   "t_s": 0.0,
+   "box": [
+    0.0,
+    2000.0,
+    -1000.0,
+    0.0
+   ]
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 1000.0,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 752.5,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 378.7500002384186,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 191.87500023841858,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 98.43750017881393,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 51.71875011920929,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 28.359375074505806,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 16.679687544703484,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 10.839843776077032,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 7.919921889901161,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 6.459960945881903,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.729980473406613,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.364990236936137,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.182495118584484,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.09124755935045,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.045623779704329,
+   "gy": 0.0,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.045431657840877,
+   "gy": 0.04403081498857312,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.022620636595849,
+   "gy": 0.04383174619092921,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.022381573417068,
+   "gy": 0.06574657618097701,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_witness",
+   "t_s": 0.0,
+   "pruned": 0,
+   "gx": 5.010976605651864,
+   "gy": 0.06559727693966237,
+   "radius": 1000.0
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_corner+0.999",
+   "pruned_note": "see lb"
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_corner+0.999",
+   "pruned_note": "see lb"
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_corner+0.999",
+   "pruned_note": "see lb"
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_corner-0.999",
+   "pruned_note": "see lb"
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_corner-0.999",
+   "pruned_note": "see lb"
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_corner-0.999",
+   "pruned_note": "see lb"
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_mid",
+   "pruned_note": "see lb"
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_incumbent_worst",
+   "pruned_note": "see lb"
+  },
+  {
+   "kind": "add_scenario",
+   "t_s": 0.001,
+   "label": "seed_inner",
+   "pruned_note": "see lb"
+  }
+ ],
+ "wall_time_s": 101.4
+}

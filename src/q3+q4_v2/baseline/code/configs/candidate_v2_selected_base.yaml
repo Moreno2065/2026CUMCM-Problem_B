@@ -1,0 +1,17 @@
+# Candidate v2 tuning base: selected matched composite e_combo_1001 (E1+E4).
+# tau is overwritten only by tune results before Freeze.
+policy: mainline
+tau: 0.15
+nbv_mode: radius
+nbv_rule: fixed_geometry
+opportunistic_reuse: true
+channel_scan_mode: sweep_all
+cert_select: gain_cost
+q4_naive: false
+q4_certificate_layout: sparse25
+q4_joint_rank: false
+cert_route_mode: greedy
+q4_residual_sparsify: true
+q3_ml_ranker: false
+q3_ml_model_path: null
+active_scan_margin_m: 0.0

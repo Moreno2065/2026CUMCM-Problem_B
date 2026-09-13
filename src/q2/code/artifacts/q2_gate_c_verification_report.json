@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "gate": "C",
+  "status": "PASS",
+  "frozen_definition": "closure(arg({G in A1: ||G-S2||>5}-S2)) dilated on the circle by [-1 degree,+1 degree]",
+  "scope": [
+    "neutral CircularIntervalUnion",
+    "strict near clipping of A1BoundaryRegistry",
+    "unbounded-count spatial component endpoint graph",
+    "per-component angular interval unions",
+    "structured endpoint and near-boundary provenance",
+    "independent boundary, near-circle, radial, and critical-cell Verifier C"
+  ],
+  "results": {
+    "q2_gate_a": "10 passed",
+    "q2_gate_b": "25 passed",
+    "q2_gate_c": "29 passed",
+    "q1_regression": "10 passed",
+    "combined": "64 passed",
+    "python_ast_compile": "PASS",
+    "independent_code_review": "PASS"
+  },
+  "deterministic_fixtures": {
+    "count": 10,
+    "status": "PASS",
+    "ids": [
+      "C-F1_ordinary_single_interval",
+      "C-F2_zero_360_wrap",
+      "C-F3_second_station_equals_first",
+      "C-F4_near_disk_crosses_thin_wedge",
+      "C-F5_permanent_three_spatial_components",
+      "C-F6_nondegenerate_all_near_sliver",
+      "C-F7_full_circle_from_actual_coverage",
+      "C-F8_gate_a_tangent_singleton_visible",
+      "C-F9_interior_arc_tangent_extremum",
+      "C-F10_dilation_merges_two_intervals"
+    ]
+  },
+  "independent_verifier": {
+    "imports_angular_solver": false,
+    "imports_or_reads_crec": false,
+    "dense_physical_boundary_oracle": "PASS",
+    "active_near_circle_oracle": "PASS",
+    "radial_interior_oracle": "PASS",
+    "bidirectional_critical_cell_oracle": "PASS",
+    "rejects_full_overclaim": true,
+    "rejects_empty_vacuous_pass": true,
+    "rejects_filled_narrow_gap": true,
+    "rejects_artificial_tiny_hole": true,
+    "fixed_seed_random_cases": 500,
+    "random_seed": 20260911,
+    "max_missing_angle_rad": 0.0,
+    "max_endpoint_disagreement_rad": 0.0,
+    "observed_random_spatial_component_counts": {"1": 483, "2": 17},
+    "observed_random_angular_interval_counts": {"1": 483, "2": 17},
+    "observed_random_full_circle_cases": 128,
+    "observed_random_all_near_cases": 0
+  },
+  "hard_invariants_confirmed": [
+    "angular_image consumes only A1BoundaryRegistry",
+    "CrecWitnessRegistry cannot be passed to angular_image",
+    "rho=1000 is never an A1 angular boundary",
+    "rho=1500 remains eligible for angular extrema",
+    "actual bearing uses strict distance greater than 5 metres",
+    "all-near has empty raw and expanded closures",
+    "POINT A1 and exact tangent topology are explicit",
+    "no spatial or angular branch-count cap exists",
+    "second-bearing expansion is frozen at one degree"
+  ],
+  "not_implemented": [
+    "Q1 adapter",
+    "D_Q1 evaluator integration",
+    "E1-E5 inner maximizer",
+    "outer search",
+    "final S2 star"
+  ],
+  "snapshot_id": "q2_gate_c_pass_v1_20260911_033242",
+  "snapshot_created_at": "2026-09-11T03:32:42+08:00",
+  "source_snapshot": "q2_gate_b_pass_v2_20260911_024014",
+  "verification_report": "code/artifacts/q2_gate_c_verification_report.json",
+  "certified_global_optimum": false
+}

@@ -1,0 +1,18 @@
+# Candidate v1 matched base for E1-E4 attribution.
+# Every E branch is disabled here; experiment variants toggle only their
+# declared factor while preserving Candidate v1's A1+A3 and tuned tau=0.15.
+policy: mainline
+tau: 0.15
+nbv_mode: radius
+nbv_rule: fixed_geometry
+opportunistic_reuse: true
+channel_scan_mode: sweep_all
+cert_select: gain_cost
+q4_naive: false
+q4_certificate_layout: lattice31
+q4_joint_rank: false
+cert_route_mode: greedy
+q4_residual_sparsify: false
+q3_ml_ranker: false
+q3_ml_model_path: null
+active_scan_margin_m: 0.0

@@ -1,0 +1,8127 @@
+{
+  "strategy": "q4_local_prototype",
+  "cleared_sources": [
+    {
+      "channel": 18,
+      "point": [
+        -37.70093478218028,
+        96.68118478841633
+      ],
+      "bound_source": "prior_geometry",
+      "prior_bound_m": 18.32863640679076,
+      "virtual_after_s": 1008.0396316109277
+    },
+    {
+      "channel": 6,
+      "point": [
+        -27.028657578846303,
+        104.04107533617486
+      ],
+      "bound_source": "prior_geometry",
+      "prior_bound_m": 2.630163890913851,
+      "virtual_after_s": 1015.6324331041376
+    },
+    {
+      "channel": 16,
+      "point": [
+        -853.8375018198761,
+        644.9296092315159
+      ],
+      "bound_source": "successful_clear_response",
+      "prior_bound_m": 30.446827076472786,
+      "virtual_after_s": 1317.6854043782464
+    },
+    {
+      "channel": 5,
+      "point": [
+        -933.0418392771209,
+        -667.5832077413927
+      ],
+      "bound_source": "prior_geometry",
+      "prior_bound_m": 18.97746130839292,
+      "virtual_after_s": 1694.3265021846703
+    },
+    {
+      "channel": 2,
+      "point": [
+        839.7647088304898,
+        207.16608834303878
+      ],
+      "bound_source": "prior_geometry",
+      "prior_bound_m": 12.857901067946827,
+      "virtual_after_s": 2448.917031739537
+    },
+    {
+      "channel": 11,
+      "point": [
+        840.4064081423356,
+        1376.9476862024817
+      ],
+      "bound_source": "successful_clear_response",
+      "prior_bound_m": 25.127538950970706,
+      "virtual_after_s": 3227.9997199879335
+    },
+    {
+      "channel": 4,
+      "point": [
+        325.0710451845408,
+        1709.5093391524042
+      ],
+      "bound_source": "prior_geometry",
+      "prior_bound_m": 18.862129490998075,
+      "virtual_after_s": 3478.7479478958976
+    },
+    {
+      "channel": 1,
+      "point": [
+        155.02796070947886,
+        1667.1633515165308
+      ],
+      "bound_source": "prior_geometry",
+      "prior_bound_m": 19.5627579327102,
+      "virtual_after_s": 3518.7952492166273
+    },
+    {
+      "channel": 7,
+      "point": [
+        -1593.703628107221,
+        694.6886217107519
+      ],
+      "bound_source": "prior_geometry",
+      "prior_bound_m": 11.109404259951328,
+      "virtual_after_s": 4197.497621676737
+    },
+    {
+      "channel": 13,
+      "point": [
+        -197.8751925103058,
+        -1641.217190425842
+      ],
+      "bound_source": "prior_geometry",
+      "prior_bound_m": 15.621902286867213,
+      "virtual_after_s": 5068.456606150115
+    }
+  ],
+  "cleared_count": 10,
+  "absent_channels": [
+    3,
+    8,
+    9,
+    10,
+    12,
+    14,
+    15,
+    17,
+    19,
+    20
+  ],
+  "count_upper_bound_stop": false,
+  "remaining_unknown_channels": [],
+  "observations": {
+    "1": [
+      {
+        "sequence": 2,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 23,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 119.85,
+          "virtual_time_s": 353.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            701.1590384050993,
+            707.9508874873994
+          ],
+          [
+            100.75041604703802,
+            1798.061188328389
+          ],
+          [
+            78.5896972353217,
+            1800.0
+          ],
+          [
+            48.54120669500132,
+            1800.0
+          ],
+          [
+            701.0069114249278,
+            707.8635871575628
+          ]
+        ],
+        "circle_center": [
+          374.8501225500503,
+          1253.9754437436998
+        ],
+        "circle_radius_m": 636.0977319574306,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 45,
+        "position": [
+          575.9021991665658,
+          1002.7112776719418
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 122.64,
+          "virtual_time_s": 564.6332665218393
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            701.1590384050993,
+            707.9508874873994
+          ],
+          [
+            100.75041604703802,
+            1798.061188328389
+          ],
+          [
+            78.5896972353217,
+            1800.0
+          ],
+          [
+            48.54120669500132,
+            1800.0
+          ],
+          [
+            701.0069114249278,
+            707.8635871575628
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            360.7885484000189,
+            1325.932314535524
+          ],
+          [
+            225.8171276886428,
+            1570.9883156614853
+          ],
+          [
+            85.08538316933232,
+            1799.4317011189491
+          ],
+          [
+            78.5896972353217,
+            1800.0
+          ],
+          [
+            48.54120669500132,
+            1800.0
+          ],
+          [
+            77.13130631999464,
+            1752.1441684660304
+          ]
+        ],
+        "circle_center": [
+          204.66487754751012,
+          1562.966157267762
+        ],
+        "circle_radius_m": 283.8303070513681,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 59,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 76.99,
+          "virtual_time_s": 763.8240312225254
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            360.7885484000189,
+            1325.932314535524
+          ],
+          [
+            225.8171276886428,
+            1570.9883156614853
+          ],
+          [
+            85.08538316933232,
+            1799.4317011189491
+          ],
+          [
+            78.5896972353217,
+            1800.0
+          ],
+          [
+            48.54120669500132,
+            1800.0
+          ],
+          [
+            77.13130631999464,
+            1752.1441684660304
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            140.6953104142037,
+            1656.635476956592
+          ],
+          [
+            158.47864423835605,
+            1629.914961652002
+          ],
+          [
+            167.42797006206777,
+            1665.768756902971
+          ],
+          [
+            148.99886565056784,
+            1695.6838767438571
+          ]
+        ],
+        "circle_center": [
+          153.73875494446196,
+          1662.7994191979296
+        ],
+        "circle_radius_m": 33.224299821189526,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 168,
+        "position": [
+          840.4064081423356,
+          1376.9476862024817
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 157.07,
+          "virtual_time_s": 3233.9997199879335
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            140.6953104142037,
+            1656.635476956592
+          ],
+          [
+            158.47864423835605,
+            1629.914961652002
+          ],
+          [
+            167.42797006206777,
+            1665.768756902971
+          ],
+          [
+            148.99886565056784,
+            1695.6838767438571
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            146.6980497133123,
+            1684.864031750063
+          ],
+          [
+            141.07707916679925,
+            1658.430787333086
+          ],
+          [
+            163.35787170564546,
+            1649.4626712829988
+          ],
+          [
+            167.42797006206777,
+            1665.768756902971
+          ],
+          [
+            159.0389434844234,
+            1679.386278938497
+          ]
+        ],
+        "circle_center": [
+          155.02796070947886,
+          1667.1633515165308
+        ],
+        "circle_radius_m": 19.5627579327102,
+        "orientation_bins": 0
+      }
+    ],
+    "2": [
+      {
+        "sequence": 3,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 14.0,
+          "virtual_time_s": 11.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            4.871948458789274,
+            1.1243301182930296
+          ],
+          [
+            1461.8094102057153,
+            337.35093074176234
+          ],
+          [
+            1449.077768622274,
+            388.4147560572409
+          ],
+          [
+            4.829516181943023,
+            1.2945166852344894
+          ]
+        ],
+        "circle_center": [
+          730.3718522131727,
+          182.10215524518728
+        ],
+        "circle_radius_m": 747.7319596856084,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 22,
+        "position": [
+          378.3491491937054,
+          48.10999268838936
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 19.0,
+          "virtual_time_s": 201.2791321639353
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            4.871948458789274,
+            1.1243301182930296
+          ],
+          [
+            1461.8094102057153,
+            337.35093074176234
+          ],
+          [
+            1449.077768622274,
+            388.4147560572409
+          ],
+          [
+            4.829516181943023,
+            1.2945166852344894
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            672.4686954482011,
+            155.1898207251412
+          ],
+          [
+            795.2049541740804,
+            183.51443734606605
+          ],
+          [
+            1317.1177652735637,
+            353.0438369665882
+          ],
+          [
+            933.4441992200545,
+            250.20292822366264
+          ]
+        ],
+        "circle_center": [
+          994.7932303608824,
+          254.1168288458647
+        ],
+        "circle_radius_m": 337.1641421361323,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 39,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 285.36,
+          "virtual_time_s": 449.6210426825103
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            672.4686954482011,
+            155.1898207251412
+          ],
+          [
+            795.2049541740804,
+            183.51443734606605
+          ],
+          [
+            1317.1177652735637,
+            353.0438369665882
+          ],
+          [
+            933.4441992200545,
+            250.20292822366264
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            846.047477628718,
+            218.38448555926885
+          ],
+          [
+            829.3003031822627,
+            212.28735742662778
+          ],
+          [
+            833.4819400322616,
+            195.9476911268087
+          ],
+          [
+            850.9681692075374,
+            201.6276243851366
+          ]
+        ],
+        "circle_center": [
+          839.7647088304898,
+          207.16608834303878
+        ],
+        "circle_radius_m": 12.857901067946829,
+        "orientation_bins": 0
+      }
+    ],
+    "3": [
+      {
+        "sequence": 4,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 17.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 24,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 359.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 46,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 685.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 69,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1202.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 85,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1461.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 103,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1746.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 115,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1987.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 126,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2205.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 138,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2511.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 149,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2750.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 160,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3008.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 170,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3296.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 183,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3579.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 194,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3837.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 203,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4084.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 215,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4352.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 226,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4610.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 237,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4868.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 247,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5134.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 258,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5392.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 269,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5650.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "4": [
+      {
+        "sequence": 5,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 23.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 25,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 110.8,
+          "virtual_time_s": 365.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            701.877968222519,
+            708.2757989097729
+          ],
+          [
+            319.20443038602343,
+            1771.483547955608
+          ],
+          [
+            273.07452539028174,
+            1779.6174948238754
+          ],
+          [
+            701.714002981566,
+            708.2135143575558
+          ]
+        ],
+        "circle_center": [
+          487.47624680640035,
+          1243.9466468668243
+        ],
+        "circle_radius_m": 576.9847099336528,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 44,
+        "position": [
+          631.7241176310005,
+          990.1840618795279
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 113.51,
+          "virtual_time_s": 547.1912077620536
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            701.877968222519,
+            708.2757989097729
+          ],
+          [
+            319.20443038602343,
+            1771.483547955608
+          ],
+          [
+            273.07452539028174,
+            1779.6174948238754
+          ],
+          [
+            701.714002981566,
+            708.2135143575558
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            483.1642372829107,
+            1315.9429369941251
+          ],
+          [
+            393.21792988781715,
+            1565.8468408835615
+          ],
+          [
+            307.1378687151009,
+            1773.6112083425742
+          ],
+          [
+            273.07452539028174,
+            1779.6174948238754
+          ],
+          [
+            282.8356840470794,
+            1755.2190322799556
+          ]
+        ],
+        "circle_center": [
+          378.11938133659623,
+          1547.7802159090002
+        ],
+        "circle_radius_m": 254.5249411264751,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 60,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 65.52,
+          "virtual_time_s": 769.8240312225254
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            483.1642372829107,
+            1315.9429369941251
+          ],
+          [
+            393.21792988781715,
+            1565.8468408835615
+          ],
+          [
+            307.1378687151009,
+            1773.6112083425742
+          ],
+          [
+            273.07452539028174,
+            1779.6174948238754
+          ],
+          [
+            282.8356840470794,
+            1755.2190322799556
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            307.0749802127465,
+            1702.0676307441183
+          ],
+          [
+            321.71991890426125,
+            1669.9545276432552
+          ],
+          [
+            336.8944841753242,
+            1701.7901117426345
+          ],
+          [
+            322.27689175781313,
+            1737.0713929246285
+          ]
+        ],
+        "circle_center": [
+          321.9984053310372,
+          1703.512960283942
+        ],
+        "circle_radius_m": 33.55958813795856,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 169,
+        "position": [
+          840.4064081423356,
+          1376.9476862024817
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 147.19,
+          "virtual_time_s": 3239.9997199879335
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            307.0749802127465,
+            1702.0676307441183
+          ],
+          [
+            321.71991890426125,
+            1669.9545276432552
+          ],
+          [
+            336.8944841753242,
+            1701.7901117426345
+          ],
+          [
+            322.27689175781313,
+            1737.0713929246285
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            317.8798686301559,
+            1726.9468535595336
+          ],
+          [
+            308.9992003169336,
+            1706.498319786759
+          ],
+          [
+            332.26222173892575,
+            1692.0718247452749
+          ],
+          [
+            336.8944841753242,
+            1701.7901117426345
+          ],
+          [
+            329.7718911558237,
+            1718.981329002521
+          ]
+        ],
+        "circle_center": [
+          325.0710451845408,
+          1709.5093391524042
+        ],
+        "circle_radius_m": 18.862129490998075,
+        "orientation_bins": 0
+      }
+    ],
+    "5": [
+      {
+        "sequence": 6,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 29.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 26,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 371.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 47,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 691.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 70,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1208.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 86,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 274.52,
+          "virtual_time_s": 1467.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            -994.6934507574053,
+            -4.990593908731045
+          ],
+          [
+            -903.0210779512806,
+            -1497.4085214586796
+          ],
+          [
+            -850.5576798357608,
+            -1493.2611353624272
+          ],
+          [
+            -994.5185996654591,
+            -4.976771415074502
+          ]
+        ],
+        "circle_center": [
+          -935.6794526996583,
+          -750.3901052907282
+        ],
+        "circle_radius_m": 747.7319596856082,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 98,
+        "position": [
+          -1009.8623980044138,
+          -381.10596848860285
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 285.92,
+          "virtual_time_s": 1616.0040839143185
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -994.6934507574053,
+            -4.990593908731045
+          ],
+          [
+            -903.0210779512806,
+            -1497.4085214586796
+          ],
+          [
+            -850.5576798357608,
+            -1493.2611353624272
+          ],
+          [
+            -994.5185996654591,
+            -4.976771415074502
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -961.91104223017,
+            -538.6852359988027
+          ],
+          [
+            -960.1190711322917,
+            -567.8583631936337
+          ],
+          [
+            -928.6394442386472,
+            -686.0429736022256
+          ],
+          [
+            -934.0308498392595,
+            -630.3060092609198
+          ]
+        ],
+        "circle_center": [
+          -945.2752432344087,
+          -612.3641048005142
+        ],
+        "circle_radius_m": 75.53360521070863,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 99,
+        "position": [
+          -958.6975448021648,
+          -576.9806241222138
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 285.41,
+          "virtual_time_s": 1661.4934518633459
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -961.91104223017,
+            -538.6852359988027
+          ],
+          [
+            -960.1190711322917,
+            -567.8583631936337
+          ],
+          [
+            -928.6394442386472,
+            -686.0429736022256
+          ],
+          [
+            -934.0308498392595,
+            -630.3060092609198
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -948.1794383091251,
+            -612.6835721579899
+          ],
+          [
+            -928.6394442386472,
+            -686.0429736022256
+          ],
+          [
+            -929.652207676821,
+            -675.5729099822194
+          ]
+        ],
+        "circle_center": [
+          -938.4094412738862,
+          -649.3632728801078
+        ],
+        "circle_radius_m": 37.95857330212391,
+        "orientation_bins": 0
+      }
+    ],
+    "6": [
+      {
+        "sequence": 7,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 104.58,
+          "virtual_time_s": 35.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "circle_center": [
+          -189.48618702789756,
+          728.4910585421563
+        ],
+        "circle_radius_m": 747.7319596856084,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 40,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 455.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "circle_center": [
+          -189.48618702789756,
+          728.4910585421563
+        ],
+        "circle_radius_m": 747.7319596856084,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 61,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 775.8240312225254
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "circle_center": [
+          -189.48618702789756,
+          728.4910585421563
+        ],
+        "circle_radius_m": 747.7319596856084,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 64,
+        "position": [
+          -51.937456560710345,
+          377.842759224101
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 917.6917928453329
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "circle_center": [
+          -189.48618702789756,
+          728.4910585421563
+        ],
+        "circle_radius_m": 747.7319596856084,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 65,
+        "position": [
+          -138.74890112356007,
+          355.2624276912521
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 940.6318020752325
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -352.131158031736,
+            1458.319597955655
+          ],
+          [
+            -403.0634879737549,
+            1445.0717030309415
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "circle_center": [
+          -189.48618702789756,
+          728.4910585421563
+        ],
+        "circle_radius_m": 747.7319596856084,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 66,
+        "position": [
+          -35.63107338153556,
+          92.44428778060484
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 53.25,
+          "virtual_time_s": 1002.096538349947
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -1.1735899637032525,
+            4.860317540767783
+          ],
+          [
+            -88.91298200418687,
+            368.22513774171097
+          ],
+          [
+            -101.7733757304299,
+            364.88004936720176
+          ],
+          [
+            -1.343338280160352,
+            4.816164684170987
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -25.48535343505164,
+            105.54530471800138
+          ],
+          [
+            -25.66523329992709,
+            106.29026103965083
+          ],
+          [
+            -28.534776282858274,
+            102.30348068977634
+          ],
+          [
+            -28.39208185776552,
+            101.79188963269888
+          ]
+        ],
+        "circle_center": [
+          -27.028657578846303,
+          104.04107533617486
+        ],
+        "circle_radius_m": 2.6301638909138516,
+        "orientation_bins": 0
+      }
+    ],
+    "7": [
+      {
+        "sequence": 8,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 41.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 27,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 377.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 48,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 697.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 71,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 180.94,
+          "virtual_time_s": 1214.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            -1671.4037176708703,
+            670.7039472003321
+          ],
+          [
+            -708.5683666189781,
+            703.401546608385
+          ],
+          [
+            -708.5712440630936,
+            703.576919599467
+          ],
+          [
+            -1657.494958777017,
+            704.6534398674785
+          ],
+          [
+            -1664.5674579022893,
+            689.4864165480345
+          ]
+        ],
+        "circle_center": [
+          -1189.987480866982,
+          687.1404333998996
+        ],
+        "circle_radius_m": 481.6967418791683,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 84,
+        "position": [
+          -853.8375018198761,
+          644.9296092315159
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 175.89,
+          "virtual_time_s": 1323.6854043782464
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -1671.4037176708703,
+            670.7039472003321
+          ],
+          [
+            -708.5683666189781,
+            703.401546608385
+          ],
+          [
+            -708.5712440630936,
+            703.576919599467
+          ],
+          [
+            -1657.494958777017,
+            704.6534398674785
+          ],
+          [
+            -1664.5674579022893,
+            689.4864165480345
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1664.773861251341,
+            688.9193280072151
+          ],
+          [
+            -1460.8151921435842,
+            677.8554702931445
+          ],
+          [
+            -1287.449838652,
+            683.7429056407461
+          ],
+          [
+            -1519.3056369321612,
+            704.4966689874993
+          ],
+          [
+            -1657.494958777017,
+            704.6534398674785
+          ],
+          [
+            -1664.5674579022893,
+            689.4864165480345
+          ]
+        ],
+        "circle_center": [
+          -1476.1118499516706,
+          686.3311168239807
+        ],
+        "circle_radius_m": 188.67976400442652,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 97,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1533.7249517503833
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -1664.773861251341,
+            688.9193280072151
+          ],
+          [
+            -1460.8151921435842,
+            677.8554702931445
+          ],
+          [
+            -1287.449838652,
+            683.7429056407461
+          ],
+          [
+            -1519.3056369321612,
+            704.4966689874993
+          ],
+          [
+            -1657.494958777017,
+            704.6534398674785
+          ],
+          [
+            -1664.5674579022893,
+            689.4864165480345
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1664.773861251341,
+            688.9193280072151
+          ],
+          [
+            -1460.8151921435842,
+            677.8554702931445
+          ],
+          [
+            -1287.449838652,
+            683.7429056407461
+          ],
+          [
+            -1519.3056369321612,
+            704.4966689874993
+          ],
+          [
+            -1657.494958777017,
+            704.6534398674785
+          ],
+          [
+            -1664.5674579022893,
+            689.4864165480345
+          ]
+        ],
+        "circle_center": [
+          -1476.1118499516706,
+          686.3311168239807
+        ],
+        "circle_radius_m": 188.67976400442652,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 101,
+        "position": [
+          -943.5464942510179,
+          -630.0771292799374
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1681.5366274804726
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -1664.773861251341,
+            688.9193280072151
+          ],
+          [
+            -1460.8151921435842,
+            677.8554702931445
+          ],
+          [
+            -1287.449838652,
+            683.7429056407461
+          ],
+          [
+            -1519.3056369321612,
+            704.4966689874993
+          ],
+          [
+            -1657.494958777017,
+            704.6534398674785
+          ],
+          [
+            -1664.5674579022893,
+            689.4864165480345
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1664.773861251341,
+            688.9193280072151
+          ],
+          [
+            -1460.8151921435842,
+            677.8554702931445
+          ],
+          [
+            -1287.449838652,
+            683.7429056407461
+          ],
+          [
+            -1519.3056369321612,
+            704.4966689874993
+          ],
+          [
+            -1657.494958777017,
+            704.6534398674785
+          ],
+          [
+            -1664.5674579022893,
+            689.4864165480345
+          ]
+        ],
+        "circle_center": [
+          -1476.1118499516706,
+          686.3311168239807
+        ],
+        "circle_radius_m": 188.67976400442652,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 202,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 234.51,
+          "virtual_time_s": 3885.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -1664.773861251341,
+            688.9193280072151
+          ],
+          [
+            -1460.8151921435842,
+            677.8554702931445
+          ],
+          [
+            -1287.449838652,
+            683.7429056407461
+          ],
+          [
+            -1519.3056369321612,
+            704.4966689874993
+          ],
+          [
+            -1657.494958777017,
+            704.6534398674785
+          ],
+          [
+            -1664.5674579022893,
+            689.4864165480345
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1618.4582706190834,
+            686.4069116096179
+          ],
+          [
+            -1571.1102092815263,
+            683.8384882326294
+          ],
+          [
+            -1556.8909078668937,
+            704.5393081431159
+          ],
+          [
+            -1605.003070738131,
+            704.5938896839349
+          ]
+        ],
+        "circle_center": [
+          -1587.6745892429885,
+          695.4731098763668
+        ],
+        "circle_radius_m": 32.09097988651845,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 213,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 274.91,
+          "virtual_time_s": 4144.857419511514
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -1618.4582706190834,
+            686.4069116096179
+          ],
+          [
+            -1571.1102092815263,
+            683.8384882326294
+          ],
+          [
+            -1556.8909078668937,
+            704.5393081431159
+          ],
+          [
+            -1605.003070738131,
+            704.5938896839349
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -1598.747937681601,
+            704.5867934575365
+          ],
+          [
+            -1597.4290959404454,
+            685.2661716866394
+          ],
+          [
+            -1588.659318532841,
+            684.7904499639675
+          ],
+          [
+            -1590.7093649677256,
+            704.577673982158
+          ]
+        ],
+        "circle_center": [
+          -1593.703628107221,
+          694.6886217107519
+        ],
+        "circle_radius_m": 11.109404259951328,
+        "orientation_bins": 0
+      }
+    ],
+    "8": [
+      {
+        "sequence": 9,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 47.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 28,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 383.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 49,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 703.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 72,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1220.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 87,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1473.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 104,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1752.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 116,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1993.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 127,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2211.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 139,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2517.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 150,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2756.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 161,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3014.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 171,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3302.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 184,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3585.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 195,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3843.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 204,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4090.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 216,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4358.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 227,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4616.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 238,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4874.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 248,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5140.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 259,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5398.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 270,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5656.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "9": [
+      {
+        "sequence": 10,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 53.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 29,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 389.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 50,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 709.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 73,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1226.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 88,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1479.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 105,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1758.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 117,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1999.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 128,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2217.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 140,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2523.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 151,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2762.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 162,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3020.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 172,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3308.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 185,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3591.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 196,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3849.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 205,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4096.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 217,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4364.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 228,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4622.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 239,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4880.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 249,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5146.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 260,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5404.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 271,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5662.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "10": [
+      {
+        "sequence": 11,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 59.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 30,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 395.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 51,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 715.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 74,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1232.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 89,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1485.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 106,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1764.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 118,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2005.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 129,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2223.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 141,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2529.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 152,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2768.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 163,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3026.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 173,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3314.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 186,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3597.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 197,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3855.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 206,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4102.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 218,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4370.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 229,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4628.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 240,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4886.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 250,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5152.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 261,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5410.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 272,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5668.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "11": [
+      {
+        "sequence": 12,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 65.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 31,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 78.02,
+          "virtual_time_s": 401.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            704.6947270663717,
+            708.4433918978235
+          ],
+          [
+            900.6981431301017,
+            1558.4426536878927
+          ],
+          [
+            872.5103660910671,
+            1574.716874349236
+          ],
+          [
+            704.5231505884498,
+            708.4797990112714
+          ]
+        ],
+        "circle_center": [
+          788.6025465787194,
+          1141.5801331235298
+        ],
+        "circle_radius_m": 441.18925505381605,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 43,
+        "position": [
+          724.4998763218499,
+          929.7115468054004
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 75.94,
+          "virtual_time_s": 519.0423780141384
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            704.6947270663717,
+            708.4433918978235
+          ],
+          [
+            900.6981431301017,
+            1558.4426536878927
+          ],
+          [
+            872.5103660910671,
+            1574.716874349236
+          ],
+          [
+            704.5231505884498,
+            708.4797990112714
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            894.6694590956879,
+            1561.9233160380206
+          ],
+          [
+            873.8800314236679,
+            1573.926097700759
+          ],
+          [
+            864.5746721205614,
+            1533.7959488179665
+          ],
+          [
+            806.5188814262158,
+            1234.427463025549
+          ]
+        ],
+        "circle_center": [
+          840.1994564249419,
+          1404.1767803631542
+        ],
+        "circle_radius_m": 173.05840594674325,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 62,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 24.43,
+          "virtual_time_s": 781.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            894.6694590956879,
+            1561.9233160380206
+          ],
+          [
+            873.8800314236679,
+            1573.926097700759
+          ],
+          [
+            864.5746721205614,
+            1533.7959488179665
+          ],
+          [
+            806.5188814262158,
+            1234.427463025549
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            840.0364502132375,
+            1358.9514885171177
+          ],
+          [
+            851.0119232329309,
+            1399.727419813648
+          ],
+          [
+            837.3115223730466,
+            1393.2117321492863
+          ],
+          [
+            829.8081302784145,
+            1354.5199995449866
+          ]
+        ],
+        "circle_center": [
+          840.4100267556728,
+          1377.1237096793175
+        ],
+        "circle_radius_m": 24.966536018265593,
+        "orientation_bins": 0
+      }
+    ],
+    "12": [
+      {
+        "sequence": 13,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 71.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 32,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 407.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 52,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 721.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 75,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1238.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 90,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1491.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 107,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1770.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 119,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2011.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 130,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2229.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 142,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2535.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 153,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2774.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 164,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3032.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 174,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3320.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 187,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3603.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 198,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3861.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 207,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4108.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 219,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4376.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 230,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4634.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 241,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4892.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 251,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5158.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 262,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5416.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 273,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5674.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "13": [
+      {
+        "sequence": 14,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 77.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 33,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 413.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 53,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 727.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 76,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1244.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 91,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1497.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 108,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 297.43,
+          "virtual_time_s": 1776.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            -701.3461174564623,
+            -708.0488356120344
+          ],
+          [
+            -162.34429042345698,
+            -1792.6724225778125
+          ],
+          [
+            -111.42406204914396,
+            -1797.1273653047158
+          ],
+          [
+            -701.1904399454611,
+            -707.9680366129431
+          ]
+        ],
+        "circle_center": [
+          -406.3850897528031,
+          -1252.588100458375
+        ],
+        "circle_radius_m": 619.2939680179293,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 114,
+        "position": [
+          -525.6721702727846,
+          -965.6856467657142
+        ],
+        "kind": "crossbar",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 296.24,
+          "virtual_time_s": 1876.138375385697
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -701.3461174564623,
+            -708.0488356120344
+          ],
+          [
+            -162.34429042345698,
+            -1792.6724225778125
+          ],
+          [
+            -111.42406204914396,
+            -1797.1273653047158
+          ],
+          [
+            -701.1904399454611,
+            -707.9680366129431
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -284.1146999179098,
+            -1478.2085081745363
+          ],
+          [
+            -134.76740100294472,
+            -1795.0850877774153
+          ],
+          [
+            -111.42406204914396,
+            -1797.1273653047158
+          ]
+        ],
+        "circle_center": [
+          -197.76938098352687,
+          -1637.667936739626
+        ],
+        "circle_radius_m": 181.33621662587234,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 125,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 252.96,
+          "virtual_time_s": 2047.4361554012023
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -284.1146999179098,
+            -1478.2085081745363
+          ],
+          [
+            -134.76740100294472,
+            -1795.0850877774153
+          ],
+          [
+            -111.42406204914396,
+            -1797.1273653047158
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -209.20449369762184,
+            -1637.1487106213622
+          ],
+          [
+            -193.89409782909527,
+            -1669.6334352225556
+          ],
+          [
+            -189.23618541105353,
+            -1653.4267353243506
+          ],
+          [
+            -205.0145603812237,
+            -1624.2878000875596
+          ]
+        ],
+        "circle_center": [
+          -199.4543291051595,
+          -1646.9606176550576
+        ],
+        "circle_radius_m": 23.344653098565594,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 245,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 357.91,
+          "virtual_time_s": 4916.5327740268
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -209.20449369762184,
+            -1637.1487106213622
+          ],
+          [
+            -193.89409782909527,
+            -1669.6334352225556
+          ],
+          [
+            -189.23618541105353,
+            -1653.4267353243506
+          ],
+          [
+            -205.0145603812237,
+            -1624.2878000875596
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -209.20449369762184,
+            -1637.1487106213622
+          ],
+          [
+            -201.36737851761706,
+            -1653.7770545568471
+          ],
+          [
+            -189.52096545610593,
+            -1654.4175965327504
+          ],
+          [
+            -189.23618541105353,
+            -1653.4267353243506
+          ],
+          [
+            -202.9618514598562,
+            -1628.0786690732943
+          ],
+          [
+            -206.22941956450566,
+            -1628.0167843189338
+          ]
+        ],
+        "circle_center": [
+          -197.8751925103058,
+          -1641.217190425842
+        ],
+        "circle_radius_m": 15.621902286867213,
+        "orientation_bins": 0
+      }
+    ],
+    "14": [
+      {
+        "sequence": 15,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 83.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 34,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 419.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 54,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 733.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 77,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1250.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 92,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1503.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 109,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1782.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 120,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2017.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 131,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2235.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 143,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2541.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 154,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2780.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 165,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3038.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 175,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3326.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 188,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3609.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 199,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3867.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 208,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4114.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 220,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4382.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 231,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4640.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 242,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4898.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 252,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5164.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 263,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5422.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 274,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5680.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "15": [
+      {
+        "sequence": 16,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 89.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 35,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 425.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 55,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 739.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 78,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1256.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 93,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1509.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 110,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1788.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 121,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2023.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 132,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2241.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 144,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2547.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 155,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2786.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 166,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3044.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 176,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3332.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 189,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3615.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 200,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3873.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 209,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4120.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 221,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4388.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 232,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4646.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 243,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4904.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 253,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5170.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 264,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5428.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 275,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5686.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "16": [
+      {
+        "sequence": 17,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 143.18,
+          "virtual_time_s": 95.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            -3.9494375300731117,
+            3.0662588273089417
+          ],
+          [
+            -1185.0135516243163,
+            920.0191762702767
+          ],
+          [
+            -1216.5531188391155,
+            877.8900337064637
+          ],
+          [
+            -4.054553248175787,
+            2.9258499547494203
+          ]
+        ],
+        "circle_center": [
+          -602.5780422125574,
+          451.11411027978767
+        ],
+        "circle_radius_m": 747.7319596856086,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 41,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 461.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -3.9494375300731117,
+            3.0662588273089417
+          ],
+          [
+            -1185.0135516243163,
+            920.0191762702767
+          ],
+          [
+            -1216.5531188391155,
+            877.8900337064637
+          ],
+          [
+            -4.054553248175787,
+            2.9258499547494203
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -3.9494375300731117,
+            3.0662588273089417
+          ],
+          [
+            -1185.0135516243163,
+            920.0191762702767
+          ],
+          [
+            -1216.5531188391155,
+            877.8900337064637
+          ],
+          [
+            -4.054553248175787,
+            2.9258499547494203
+          ]
+        ],
+        "circle_center": [
+          -602.5780422125574,
+          451.11411027978767
+        ],
+        "circle_radius_m": 747.7319596856086,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 63,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 201.94,
+          "virtual_time_s": 787.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -3.9494375300731117,
+            3.0662588273089417
+          ],
+          [
+            -1185.0135516243163,
+            920.0191762702767
+          ],
+          [
+            -1216.5531188391155,
+            877.8900337064637
+          ],
+          [
+            -4.054553248175787,
+            2.9258499547494203
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -829.359493590143,
+            643.8969723838558
+          ],
+          [
+            -858.5419781879208,
+            666.5536292671176
+          ],
+          [
+            -901.1181164911554,
+            650.2655752630093
+          ],
+          [
+            -869.0235740380472,
+            627.1054858927737
+          ]
+        ],
+        "circle_center": [
+          -865.2388050406491,
+          647.0812738234325
+        ],
+        "circle_radius_m": 36.02033822468249,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 82,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 201.2,
+          "virtual_time_s": 1280.4247230671895
+        },
+        "within_min_reception_radius": true,
+        "prior_vertices": [
+          [
+            -829.359493590143,
+            643.8969723838558
+          ],
+          [
+            -858.5419781879208,
+            666.5536292671176
+          ],
+          [
+            -901.1181164911554,
+            650.2655752630093
+          ],
+          [
+            -869.0235740380472,
+            627.1054858927737
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -836.3900757305112,
+            649.3553659867102
+          ],
+          [
+            -841.0756112823739,
+            652.9931155743845
+          ],
+          [
+            -883.3496554350113,
+            637.4434841977417
+          ],
+          [
+            -876.9267029353293,
+            632.8085480826452
+          ]
+        ],
+        "circle_center": [
+          -859.8698655827612,
+          643.399425092226
+        ],
+        "circle_radius_m": 24.223413538236432,
+        "orientation_bins": 0
+      }
+    ],
+    "17": [
+      {
+        "sequence": 18,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 101.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 36,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 431.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 56,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 745.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 79,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1262.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 94,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1515.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 111,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1794.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 122,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2029.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 133,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2247.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 145,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2553.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 156,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2792.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 157,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2990.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 177,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3338.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 190,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3621.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 201,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3879.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 210,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4126.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 222,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4394.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 233,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4652.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 244,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4910.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 254,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5176.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 265,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5434.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 276,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5692.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "18": [
+      {
+        "sequence": 19,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 111.48,
+          "virtual_time_s": 107.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null,
+        "posterior_vertices": [
+          [
+            -1.7489932379615443,
+            4.684124534378308
+          ],
+          [
+            -524.77869896713,
+            1405.4535635689574
+          ],
+          [
+            -573.7505832411736,
+            1386.1827695036206
+          ],
+          [
+            -1.912207740787434,
+            4.61989843568802
+          ]
+        ],
+        "circle_center": [
+          -275.63241625871797,
+          700.4505753853183
+        ],
+        "circle_radius_m": 747.7319596856084,
+        "orientation_bins": 0
+      },
+      {
+        "sequence": 42,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "shared_bearing",
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 219.3,
+          "virtual_time_s": 467.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": [
+          [
+            -1.7489932379615443,
+            4.684124534378308
+          ],
+          [
+            -524.77869896713,
+            1405.4535635689574
+          ],
+          [
+            -573.7505832411736,
+            1386.1827695036206
+          ],
+          [
+            -1.912207740787434,
+            4.61989843568802
+          ]
+        ],
+        "posterior_vertices": [
+          [
+            -30.284149379283313,
+            81.10650403406397
+          ],
+          [
+            -42.685303951508004,
+            114.31906948347518
+          ],
+          [
+            -46.17645325303147,
+            111.56242054613449
+          ],
+          [
+            -32.71656561285256,
+            79.04330009335749
+          ]
+        ],
+        "circle_center": [
+          -37.70093478218028,
+          96.68118478841633
+        ],
+        "circle_radius_m": 18.32863640679076,
+        "orientation_bins": 0
+      }
+    ],
+    "19": [
+      {
+        "sequence": 20,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 113.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 37,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 437.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 57,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 751.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 80,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1268.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 95,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1521.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 112,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1800.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 123,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2035.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 134,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2253.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 146,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2559.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 147,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2738.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 158,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2996.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 178,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3344.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 191,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3627.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 192,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3825.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 211,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4132.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 223,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4400.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 234,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4658.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 235,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4856.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 255,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5182.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 266,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5440.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 267,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5638.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ],
+    "20": [
+      {
+        "sequence": 21,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 119.0
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 38,
+        "position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 443.6210426825103
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 58,
+        "position": [
+          6.092617825758082e-14,
+          995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 757.8240312225254
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 81,
+        "position": [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1274.4247230671895
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 96,
+        "position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1527.7249517503833
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 113,
+        "position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1806.781595158898
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 124,
+        "position": [
+          -1.8277853477274245e-13,
+          -995.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2041.4361554012023
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 135,
+        "position": [
+          703.5712472806147,
+          -703.5712472806149
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2259.744161482508
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 137,
+        "position": [
+          995.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2505.691845610313
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 148,
+        "position": [
+          1864.0,
+          0.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2744.4918456103132
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 159,
+        "position": [
+          1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3002.4673256387528
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 179,
+        "position": [
+          932.0000000000002,
+          1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3350.876790944297
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 182,
+        "position": [
+          1.141370816805333e-13,
+          1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3573.906459454635
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 193,
+        "position": [
+          -931.9999999999995,
+          1614.2713526541938
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 3831.8819394830743
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 212,
+        "position": [
+          -1614.2713526541938,
+          931.9999999999999
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4138.857419511514
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 224,
+        "position": [
+          -1864.0,
+          2.282741633610666e-13
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4406.581813969922
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 225,
+        "position": [
+          -1614.271352654194,
+          -931.9999999999994
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4604.557293998361
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 236,
+        "position": [
+          -932.0000000000008,
+          -1614.2713526541934
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 4862.5327740268
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 256,
+        "position": [
+          -3.4241124504159993e-13,
+          -1864.0
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5188.050824679346
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 257,
+        "position": [
+          932.0000000000002,
+          -1614.2713526541936
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5386.026304707786
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      },
+      {
+        "sequence": 268,
+        "position": [
+          1614.2713526541932,
+          -932.0000000000008
+        ],
+        "kind": "search",
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5644.001784736225
+        },
+        "within_min_reception_radius": false,
+        "prior_vertices": null
+      }
+    ]
+  },
+  "scan_visits": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    1,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "stations": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      995.0,
+      0.0
+    ],
+    [
+      703.5712472806148,
+      703.5712472806148
+    ],
+    [
+      6.092617825758082e-14,
+      995.0
+    ],
+    [
+      -703.5712472806147,
+      703.5712472806148
+    ],
+    [
+      -995.0,
+      1.2185235651516165e-13
+    ],
+    [
+      -703.5712472806149,
+      -703.5712472806147
+    ],
+    [
+      -1.8277853477274245e-13,
+      -995.0
+    ],
+    [
+      703.5712472806147,
+      -703.5712472806149
+    ],
+    [
+      1864.0,
+      0.0
+    ],
+    [
+      1614.2713526541938,
+      931.9999999999999
+    ],
+    [
+      932.0000000000002,
+      1614.2713526541936
+    ],
+    [
+      1.141370816805333e-13,
+      1864.0
+    ],
+    [
+      -931.9999999999995,
+      1614.2713526541938
+    ],
+    [
+      -1614.2713526541938,
+      931.9999999999999
+    ],
+    [
+      -1864.0,
+      2.282741633610666e-13
+    ],
+    [
+      -1614.271352654194,
+      -931.9999999999994
+    ],
+    [
+      -932.0000000000008,
+      -1614.2713526541934
+    ],
+    [
+      -3.4241124504159993e-13,
+      -1864.0
+    ],
+    [
+      932.0000000000002,
+      -1614.2713526541936
+    ],
+    [
+      1614.2713526541932,
+      -932.0000000000008
+    ]
+  ],
+  "coverage_triangles": [
+    [
+      7,
+      17,
+      18
+    ],
+    [
+      17,
+      7,
+      6
+    ],
+    [
+      6,
+      7,
+      0
+    ],
+    [
+      7,
+      8,
+      0
+    ],
+    [
+      5,
+      14,
+      15
+    ],
+    [
+      14,
+      5,
+      4
+    ],
+    [
+      5,
+      6,
+      0
+    ],
+    [
+      4,
+      5,
+      0
+    ],
+    [
+      1,
+      20,
+      9
+    ],
+    [
+      20,
+      1,
+      8
+    ],
+    [
+      10,
+      1,
+      9
+    ],
+    [
+      1,
+      10,
+      2
+    ],
+    [
+      8,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      3,
+      4,
+      0
+    ],
+    [
+      2,
+      3,
+      0
+    ],
+    [
+      16,
+      17,
+      6
+    ],
+    [
+      16,
+      5,
+      15
+    ],
+    [
+      5,
+      16,
+      6
+    ],
+    [
+      19,
+      20,
+      8
+    ],
+    [
+      19,
+      7,
+      18
+    ],
+    [
+      7,
+      19,
+      8
+    ],
+    [
+      13,
+      14,
+      4
+    ],
+    [
+      13,
+      3,
+      12
+    ],
+    [
+      3,
+      13,
+      4
+    ],
+    [
+      10,
+      11,
+      2
+    ],
+    [
+      3,
+      11,
+      12
+    ],
+    [
+      11,
+      3,
+      2
+    ]
+  ],
+  "clear_attempts": [
+    {
+      "sequence": 67,
+      "channel": 18,
+      "position": [
+        -37.70093478218028,
+        96.68118478841633
+      ],
+      "kind": "certified",
+      "prior_bound_m": 18.32863640679076,
+      "prior_vertices": [
+        [
+          -30.284149379283313,
+          81.10650403406397
+        ],
+        [
+          -42.685303951508004,
+          114.31906948347518
+        ],
+        [
+          -46.17645325303147,
+          111.56242054613449
+        ],
+        [
+          -32.71656561285256,
+          79.04330009335749
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 1008.0396316109277
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 68,
+      "channel": 6,
+      "position": [
+        -27.028657578846303,
+        104.04107533617486
+      ],
+      "kind": "certified",
+      "prior_bound_m": 2.630163890913851,
+      "prior_vertices": [
+        [
+          -25.48535343505164,
+          105.54530471800138
+        ],
+        [
+          -25.66523329992709,
+          106.29026103965083
+        ],
+        [
+          -28.534776282858274,
+          102.30348068977634
+        ],
+        [
+          -28.39208185776552,
+          101.79188963269888
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 1015.6324331041376
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 83,
+      "channel": 16,
+      "position": [
+        -853.8375018198761,
+        644.9296092315159
+      ],
+      "kind": "early_optical",
+      "prior_bound_m": 30.446827076472786,
+      "prior_vertices": [
+        [
+          -836.3900757305112,
+          649.3553659867102
+        ],
+        [
+          -841.0756112823739,
+          652.9931155743845
+        ],
+        [
+          -883.3496554350113,
+          637.4434841977417
+        ],
+        [
+          -876.9267029353293,
+          632.8085480826452
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 1317.6854043782464
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 100,
+      "channel": 5,
+      "position": [
+        -943.5464942510179,
+        -630.0771292799374
+      ],
+      "kind": "early_optical",
+      "prior_bound_m": 57.91714660424773,
+      "prior_vertices": [
+        [
+          -948.1794383091251,
+          -612.6835721579899
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -929.652207676821,
+          -675.5729099822194
+        ]
+      ],
+      "response": {
+        "clear_result": "no_target_in_range",
+        "accepted": true,
+        "virtual_time_s": 1675.5366274804726
+      },
+      "certificate": null,
+      "posterior_vertices": [
+        [
+          -938.3987812047566,
+          -649.4032941967918
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -929.652207676821,
+          -675.5729099822194
+        ],
+        [
+          -937.4442343155945,
+          -649.1234418805598
+        ]
+      ]
+    },
+    {
+      "sequence": 102,
+      "channel": 5,
+      "position": [
+        -933.0418392771209,
+        -667.5832077413927
+      ],
+      "kind": "certified",
+      "prior_bound_m": 18.97746130839292,
+      "prior_vertices": [
+        [
+          -938.3987812047566,
+          -649.4032941967918
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -929.652207676821,
+          -675.5729099822194
+        ],
+        [
+          -937.4442343155945,
+          -649.1234418805598
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 1694.3265021846703
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 136,
+      "channel": 2,
+      "position": [
+        839.7647088304898,
+        207.16608834303878
+      ],
+      "kind": "certified",
+      "prior_bound_m": 12.857901067946827,
+      "prior_vertices": [
+        [
+          846.047477628718,
+          218.38448555926885
+        ],
+        [
+          829.3003031822627,
+          212.28735742662778
+        ],
+        [
+          833.4819400322616,
+          195.9476911268087
+        ],
+        [
+          850.9681692075374,
+          201.6276243851366
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 2448.917031739537
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 167,
+      "channel": 11,
+      "position": [
+        840.4064081423356,
+        1376.9476862024817
+      ],
+      "kind": "early_optical",
+      "prior_bound_m": 25.127538950970706,
+      "prior_vertices": [
+        [
+          840.0364502132375,
+          1358.9514885171177
+        ],
+        [
+          851.0119232329309,
+          1399.727419813648
+        ],
+        [
+          837.3115223730466,
+          1393.2117321492863
+        ],
+        [
+          829.8081302784145,
+          1354.5199995449866
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 3227.9997199879335
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 180,
+      "channel": 4,
+      "position": [
+        325.0710451845408,
+        1709.5093391524042
+      ],
+      "kind": "certified",
+      "prior_bound_m": 18.862129490998075,
+      "prior_vertices": [
+        [
+          317.8798686301559,
+          1726.9468535595336
+        ],
+        [
+          308.9992003169336,
+          1706.498319786759
+        ],
+        [
+          332.26222173892575,
+          1692.0718247452749
+        ],
+        [
+          336.8944841753242,
+          1701.7901117426345
+        ],
+        [
+          329.7718911558237,
+          1718.981329002521
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 3478.7479478958976
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 181,
+      "channel": 1,
+      "position": [
+        155.02796070947886,
+        1667.1633515165308
+      ],
+      "kind": "certified",
+      "prior_bound_m": 19.5627579327102,
+      "prior_vertices": [
+        [
+          146.6980497133123,
+          1684.864031750063
+        ],
+        [
+          141.07707916679925,
+          1658.430787333086
+        ],
+        [
+          163.35787170564546,
+          1649.4626712829988
+        ],
+        [
+          167.42797006206777,
+          1665.768756902971
+        ],
+        [
+          159.0389434844234,
+          1679.386278938497
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 3518.7952492166273
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 214,
+      "channel": 7,
+      "position": [
+        -1593.703628107221,
+        694.6886217107519
+      ],
+      "kind": "certified",
+      "prior_bound_m": 11.109404259951328,
+      "prior_vertices": [
+        [
+          -1598.747937681601,
+          704.5867934575365
+        ],
+        [
+          -1597.4290959404454,
+          685.2661716866394
+        ],
+        [
+          -1588.659318532841,
+          684.7904499639675
+        ],
+        [
+          -1590.7093649677256,
+          704.577673982158
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 4197.497621676737
+      },
+      "certificate": null
+    },
+    {
+      "sequence": 246,
+      "channel": 13,
+      "position": [
+        -197.8751925103058,
+        -1641.217190425842
+      ],
+      "kind": "certified",
+      "prior_bound_m": 15.621902286867213,
+      "prior_vertices": [
+        [
+          -209.20449369762184,
+          -1637.1487106213622
+        ],
+        [
+          -201.36737851761706,
+          -1653.7770545568471
+        ],
+        [
+          -189.52096545610593,
+          -1654.4175965327504
+        ],
+        [
+          -189.23618541105353,
+          -1653.4267353243506
+        ],
+        [
+          -202.9618514598562,
+          -1628.0786690732943
+        ],
+        [
+          -206.22941956450566,
+          -1628.0167843189338
+        ]
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 5068.456606150115
+      },
+      "certificate": null
+    }
+  ],
+  "optical_fallbacks": [],
+  "all_station_no_signal_channels": {
+    "3": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "8": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "9": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "10": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "12": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "14": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "15": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "17": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "19": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "20": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "crossbar_records": [
+    {
+      "channel": 2,
+      "sequence_before": 21,
+      "prior_vertices": [
+        [
+          4.871948458789274,
+          1.1243301182930296
+        ],
+        [
+          1461.8094102057153,
+          337.35093074176234
+        ],
+        [
+          1449.077768622274,
+          388.4147560572409
+        ],
+        [
+          4.829516181943023,
+          1.2945166852344894
+        ]
+      ],
+      "points": [
+        [
+          378.3491491937054,
+          48.10999268838936
+        ],
+        [
+          356.64874399384115,
+          135.14556411400707
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          0.0,
+          0.0
+        ],
+        "reference_bearing_deg": 14.0,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          0.9702957262759965,
+          0.24192189559966773
+        ],
+        "unit_transverse": [
+          -0.24192189559966773,
+          0.9702957262759965
+        ],
+        "section_distance_m": 378.74942313127303,
+        "halfwidth_m": 44.850023074749075,
+        "range_certificates": [
+          {
+            "kind": "full_bearing_conditional_range",
+            "two_disk_residuals_m2": [
+              -858291.3949613564,
+              -610346.3605947242
+            ],
+            "maximum_vertex_distance_m": 1123.5066125461562
+          },
+          {
+            "kind": "full_bearing_conditional_range",
+            "two_disk_residuals_m2": [
+              -858291.3949613564,
+              -610346.3605947242
+            ],
+            "maximum_vertex_distance_m": 1123.506612546156
+          }
+        ],
+        "cut_normal": [
+          0.9702957262759965,
+          0.24192189559966773
+        ],
+        "cut_rhs": 378.74942323127306,
+        "fraction": 0.25,
+        "projection_lower_m": 4.9992308416974085,
+        "projection_upper_m": 1500.0
+      },
+      "outcomes": [
+        "direction"
+      ]
+    },
+    {
+      "channel": 11,
+      "sequence_before": 42,
+      "prior_vertices": [
+        [
+          704.6947270663717,
+          708.4433918978235
+        ],
+        [
+          900.6981431301017,
+          1558.4426536878927
+        ],
+        [
+          872.5103660910671,
+          1574.716874349236
+        ],
+        [
+          704.5231505884498,
+          708.4797990112714
+        ]
+      ],
+      "points": [
+        [
+          724.4998763218499,
+          929.7115468054004
+        ],
+        [
+          776.2813523908216,
+          918.7239446784585
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "reference_bearing_deg": 78.02,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          0.20757024023392315,
+          0.9782201160113358
+        ],
+        "unit_transverse": [
+          -0.9782201160113358,
+          0.20757024023392315
+        ],
+        "section_distance_m": 225.55915059382988,
+        "halfwidth_m": 26.4671903702559,
+        "range_certificates": [
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 661.7695804746952,
+            "residual": -338.2304195253048
+          },
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 663.0133836173834,
+            "residual": -336.9866163826166
+          }
+        ],
+        "cut_normal": [
+          0.20757024023392315,
+          0.9782201160113358
+        ],
+        "cut_rhs": 1059.8471506506314,
+        "fraction": 0.25,
+        "projection_lower_m": 4.9992308416973685,
+        "projection_upper_m": 887.2389098502274
+      },
+      "outcomes": [
+        "direction"
+      ]
+    },
+    {
+      "channel": 4,
+      "sequence_before": 43,
+      "prior_vertices": [
+        [
+          701.877968222519,
+          708.2757989097729
+        ],
+        [
+          319.20443038602343,
+          1771.483547955608
+        ],
+        [
+          273.07452539028174,
+          1779.6174948238754
+        ],
+        [
+          701.714002981566,
+          708.2135143575558
+        ]
+      ],
+      "points": [
+        [
+          631.7241176310005,
+          990.1840618795279
+        ],
+        [
+          567.0086331461413,
+          965.6009554282948
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "reference_bearing_deg": 110.8,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          -0.35510696240813705,
+          0.9348256763960144
+        ],
+        "unit_transverse": [
+          -0.9348256763960144,
+          -0.35510696240813705
+        ],
+        "section_distance_m": 293.4464342388126,
+        "halfwidth_m": 34.61366440765383,
+        "range_certificates": [
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 867.0840069247797,
+            "residual": -132.91599307522029
+          },
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 865.459523092669,
+            "residual": -134.54047690733103
+          }
+        ],
+        "cut_normal": [
+          -0.35510696240813705,
+          0.9348256763960144
+        ],
+        "cut_rhs": 701.3198530111775,
+        "fraction": 0.25,
+        "projection_lower_m": 4.999230841697404,
+        "projection_upper_m": 1158.7880444301584
+      },
+      "outcomes": [
+        "direction"
+      ]
+    },
+    {
+      "channel": 1,
+      "sequence_before": 44,
+      "prior_vertices": [
+        [
+          701.1590384050993,
+          707.9508874873994
+        ],
+        [
+          100.75041604703802,
+          1798.061188328389
+        ],
+        [
+          78.5896972353217,
+          1800.0
+        ],
+        [
+          48.54120669500132,
+          1800.0
+        ],
+        [
+          701.0069114249278,
+          707.8635871575628
+        ]
+      ],
+      "points": [
+        [
+          575.9021991665658,
+          1002.7112776719418
+        ],
+        [
+          509.70763751207517,
+          964.7245440937754
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          703.5712472806148,
+          703.5712472806148
+        ],
+        "reference_bearing_deg": 119.85,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          -0.49773103991261214,
+          0.8673314314075731
+        ],
+        "unit_transverse": [
+          -0.8673314314075731,
+          -0.49773103991261214
+        ],
+        "section_distance_m": 322.9983988330736,
+        "halfwidth_m": 38.15990015896514,
+        "range_certificates": [
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 955.9178432962223,
+            "residual": -44.08215670377774
+          },
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 954.1276456281468,
+            "residual": -45.87235437185325
+          }
+        ],
+        "cut_normal": [
+          -0.49773103991261214,
+          0.8673314314075731
+        ],
+        "cut_rhs": 583.0386073725869,
+        "fraction": 0.25,
+        "projection_lower_m": 4.9992308416974405,
+        "projection_upper_m": 1276.9959028072021
+      },
+      "outcomes": [
+        "direction"
+      ]
+    },
+    {
+      "channel": 6,
+      "sequence_before": 63,
+      "prior_vertices": [
+        [
+          -1.1735899637032525,
+          4.860317540767783
+        ],
+        [
+          -352.131158031736,
+          1458.319597955655
+        ],
+        [
+          -403.0634879737549,
+          1445.0717030309415
+        ],
+        [
+          -1.343338280160352,
+          4.816164684170987
+        ]
+      ],
+      "points": [
+        [
+          -51.937456560710345,
+          377.842759224101
+        ],
+        [
+          -138.74890112356007,
+          355.2624276912521
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          0.0,
+          0.0
+        ],
+        "reference_bearing_deg": 104.58,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          -0.25173154866849695,
+          0.9677971003288655
+        ],
+        "unit_transverse": [
+          -0.9677971003288655,
+          -0.25173154866849695
+        ],
+        "section_distance_m": 378.74942313127303,
+        "halfwidth_m": 44.850023074749075,
+        "range_certificates": [
+          {
+            "kind": "full_bearing_conditional_range",
+            "two_disk_residuals_m2": [
+              -858291.3949613564,
+              -610346.3605947242
+            ],
+            "maximum_vertex_distance_m": 1123.506612546156
+          },
+          {
+            "kind": "full_bearing_conditional_range",
+            "two_disk_residuals_m2": [
+              -858291.3949613564,
+              -610346.3605947242
+            ],
+            "maximum_vertex_distance_m": 1123.5066125461562
+          }
+        ],
+        "cut_normal": [
+          -0.25173154866849695,
+          0.9677971003288655
+        ],
+        "cut_rhs": 378.74942323127306,
+        "fraction": 0.25,
+        "projection_lower_m": 4.999230841697407,
+        "projection_upper_m": 1500.0
+      },
+      "outcomes": [
+        "no_signal",
+        "no_signal"
+      ],
+      "posterior_vertices": [
+        [
+          -1.1735899637032525,
+          4.860317540767783
+        ],
+        [
+          -88.91298200418687,
+          368.22513774171097
+        ],
+        [
+          -101.7733757304299,
+          364.88004936720176
+        ],
+        [
+          -1.343338280160352,
+          4.816164684170987
+        ]
+      ]
+    },
+    {
+      "channel": 6,
+      "sequence_before": 65,
+      "prior_vertices": [
+        [
+          -1.1735899637032525,
+          4.860317540767783
+        ],
+        [
+          -88.91298200418687,
+          368.22513774171097
+        ],
+        [
+          -101.7733757304299,
+          364.88004936720176
+        ],
+        [
+          -1.343338280160352,
+          4.816164684170987
+        ]
+      ],
+      "points": [
+        [
+          -35.63107338153556,
+          92.44428778060484
+        ],
+        [
+          -13.928212235016339,
+          98.08937066532744
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          0.0,
+          0.0
+        ],
+        "reference_bearing_deg": 104.58,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          -0.25173154866849695,
+          0.9677971003288655
+        ],
+        "unit_transverse": [
+          -0.9677971003288655,
+          -0.25173154866849695
+        ],
+        "section_distance_m": 98.43677893909134,
+        "halfwidth_m": 11.21250577168727,
+        "range_certificates": [
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 280.88082702766076,
+            "residual": -719.1191729723392
+          },
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 280.8808270276607,
+            "residual": -719.1191729723394
+          }
+        ],
+        "cut_normal": [
+          -0.25173154866849695,
+          0.9677971003288655
+        ],
+        "cut_rhs": 98.43677903909133,
+        "fraction": 0.25,
+        "projection_lower_m": 4.999230841697407,
+        "projection_upper_m": 378.7494232312731
+      },
+      "outcomes": [
+        "direction"
+      ]
+    },
+    {
+      "channel": 5,
+      "sequence_before": 97,
+      "prior_vertices": [
+        [
+          -994.6934507574053,
+          -4.990593908731045
+        ],
+        [
+          -903.0210779512806,
+          -1497.4085214586796
+        ],
+        [
+          -850.5576798357608,
+          -1493.2611353624272
+        ],
+        [
+          -994.5185996654591,
+          -4.976771415074502
+        ]
+      ],
+      "points": [
+        [
+          -1009.8623980044138,
+          -381.10596848860285
+        ],
+        [
+          -920.4413292594948,
+          -374.03696970952814
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        "reference_bearing_deg": 274.52,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          0.07880708073765288,
+          -0.9968898856070358
+        ],
+        "unit_transverse": [
+          0.9968898856070358,
+          0.07880708073765288
+        ],
+        "section_distance_m": 378.74942313127303,
+        "halfwidth_m": 44.850023074749075,
+        "range_certificates": [
+          {
+            "kind": "full_bearing_conditional_range",
+            "two_disk_residuals_m2": [
+              -858291.3949613564,
+              -610346.3605947242
+            ],
+            "maximum_vertex_distance_m": 1123.5066125461558
+          },
+          {
+            "kind": "full_bearing_conditional_range",
+            "two_disk_residuals_m2": [
+              -858291.3949613564,
+              -610346.3605947242
+            ],
+            "maximum_vertex_distance_m": 1123.5066125461558
+          }
+        ],
+        "cut_normal": [
+          0.07880708073765288,
+          -0.9968898856070358
+        ],
+        "cut_rhs": 300.3363778973083,
+        "fraction": 0.25,
+        "projection_lower_m": 4.999230841697406,
+        "projection_upper_m": 1500.0
+      },
+      "outcomes": [
+        "direction"
+      ]
+    },
+    {
+      "channel": 5,
+      "sequence_before": 98,
+      "prior_vertices": [
+        [
+          -961.91104223017,
+          -538.6852359988027
+        ],
+        [
+          -960.1190711322917,
+          -567.8583631936337
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -934.0308498392595,
+          -630.3060092609198
+        ]
+      ],
+      "points": [
+        [
+          -958.6975448021648,
+          -576.9806241222138
+        ],
+        [
+          -949.9947200237071,
+          -574.4982745816628
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          -1009.8623980044138,
+          -381.10596848860285
+        ],
+        "reference_bearing_deg": 285.92,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          0.2742949130431468,
+          -0.9616456211508752
+        ],
+        "unit_transverse": [
+          0.9616456211508752,
+          0.2742949130431468
+        ],
+        "section_distance_m": 202.39626384447388,
+        "halfwidth_m": 4.524964595607678,
+        "range_certificates": [
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 113.12862362632528,
+            "residual": -886.8713763736747
+          },
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 113.57054056155545,
+            "residual": -886.4294594384446
+          }
+        ],
+        "cut_normal": [
+          0.2742949130431468,
+          -0.9616456211508752
+        ],
+        "cut_rhs": 291.88503108983787,
+        "fraction": 0.25,
+        "projection_lower_m": 164.68822554774323,
+        "projection_upper_m": 315.5203787346658
+      },
+      "outcomes": [
+        "direction"
+      ]
+    },
+    {
+      "channel": 13,
+      "sequence_before": 113,
+      "prior_vertices": [
+        [
+          -701.3461174564623,
+          -708.0488356120344
+        ],
+        [
+          -162.34429042345698,
+          -1792.6724225778125
+        ],
+        [
+          -111.42406204914396,
+          -1797.1273653047158
+        ],
+        [
+          -701.1904399454611,
+          -707.9680366129431
+        ]
+      ],
+      "points": [
+        [
+          -525.6721702727846,
+          -965.6856467657142
+        ],
+        [
+          -591.6221884899628,
+          -999.9147106024154
+        ]
+      ],
+      "certificate": {
+        "reference_position": [
+          -703.5712472806149,
+          -703.5712472806147
+        ],
+        "reference_bearing_deg": 297.43,
+        "error_bound_deg": 1.005,
+        "unit_forward": [
+          0.46066458072803546,
+          -0.8875743034037563
+        ],
+        "unit_transverse": [
+          0.8875743034037563,
+          0.46066458072803546
+        ],
+        "section_distance_m": 314.5978092567978,
+        "halfwidth_m": 37.15182940981205,
+        "range_certificates": [
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 928.9224006847684,
+            "residual": -71.07759931523162
+          },
+          {
+            "kind": "minimum_radius",
+            "maximum_vertex_distance_m": 930.6654917072846,
+            "residual": -69.33450829271544
+          }
+        ],
+        "cut_normal": [
+          0.46066458072803546,
+          -0.8875743034037563
+        ],
+        "cut_rhs": 614.9592154159759,
+        "fraction": 0.25,
+        "projection_lower_m": 4.999230841697364,
+        "projection_upper_m": 1243.3935445020993
+      },
+      "outcomes": [
+        "direction"
+      ]
+    }
+  ],
+  "virtual_time_s": 5692.001784736225,
+  "required_station_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "coverage_changes": [],
+  "negative_region_records": [
+    {
+      "channel": 7,
+      "sequence": 71,
+      "prior_vertices": [
+        [
+          -708.5712440630936,
+          703.576919599467
+        ],
+        [
+          -1657.494958777017,
+          704.6534398674785
+        ],
+        [
+          -1664.5674579022893,
+          689.4864165480345
+        ],
+        [
+          -1671.4037176708703,
+          670.7039472003321
+        ],
+        [
+          -708.5683666189781,
+          703.401546608385
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -1671.4037176708703,
+          670.7039472003321
+        ],
+        [
+          -708.5683666189781,
+          703.401546608385
+        ],
+        [
+          -708.5712440630936,
+          703.576919599467
+        ],
+        [
+          -1657.494958777017,
+          704.6534398674785
+        ],
+        [
+          -1664.5674579022893,
+          689.4864165480345
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 1,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 7,
+      "sequence": 84,
+      "prior_vertices": [
+        [
+          -1664.773861251341,
+          688.9193280072151
+        ],
+        [
+          -1460.8151921435842,
+          677.8554702931445
+        ],
+        [
+          -1287.449838652,
+          683.7429056407461
+        ],
+        [
+          -1519.3056369321612,
+          704.4966689874993
+        ],
+        [
+          -1657.494958777017,
+          704.6534398674785
+        ],
+        [
+          -1664.5674579022893,
+          689.4864165480345
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -1664.773861251341,
+          688.9193280072151
+        ],
+        [
+          -1460.8151921435842,
+          677.8554702931445
+        ],
+        [
+          -1287.449838652,
+          683.7429056407461
+        ],
+        [
+          -1519.3056369321612,
+          704.4966689874993
+        ],
+        [
+          -1657.494958777017,
+          704.6534398674785
+        ],
+        [
+          -1664.5674579022893,
+          689.4864165480345
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 1,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 5,
+      "sequence": 86,
+      "prior_vertices": [
+        [
+          -994.6934507574053,
+          -4.990593908731045
+        ],
+        [
+          -903.0210779512806,
+          -1497.4085214586796
+        ],
+        [
+          -850.5576798357608,
+          -1493.2611353624272
+        ],
+        [
+          -994.5185996654591,
+          -4.976771415074502
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -994.6934507574053,
+          -4.990593908731045
+        ],
+        [
+          -903.0210779512806,
+          -1497.4085214586796
+        ],
+        [
+          -850.5576798357608,
+          -1493.2611353624272
+        ],
+        [
+          -994.5185996654591,
+          -4.976771415074502
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 2,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 5,
+      "sequence": 98,
+      "prior_vertices": [
+        [
+          -961.91104223017,
+          -538.6852359988027
+        ],
+        [
+          -960.1190711322917,
+          -567.8583631936337
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -934.0308498392595,
+          -630.3060092609198
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -961.91104223017,
+          -538.6852359988027
+        ],
+        [
+          -960.1190711322917,
+          -567.8583631936337
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -934.0308498392595,
+          -630.3060092609198
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 2,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 5,
+      "sequence": 99,
+      "prior_vertices": [
+        [
+          -948.1794383091251,
+          -612.6835721579899
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -929.652207676821,
+          -675.5729099822194
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -948.1794383091251,
+          -612.6835721579899
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -929.652207676821,
+          -675.5729099822194
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 2,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 5,
+      "sequence": 100,
+      "prior_vertices": [
+        [
+          -938.3987812047566,
+          -649.4032941967918
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -929.652207676821,
+          -675.5729099822194
+        ],
+        [
+          -937.4442343155945,
+          -649.1234418805598
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -938.3987812047566,
+          -649.4032941967918
+        ],
+        [
+          -928.6394442386472,
+          -686.0429736022256
+        ],
+        [
+          -929.652207676821,
+          -675.5729099822194
+        ],
+        [
+          -937.4442343155945,
+          -649.1234418805598
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 2,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 13,
+      "sequence": 108,
+      "prior_vertices": [
+        [
+          -701.3461174564623,
+          -708.0488356120344
+        ],
+        [
+          -162.34429042345698,
+          -1792.6724225778125
+        ],
+        [
+          -111.42406204914396,
+          -1797.1273653047158
+        ],
+        [
+          -701.1904399454611,
+          -707.9680366129431
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -701.3461174564623,
+          -708.0488356120344
+        ],
+        [
+          -162.34429042345698,
+          -1792.6724225778125
+        ],
+        [
+          -111.42406204914396,
+          -1797.1273653047158
+        ],
+        [
+          -701.1904399454611,
+          -707.9680366129431
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 3,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 13,
+      "sequence": 114,
+      "prior_vertices": [
+        [
+          -134.76740100294472,
+          -1795.0850877774153
+        ],
+        [
+          -111.42406204914396,
+          -1797.1273653047158
+        ],
+        [
+          -284.1146999179098,
+          -1478.2085081745363
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -284.1146999179098,
+          -1478.2085081745363
+        ],
+        [
+          -134.76740100294472,
+          -1795.0850877774153
+        ],
+        [
+          -111.42406204914396,
+          -1797.1273653047158
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 3,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 13,
+      "sequence": 125,
+      "prior_vertices": [
+        [
+          -189.23618541105353,
+          -1653.4267353243506
+        ],
+        [
+          -205.0145603812237,
+          -1624.2878000875596
+        ],
+        [
+          -209.20449369762184,
+          -1637.1487106213622
+        ],
+        [
+          -193.89409782909527,
+          -1669.6334352225556
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -209.20449369762184,
+          -1637.1487106213622
+        ],
+        [
+          -193.89409782909527,
+          -1669.6334352225556
+        ],
+        [
+          -189.23618541105353,
+          -1653.4267353243506
+        ],
+        [
+          -205.0145603812237,
+          -1624.2878000875596
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 3,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 7,
+      "sequence": 202,
+      "prior_vertices": [
+        [
+          -1618.4582706190834,
+          686.4069116096179
+        ],
+        [
+          -1571.1102092815263,
+          683.8384882326294
+        ],
+        [
+          -1556.8909078668937,
+          704.5393081431159
+        ],
+        [
+          -1605.003070738131,
+          704.5938896839349
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -1618.4582706190834,
+          686.4069116096179
+        ],
+        [
+          -1571.1102092815263,
+          683.8384882326294
+        ],
+        [
+          -1556.8909078668937,
+          704.5393081431159
+        ],
+        [
+          -1605.003070738131,
+          704.5938896839349
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 1,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 7,
+      "sequence": 213,
+      "prior_vertices": [
+        [
+          -1597.4290959404454,
+          685.2661716866394
+        ],
+        [
+          -1588.659318532841,
+          684.7904499639675
+        ],
+        [
+          -1590.7093649677256,
+          704.577673982158
+        ],
+        [
+          -1598.747937681601,
+          704.5867934575365
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -1598.747937681601,
+          704.5867934575365
+        ],
+        [
+          -1597.4290959404454,
+          685.2661716866394
+        ],
+        [
+          -1588.659318532841,
+          684.7904499639675
+        ],
+        [
+          -1590.7093649677256,
+          704.577673982158
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 1,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    },
+    {
+      "channel": 13,
+      "sequence": 245,
+      "prior_vertices": [
+        [
+          -206.22941956450566,
+          -1628.0167843189338
+        ],
+        [
+          -209.20449369762184,
+          -1637.1487106213622
+        ],
+        [
+          -201.36737851761706,
+          -1653.7770545568471
+        ],
+        [
+          -189.52096545610593,
+          -1654.4175965327504
+        ],
+        [
+          -189.23618541105353,
+          -1653.4267353243506
+        ],
+        [
+          -202.9618514598562,
+          -1628.0786690732943
+        ]
+      ],
+      "posterior_vertices": [
+        [
+          -209.20449369762184,
+          -1637.1487106213622
+        ],
+        [
+          -201.36737851761706,
+          -1653.7770545568471
+        ],
+        [
+          -189.52096545610593,
+          -1654.4175965327504
+        ],
+        [
+          -189.23618541105353,
+          -1653.4267353243506
+        ],
+        [
+          -202.9618514598562,
+          -1628.0786690732943
+        ],
+        [
+          -206.22941956450566,
+          -1628.0167843189338
+        ]
+      ],
+      "mode": "disk",
+      "negative_points": [
+        [
+          -995.0,
+          1.2185235651516165e-13
+        ],
+        [
+          -703.5712472806147,
+          703.5712472806148
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.092617825758082e-14,
+          995.0
+        ],
+        [
+          703.5712472806148,
+          703.5712472806148
+        ]
+      ],
+      "certified_region_count": 3,
+      "applied_region_count": 0,
+      "remaining_piece_count": 1,
+      "certified_regions": []
+    }
+  ],
+  "discovery_upper_bound_stops": [],
+  "station_spec": [
+    8,
+    12,
+    995,
+    1864,
+    0
+  ],
+  "initial_rotation": null,
+  "version": "q4_21station_exact_route_v4",
+  "parameters": {
+    "route": "joint",
+    "share": true,
+    "directional": false,
+    "angle_bin": 4.0,
+    "trial_radius": 40.0,
+    "probe_offset": 0.25,
+    "radio_limit": 12,
+    "search_first": false,
+    "source_bias": 0.0,
+    "crossbar": true,
+    "crossbar_offset": 0.03,
+    "crossbar_after_dark": false,
+    "station_layout": "8_16",
+    "station_inner": 990.0,
+    "crossbar_fraction": 0.25,
+    "conditional_range": true,
+    "route_mode": "backbone",
+    "route_estimate": 0.5,
+    "opportunistic": false,
+    "drop_sites": false,
+    "share_ratio": 0.7,
+    "negative_regions": "disk",
+    "crossbar_reference": "latest",
+    "stop_when_found16": true,
+    "scan_current_first": true,
+    "near_clear_distance": 50.0,
+    "near_clear_radius": 20.0,
+    "station_spec": [
+      8,
+      12,
+      995,
+      1864,
+      0
+    ],
+    "opportunistic_distance": 650.0,
+    "opportunistic_candidates": 3,
+    "exact_insert": true,
+    "cumulative_points": 0.0,
+    "cumulative_cap": 2,
+    "initial_rotation_steps": 0,
+    "initial_reflection": false,
+    "initial_rotation_span": 1.5707963267948966
+  },
+  "paper_variant": "q4_no_rotation"
+}

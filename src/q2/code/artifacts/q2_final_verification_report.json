@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "status": "PASS",
+  "scope": "Q2 Gates A-G plus Gate G-prime, Q1 regression, and clean-room handoff",
+  "snapshot_id": "q2_final_pass_v16_20260911_103800",
+  "tests": {
+    "q2": "148 passed, 1 skipped",
+    "q1": "11 passed",
+    "ruff": "All checks passed",
+    "gate_g_prime": "7 passed",
+    "clean_room": "1 passed in 497.88s"
+  },
+  "independent_evidence": {
+    "adaptive_candidate_region": true,
+    "candidate_boundary_target_m": 5.0,
+    "candidate_base_resolution": 21,
+    "candidate_max_refinement_depth": 6,
+    "hero_surface_closure": true,
+    "hero_surface_tolerance_m": 1e-09,
+    "hero_promotion_loop": true,
+    "hero_promotion_history": [
+      {
+        "round": 1,
+        "promoted": true,
+        "evidence_S2": [800.0736125053295, -606.4160929019891],
+        "evidence_Q": 134.07805576181698,
+        "final_S2": [800.1012338639696, -606.388471543349],
+        "final_Q": 134.07676525132717
+      }
+    ],
+    "hero_closure_artifact": "q2_hero_closure.json",
+    "hero_S2": [800.1012338639696, -606.388471543349],
+    "hero_Q_m": 134.07676525132717,
+    "best_evaluated_Q_m": 134.07676525132717,
+    "hero_crec_margin_m": 7.568692126369569e-07,
+    "hero_crec_margin_status": "marginal_but_independently_verified",
+    "symmetric_mirror_cell_refinement": true,
+    "symmetry_abs_Q_difference_m": 2.2737367544323206e-13,
+    "symmetry_tolerance_m": 1e-7,
+    "baseline_numeric_positions": true,
+    "baseline_none_not_zero": true,
+    "saved_sidecar_render": true,
+    "figure_dpi": 300,
+    "clean_room_isolated_pythonpath": true,
+    "clean_room_workspace_path_absent": true,
+    "parallel_backend_equivalence": true,
+    "parallel_backend_benchmark": true
+  },
+  "claim_boundary": {
+    "certified_global_optimum": false,
+    "candidate_regions_are_proof": false,
+    "gate_h": false
+  }
+}

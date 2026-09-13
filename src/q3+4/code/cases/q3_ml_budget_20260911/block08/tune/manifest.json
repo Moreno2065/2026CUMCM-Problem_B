@@ -1,0 +1,56 @@
+{
+ "set": "tune",
+ "purpose": "C 类参数（tau）筛选专用（Addendum B.3）；禁止用于消融/验证",
+ "generated_at": "2026-09-11T21:39:15+08:00",
+ "seed_block": 870000,
+ "seed_offset": 770000,
+ "tag": "block08",
+ "isolation": "seed blocks are pairwise disjoint; case_id 全局唯一；四集无交集",
+ "case_files": [
+  {
+   "file": "tune_q3.json",
+   "question": "q3",
+   "n_cases": 6,
+   "case_ids": [
+    "block08_tune_q3_01",
+    "block08_tune_q3_02",
+    "block08_tune_q3_03",
+    "block08_tune_q3_04",
+    "block08_tune_q3_05",
+    "block08_tune_q3_06"
+   ],
+   "scenarios": [
+    "boundary",
+    "dense",
+    "random",
+    "sparse"
+   ],
+   "error_field_types": [
+    "random_fixed"
+   ]
+  },
+  {
+   "file": "tune_q4.json",
+   "question": "q4",
+   "n_cases": 6,
+   "case_ids": [
+    "block08_tune_q4_01",
+    "block08_tune_q4_02",
+    "block08_tune_q4_03",
+    "block08_tune_q4_04",
+    "block08_tune_q4_05",
+    "block08_tune_q4_06"
+   ],
+   "scenarios": [
+    "boundary",
+    "dense",
+    "mixed",
+    "random",
+    "sparse"
+   ],
+   "error_field_types": [
+    "random_fixed"
+   ]
+  }
+ ]
+}

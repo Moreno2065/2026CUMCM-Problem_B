@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "gate": "F",
+  "purpose": "Deterministic non-certified outer-search fixtures and independent local verification.",
+  "source_snapshot": "q2_gate_e_pass_v1_20260911_042520",
+  "epsilon_deg": 1.0,
+  "cases": [
+    {
+      "id": "F-F1_default_representative",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "config": {"coarse_resolution": 5, "subdivision_depth": 1, "local_iterations": 5},
+      "required_seed_layouts": ["analytic_baseline", "symmetry_related", "boundary", "interior", "coarse_grid_best"],
+      "certificate": false
+    },
+    {
+      "id": "F-F2_multiresolution_stability",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "configs": [
+        {"coarse_resolution": 4, "subdivision_depth": 1, "local_iterations": 4},
+        {"coarse_resolution": 6, "subdivision_depth": 2, "local_iterations": 6}
+      ],
+      "required": "deterministic repeat, stable Q and location within prescribed tolerance"
+    },
+    {
+      "id": "F-F3_general_input_offset",
+      "station1": {"x": -400.0, "y": 300.0},
+      "theta1_deg": 123.0,
+      "config": {"coarse_resolution": 4, "subdivision_depth": 1, "local_iterations": 3},
+      "required": "geometry-relative bounds and valid admissible recommendation"
+    },
+    {
+      "id": "F-F4_general_input_wrap",
+      "station1": {"x": 900.0, "y": -500.0},
+      "theta1_deg": 548.0,
+      "config": {"coarse_resolution": 4, "subdivision_depth": 1, "local_iterations": 3},
+      "required": "geometry-relative bounds and valid admissible recommendation"
+    },
+    {
+      "id": "F-F5_coarse_grid_provenance",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "config": {"coarse_resolution": 3, "subdivision_depth": 0, "local_iterations": 1},
+      "required": "coarse_grid_best is omitted when no coarse point is valid, never borrowed from another seed"
+    },
+    {
+      "id": "F-F6_provenance_tamper_rejection",
+      "required": [
+        "S2",
+        "Crec margin and state",
+        "raw and expanded angular intervals",
+        "admissibility and Q",
+        "worst beta/type/status",
+        "Q1 polygon and diameter witness",
+        "active geometry labels",
+        "certified_global_optimum"
+      ],
+      "expected": "independent verifier rejects every forged field"
+    }
+  ],
+  "search_policy": {
+    "bounds": "intersection of compatible Crec witness-disk axis-aligned boxes",
+    "method": "deterministic coarse grid + top-cell subdivision + fixed-direction nonsmooth refinement",
+    "certificate": false,
+    "forbidden_optimizers": ["GA", "PSO", "RL", "neural optimizer"]
+  }
+}

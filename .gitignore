@@ -1,0 +1,35 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ===== 运行产物 / 中间结果（不入库）=====
+# Q3/Q4 主流程输出：results 572MB / output 72MB
+src/q3+4/code/results/
+src/q3+4/code/output/
+src/q3+4/code/.pytest_cache/
+
+# Q3+Q4 v2 论文证据流水线的逐次运行目录（含各案例下的 runs/）
+# （figures/ tables/ figure_data/ claims.* 保留入库）
+src/q3+q4_v2/paper_evidence/**/runs/
+src/q3+q4_v2/runs/
+
+# 多智能体协作工作区：全部为中间产物（压缩包、审查稿、临时脚本）
+agentworkspace/
+
+# 运行时快照与缓存
+snapshots/*.tmp
+
+# ===== 仿真器（体积大，公开仓库不含；本地复现请自行放置）=====
+simu/jammers-simulator.exe
+
+# ===== 系统 / 编辑器 =====
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

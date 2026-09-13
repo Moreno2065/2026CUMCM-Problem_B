@@ -1,0 +1,2414 @@
+{
+  "epsilon_deg": 1.0,
+  "threshold_rad": 1.7453292519943296e-05,
+  "threshold_fraction_of_epsilon": 0.001,
+  "threshold_formula": "max(PARALLEL_EVENT_FRACTION_OF_EPSILON * radians(epsilon), 1e-12)",
+  "rows": [
+    {
+      "name": "hero",
+      "S2": [
+        803.9993907806255,
+        -601.2267689264614
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.5926529198335371,
+      "nearest_event_deg": 178.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 143.0434889774332,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.6732321950881994,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.6383256100483132,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.5926529198335371,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.6275595048734237,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.6624660899133104,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.7081387801280847,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0434889774332,
+          "event_rad": 2.4965798561964263,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 39.57336341088191,
+          "event_rad": 0.690685487608143,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.03549838168908,
+          "event_rad": 2.496440393991495,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 42.04223562425052,
+          "event_rad": 0.7337754365424252,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0434889774332,
+          "event_rad": 2.4965798561964263,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.03549838168908,
+          "event_rad": 2.496440393991495,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 39.57336341088191,
+          "event_rad": 0.690685487608143,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 42.04223562425052,
+          "event_rad": 0.7337754365424252,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 134.06854899540483,
+      "q_verify_m": 134.06854899540483,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 134.06854899540483,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 1.3406854899540483e-06,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "hero_mirror",
+      "S2": [
+        803.9993907806255,
+        601.2267689264614
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.5926529198335371,
+      "nearest_event_deg": 182.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 216.96450161831092,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.6732321950881994,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.7081387801280856,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.6624660899133104,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.6275595048734237,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.5926529198335371,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.6383256100483132,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 216.96450161831092,
+          "event_rad": 3.786744913188091,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 317.9577643757495,
+          "event_rad": 5.549409870637161,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 216.9565110225668,
+          "event_rad": 3.78660545098316,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 320.4266365891181,
+          "event_rad": 5.592499819571444,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 216.96450161831092,
+          "event_rad": 3.786744913188091,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 216.9565110225668,
+          "event_rad": 3.78660545098316,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 317.9577643757495,
+          "event_rad": 5.549409870637161,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 320.4266365891181,
+          "event_rad": 5.592499819571444,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 134.06854899540545,
+      "q_verify_m": 134.06854899540545,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 134.06854899540545,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 1.3406854899540546e-06,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "baseline_B1_90deg_midpoint",
+      "S2": [
+        752.5,
+        752.5
+      ],
+      "in_crec": false,
+      "admissible": false,
+      "all_near": false,
+      "status": "OUTSIDE_CREC",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 0,
+      "nearest_event_distance_rad": null,
+      "nearest_event_deg": null,
+      "nearest_event_inside_allowed_interval": null,
+      "bands": 0,
+      "base_samples": 0,
+      "densification_samples": 0,
+      "bands_triggered": false,
+      "events": [],
+      "note": "empty expanded bearing set: no interval to densify",
+      "promoted": null
+    },
+    {
+      "name": "baseline_B2_max_min_angle",
+      "S2": [
+        673.8963210702341,
+        743.3557100464799
+      ],
+      "in_crec": false,
+      "admissible": false,
+      "all_near": false,
+      "status": "OUTSIDE_CREC",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 0,
+      "nearest_event_distance_rad": null,
+      "nearest_event_deg": null,
+      "nearest_event_inside_allowed_interval": null,
+      "bands": 0,
+      "base_samples": 0,
+      "densification_samples": 0,
+      "bands_triggered": false,
+      "events": [],
+      "note": "empty expanded bearing set: no interval to densify",
+      "promoted": null
+    },
+    {
+      "name": "S1_origin",
+      "S2": [
+        0.0,
+        0.0
+      ],
+      "in_crec": true,
+      "admissible": false,
+      "all_near": false,
+      "status": "INADMISSIBLE",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 2,
+      "nearest_event_distance_rad": 0.0,
+      "nearest_event_deg": 0.0,
+      "in_interval": true,
+      "nearest_event_inside_allowed_interval": true,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 0.0,
+      "nearest_any_event_family": "E3_parallel_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 4,
+      "base_samples": 130,
+      "densification_samples": 44,
+      "sample_count_total": 129,
+      "bands_triggered": true,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": true
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": true
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 3.071779483510019,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 3.106686068549906,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 3.0717794835100203,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": true
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 359.0,
+          "event_rad": 6.265732014659643,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 359.0,
+          "event_rad": 6.265732014659643,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 1.0,
+          "event_rad": 0.017453292519943295,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 0.9999999999999998,
+          "event_rad": 0.017453292519943292,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 359.0,
+          "event_rad": 6.265732014659643,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 1.0,
+          "event_rad": 0.017453292519943295,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 359.0,
+          "event_rad": 6.265732014659643,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 0.9999999999999998,
+          "event_rad": 0.017453292519943292,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "near_circle"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 1.0,
+          "event_rad": 0.017453292519943295,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "near_circle"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 359.0,
+          "event_rad": 6.265732014659643,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "near_circle"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "near_circle"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": null,
+      "q_verify_m": null,
+      "gap_before_promotion_m": null,
+      "q_returned_m": null,
+      "promoted": null,
+      "verifier_promoted": null,
+      "production_promoted": null,
+      "reason": "not admissible or all-near: the inner maximisation is not defined for this station, so no promotion vocabulary applies"
+    },
+    {
+      "name": "outside_crec_far",
+      "S2": [
+        0.0,
+        2600.0
+      ],
+      "in_crec": false,
+      "admissible": false,
+      "all_near": false,
+      "status": "OUTSIDE_CREC",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 0,
+      "nearest_event_distance_rad": null,
+      "nearest_event_deg": null,
+      "nearest_event_inside_allowed_interval": null,
+      "bands": 0,
+      "base_samples": 0,
+      "densification_samples": 0,
+      "bands_triggered": false,
+      "events": [],
+      "note": "empty expanded bearing set: no interval to densify",
+      "promoted": null
+    },
+    {
+      "name": "far_from_every_parallel_event",
+      "S2": [
+        750.0,
+        500.0
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.5112246978724881,
+      "nearest_event_deg": 358.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 213.87177870690203,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.5461312829123743,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.5810378679522605,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.6084658434810182,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.5735592584411315,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.5386526734012449,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.5112246978724881,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 213.87177870690203,
+          "event_rad": 3.732766715532141,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 324.93938816954847,
+          "event_rad": 5.671262192974531,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 213.86252480933007,
+          "event_rad": 3.7326052045508678,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 327.7089824290558,
+          "event_rad": 5.719600731747269,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 213.87177870690203,
+          "event_rad": 3.732766715532141,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 213.86252480933007,
+          "event_rad": 3.7326052045508678,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 324.93938816954847,
+          "event_rad": 5.671262192974531,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 327.7089824290558,
+          "event_rad": 5.719600731747269,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 165.10669736557148,
+      "q_verify_m": 165.10669736557148,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 165.10669736557148,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 1.6510669736557148e-06,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "converged: golden-section refinement of the strongest sample peaks stalled within 1e-9 relative; a finite scan remains a lower estimate, not a global-optimality certificate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.112e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "near_parallel_gate_y120",
+      "S2": [
+        600.0,
+        120.0
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.05153711744092515,
+      "nearest_event_deg": 358.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 191.41055428741464,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.08644370248081135,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.12135028752069754,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.21632318130295447,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.18141659626306783,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.1465100112231812,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.05153711744092515,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 191.41055428741464,
+          "event_rad": 3.340744395382734,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 350.77223963069656,
+          "event_rad": 6.122130506150193,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 191.3944052995026,
+          "event_rad": 3.340462542372804,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 354.04714068236495,
+          "event_rad": 6.179288312178832,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 191.41055428741464,
+          "event_rad": 3.340744395382734,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 191.3944052995026,
+          "event_rad": 3.340462542372804,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 350.77223963069656,
+          "event_rad": 6.122130506150193,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 354.04714068236495,
+          "event_rad": 6.179288312178832,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 1628.5750819330765,
+      "q_verify_m": 1628.5750819330765,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 1628.5750819330765,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 1.6285750819330764e-05,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.154e-02 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "near_parallel_gate_y90",
+      "S2": [
+        600.0,
+        90.0
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.018452186848238128,
+      "nearest_event_deg": 358.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 188.60958880460032,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.05335877188812432,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.08826535692801052,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.16743220792206603,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.1325256228821794,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.09761903784229276,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.018452186848238128,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 188.60958880460032,
+          "event_rad": 3.2918583254729112,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 352.64266901395877,
+          "event_rad": 6.154775657314166,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 188.59315886849123,
+          "event_rad": 3.2915715689919156,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 355.94276757080917,
+          "event_rad": 6.212373242771519,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 188.60958880460032,
+          "event_rad": 3.2918583254729112,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 188.59315886849123,
+          "event_rad": 3.2915715689919156,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 352.64266901395877,
+          "event_rad": 6.154775657314166,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 355.94276757080917,
+          "event_rad": 6.212373242771519,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 4543.153837767255,
+      "q_verify_m": 4543.153837767255,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 4543.153837767255,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 4.5431538377672554e-05,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 1.845e-02 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "near_parallel_gate_y78",
+      "S2": [
+        600.0,
+        78.0
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.005170510316352406,
+      "nearest_event_deg": 358.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 187.47670666342657,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.0400770953562386,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.0749836803961248,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.14765807917540696,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.11275149413552032,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.07784490909563369,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.005170510316352406,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.47670666342657,
+          "event_rad": 3.2720858020723864,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 353.3955078196852,
+          "event_rad": 6.167915173210874,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.46018474775934,
+          "event_rad": 3.2717974402452565,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 356.7037515809442,
+          "event_rad": 6.2256549193034045,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.47670666342657,
+          "event_rad": 3.2720858020723864,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.46018474775934,
+          "event_rad": 3.2717974402452565,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 353.3955078196852,
+          "event_rad": 6.167915173210874,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 356.7037515809442,
+          "event_rad": 6.2256549193034045,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 16207.87157288343,
+      "q_verify_m": 16207.87157288343,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 16207.87157288343,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 0.00016207871572883432,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "converged: golden-section refinement of the strongest sample peaks stalled within 1e-9 relative; a finite scan remains a lower estimate, not a global-optimality certificate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.171e-03 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "near_parallel_gate_y76",
+      "S2": [
+        600.0,
+        76.0
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.00295479351292105,
+      "nearest_event_deg": 358.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 187.28729555130064,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.037861378552807246,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.07276796359269344,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.14435198478356082,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.10944539974367418,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.07453881470378754,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.00295479351292105,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.28729555130064,
+          "event_rad": 3.268779954525925,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 353.5212110968446,
+          "event_rad": 6.170109109277852,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.2707594924347,
+          "event_rad": 3.2684913458534104,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 356.830702802377,
+          "event_rad": 6.227870636106836,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.28729555130064,
+          "event_rad": 3.268779954525925,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.2707594924347,
+          "event_rad": 3.2684913458534104,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 353.5212110968446,
+          "event_rad": 6.170109109277852,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 356.830702802377,
+          "event_rad": 6.227870636106836,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 28360.3426331221,
+      "q_verify_m": 28360.3426331221,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 28360.3426331221,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 0.00028360342633122103,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 2.955e-03 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "near_parallel_gate_y73_334",
+      "S2": [
+        600.0,
+        73.334
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 4.011417535920714e-07,
+      "nearest_event_deg": 358.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 187.03456199438423,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 1,
+      "base_samples": 65,
+      "densification_samples": 6,
+      "sample_count_total": 70,
+      "bands_triggered": true,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.03490698618163979,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.06981357122152598,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.13994063238293863,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.105034047343052,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.07012746230316536,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 4.011417535920714e-07,
+          "inside_allowed_interval": false,
+          "densified": true
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.03456199438423,
+          "event_rad": 3.2643689218274567,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 353.6888708090235,
+          "event_rad": 6.17303532327832,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.01800761793413,
+          "event_rad": 3.264079993452788,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 356.9999770162706,
+          "event_rad": 6.230825028478003,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.03456199438423,
+          "event_rad": 3.2643689218274567,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 187.01800761793413,
+          "event_rad": 3.264079993452788,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 353.6888708090235,
+          "event_rad": 6.17303532327832,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 356.9999770162706,
+          "event_rad": 6.230825028478003,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 208888536.1903537,
+      "q_verify_m": 208888536.1903537,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 208888536.1903537,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 2.088885361903537,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 6,
+        "golden_refinement": 112
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 70 sampled bearings (182 Q1 evaluations), nearest parallel-event distance 4.011e-07 rad vs gate 1.745e-05 rad, 1 densified event/interval pairs"
+    },
+    {
+      "name": "surface_min_Q",
+      "S2": [
+        803.9993907806255,
+        -601.2346895765609
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.592659249860255,
+      "nearest_event_deg": 178.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 143.0431262936181,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.67323895880586,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.638332373765973,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.592659249860255,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.6275658349001416,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.6624724199400283,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.7081455438457454,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0431262936181,
+          "event_rad": 2.4965735261697084,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 39.57375094335766,
+          "event_rad": 0.6906922513258031,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.03513577398738,
+          "event_rad": 2.4964340652932075,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 42.04259536028003,
+          "event_rad": 0.7337817151205782,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0431262936181,
+          "event_rad": 2.4965735261697084,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.03513577398738,
+          "event_rad": 2.4964340652932075,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 39.57375094335766,
+          "event_rad": 0.6906922513258031,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 42.04259536028003,
+          "event_rad": 0.7337817151205782,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 134.06745927023417,
+      "q_verify_m": 134.06745927023417,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 134.06745927023417,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 1.3406745927023416e-06,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "surface_max_Q",
+      "S2": [
+        150.74988577136727,
+        -98.25475935627162
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.0010178304172603347,
+      "nearest_event_deg": 2.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 146.03853379543338,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.035924415457146974,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.0010178304172603347,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.5403795265146396,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.5752861115545262,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.6101926965944129,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.07083100049703361,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 146.03853379543338,
+          "event_rad": 2.5488532495153238,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 3.058317387169054,
+          "event_rad": 0.05337770797709017,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 145.9913634952349,
+          "event_rad": 2.548029972467706,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 5.270033851703437,
+          "event_rad": 0.09197944240378356,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 146.03853379543338,
+          "event_rad": 2.5488532495153238,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 145.9913634952349,
+          "event_rad": 2.548029972467706,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 3.058317387169054,
+          "event_rad": 0.05337770797709017,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 5.270033851703437,
+          "event_rad": 0.09197944240378356,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 97753.588635849,
+      "q_verify_m": 97753.588635849,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 97753.588635849,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 0.00097753588635849,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 1.018e-03 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "surface_low_Q_0",
+      "S2": [
+        803.9993907806255,
+        -601.2346895765609
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.592659249860255,
+      "nearest_event_deg": 178.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 143.0431262936181,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.67323895880586,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.638332373765973,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.592659249860255,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.6275658349001416,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.6624724199400283,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.7081455438457454,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0431262936181,
+          "event_rad": 2.4965735261697084,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 39.57375094335766,
+          "event_rad": 0.6906922513258031,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.03513577398738,
+          "event_rad": 2.4964340652932075,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 42.04259536028003,
+          "event_rad": 0.7337817151205782,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0431262936181,
+          "event_rad": 2.4965735261697084,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.03513577398738,
+          "event_rad": 2.4964340652932075,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 39.57375094335766,
+          "event_rad": 0.6906922513258031,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 42.04259536028003,
+          "event_rad": 0.7337817151205782,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 134.06745927023417,
+      "q_verify_m": 134.06745927023417,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 134.06745927023417,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 1.3406745927023416e-06,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "surface_low_Q_1",
+      "S2": [
+        803.9993907806255,
+        -601.2346895765606
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.5926592498602545,
+      "nearest_event_deg": 178.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 143.0431262936181,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.6732389588058596,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.638332373765973,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.5926592498602545,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.6275658349001412,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.6624724199400278,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.7081455438457454,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0431262936181,
+          "event_rad": 2.496573526169709,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 39.573750943357645,
+          "event_rad": 0.6906922513258029,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0351357739874,
+          "event_rad": 2.496434065293208,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 42.042595360280025,
+          "event_rad": 0.7337817151205781,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0431262936181,
+          "event_rad": 2.496573526169709,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 143.0351357739874,
+          "event_rad": 2.496434065293208,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 39.573750943357645,
+          "event_rad": 0.6906922513258029,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 42.042595360280025,
+          "event_rad": 0.7337817151205781,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 134.06745927023437,
+      "q_verify_m": 134.06745927023437,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 134.06745927023437,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 1.3406745927023437e-06,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    },
+    {
+      "name": "surface_low_Q_2",
+      "S2": [
+        803.9993907806255,
+        601.2346895765606
+      ],
+      "in_crec": true,
+      "admissible": true,
+      "all_near": false,
+      "status": "E1",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "allowed_interval_count": 1,
+      "nearest_event_distance_rad": 0.5926592498602545,
+      "nearest_event_deg": 182.0,
+      "in_interval": false,
+      "nearest_event_inside_allowed_interval": false,
+      "nearest_any_event_distance_rad": 0.0,
+      "nearest_any_event_deg": 216.9648642260126,
+      "nearest_any_event_family": "A1_angular_image_boundary",
+      "nearest_any_event_in_interval": true,
+      "bands": 0,
+      "base_samples": 65,
+      "densification_samples": 0,
+      "sample_count_total": 65,
+      "bands_triggered": false,
+      "events": [
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 0.0,
+          "event_rad": 0.0,
+          "circular_distance_to_allowed_set_rad": 0.67323895880586,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 2.0,
+          "event_rad": 0.03490658503988659,
+          "circular_distance_to_allowed_set_rad": 0.7081455438457462,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 178.0,
+          "event_rad": 3.1066860685499065,
+          "circular_distance_to_allowed_set_rad": 0.6624724199400278,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 180.0,
+          "event_rad": 3.141592653589793,
+          "circular_distance_to_allowed_set_rad": 0.6275658349001412,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 182.0,
+          "event_rad": 3.1764992386296798,
+          "circular_distance_to_allowed_set_rad": 0.5926592498602545,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "E3_parallel_boundary",
+          "event_deg": 358.0,
+          "event_rad": 6.2482787221397,
+          "circular_distance_to_allowed_set_rad": 0.6383323737659738,
+          "inside_allowed_interval": false,
+          "densified": false
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 216.9648642260126,
+          "event_rad": 3.7867512418863782,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 317.95740463972,
+          "event_rad": 5.549403592059008,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_lower"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 216.9568737063819,
+          "event_rad": 3.7866117810098774,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 320.42624905664235,
+          "event_rad": 5.592493055853783,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_wedge_upper"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 216.9648642260126,
+          "event_rad": 3.7867512418863782,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 216.9568737063819,
+          "event_rad": 3.7866117810098774,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_5"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 317.95740463972,
+          "event_rad": 5.549403592059008,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        },
+        {
+          "family": "A1_angular_image_boundary",
+          "event_deg": 320.42624905664235,
+          "event_rad": 5.592493055853783,
+          "circular_distance_to_allowed_set_rad": 0.0,
+          "inside_allowed_interval": true,
+          "densified": false,
+          "source_label": "a1_rho_1500"
+        }
+      ],
+      "note": "the gate is the circular distance between an event and the closed allowed interval, not exact event membership: an endpoint can sit arbitrarily close to an event that lies outside the interval",
+      "q_main_raw_m": 134.067459270235,
+      "q_verify_m": 134.067459270235,
+      "gap_before_promotion_m": 0.0,
+      "q_returned_m": 134.067459270235,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_promotion_tolerance_m": 0.0001,
+      "verifier_promotion_tolerance_m": 1.3406745927023499e-06,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs"
+    }
+  ],
+  "summary": {
+    "row_count": 17,
+    "admissible_row_count": 13,
+    "densified_row_count": 2,
+    "exact_same_side_parallel_events_excluded_from_every_admissible_row": true,
+    "non_admissible_rows_where_an_e3_event_is_inside": [
+      "S1_origin"
+    ],
+    "endpoint_proximity_to_outside_event_triggers_densification": true
+  },
+  "promotion_tolerance_note": "two promotion tolerances coexist and are reported side by side instead of being unified in this round: the independent verifier promotes when abs_gap > max(1e-6, 1e-8 * max(1, |q_main|)) inside verify_inner_max_independent, while the production facade maximize_inner_verified promotes when the scan exceeds the raw candidate maximum by more than InnerVerificationConfig.promotion_tolerance_m. Changing either threshold would change Q and every downstream artifact, so the difference is registered as an open calibration item.",
+  "interpretation_note": "Two distinct statements must not be conflated. (1) The 3*epsilon admissibility gate excludes the exact same-side parallel events beta = theta1 +- 2*epsilon from the expanded bearing set: those events are never inside an allowed interval. (2) That gate gives no uniform positive numerical margin: an allowed interval endpoint can still sit arbitrarily close to an event that is strictly outside the interval, so the densification condition is the event-to-interval circular distance and not exact event membership. The reverse-parallel events theta1 + pi and theta1 + pi +- 2*epsilon are also listed; no 180-degree hard exclusion is assumed."
+}

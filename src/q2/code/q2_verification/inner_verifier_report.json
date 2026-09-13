@@ -1,0 +1,588 @@
+{
+  "case": {
+    "S1": [
+      0.0,
+      0.0
+    ],
+    "theta1_deg": 0.0,
+    "epsilon_deg": 1.0
+  },
+  "hero_Q_m": 134.06854899540483,
+  "promotion_tolerance_note": "two promotion tolerances coexist and are reported side by side instead of being unified in this round: the independent verifier promotes when abs_gap > max(1e-6, 1e-8 * max(1, |q_main|)) inside verify_inner_max_independent, while the production facade maximize_inner_verified promotes when the scan exceeds the raw candidate maximum by more than InnerVerificationConfig.promotion_tolerance_m. Changing either threshold would change Q and every downstream artifact, so the difference is registered as an open calibration item.",
+  "interpretation_note": "a finite scan over beta, even with a zero or negative gap, is a sampling lower bound for the inner supremum. It is not a certified upper bound and not a global-optimality proof; the independent ingredient is the search path over beta, not the shared Q1 polygon algorithm.",
+  "rows": [
+    {
+      "name": "hero",
+      "status": "checked",
+      "S2": [
+        803.9993907806255,
+        -601.2267689264614
+      ],
+      "q_candidate_raw_m": 134.06854899540483,
+      "beta_main_deg": 38.57336341088191,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1e-09,
+      "q_production_returned_m": 134.06854899540483,
+      "q_main_raw_m": 134.06854899540483,
+      "q_verify_m": 134.06854899540483,
+      "beta_verify_deg": 38.57336341088191,
+      "q_returned_m": 134.06854899540483,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 1.3406854899540483e-06,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.5926529198335371,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "hero_mirror",
+      "status": "checked",
+      "S2": [
+        803.9993907806255,
+        601.2267689264614
+      ],
+      "q_candidate_raw_m": 134.06854899540545,
+      "beta_main_deg": 321.4266365891181,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1e-09,
+      "q_production_returned_m": 134.06854899540545,
+      "q_main_raw_m": 134.06854899540545,
+      "q_verify_m": 134.06854899540545,
+      "beta_verify_deg": 321.4266365891181,
+      "q_returned_m": 134.06854899540545,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 1.3406854899540546e-06,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.5926529198335371,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "baseline_B1_90deg_midpoint",
+      "status": "skipped",
+      "reason": "OUTSIDE_CREC"
+    },
+    {
+      "name": "baseline_B2_max_min_angle",
+      "status": "skipped",
+      "reason": "OUTSIDE_CREC"
+    },
+    {
+      "name": "S1_origin",
+      "status": "skipped",
+      "reason": "INADMISSIBLE"
+    },
+    {
+      "name": "outside_crec_far",
+      "status": "skipped",
+      "reason": "OUTSIDE_CREC"
+    },
+    {
+      "name": "far_from_every_parallel_event",
+      "status": "checked",
+      "S2": [
+        750.0,
+        500.0
+      ],
+      "q_candidate_raw_m": 165.10669736557148,
+      "beta_main_deg": 328.7089824290558,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1e-09,
+      "q_production_returned_m": 165.10669736557148,
+      "q_main_raw_m": 165.10669736557148,
+      "q_verify_m": 165.10669736557148,
+      "beta_verify_deg": 328.7089824290558,
+      "q_returned_m": 165.10669736557148,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 1.6510669736557148e-06,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "converged: golden-section refinement of the strongest sample peaks stalled within 1e-9 relative; a finite scan remains a lower estimate, not a global-optimality certificate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.112e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.5112246978724881,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": true,
+      "failures": []
+    },
+    {
+      "name": "near_parallel_gate_y120",
+      "status": "checked",
+      "S2": [
+        600.0,
+        120.0
+      ],
+      "q_candidate_raw_m": 1628.5750819330765,
+      "beta_main_deg": 355.04714068236495,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1.6285750819330764e-09,
+      "q_production_returned_m": 1628.5750819330765,
+      "q_main_raw_m": 1628.5750819330765,
+      "q_verify_m": 1628.5750819330765,
+      "beta_verify_deg": 355.04714068236495,
+      "q_returned_m": 1628.5750819330765,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 1.6285750819330764e-05,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.154e-02 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.05153711744092515,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "near_parallel_gate_y90",
+      "status": "checked",
+      "S2": [
+        600.0,
+        90.0
+      ],
+      "q_candidate_raw_m": 4543.153837767255,
+      "beta_main_deg": 356.94276757080917,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 4.543153837767255e-09,
+      "q_production_returned_m": 4543.153837767255,
+      "q_main_raw_m": 4543.153837767255,
+      "q_verify_m": 4543.153837767255,
+      "beta_verify_deg": 356.94276757080917,
+      "q_returned_m": 4543.153837767255,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 4.5431538377672554e-05,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 1.845e-02 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.018452186848238128,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "near_parallel_gate_y78",
+      "status": "checked",
+      "S2": [
+        600.0,
+        78.0
+      ],
+      "q_candidate_raw_m": 16207.87157288343,
+      "beta_main_deg": 357.7037515809442,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1.620787157288343e-08,
+      "q_production_returned_m": 16207.87157288343,
+      "q_main_raw_m": 16207.87157288343,
+      "q_verify_m": 16207.87157288343,
+      "beta_verify_deg": 357.7037515809442,
+      "q_returned_m": 16207.87157288343,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 0.00016207871572883432,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "converged: golden-section refinement of the strongest sample peaks stalled within 1e-9 relative; a finite scan remains a lower estimate, not a global-optimality certificate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.171e-03 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.005170510316352406,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": true,
+      "failures": []
+    },
+    {
+      "name": "near_parallel_gate_y76",
+      "status": "checked",
+      "S2": [
+        600.0,
+        76.0
+      ],
+      "q_candidate_raw_m": 28360.3426331221,
+      "beta_main_deg": 357.830702802377,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 2.8360342633122102e-08,
+      "q_production_returned_m": 28360.3426331221,
+      "q_main_raw_m": 28360.3426331221,
+      "q_verify_m": 28360.3426331221,
+      "beta_verify_deg": 357.830702802377,
+      "q_returned_m": 28360.3426331221,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 0.00028360342633122103,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 2.955e-03 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.00295479351292105,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "near_parallel_gate_y73_334",
+      "status": "checked",
+      "S2": [
+        600.0,
+        73.334
+      ],
+      "q_candidate_raw_m": 208888536.1903537,
+      "beta_main_deg": 357.9999770162706,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 0.00020888853619035368,
+      "q_production_returned_m": 208888536.1903537,
+      "q_main_raw_m": 208888536.1903537,
+      "q_verify_m": 208888536.1903537,
+      "beta_verify_deg": 357.9999770162706,
+      "q_returned_m": 208888536.1903537,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 2.088885361903537,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 6,
+        "golden_refinement": 112
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 70 sampled bearings (182 Q1 evaluations), nearest parallel-event distance 4.011e-07 rad vs gate 1.745e-05 rad, 1 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 4.011417535920714e-07,
+      "sample_count": 182,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 1,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "surface_min_Q",
+      "status": "checked",
+      "S2": [
+        803.9993907806255,
+        -601.2346895765609
+      ],
+      "q_candidate_raw_m": 134.06745927023417,
+      "beta_main_deg": 38.57375094335766,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1e-09,
+      "q_production_returned_m": 134.06745927023417,
+      "q_main_raw_m": 134.06745927023417,
+      "q_verify_m": 134.06745927023417,
+      "beta_verify_deg": 38.57375094335766,
+      "q_returned_m": 134.06745927023417,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 1.3406745927023416e-06,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.592659249860255,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "surface_max_Q",
+      "status": "checked",
+      "S2": [
+        150.74988577136727,
+        -98.25475935627162
+      ],
+      "q_candidate_raw_m": 97753.588635849,
+      "beta_main_deg": 2.058317387169054,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 9.775358863584899e-08,
+      "q_production_returned_m": 97753.588635849,
+      "q_main_raw_m": 97753.588635849,
+      "q_verify_m": 97753.588635849,
+      "beta_verify_deg": 2.058317387169054,
+      "q_returned_m": 97753.588635849,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 0.00097753588635849,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 1.018e-03 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.0010178304172603347,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "surface_low_Q_0",
+      "status": "checked",
+      "S2": [
+        803.9993907806255,
+        -601.2346895765609
+      ],
+      "q_candidate_raw_m": 134.06745927023417,
+      "beta_main_deg": 38.57375094335766,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1e-09,
+      "q_production_returned_m": 134.06745927023417,
+      "q_main_raw_m": 134.06745927023417,
+      "q_verify_m": 134.06745927023417,
+      "beta_verify_deg": 38.57375094335766,
+      "q_returned_m": 134.06745927023417,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 1.3406745927023416e-06,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.592659249860255,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "surface_low_Q_1",
+      "status": "checked",
+      "S2": [
+        803.9993907806255,
+        -601.2346895765606
+      ],
+      "q_candidate_raw_m": 134.06745927023437,
+      "beta_main_deg": 38.573750943357645,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1e-09,
+      "q_production_returned_m": 134.06745927023437,
+      "q_main_raw_m": 134.06745927023437,
+      "q_verify_m": 134.06745927023437,
+      "beta_verify_deg": 38.573750943357645,
+      "q_returned_m": 134.06745927023437,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 1.3406745927023437e-06,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.5926592498602545,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    },
+    {
+      "name": "surface_low_Q_2",
+      "status": "checked",
+      "S2": [
+        803.9993907806255,
+        601.2346895765606
+      ],
+      "q_candidate_raw_m": 134.067459270235,
+      "beta_main_deg": 321.42624905664235,
+      "candidate_type": "E1",
+      "all_matching_event_types": [
+        "E1"
+      ],
+      "matching_tolerance_m": 1e-09,
+      "q_production_returned_m": 134.067459270235,
+      "q_main_raw_m": 134.067459270235,
+      "q_verify_m": 134.067459270235,
+      "beta_verify_deg": 321.42624905664235,
+      "q_returned_m": 134.067459270235,
+      "gap_before_promotion_m": 0.0,
+      "abs_gap_m": 0.0,
+      "relative_gap": 0.0,
+      "promoted": false,
+      "verifier_promoted": false,
+      "production_promoted": false,
+      "production_gap_before_promotion_m": 0.0,
+      "verifier_promotion_tolerance_m": 1.3406745927023499e-06,
+      "production_promotion_tolerance_m": 0.0001,
+      "sampling_levels": {
+        "base_uniform": 65,
+        "event_densification": 0,
+        "golden_refinement": 107
+      },
+      "convergence_diagnostic": "not converged: no interior sample peak was bracketed for golden-section refinement, so the reported value is a finite-sample lower estimate; 65 sampled bearings (172 Q1 evaluations), nearest parallel-event distance 5.927e-01 rad vs gate 1.745e-05 rad, 0 densified event/interval pairs",
+      "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+      "nearest_event_distance_rad": 0.5926592498602545,
+      "sample_count": 172,
+      "refinement_rounds": 20,
+      "near_parallel_bands": 0,
+      "converged": false,
+      "failures": []
+    }
+  ],
+  "summary": {
+    "probe_count": 17,
+    "checked_count": 13,
+    "max_abs_gap_m": 0.0,
+    "failures": [],
+    "passed": true
+  }
+}

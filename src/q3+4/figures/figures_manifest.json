@@ -1,0 +1,125 @@
+{
+ "experiment_dir": "D:\\CUMCM2026\\src\\q3+4\\code\\results",
+ "out_dir": "D:\\CUMCM2026\\src\\q3+4\\code\\figures",
+ "stage": "rendered — Addendum F figures F.1-F.8",
+ "expected_figures": {
+  "fig1_method_loop": "方法闭环图（F.1）",
+  "fig2_bounded_bearing_geometry": "bounded-bearing geometry（F.2）",
+  "fig3_q3_certificate": "Q3 certificate accumulation（F.3）",
+  "fig4_q4_robust_certificate": "Q4 robust convex certificate（F.4）",
+  "fig5_localization_convergence": "localization convergence（F.5）",
+  "fig6_ablation_paired": "ablation paired comparison（F.6）",
+  "fig7_time_decomposition": "time decomposition（F.7）",
+  "fig8_certificate_progress": "certificate progress（F.8）"
+ },
+ "plot_scripts": [
+  {
+   "script": "plot_fig1.py",
+   "ok": true,
+   "returncode": 0,
+   "stdout_tail": "fig1 -> D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig1_method_loop.pdf D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig1_method_loop.png\n",
+   "stderr_tail": "CM2026\\src\\q3+4\\code\\figures\\scripts\\_common.py:58: UserWarning: Glyph 8838 (\\N{SUBSET OF OR EQUAL TO}) missing from font(s) Arial.\n  fig.savefig(str(png), dpi=dpi, bbox_inches=\"tight\", facecolor=\"white\")\nD:\\CUMCM2026\\src\\q3+4\\code\\figures\\scripts\\_common.py:58: UserWarning: Glyph 8746 (\\N{UNION}) missing from font(s) Arial.\n  fig.savefig(str(png), dpi=dpi, bbox_inches=\"tight\", facecolor=\"white\")\n"
+  },
+  {
+   "script": "plot_fig2.py",
+   "ok": true,
+   "returncode": 0,
+   "stdout_tail": "fig2 -> D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig2_bounded_bearing_geometry.pdf D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig2_bounded_bearing_geometry.png\n",
+   "stderr_tail": ""
+  },
+  {
+   "script": "plot_fig3.py",
+   "ok": true,
+   "returncode": 0,
+   "stdout_tail": "fig3 -> D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig3_q3_certificate.pdf D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig3_q3_certificate.png\n",
+   "stderr_tail": "CM2026\\src\\q3+4\\code\\figures\\scripts\\_common.py:58: UserWarning: Glyph 8838 (\\N{SUBSET OF OR EQUAL TO}) missing from font(s) Arial.\n  fig.savefig(str(png), dpi=dpi, bbox_inches=\"tight\", facecolor=\"white\")\nD:\\CUMCM2026\\src\\q3+4\\code\\figures\\scripts\\_common.py:58: UserWarning: Glyph 8746 (\\N{UNION}) missing from font(s) Arial.\n  fig.savefig(str(png), dpi=dpi, bbox_inches=\"tight\", facecolor=\"white\")\n"
+  },
+  {
+   "script": "plot_fig4.py",
+   "ok": true,
+   "returncode": 0,
+   "stdout_tail": "wrote D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig4_q4_robust_certificate.pdf D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig4_q4_robust_certificate.png\n",
+   "stderr_tail": ""
+  },
+  {
+   "script": "plot_fig5.py",
+   "ok": true,
+   "returncode": 0,
+   "stdout_tail": "wrote D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig5_localization_convergence.pdf D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig5_localization_convergence.png D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig5_data.csv\n",
+   "stderr_tail": ""
+  },
+  {
+   "script": "plot_fig6.py",
+   "ok": true,
+   "returncode": 0,
+   "stdout_tail": "wrote D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig6_ablation_paired.pdf D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig6_ablation_paired.png D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig6_data.csv\n",
+   "stderr_tail": "D:\\CUMCM2026\\src\\q3+4\\code\\figures\\scripts\\plot_fig6.py:105: SyntaxWarning: invalid escape sequence '\\D'\n  label=\"case (paired $\\Delta$T)\"),\n"
+  },
+  {
+   "script": "plot_fig7.py",
+   "ok": true,
+   "returncode": 0,
+   "stdout_tail": "wrote D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig7_time_decomposition.pdf D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig7_time_decomposition.png D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig7_data.csv\n",
+   "stderr_tail": ""
+  },
+  {
+   "script": "plot_fig8.py",
+   "ok": true,
+   "returncode": 0,
+   "stdout_tail": "wrote D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig8_certificate_progress.pdf D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig8_certificate_progress.png D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig8_data.csv\n",
+   "stderr_tail": ""
+  }
+ ],
+ "all_scripts_ok": true,
+ "produced": {
+  "fig1_method_loop": {
+   "pdf": true,
+   "png": true
+  },
+  "fig2_bounded_bearing_geometry": {
+   "pdf": true,
+   "png": true
+  },
+  "fig3_q3_certificate": {
+   "pdf": true,
+   "png": true
+  },
+  "fig4_q4_robust_certificate": {
+   "pdf": true,
+   "png": true
+  },
+  "fig5_localization_convergence": {
+   "pdf": true,
+   "png": true
+  },
+  "fig6_ablation_paired": {
+   "pdf": true,
+   "png": true
+  },
+  "fig7_time_decomposition": {
+   "pdf": true,
+   "png": true
+  },
+  "fig8_certificate_progress": {
+   "pdf": true,
+   "png": true
+  }
+ },
+ "all_figures_present": true,
+ "n_runs": 1,
+ "runs": [
+  {
+   "run_dir": "D:\\CUMCM2026\\src\\q3+4\\code\\results\\official_q4_202612004018",
+   "has_figure_data": true,
+   "figure_data_files": [
+    "certificate_growth.csv",
+    "mec_radius.csv",
+    "trajectory.csv"
+   ],
+   "has_decision_trace": true,
+   "has_localization_history": true,
+   "has_certificate_history": true
+  }
+ ],
+ "evidence_complete": true
+}

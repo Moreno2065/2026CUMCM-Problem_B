@@ -1,0 +1,55 @@
+{
+ "set": "holdout",
+ "purpose": "FROZEN_CONFIG 冻结后的最终验证；调参与消融禁止触碰",
+ "generated_at": "2026-09-11T16:18:06+08:00",
+ "seed_block": 400000,
+ "isolation": "seed blocks tune=1e5 ablation=2e5 stress=3e5 holdout=4e5; case_id 全局唯一；四集无交集",
+ "case_files": [
+  {
+   "file": "holdout_q3.json",
+   "question": "q3",
+   "n_cases": 6,
+   "case_ids": [
+    "holdout_q3_01",
+    "holdout_q3_02",
+    "holdout_q3_03",
+    "holdout_q3_04",
+    "holdout_q3_05",
+    "holdout_q3_06"
+   ],
+   "scenarios": [
+    "boundary",
+    "dense",
+    "random",
+    "sparse"
+   ],
+   "error_field_types": [
+    "random_fixed"
+   ]
+  },
+  {
+   "file": "holdout_q4.json",
+   "question": "q4",
+   "n_cases": 7,
+   "case_ids": [
+    "holdout_q4_01",
+    "holdout_q4_02",
+    "holdout_q4_03",
+    "holdout_q4_04",
+    "holdout_q4_05",
+    "holdout_q4_06",
+    "holdout_q4_07"
+   ],
+   "scenarios": [
+    "boundary",
+    "dense",
+    "edge_facing",
+    "random",
+    "sparse"
+   ],
+   "error_field_types": [
+    "random_fixed"
+   ]
+  }
+ ]
+}

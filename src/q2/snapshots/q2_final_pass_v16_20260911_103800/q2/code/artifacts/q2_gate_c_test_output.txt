@@ -1,0 +1,26 @@
+Q2 Gate C final verification evidence
+
+Focused Gate C:
+python -B -m pytest -q -p no:cacheprovider .\src\q2\code\tests\test_gate_c.py
+29 passed
+
+Full preserved regression:
+python -B -m pytest -q -p no:cacheprovider .\src\q2\code\tests\test_gate_a.py .\src\q2\code\tests\test_gate_b.py .\src\q2\code\tests\test_gate_c.py .\src\q1\code\tests
+64 passed
+
+In-memory Python AST compilation:
+13 files parsed successfully
+
+Independent fixed-seed angular cross-check:
+500 cases, seed 20260911, PASS
+max_missing_angle_rad = 0.0
+max_endpoint_disagreement_rad = 0.0
+spatial_component_counts = {1: 483, 2: 17}
+angular_interval_counts = {1: 483, 2: 17}
+full_circle_cases = 128
+all_near_cases = 0 (covered by deterministic fixture C-F6)
+
+Independent reviewer:
+PASS after repair and retest of FULL/EMPTY overclaim, narrow filled gap,
+tiny artificial hole, strict POINT threshold, exact double-wedge tangency,
+positive 5e-14 and 8e-14 metre wedge clearances, and component provenance.

@@ -1,0 +1,644 @@
+{
+  "name": "cumcm-support-package",
+  "id": "cumcm-support-package",
+  "description": "Build a curated CUMCM2026 B-problem support-materials ZIP for D:\\CUMCM2026 that is strictly under 20 MB, contains the Q1-Q4 source code, documentation, paper figures/tables and sampled raw run evidence, and has the team number anonymised (TEAM001 -> TEAMXXX) per competition rules. The current staging attempt is 473.89 MB and must be rebuilt with correct directory pruning.",
+  "captainSessionId": "session-7a65c0c6-2ed1-4828-b8dd-92fc31e9e076",
+  "createdAt": 1789287800865,
+  "members": [
+    {
+      "id": "b4038131-7baa-410a-ad9b-4902eda05943",
+      "name": "packager",
+      "role": "build-engineer",
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "reasoningEffort": "max",
+      "executionPrompt": "You build file archives on Windows with PowerShell 7. You are rigorous about verifying your own output with measured numbers (file counts, byte sizes) before reporting success. You never claim a size or count you have not measured.",
+      "joinedAt": 1789287806441,
+      "status": "idle"
+    },
+    {
+      "id": "c7f3394d-dba1-43dc-a18d-43b3e5f01116",
+      "name": "verifier",
+      "role": "verification-engineer",
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "reasoningEffort": "max",
+      "executionPrompt": "You are an adversarial verifier. You independently re-derive every claimed number from the artifact on disk rather than trusting a report. You extract archives to a scratch directory and inspect real contents. You report specific findings with file paths and measured evidence.",
+      "joinedAt": 1789287806447,
+      "status": "idle"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "subject": "Build the curated support-materials ZIP under the 20 MB budget",
+      "description": "GOAL: produce a curated CUMCM2026 B-problem support-materials ZIP at\n`D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip`\n\nHARD BUDGET: the final .zip file size MUST be <= 20,000,000 bytes. Target 10-18 MB. A previous attempt produced 473.89 MB staged / 65.67 MB zip and was REJECTED. You must measure the real byte size with `(Get-Item $zip).Length` and report it.\n\nWHY THE PREVIOUS ATTEMPT FAILED (root cause - do not repeat it):\nThe exclusion filter was applied as a regex `-match '\\\\results\\\\|\\\\output\\\\'` over full paths. That pattern matches `\\results\\` and `\\output\\` but NOT `\\paper_evidence\\`, `\\runs\\`, or `\\verification\\`, so 393 MB of `paper_evidence`, 17 MB of `runs`, and 12.5 MB of `verification` were copied into the staging tree. Rebuild the staging tree from scratch. Do NOT trust a path-regex filter: enumerate candidate files with `Get-ChildItem`, then filter with explicit conditions, and PRINT a per-top-level-directory size table of the staging tree BEFORE zipping so the budget is provable.\n\nSOURCE LAYOUT FACTS (verify each yourself; do not assume):\n- Workspace root: `D:\\CUMCM2026`\n- `src\\q1\\` - code in `src\\q1\\code\\`, model doc `src\\q1\\q1.md`\n- `src\\q2\\` - code in `src\\q2\\code\\`; also `src\\q2\\formal\\`, `src\\q2\\tests_formal\\`; model docs are the `*.md` directly in `src\\q2\\`\n- `src\\q3+4\\` - V1 engine: `code\\`, `docs\\`, `figures\\`, `tools\\`  (its `code\\results\\` = 572 MB and `code\\output\\` = 72 MB must be EXCLUDED)\n- `src\\q3+q4_v2\\` - V2 engine (the delivered strategy). EXCLUDE its `paper_evidence\\` (393 MB), `runs\\` (17 MB), and `verification\\` (12.5 MB) subtrees; everything else IS included (~12.8 MB).\n- `simu\\数据\\` - holds 7 `*.jlog` simulator logs (~700 KB total)\n\nREQUIRED ARCHIVE LAYOUT (top level inside the zip):\n```\nREADME.md                     <- you author this, see below\nMANIFEST.csv                  <- you generate: relative_path,bytes,sha256\n01_source_code/\n  q1/                         <- src\\q1\\code\\ + q1.md\n  q2/                         <- src\\q2\\code\\ (minus artifacts\\ subdirs), src\\q2\\formal\\, src\\q2\\tests_formal\\, src\\q2\\*.md\n  q2/artifacts/               <- ONLY loose files directly in src\\q2\\code\\artifacts\\ smaller than 100000 bytes\n  q3_q4_v1/                   <- src\\q3+4\\code\\ (minus results/, output/), docs/, figures/, tools/\n  q3_q4_v2/                   <- src\\q3+q4_v2\\ (minus paper_evidence/, runs/, verification/)\n02_documentation/\n  q3_q4_v2/docs/              <- src\\q3+q4_v2\\docs\\*.md + *.json\n  q3_q4_v1/docs/              <- src\\q3+4\\docs\\*.md + *.json\n  q2_reports/                 <- src\\q2\\code\\reports\\*.md\n03_paper_evidence/            <- from src\\q3+q4_v2\\paper_evidence\\\n  figures/                    <- figures\\*.jpg + figures\\*.json\n  figure_data/                <- figure_data\\*.csv\n  tables/                     <- tables\\*.csv\n  flowcharts/                 <- flowcharts\\* (skip any single file > 200000 bytes)\n  claims.json claims.md figure_contract.md final_preflight.md figures_manifest.json\n  flowcharts_manifest.json variant_registry.json Q3_Q4_Paper_Replacement_Final.md\n  docx_update_report.json paired_run_status.json source_manifest.json\n04_raw_run_evidence/\n  per_run/v1_frozen/q3/       <- for EVERY run dir under paper_evidence\\runs\\v1_frozen\\q3\\,\n  per_run/v1_frozen/q4/          copy metrics.json, run_report.json, verifier_report.json\n  per_run/v2_final/q3/           flattened as \"<rundir>__<filename>\" (e.g. paper_q3_n13_s950021__metrics.json)\n  per_run/v2_final/q4/        <- same for runs\\v2_final\\q3 and q4\n  sample_runs/v1_frozen/q3/paper_q3_n13_s950021/\n  sample_runs/v1_frozen/q4/paper_q4_n10_s960000/\n  sample_runs/v2_final/q3/paper_q3_n13_s950020/\n  sample_runs/v2_final/q4/paper_q4_n10_s960000/\n      <- for each of those 4 dirs copy whichever exist: metrics.json, run_report.json,\n         verifier_report.json, policy_config.json, config.yaml, provenance.json,\n         paper_command.json, ground_truth.json, certificate.json, trajectory.csv\n         (SKIP any single file larger than 5,000,000 bytes)\n05_simulator_logs/            <- rename on copy to drop practice IDs:\n      simu\\数据\\formal-p3-1-VUXH-728S-5QND-4JGQ.jlog  ->  formal-p3-1.jlog\n      simu\\数据\\formal-p4-1-PFZQ-G9BM-KDEX-ZQN9.jlog  ->  formal-p4-1.jlog\n```\n\nALWAYS EXCLUDE these path components anywhere in the tree:\n`__pycache__`, `.pytest_cache`, `.ipynb_checkpoints`, `_legacy_superseded_v6`, `results`, `output`, `paper_evidence`, `runs`, `verification`\n\nANONYMISATION (competition rule: the team number must be hidden or replaced by a placeholder):\nAfter staging, replace the literal string `TEAM001` with `TEAMXXX` in every staged TEXT file\n(extensions .py .md .txt .json .jsonl .csv .yaml .yml .toml .cfg .ini .jlog .ps1 .sh .bat).\nSkip files whose bytes contain a 0x00 byte (binary). Read/write as UTF-8 WITHOUT BOM.\nReport how many files were patched. Do NOT edit anything under `D:\\CUMCM2026\\src` or `D:\\CUMCM2026\\simu` - the package is the only thing that changes.\n\nREADME.md you must author (Chinese, concise): what the archive is; the folder map above; which question maps to which code entry point; the exact run commands for reproducing the paper results (take them from `src\\q3+q4_v2\\docs\\README.md`, corrected to the archive's paths); a statement that the team number has been replaced with the placeholder `TEAMXXX`; and a short \"not included\" list explaining that large generated result trees (results/, output/, runs/, paper_evidence/ raw trees), Python caches, and the 18.8 MB simulator .exe were intentionally excluded to meet the 20 MB limit.\n\nMANIFEST.csv: write it at the staging root (so it lands at the zip root) with header\n`relative_path,bytes,sha256`, listing every other staged file with a forward-slash relative path\nand its SHA-256. Also save a copy to `D:\\CUMCM2026\\agentworkspace\\work\\package_manifest.csv`.\n\nBUILD SCRIPT: write your build script to `D:\\CUMCM2026\\agentworkspace\\work\\package_support.ps1` (an earlier broken version is there - overwrite it). Run it with `pwsh -NoProfile -File`. Make the script idempotent: it must delete and recreate the staging dir each run.\n\nREPORT WHEN DONE: final zip byte size and MB, total staged file count, per-top-level-folder size table, number of TEAM001 files patched, and confirmation that the four sample_runs directories and the all-run per_run files are present. Also report the per-question file counts so the verifier can check them.",
+      "status": "completed",
+      "assignee": "packager",
+      "dependencies": [],
+      "attempt": 1,
+      "createdAt": 1789287826887,
+      "updatedAt": 1789288672502,
+      "kind": "implementation",
+      "objective": "Rebuild the CUMCM2026 B-problem support-materials ZIP at D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip so that it is strictly <= 20,000,000 bytes and contains the curated Q1-Q4 source, documentation, paper figures/tables, sampled raw run evidence, and anonymised simulator logs, with TEAM001 replaced by the placeholder TEAMXXX.",
+      "inScope": [
+        "agentworkspace/work/package_support.ps1",
+        "agentworkspace/work/package_manifest.csv",
+        "agentworkspace/out/support_stage",
+        "agentworkspace/out/CUMCM2026_B_支撑材料.zip"
+      ],
+      "outOfScope": [
+        "src/**",
+        "simu/**",
+        "paper/**",
+        "辅助材料/**",
+        "docs/**"
+      ],
+      "acceptance": [
+        "最终文件 D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip 实测字节数 (Get-Item).Length <= 20000000，且脚本打印的分层体积表总和与暂存目录实测总大小一致",
+        "解压后顶层恰好包含 README.md、MANIFEST.csv 与 01_source_code / 02_documentation / 03_paper_evidence / 04_raw_run_evidence / 05_simulator_logs 五个目录",
+        "四问源码齐备：01_source_code/q1 可定位 q1_cli.py 与 q1_geometry.py；q2 含 code/ 与 formal/；q3_q4_v1 含 code/cli.py 与 code/configs/；q3_q4_v2 含 absorbed/run_absorbed.py、recommended.py、production.py 与 paper_pipeline/",
+        "排除项已落实：包内不存在路径分量 results、output、paper_evidence、runs、verification、__pycache__、.pytest_cache、_legacy_superseded_v6；且不包含 jammers-simulator.exe 与 10.4 MB 的 B题论文_v0.3.docx",
+        "脱敏完成：解压后对所有文本文件搜索 TEAM001 命中数为 0，源码内 robot-id 默认值显示为 TEAMXXX",
+        "论文证据齐备：03_paper_evidence/figures 至少 9 个 .jpg 且含 figures_manifest.json；tables 至少 5 个 .csv；figure_data 至少 9 个 .csv",
+        "逐局证据齐备：04_raw_run_evidence/per_run 下 v1_frozen 与 v2_final 各含 q3、q4，且每个 run 都有 metrics.json、run_report.json、verifier_report.json 三个展平文件；四个 sample_runs 目录各自非空",
+        "05_simulator_logs 含 formal-p3-1.jlog 与 formal-p4-1.jlog 两个文件，文件名不含 practice 编号",
+        "MANIFEST.csv 存在且其记录的文件数与解压后实测文件总数一致，每行含 relative_path、bytes、sha256 三列"
+      ],
+      "verify": [
+        "$z = Get-Item 'D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip'; \"$($z.Length) bytes / $([math]::Round($z.Length/1MB,2)) MB\"; if ($z.Length -gt 20000000) { throw 'OVER BUDGET' } else { 'WITHIN BUDGET' }",
+        "$stage='D:\\CUMCM2026\\agentworkspace\\out\\support_stage'; (Get-ChildItem $stage -Recurse -File).Count"
+      ],
+      "deliverables": [
+        "agentworkspace/out/CUMCM2026_B_支撑材料.zip",
+        "agentworkspace/out/support_stage/",
+        "agentworkspace/work/package_support.ps1",
+        "agentworkspace/work/package_manifest.csv"
+      ],
+      "nonGoals": [
+        "Modifying anything under src/ or simu/ (the package is a read-only consumer of the workspace)",
+        "Including the 18.8 MB jammers-simulator.exe or the 10.4 MB paper docx",
+        "Including any raw generated result tree that was excluded by the layout spec"
+      ],
+      "attemptId": "1ae2ac59-b433-408a-894e-9f22a2fa2682",
+      "reassigning": false,
+      "output": "BUILT AND SELF-VERIFIED.\n\nDELIVERABLES (all inside the declared inScope)\n- D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip\n- D:\\CUMCM2026\\agentworkspace\\out\\support_stage\\  (1723 files)\n- D:\\CUMCM2026\\agentworkspace\\work\\package_support.ps1   (self-contained: README is an inline here-string, no extra source files needed)\n- D:\\CUMCM2026\\agentworkspace\\work\\package_manifest.csv\n\nMEASURED NUMBERS\n- zip bytes = 14641132 (13.96 MB) -> 26.8% under the 20000000 budget. zip entries = 1723.\n- staged files = 1723, staged bytes = 35466640 (33.824 MB)\n- Per-top-level measured table:\n  01_source_code/       902 files   24.435 MB\n  02_documentation/      31 files    0.283 MB\n  03_paper_evidence/     36 files    5.304 MB\n  04_raw_run_evidence/  750 files    3.346 MB\n  05_simulator_logs/      2 files    0.218 MB\n  MANIFEST.csv            1 file     0.230 MB\n  README.md               1 file     0.008 MB\n  TOTAL                1723 files   33.824 MB  ==  35466640 bytes measured\n- Anonymisation: scanned 1649 NUL-free text files, 148 patched, 2 binary skipped.\n\nROOT CAUSE OF THE PREVIOUS 473.89 MB / 65.67 MB FAILURE, FIXED PROPERLY\nThe old script filtered with a full-path regex so `paper_evidence`, `runs` and `verification` were never pruned. The new script walks the tree with an explicit path-SEGMENT exclude set (__pycache__, .pytest_cache, .ipynb_checkpoints, _legacy_superseded_v6, results, output, paper_evidence, runs, verification), prunes directories BEFORE descending, prints the measured per-top-level table, and re-asserts exclusions over the finished stage tree, throwing on any violation.\n\nFIXES BEYOND THE LITERAL SPEC (documented for the reviewer)\n- My first rebuild wrongly pulled 14.9 MB of `src\\q2\\code\\artifacts\\<generated subdirs>` into the package; I added an explicit `@('artifacts')` prune for q2/code and kept only loose files <100000 bytes. That dropped 01_source_code from 40.391 MB to 24.435 MB.\n- Beyond `TEAM001`, I also replaced the REAL team number `202612004018`, a genuine compliance leak in two packaged text files: `01_source_code/q3_q4_v2/baseline/evidence/q3_official_v3/run_report.json` (\"output_dir\" pointed at `q3_202612004018_candidate_v3`) and `01_source_code/q3_q4_v2/docs/SOURCE_MANIFEST.json` (\"source\" path). Both now read TEAMXXX.\n- Removed an incorrect README claim that `03_paper_evidence/figures/` carries json metadata (the source dir has only the 9 .jpg), and removed a README command that invoked the excluded `verification/check_model.py`.\n- README \"not included\" table rewritten with measured source sizes.\n\nVERIFICATION RUN ON A FRESH EXTRACTION (scratch dir, since deleted)\n1 Budget 14641132 bytes, -gt 20000000 = False.\n2 Exclusions: 0 offenders; no exe, no docx.\n3 Anonymisation: TEAM001 = 0, 202612004018 = 0 over 1666 text files.\n4 Top level exactly README.md + MANIFEST.csv + the five numbered dirs.\n5 Counts: 9 jpg / 9 figure_data csv / 7 tables csv; per_run 180,180,180,180; 4 non-empty sample_runs; 2 renamed .jlog.\n6 MANIFEST: 1722 rows == 1722 non-manifest files; full-sweep SHA-256 recomputation 0 mismatches; work copy byte-identical.\n7 Idempotent: repeat runs produce the same zip bytes and staged bytes.\n\nFLAGS FOR t2/t3\n- Ambiguity I resolved by literal reading: the spec note said `src\\q3+q4_v2\\` \"everything else IS included (~12.8 MB)\" while also listing `verification` as an ALWAYS-EXCLUDE component, and acceptance criterion 4 fails on any packaged path containing `verification`. I obeyed the exclusion list, so the 12.646 MB / 226-file `src\\q3+q4_v2\\verification\\` is NOT packaged and the kept v2 source subtree is 3.205 MB. Adding it back is a one-line change and would still fit (~+6 MB compressed). This is the biggest judgement call in the build.\n- `03_paper_evidence/flowcharts/` is an empty directory because the source `paper_evidence\\flowcharts\\` is empty (0 files); `flowcharts_manifest.json` is present as required.\n- The two `.jlog` files are binary, so the text anonymisation pass skips them; their envelope headers still contain the official simulator's team-number field. Filenames were de-identified per spec and the README documents the byte-preservation tradeoff (only regenerating them with `--robot-id TEAMXXX` removes those bytes, at the cost of new hashes).",
+      "changedPaths": [
+        "agentworkspace/work/package_support.ps1",
+        "agentworkspace/work/package_manifest.csv",
+        "agentworkspace/out/support_stage/",
+        "agentworkspace/out/CUMCM2026_B_支撑材料.zip"
+      ],
+      "acceptanceResults": [
+        {
+          "criterion": "最终文件 D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip 实测字节数 (Get-Item).Length <= 20000000，且脚本打印的分层体积表总和与暂存目录实测总大小一致",
+          "status": "passed",
+          "evidence": "Get-Item zip -> Length = 14641132 bytes (13.96 MB); 14641132 -gt 20000000 = False. Script table TOTAL = 1723 files / 33.824 MB; independent (Get-ChildItem support_stage -Recurse -File | Measure-Object Length -Sum).Sum = 35466640 bytes, matching the per-top-level rows (01_source_code 24.435 + 02_documentation 0.283 + 03_paper_evidence 5.304 + 04_raw_run_evidence 3.346 + 05_simulator_logs 0.218 + MANIFEST.csv 0.230 + README.md 0.008 MB). Zip entries reported by System.IO.Compression = 1723 = staged file count = extracted file count."
+        },
+        {
+          "criterion": "解压后顶层恰好包含 README.md、MANIFEST.csv 与 01_source_code / 02_documentation / 03_paper_evidence / 04_raw_run_evidence / 05_simulator_logs 五个目录",
+          "status": "passed",
+          "evidence": "Fresh Expand-Archive top-level = 01_source_code | 02_documentation | 03_paper_evidence | 04_raw_run_evidence | 05_simulator_logs | MANIFEST.csv | README.md. Nothing else; extracted file total 1723."
+        },
+        {
+          "criterion": "四问源码齐备：01_source_code/q1 可定位 q1_cli.py 与 q1_geometry.py；q2 含 code/ 与 formal/；q3_q4_v1 含 code/cli.py 与 code/configs/；q3_q4_v2 含 absorbed/run_absorbed.py、recommended.py、production.py 与 paper_pipeline/",
+          "status": "passed",
+          "evidence": "Presence test over 36 required paths in the extracted tree returned 0 missing, including 01_source_code/q1/code/q1_cli.py, 01_source_code/q1/code/q1_geometry.py, 01_source_code/q2/code, 01_source_code/q2/formal, 01_source_code/q3_q4_v1/code/cli.py, 01_source_code/q3_q4_v1/code/configs (13 files), 01_source_code/q3_q4_v2/absorbed/run_absorbed.py, .../recommended.py, .../production.py, .../paper_pipeline (19 files)."
+        },
+        {
+          "criterion": "排除项已落实：包内不存在路径分量 results、output、paper_evidence、runs、verification、__pycache__、.pytest_cache、_legacy_superseded_v6；且不包含 jammers-simulator.exe 与 10.4 MB 的 B题论文_v0.3.docx",
+          "status": "passed",
+          "evidence": "Independent path-segment sweep over all 1723 extracted files = 0 offenders; no jammers-simulator.exe, no B题论文*.docx. The same sweep runs inside the build script before zipping ('=== 排除项校验: 0 violation(s)') and throws on violation."
+        },
+        {
+          "criterion": "脱敏完成：解压后对所有文本文件搜索 TEAM001 命中数为 0，源码内 robot-id 默认值显示为 TEAMXXX",
+          "status": "passed",
+          "evidence": "1666 NUL-free extracted files scanned: TEAM001 = 0, real team number 202612004018 = 0, and a TEAM[0-9]{2,} sweep matched only TEAMXXX. Real extracted lines: 01_source_code/q3_q4_v1/code/run.py: p.add_argument(\"--robot-id\", default=\"TEAMXXX\", and 01_source_code/q3_q4_v2/absorbed/run_absorbed.py: parser.add_argument(\"--robot-id\", default=\"TEAMXXX\",."
+        },
+        {
+          "criterion": "论文证据齐备：03_paper_evidence/figures 至少 9 个 .jpg 且含 figures_manifest.json；tables 至少 5 个 .csv；figure_data 至少 9 个 .csv",
+          "status": "passed",
+          "evidence": "figures/*.jpg = 9 (fig07..fig15); 03_paper_evidence/figures_manifest.json present; tables/*.csv = 7 (>=5); figure_data/*.csv = 9 (>=9). The SOURCE paper_evidence/figures contains only the 9 .jpg, and the README was corrected to state that, so no false claim remains."
+        },
+        {
+          "criterion": "逐局证据齐备：04_raw_run_evidence/per_run 下 v1_frozen 与 v2_final 各含 q3、q4，且每个 run 都有 metrics.json、run_report.json、verifier_report.json 三个展平文件；四个 sample_runs 目录各自非空",
+          "status": "passed",
+          "evidence": "per_run file counts 180, 180, 180, 180 for v1_frozen/q3, v1_frozen/q4, v2_final/q3, v2_final/q4 (60 runs x 3 files each, 720 total, flattened names e.g. paper_q3_n13_s950021__metrics.json). sample_runs non-empty: paper_q3_n13_s950021=9, paper_q4_n10_s960000=9, paper_q3_n13_s950020=6, paper_q4_n10_s960000=6 (the v2 source dirs lack config.yaml/certificate.json/provenance.json/trajectory.csv; every existing allowed name was taken and none exceeded the 5,000,000-byte cap)."
+        },
+        {
+          "criterion": "05_simulator_logs 含 formal-p3-1.jlog 与 formal-p4-1.jlog 两个文件，文件名不含 practice 编号",
+          "status": "passed",
+          "evidence": "05_simulator_logs = formal-p3-1.jlog (101576 B) and formal-p4-1.jlog (127269 B) only; no practice identifier in either name."
+        },
+        {
+          "criterion": "MANIFEST.csv 存在且其记录的文件数与解压后实测文件总数一致，每行含 relative_path、bytes、sha256 三列",
+          "status": "passed",
+          "evidence": "Header = relative_path,bytes,sha256; data rows = 1722; extracted file total = 1723 = 1722 + MANIFEST.csv itself (MANIFEST deliberately does not self-list, so row count is self-consistent). Full-sweep SHA-256 recomputation of EVERY row against the extracted tree: sha_mismatch = 0. The copy at agentworkspace/work/package_manifest.csv is byte-identical to the in-zip copy."
+        }
+      ],
+      "commandsRun": [
+        {
+          "command": "$z = Get-Item 'D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip'; \"$($z.Length) bytes / $([math]::Round($z.Length/1MB,2)) MB\"; if ($z.Length -gt 20000000) { throw 'OVER BUDGET' } else { 'WITHIN BUDGET' }",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "14641132 bytes / 13.96 MB -> WITHIN BUDGET. Raw script output: \"    bytes = 14641132   MB = 13.96\" / \"    WITHIN BUDGET (<= 20000000)\" / \"    zip entries = 1723\". Independent re-run produced identical bytes."
+        },
+        {
+          "command": "$stage='D:\\CUMCM2026\\agentworkspace\\out\\support_stage'; (Get-ChildItem $stage -Recurse -File).Count",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "1723. Cross-checked three ways: zip entries = 1723, fresh Expand-Archive extracted file count = 1723, MANIFEST data rows = 1722 (+MANIFEST.csv = 1723). Staged bytes measured independently as 35466640."
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "subject": "Independently verify the ZIP: budget, exclusions, anonymisation, content, manifest",
+      "description": "Independently verify the built ZIP at `D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip`.\nDo NOT trust the packager's report. Extract the archive to a scratch directory (e.g. `D:\\CUMCM2026\\agentworkspace\\work\\verify_extract`) and re-derive everything from real bytes on disk.\n\nYou must check and report a verdict on each of these:\n\n1. BUDGET. `(Get-Item '<zip>').Length` must be <= 20000000 bytes. Report the exact byte count.\n2. EXCLUSIONS. Walk the extracted tree and prove that NO path contains any of these directory components: `__pycache__`, `.pytest_cache`, `.ipynb_checkpoints`, `_legacy_superseded_v6`, `results`, `output`, `paper_evidence`, `runs`, `verification`. List any offender path. Also confirm `jammers-simulator.exe` is absent.\n3. ANONYMISATION. Search every extracted text file for the literal `TEAM001` and report the hit count (must be 0). Then show at least two real lines where the robot-id default now reads `TEAMXXX`, and confirm no practice-log identifier survives in `05_simulator_logs` filenames.\n4. CONTENT PRESENCE. Confirm these exist and report counts:\n   - `01_source_code/q1/code/q1_cli.py` and `q1_geometry.py`\n   - `01_source_code/q2/code/` non-empty and `01_source_code/q2/formal/` non-empty\n   - `01_source_code/q3_q4_v1/code/cli.py` and `01_source_code/q3_q4_v1/code/configs/` non-empty\n   - `01_source_code/q3_q4_v2/absorbed/run_absorbed.py`, `q3+q4_v2/recommended.py`, `production.py`, and `paper_pipeline/` present\n   - `03_paper_evidence/figures/*.jpg` count (expect >= 9) and `figures_manifest.json` present\n   - `03_paper_evidence/tables/*.csv` count (expect >= 5) and `figure_data/*.csv` count (expect >= 9)\n   - `04_raw_run_evidence/per_run/` contains `v1_frozen/q3`, `v1_frozen/q4`, `v2_final/q3`, `v2_final/q4`, each with the flattened `*__metrics.json`, `*__run_report.json`, `*__verifier_report.json` triples; report the number of distinct runs per directory\n   - all four `04_raw_run_evidence/sample_runs/.../<run>/` directories exist and are non-empty\n   - `05_simulator_logs/formal-p3-1.jlog` and `formal-p4-1.jlog` exist with non-zero size\n5. MANIFEST INTEGRITY. `MANIFEST.csv` exists at the archive root with header `relative_path,bytes,sha256`. Report its data-row count and the extracted file count, and independently recompute the SHA-256 of at least 5 randomly chosen rows to confirm they match.\n6. README QUALITY. `README.md` exists, is in Chinese, names the placeholder `TEAMXXX`, and contains a reproduction command. Quote the command you found.\n\nUse `Expand-Archive` or `System.IO.Compression.ZipFile` to extract. Report every finding with the exact command run and its output. If something fails, state the concrete expected-vs-actual. State explicitly whether the archive passes or fails overall.",
+      "status": "failed",
+      "assignee": "verifier",
+      "dependencies": [
+        "t1"
+      ],
+      "attempt": 1,
+      "createdAt": 1789287833577,
+      "updatedAt": 1789288751015,
+      "kind": "verification",
+      "objective": "Independently prove or falsify that the built support ZIP satisfies the 20 MB budget, the exclusion rules, the anonymisation rule, the required content inventory, and MANIFEST integrity, by extracting it and re-deriving every claim from bytes on disk.",
+      "acceptance": [
+        "独立实测：解压到临时目录后，用 Get-Item 报告 zip 字节数并以 -gt 20000000 判定，结论与实测数值一致（不得复述构建者数字）",
+        "排除项反证：对解压树遍历，若存在路径分量 results、output、paper_evidence、runs、verification、__pycache__、.pytest_cache、_legacy_superseded_v6 中任意一个则判失败，并给出具体路径",
+        "脱敏反证：对解压树全部文本文件搜索 TEAM001，命中数必须为 0；同时展示至少一处 robot-id 默认值已变为 TEAMXXX 的实际行",
+        "内容存在性抽查：逐一确认 acceptance 清单中的关键文件路径真实存在（q1_cli.py、q2/formal、cli.py 与 configs、absorbed/run_absorbed.py、figures/*.jpg 数量、tables/*.csv 数量、per_run 下 4 个子目录的 metrics 文件数、4 个 sample_runs 目录非空、2 个 jlog）",
+        "一致性反证：MANIFEST.csv 行数（不含表头）与解压后实测文件总数相符，且随机抽取至少 5 行重新计算 SHA-256 与清单一致",
+        "对每一条 acceptance 给出 passed/failed 与命令或文件路径证据；任何一条 failed 必须给出可执行的修复要求"
+      ],
+      "deliverables": [
+        "agentworkspace/work/verify_support_package.md"
+      ],
+      "attemptId": "7b234a3a-d530-40d9-a357-99e99a0c1fca",
+      "reassigning": false,
+      "findings": [
+        {
+          "id": "t2-B1",
+          "severity": "blocker",
+          "problem": "The real numeric team number 202612004018 survives in cleartext in BOTH simulator-log payloads, in the JSON field \"team_no\": formal-p3-1.jlog (101576 B, match at byte offset 131) and formal-p4-1.jlog (127269 B, match at byte offset 131) both contain {\"package_type\":\"formal_behavior_log\",...,\"team_no\":\"202612004018\",\"problem_no\":3|4,...}. Root cause: the anonymisation pass skips any file containing a NUL byte ('if ($bytes -contains 0) { return }'), and both .jlog files are NUL-containing containers, so they were never scanned — the 2 'binary skipped' files in the builder's own report are exactly these. TEAM001-style replacement was also insufficient because the real identifier is numeric, not the literal TEAM001. This directly defeats the goal's requirement that the team number be anonymised: the workspace reminder file states team numbers must be hidden or placeholdered in support materials, and a judge opening the .jlog sees the team number. NOTE this does not fail the task's literal scan string (TEAM001 = 0 hits) but it fails the underlying rule.",
+          "requiredFix": "Patch the two .jlog payloads binary-safely (read bytes, replace b'202612004018' with a placeholder of equal or shorter length such as b'TEAMXXX' or b'000000000000', write bytes back — never decode/re-encode the whole NUL-containing container), or drop 05_simulator_logs from the archive if a de-identified copy cannot be produced. Then regenerate the affected MANIFEST.csv rows and rebuild the ZIP, and re-verify that a raw-byte scan for '202612004018' returns 0 across all members.",
+          "file": "05_simulator_logs/formal-p3-1.jlog"
+        },
+        {
+          "id": "t2-B2",
+          "severity": "medium",
+          "problem": "Two ZIPs and two staging trees remain in agentworkspace\\out after t1: CUMCM2026_B_支撑材料.zip (14641132 B, canonical) and the stale CUMCM2026_B_支撑材料_v2.zip (18542168 B, 17.683 MB, different content, 1309 entries); plus support_stage/ (1723 files) and support_stage_v2/ (1309 files). 第十一条 requires all support materials compressed into ONE file, so a second differently-sized archive at the same revision is a submission hazard, and the '_v2' name is not the submission name.",
+          "requiredFix": "Delete or move CUMCM2026_B_支撑材料_v2.zip and the support_stage_v2 tree out of agentworkspace\\out, leaving exactly one archive named for submission (no _v2 suffix) plus the staging tree it was built from.",
+          "file": "D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料_v2.zip"
+        },
+        {
+          "id": "t2-B3",
+          "severity": "low",
+          "problem": "README.md line 101 states the replacement covered '全部文本文件' (all text files), which overstates the actual coverage: the two .jlog containers were skipped, which is where the team number still lives. A reader trusting the README would conclude the package is fully de-identified.",
+          "requiredFix": "Either fix t2-B1 so the claim becomes true, or reword the README to state precisely which file types were scanned and that the .jlog payloads were de-identified separately.",
+          "file": "README.md"
+        }
+      ],
+      "acceptanceResults": [
+        {
+          "criterion": "独立实测：解压到临时目录后，用 Get-Item 报告 zip 字节数并以 -gt 20000000 判定，结论与实测数值一致（不得复述构建者数字）",
+          "status": "passed",
+          "evidence": "PASSED. Get-Item 'D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip' -> Length = 14641132 bytes (13.963 MB), LastWrite 2026-09-13 16:37:28, '-gt 20000000' = False, headroom 5.111 MB. Independently extracted to D:\\CUMCM2026\\agentworkspace\\work\\verify_extract: 1723 files on disk == 1723 archive members, raw 35466640 bytes. SAMPLED SHA-256 of the zip = 9BD87A28E2AA753E7924CED8B8006C4A37F7EDA45D03628BA47BE9A78935DFFF and re-checked AFTER full extraction: byte-identical, so the artifact was frozen during verification and this evidence binds to those exact bytes."
+        },
+        {
+          "criterion": "排除项反证：对解压树遍历，若存在路径分量 results、output、paper_evidence、runs、verification、__pycache__、.pytest_cache、_legacy_superseded_v6 中任意一个则判失败，并给出具体路径",
+          "status": "passed",
+          "evidence": "PASSED. os.walk over all 1723 extracted files: forbidden DIRECTORY components found = 0 (exact-case and case-insensitive both zero) for all nine names. jammers-simulator.exe absent; zero .exe files anywhere. Forensic note: 5 substring hits for 'results' are all RESULTS.md FILES (e.g. 01_source_code\\q3_q4_v2\\belief_rollout\\RESULTS.md), 11 for 'output' are files (example_output.json, q2_gate_*_test_output.txt), and 38/31/18 for paper_evidence/runs/verification are filenames or prose (Q3_Q4_PAPER_EVIDENCE_MAP_v2.0.md, test_smoke_runs.py, Q2_FINAL_VERIFICATION_REPORT.md) — none is a directory component, so none is an offender. The prune is correct AND the substring matches prove the component-wise rule avoided deleting legitimate artifacts."
+        },
+        {
+          "criterion": "脱敏反证：对解压树全部文本文件搜索 TEAM001，命中数必须为 0；同时展示至少一处 robot-id 默认值已变为 TEAMXXX 的实际行",
+          "status": "passed",
+          "evidence": "PASSED for the named indicator: 0 hits for TEAM001 across all 1723 files scanned as RAW BYTES (stronger than text-only). Also 0 for TEAM[0-9]{3} and 0 for practice id 5880626762084925000; TEAMXXX present in 149 files. Real replacement lines: 01_source_code\\q3_q4_v1\\code\\run.py:45 -> p.add_argument(\"--robot-id\", default=\"TEAMXXX\", ; 01_source_code\\q3_q4_v1\\code\\cli.py:256 -> pr.add_argument(\"--robot-id\", default=\"TEAMXXX\") ; 01_source_code\\q3_q4_v1\\code\\run.py:9 -> --robot-id TEAMXXX   # 官方模拟器. Log filenames de-identified: 05_simulator_logs\\formal-p3-1.jlog and formal-p4-1.jlog carry no practice-log identifier. HOWEVER this criterion passes only on its literal indicator string — see blocker t2-B1: the NUMERIC team number 202612004018 survives in cleartext in both .jlog files, so the team-anonymisation rule itself is NOT satisfied."
+        },
+        {
+          "criterion": "内容存在性抽查：逐一确认 acceptance 清单中的关键文件路径真实存在（q1_cli.py、q2/formal、cli.py 与 configs、absorbed/run_absorbed.py、figures/*.jpg 数量、tables/*.csv 数量、per_run 下 4 个子目录的 metrics 文件数、4 个 sample_runs 目录非空、2 个 jlog）",
+          "status": "passed",
+          "evidence": "PASSED, with one path correction. Present: 01_source_code/q1/code/q1_cli.py (1501 B) and q1_geometry.py (20259 B); 01_source_code/q2/code/ (196 files) and q2/formal/ (22 files); 01_source_code/q3_q4_v1/code/cli.py (14867 B) and code/configs/ (13 files); 03_paper_evidence/figures/*.jpg = 9 (fig07..fig15) plus figures_manifest.json; tables/*.csv = 7; figure_data/*.csv = 9. PATH CORRECTION: the listing's 'q3+q4_v2/...' path does not exist in this build — the archive is FLATTER than expected, and the required files are present at the shallower path (full-tree search): 01_source_code/q3_q4_v2/absorbed/run_absorbed.py, 01_source_code/q3_q4_v2/recommended.py, 01_source_code/q3_q4_v2/production.py, 01_source_code/q3_q4_v2/paper_pipeline/ (11 files + tests). per_run: v1_frozen/q3 60 runs, v1_frozen/q4 60, v2_final/q3 60, v2_final/q4 60 — each 180 files = 60 metrics + 60 run_report + 60 verifier_report triples. sample_runs: v1_frozen/q3/paper_q3_n13_s950021 (9 files), v1_frozen/q4/paper_q4_n10_s960000 (9), v2_final/q3/paper_q3_n13_s950020 (6), v2_final/q4/paper_q4_n10_s960000 (6) — all four non-empty. 05_simulator_logs/formal-p3-1.jlog 101576 B and formal-p4-1.jlog 127269 B, both non-zero."
+        },
+        {
+          "criterion": "一致性反证：MANIFEST.csv 行数（不含表头）与解压后实测文件总数相符，且随机抽取至少 5 行重新计算 SHA-256 与清单一致",
+          "status": "passed",
+          "evidence": "PASSED. MANIFEST.csv at archive root, 241163 bytes, header exactly 'relative_path,bytes,sha256'. Data rows = 1722. Extracted files = 1723 total, and 1723 - 1 (MANIFEST.csv does not list itself) = 1722 == row count. Five rows chosen with a fixed seed (20260913) were re-hashed from disk with hashlib.sha256 and every byte count and digest matched: 01_source_code/q2/code/tools/render_q2_paper_figures.py, 04_raw_run_evidence/per_run/v1_frozen/q4/paper_q4_n16_s9600*, 04_raw_run_evidence/per_run/v2_final/q4/paper_q4_n13_s9600*, 01_source_code/q3_q4_v1/code/cases/q3_ml_budget_20260911/*, 01_source_code/q3_q4_v1/code/tests/test_e1_sparse_certific*. PyZipFile/testzip() also validated every member CRC. NOTE: this MANIFEST will become stale once t2-B1 is fixed, because patching the two .jlog payloads changes their bytes and SHA-256; those rows (and any recomputation) must be regenerated with the rebuild."
+        },
+        {
+          "criterion": "对每一条 acceptance 给出 passed/failed 与命令或文件路径证据；任何一条 failed 必须给出可执行的修复要求",
+          "status": "passed",
+          "evidence": "PASSED as a reporting criterion: all six criteria carry passed/failed plus concrete command output or file paths above. The five literal criteria pass, but this verification overall FAILS on a blocker I found beyond the named indicator set: the real numeric team number 202612004018 is present in cleartext in both 05_simulator_logs .jlog payloads (field team_no), which defeats the team-goal requirement to anonymise the team number. Because that means the archive must not be shipped as-is, completion stop condition #2 applies and the task is submitted as failed with blocker finding t2-B1 and repair requirements t2-B2/t2-B3."
+        }
+      ],
+      "commandsRun": [
+        {
+          "command": "Get-Item 'D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip' | Select Length  # budget check",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "Length = 14641132 bytes; 13.963 MB; -gt 20000000 = False; headroom 5.111 MB; LastWrite 2026-09-13 16:37:28"
+        },
+        {
+          "command": "Get-FileHash 'D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip' -Algorithm SHA256",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "9BD87A28E2AA753E7924CED8B8006C4A37F7EDA45D03628BA47BE9A78935DFFF — re-verified byte-identical AFTER full extraction, so the artifact was frozen and this evidence is bound to those bytes"
+        },
+        {
+          "command": "python vf_freeze.py snapshot D:\\CUMCM2026\\agentworkspace\\out --out _vf_frozen_t2.json",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "2 zips: CUMCM2026_B_支撑材料.zip 14641132 B 9bd87a28e2aa753e (not write-locked); CUMCM2026_B_支撑材料_v2.zip 18542168 B 44f71886b80d9810 (stale duplicate)"
+        },
+        {
+          "command": "python vf_verify_bundle.py '<zip>' --extract D:\\CUMCM2026\\agentworkspace\\work\\verify_extract",
+          "status": "passed",
+          "exitCode": 1,
+          "evidence": "blocks=[] (zero blocking). zip_bytes 14641132; entry_count 1723; raw 35466640; ratio 2.48. CRC all validate; no absolute/.. members; sections 01_source_code 902/24.435MB, 02_documentation 31/0.283MB, 03_paper_evidence 36/5.304MB, 05_simulator_logs 2/0.218MB; extract 1723 files on disk == 1723 members. WARN: 1 zero-byte file (01_source_code/q2/formal/__init__.py — normal package marker, not an offender); 142 duplicate-CRC groups wasting 1.206 MB (non-blocking, budget has 5.1 MB headroom)."
+        },
+        {
+          "command": "python -c \"walk verify_extract; classify every FORBIDDEN name as DIRECTORY COMPONENT, case-sensitive and case-insensitive\"",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "forbidden dir components found = 0; exact-case offenders = none; case-insensitive offenders = none; zero .exe files; jammers-simulator.exe absent"
+        },
+        {
+          "command": "python -c \"scan all 1723 extracted files as RAW BYTES for TEAM001|TEAM[0-9]{3}|team001|202612004018|5880626762084925000|TEAMXXX\"",
+          "status": "failed",
+          "exitCode": 0,
+          "evidence": "TEAM001 0 files | TEAM[0-9]{3} 0 | team001 0 | 5880626762084925000 0 | TEAMXXX 149 files | *** 202612004018 2 files: 05_simulator_logs\\formal-p3-1.jlog, 05_simulator_logs\\formal-p4-1.jlog ***"
+        },
+        {
+          "command": "python -c \"extract context bytes around 202612004018 in the two .jlog files and test for NUL bytes\"",
+          "status": "failed",
+          "exitCode": 0,
+          "evidence": "formal-p3-1.jlog (101576 B) contains NUL byte True; context: JMBFLOG1 ... {\"package_type\":\"formal_behavior_log\",\"envelope_version\":1,\"payload_schema_version\":\"behavior-payload-v1\",\"team_no\":\"202612004018\",\"problem_no\":3,... — formal-p4-1.jlog (127269 B) NUL True, same field team_no\":\"202612004018\",\"problem_no\":4. The NUL byte is exactly why the anonymisation pass skipped them."
+        },
+        {
+          "command": "python -c \"check required content inventory under verify_extract\"",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "All required items present; 4 per_run dirs each with 60 distinct runs x 3 scalar files (180 files); 4 sample_runs dirs non-empty (9/9/6/6 files); 9 figures/*.jpg; 7 tables/*.csv; 9 figure_data/*.csv; both .jlog non-zero. Paths are one level shallower than the task listing assumed (01_source_code/q3_q4_v2/<file>, not .../q3+q4_v2/<file>)."
+        },
+        {
+          "command": "python -c \"parse MANIFEST.csv; compare row count to extracted files; recompute SHA-256 for 5 seeded-random rows\"",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "header 'relative_path,bytes,sha256'; data rows 1722 == 1723 extracted - 1 (MANIFEST itself); all 5 sampled rows matched both bytes and sha256"
+        },
+        {
+          "command": "python -c \"read README.md; count CJK chars, TEAMXXX mentions, headings, reproduction commands\"",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "8281 bytes, 127 lines, 1125 CJK chars (Chinese), TEAMXXX x6, headings include 三、复现命令; reproduction command found: python -X utf8 run.py --mode q3 --sim http --base-url http://127.0.0.1:2026 --robot-id TEAMXXX"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "subject": "Review the archive against the user's requirements and competition rules",
+      "description": "Adversarial review of the delivered support archive against the user's actual requirements, judged as a competition submission rather than as a build artifact.\n\nRead the archive at `D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip` (extract to a scratch dir) plus the build report and the verification report (task t2).\n\nJudge these questions and give a verdict for each, with evidence:\n1. The user's hard constraint is that the support archive must not exceed 20 MB. Is it actually satisfied with margin? Is the 20 MB limit even the right limit for this deliverable, or does the competition rule apply to the paper rather than the support archive? Check `D:\\CUMCM2026\\辅助材料\\` sources for the rule text and quote what you find. Flag it if the team may be over-trimming under a misread rule.\n2. The user chose the \"standard edition\": curated deliverable content PLUS sampled raw run evidence (including simulator logs and per-run metrics). Is that actually what was delivered? Name anything that was promised but is missing.\n3. Competition compliance: the rule states the team number must be hidden or replaced with a placeholder, and ideally not hard-coded in programs. Inspect the packaged code for `TEAM001`, `TEAMXXX`, any real-looking team number, or identifiers in filenames/fixtures/data that could reveal the team. Report residual risk.\n4. Reproducibility: could a judge reproduce the paper's figures and per-run numbers using only this archive? Identify gaps that matter vs gaps that are acceptable given the size budget.\n5. Editorial quality: is README.md accurate about what is inside, and is the \"not included\" rationale honest and complete?\n\nDo not re-run the mechanical checks t2 already owns - build on t2's evidence and spend your effort on judgement. If t2 has not finished, you may still inspect the archive directly. Report findings with severity (blocker/high/medium/low), the file path involved, and the concrete fix required. Give an explicit overall verdict of pass, needs_revision, or reject.",
+      "status": "pending",
+      "assignee": "verifier",
+      "dependencies": [
+        "t1",
+        "t2"
+      ],
+      "attempt": 0,
+      "createdAt": 1789287839080,
+      "updatedAt": 1789287840606,
+      "kind": "review",
+      "objective": "Judge whether the delivered support archive genuinely satisfies the user's two explicit requirements - a ZIP at or under 20 MB and a sensibly curated content selection - and whether it is competition-compliant and adequate as a support-materials submission.",
+      "acceptance": [
+        "逐条判定用户提出的两项要求：zip <= 20MB（硬性）与“挑选内容”是否合理，给出 pass/fail 与依据",
+        "判定“标准版”口径是否被满足：精简交付内容 + 抽样原始运行证据（含 jlog 与逐局 metrics）两者都在包内真实存在",
+        "判定合规风险：代码中是否还存在真实参赛队号或可反推队号的标识；程序未把队号写死的要求是否满足；给出残留风险清单",
+        "判定内容充分性：评委据包内材料能否复现论文图表与逐局数值，指出仍缺失但不值得为体积补齐的内容"
+      ],
+      "deliverables": [
+        "agentworkspace/work/review_support_package.md"
+      ],
+      "reviewedTaskId": "t1"
+    },
+    {
+      "id": "t4",
+      "subject": "Repair: eliminate the .jlog team-number leak and consolidate to one archive",
+      "description": "Repair the support archive after t2 FAILED on blocker t2-B1.\n\nCONFIRMED BLOCKER (t2-B1, independently verified by the captain and the verifier, bound to frozen SHA-256 9BD87A28E2AA753E7924CED8B8006C4A37F7EDA45D03628BA47BE9A78935DFFF):\nThe two shipped simulator logs expose the REAL competition number in cleartext:\n- 05_simulator_logs/formal-p3-1.jlog (101576 B, offset 131): {\"package_type\":\"formal_behavior_log\",...,\"team_no\":\"202612004018\",\"problem_no\":3,...}\n- 05_simulator_logs/formal-p4-1.jlog (127269 B, offset 131): {...,\"team_no\":\"202612004018\",\"problem_no\":4,...}\nRoot cause: both files contain a NUL byte, so the anonymiser's `if ($bytes -contains 0) { return }` skipped them entirely; and the replacement only targeted the literal TEAM001 while the real identifier is NUMERIC.\n\nREQUIRED REPAIR — DROP THE TWO LOGS. Do NOT attempt a bytes-only patch.\nRationale you must respect: a clean byte patch of `team_no` changes the bytes of a signed simulator behavior log. If the container carries a payload hash or signature over the envelope, the file becomes internally inconsistent and would itself be a fabricated/edited evidence artifact - worse than omitting it. Shipping a valid, honestly-absent log is correct; shipping a silently edited one is not. Simulator logs are optional supporting evidence, so omission is cheap.\n  a. Remove `05_simulator_logs/formal-p3-1.jlog` and `formal-p4-1.jlog` from the package, and remove the now-empty `05_simulator_logs/` directory.\n  b. If - and only if - a genuinely de-identified copy can be produced that is still an internally valid log, you may ship that instead; otherwise omit. State which you did.\n  c. Also drop the empty `03_paper_evidence/flowcharts/` directory (verified empty because the source dir has 0 files) so no empty directories ship.\n  d. Update README.md: remove any claim that anonymisation covered ALL text files (that overstated coverage - t2-B3), and add the two dropped logs to the \"not included\" rationale with the reason (they carry a simulator `team_no` field). Keep the rest of the README, including the TEAMXXX reproduction command.\n  e. REGENERATE MANIFEST.csv from scratch after the file set changes. Do not reuse old rows - the removed files' rows must go and every remaining row must be re-hashed.\n\nMANDATORY CLEANUP (criterion 5): under `D:\\CUMCM2026\\agentworkspace\\out` leave exactly ONE archive and at most one staging tree:\n  - keep `CUMCM2026_B_支撑材料.zip` (canonical, no version suffix)\n  - delete or move out of `out`: `CUMCM2026_B_支撑材料_v2.zip` (18542168 B) and the spare `support_stage_v2\\` tree\n第十一条 requires a single archive file, and a 17.68 MB decoy adjacent to the deliverable is a submission hazard.\n\nRE-ASSERT AFTER REBUILD (same guard you already built): the nine forbidden path components over the finished stage tree (exact and case-insensitive), absence of jammers-simulator.exe and B题论文*.docx, and a raw-byte scan of EVERY staged file for both `202612004018` and `TEAM001` - the scan must read bytes, not just the text whitelist, because the original miss was a binary skip. Report: new zip byte size, entry count, SHA-256, staged file count, and the raw-byte scan result.",
+      "status": "completed",
+      "assignee": "packager",
+      "dependencies": [],
+      "attempt": 1,
+      "createdAt": 1789288775203,
+      "updatedAt": 1789289180478,
+      "kind": "repair",
+      "objective": "Remove the confirmed team-number exposure from the support archive so it is safe to submit: no `202612004018` in any staged byte, MANIFEST regenerated, README corrected, and exactly one canonical archive left in agentworkspace/out under the 20 MB budget.",
+      "inScope": [
+        "agentworkspace/work/package_support.ps1",
+        "agentworkspace/out/support_stage",
+        "agentworkspace/out/CUMCM2026_B_支撑材料.zip"
+      ],
+      "outOfScope": [
+        "src/**",
+        "simu/**",
+        "paper/**",
+        "agentworkspace/out/support_stage_v2"
+      ],
+      "acceptance": [
+        "重建后的规范存档 D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip 实测字节数 <= 20000000，并报告新的 SHA-256 与条目数",
+        "对解压后全部 1723 个文件做原始字节扫描：202612004018 命中数为 0，且 TEAMXXX 在文本文件中出现（证明脱敏仍生效）",
+        "05_simulator_logs/ 不再包含任何 team_no=真实队号的日志；README 的“未纳入”清单如实说明 .jlog 因携带 team_no 字段被剔除",
+        "MANIFEST.csv 行数与解压后文件总数一致，且全部行重新计算 SHA-256 后 0 处不匹配（不得沿用旧清单）",
+        "out 目录下只剩一个存档与一棵暂存树：CUMCM2026_B_支撑材料_v2.zip 与 support_stage_v2 已删除或移出 out；无 _v2 命名的存档残留",
+        "九个禁用路径分量在重建后的暂存树中仍为 0，且 jammers-simulator.exe 与 B题论文*.docx 仍不在包内"
+      ],
+      "verify": [
+        "$z = Get-Item 'D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip'; \"$($z.Length) bytes\"; if ($z.Length -gt 20000000) { throw 'OVER BUDGET' } else { 'WITHIN BUDGET' }",
+        "$t='D:\\CUMCM2026\\agentworkspace\\out\\support_stage'; $hits = Get-ChildItem $t -Recurse -File | Where-Object { ([System.Text.Encoding]::Latin1.GetString([System.IO.File]::ReadAllBytes($_.FullName))) -match '202612004018' }; \"files leaking team number: $($hits.Count)\"",
+        "Get-ChildItem 'D:\\CUMCM2026\\agentworkspace\\out' -File -Filter *.zip | Select-Object Name,Length | Format-Table -AutoSize"
+      ],
+      "deliverables": [
+        "agentworkspace/out/CUMCM2026_B_支撑材料.zip",
+        "agentworkspace/work/package_support.ps1"
+      ],
+      "nonGoals": [
+        "Patching team_no inside the .jlog payloads (rejected: risks producing an internally inconsistent evidence artifact)",
+        "Including src/q3+q4_v2/verification (still excluded by decision)",
+        "Changing the 01_-05_ archive layout or the anonymisation approach for text files"
+      ],
+      "sourceTaskId": "t1",
+      "sourceFindingIds": [
+        "t2-B1",
+        "t2-B2",
+        "t2-B3"
+      ],
+      "reassigning": false,
+      "attemptId": "d4a4df91-77f9-4036-9d34-691ea7970f77",
+      "output": "t4 COMPLETE. Artifact frozen. Nothing is being written.\n\nFROZEN IDENTITY of the single archive\n  path     : D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip   (canonical, no version suffix)\n  bytes    : 14,656,677  = 13.98 MB   (budget 20,000,000 -> WITHIN, headroom 5,343,323 B / 5.10 MB)\n  entries  : 1737        staged files: 1737\n  SHA-256  : c325ba634280d9eee62e9e5c5eccd725b61fd2620102467bfa6c8e07cff4c8c8\n\nIMPORTANT DISCREPANCY I RESOLVED — THE LOGS STAY\nThe t4 task text says \"DROP THE TWO LOGS. Do NOT attempt a bytes-only patch\", but your FINAL message\nretracted that order and told me the logs STAY. I re-measured independently and the retraction is correct:\n  p3: 65 differing bytes, all inside envelope 131..1805 (envelope span 14..3229)\n  p4: 65 differing bytes, all inside envelope 131..1804 (envelope span 14..3229)\n  bytes 3230..end BYTE-FOR-BYTE IDENTICAL to the pristine originals (the encrypted payload region)\n  envelope is STRICT UTF-8 decodable AND parses as JSON; team_no = 000000000000; total length unchanged\nSo the logs are KEPT, redacted length-preservingly. I did not drop them and did not re-patch them further.\n\nRAW-BYTE ANONYMISATION SCAN (reads bytes of EVERY file, does NOT skip NUL-containing binaries)\n  1737 files scanned -> real team number = 0 ; TEAM+001 = 0 ; TEAM+3-digits = 0\nThe build script now hard-fails (throw) if any of the three is non-zero.\n\nNINE FORBIDDEN COMPONENTS — case-insensitive as you required\nReplaced -contains/-in with HashSet[string]::new(StringComparer::OrdinalIgnoreCase), tested per component.\nFinished-tree re-assertion: 0 violations. Independent post-extract sweep: 0. No exe, no B题论文*.docx.\n\nFINISH-LIST STATUS\n1. DONE — Q2 formal certificates added: 14 non-.npz files / 42,057 B under 01_source_code/q2/formal_artifacts/formal/,\n   including incumbent_float_reconciled.json, q2_global_optimality_certificate.json, proof_tree_index.json,\n   proof_tree_manifest.json, proof_tree_record_summary.json, proof_tree_replay_result.json,\n   master_lower_bound.json, rigorous_master_lower_bound.json. The three .npz (86.1 MB) are excluded by an\n   explicit wildcard prune (visible in the prune log). Zero identity hits in the added files.\n2. DONE — README coverage claim corrected: explicit 覆盖范围说明 now states the per-file TEXT replacement did\n   NOT cover the two .jlog (binary, NUL-containing, skipped by the text pass) and that they were redacted in a\n   separate length-preserving step. The misleading \"all text files\" claim is gone.\n3. DONE — honest limitation recorded: envelope team_no (and the copy inside the inner JMBTKT1 ticket) replaced\n   with 000000000000; encrypted payload region byte-identical to the original; the envelope's package signature\n   was therefore NOT re-signed (no simulator private key).\n4. DONE — MANIFEST.csv regenerated from scratch (stage tree deleted and rebuilt every run, so no stale rows can\n   survive). 1736 data rows == 1736 non-manifest files. Full-sweep SHA-256 recomputation of all rows: 0 mismatches.\n5. DONE — consolidation. Deleted CUMCM2026_B_支撑材料_v2.zip (measured 20,025,124 B = 19.1 MB — note it was\n   ITSELF over the 20 MB budget, so it was both a decoy and a raw violation) and support_stage_v2/ (2095 files).\n   `out` now holds exactly ONE archive (1 *.zip) and ONE staging tree (support_stage/, 1737 files).\n   B题论文_v0.4.docx left untouched — not an archive, outside my inScope.\n6. DONE — frozen and reported above. No write in flight; the archive will not be touched again.\n\nAlso added: an automated cascading empty-directory sweep (so no empty dir can ship) and a zip SHA-256 line in\nthe build output for future freeze references.\n\nNEW WORK FILES: agentworkspace/work/package_deep_audit.ps1 (deep byte scan) and\nagentworkspace/work/package_identity_audit.ps1 + identity_audit.txt (school/region/author/pledge scan).\n\nIDENTITY SCAN RESULT (from the earlier captain mail, still current): 6 hits over 1723 files, ALL generic prose,\nzero actual leaks — \"作者写作备注\" (editorial note) in Q2_IMPLEMENTATION_AUDIT.md x3 copies, \"经作者逐行枚举证明\"\n(internal audit prose) in ABSORBED_SOLVERS_VERDICT.md x2 copies, and one false-positive \"email\" that is actually\nthe Python matmul operator `s+Rmat@np.asarray(point)` in q2_adopted.py. Zero school/region names anywhere.\nBinary metadata is clean: all 23 PDFs carry only Matplotlib Creator/Producer + CreationDate; all 23 PNGs only a\nMatplotlib Software tEXt chunk. No 承诺书/编号专用页 files or path components.\n\nONE FINDING I DID NOT ACT ON — your call\n`src/q3+q4_v2/verification/model_checks.json` (5,240 B) is DIRECTLY referenced by the shipped\n`01_source_code/q3_q4_v2/docs/README.md` (\"[模型数值核对结果](verification/model_checks.json)\"); it exists in the\nsource workspace but is NOT in the package because `verification` is one of the nine forbidden components. It is\nhigh-value evidence (all_checks_passed=true, 9 checks, model_sha256, and it verifies the 135-file source snapshot)\nand I confirmed it contains no identity traces. Adding it needs a carve-out from the nine-component rule (e.g.\n01_source_code/q3_q4_v2/docs/model_checks.json, no \"verification\" path component). I did NOT do it because you\nsaid do the bounded list then stop and freeze, and because it changes a rule rather than a file set.\nSay the word and it is a two-line change (~5 KB).",
+      "changedPaths": [
+        "agentworkspace/work/package_support.ps1",
+        "agentworkspace/out/support_stage/",
+        "agentworkspace/out/CUMCM2026_B_支撑材料.zip"
+      ],
+      "acceptanceResults": [
+        {
+          "criterion": "a. 两个 .jlog 的 team_no 泄漏已消除；若无法安全脱敏则丢弃",
+          "status": "passed",
+          "evidence": "队长在后续消息中 RETRACT 了「丢弃日志」指令并改为保留（其最终消息明确要求不得删除或重新打补丁）。我独立复核了队长的全部测量：两个包内 .jlog 与原始文件的差异分别只有 65 字节且完全落在信封区间内（p3: 131..1805，p4: 131..1804），加密载荷区间（3230..101575 / 3230..127268）逐字节相同；信封头严格 UTF-8 可解码、可解析为 JSON；team_no 现为 000000000000；202612004018 在包内 .jlog 中命中 0。文件总长不变（101576 / 127269）。因此保留日志并采用等长脱敏（Repair-JlogTeamNo）。"
+        },
+        {
+          "criterion": "b. 空目录不随包交付（03_paper_evidence/flowcharts/）",
+          "status": "passed",
+          "evidence": "构建脚本新增自底向上空目录清理（可级联），打印 `=== 空目录清理: 移除 1 个` / `removed empty dir: 03_paper_evidence\\flowcharts`，随后 `=== 空目录校验: 0 个空目录`。对解压后成品的独立复检同样得到 `empty dirs = 0`。脚本在存在空目录时直接 throw。"
+        },
+        {
+          "criterion": "c. README 修正覆盖范围声明 + 日志真实限制说明",
+          "status": "passed",
+          "evidence": "已删除「全部文本文件」的过度声明，改为明确的「覆盖范围说明（准确表述）」：说明逐文件文本替换并未覆盖 .jlog（它们是含 NUL 的二进制，被文本脱敏环节跳过），两者是在另一步骤中做等长脱敏。新增如实限制声明：信封头原始签名覆盖未脱敏字节，本包未对该签名重新签名（无私钥），除信封头外加密载荷区间与原文件逐字节一致。README 仍含 TEAMXXX 复现命令。"
+        },
+        {
+          "criterion": "d. MANIFEST.csv 从零重新生成（不复用旧行）",
+          "status": "passed",
+          "evidence": "脚本每次先 Remove-Item $stage -Recurse 重建暂存树，再重新枚举文件、逐个重算 SHA-256 写入新 MANIFEST.csv，不存在复用旧行的路径。实测：header=relative_path,bytes,sha256，数据行 1736 == 1736 个非清单文件（解压后共 1737 个文件）；对全部 1736 行逐行重算 SHA-256 与字节数，sha_mismatch = 0。"
+        },
+        {
+          "criterion": "e. out 目录收敛为恰好一个归档 + 至多一个暂存树",
+          "status": "passed",
+          "evidence": "删除了 CUMCM2026_B_支撑材料_v2.zip（实测 20,025,124 字节 = 19.1 MB，本身已超 20 MB 预算）与 support_stage_v2\\（2095 文件）。删除后 out 下：support_stage/（1737 文件）、CUMCM2026_B_支撑材料.zip、B题论文_v0.4.docx。复核：out 下 zip 文件数 = 1、staging 树数 = 1，未保留任何 _v2 后缀文件。"
+        },
+        {
+          "criterion": "f. 重建后重新断言并报告（九个禁止分量含大小写不敏感、无 exe/docx、原始字节全量扫描）",
+          "status": "passed",
+          "evidence": "禁止分量改为 OrdinalIgnoreCase HashSet 逐分量比较；成品树反证 0 violation(s)，独立复检 offenders = 0。无 jammers-simulator.exe、无 B题论文*.docx。原始字节扫描读取每个文件的字节（不跳过含 NUL 的二进制，共 1737 个文件）：真实队号 0、TEAM+001 0、TEAM+3 位数字 0；脚本在任一非 0 时 throw。报告：zip = 14,656,677 字节 / 13.98 MB，条目数 1737，SHA-256 = c325ba634280d9eee62e9e5c5eccd725b61fd2620102467bfa6c8e07cff4c8c8，暂存文件数 1737。"
+        }
+      ],
+      "commandsRun": [
+        {
+          "command": "pwsh -NoProfile -File 'D:\\CUMCM2026\\agentworkspace\\work\\package_support.ps1'",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "=== 原始字节全量扫描（1736 个文件，含二进制，不跳过 NUL）=== 真实队号命中文件数 = 0 / TEAM+001 = 0 / TEAM+3位数字 = 0。=== 排除项校验(大小写不敏感分量): 0 violation(s) === 空目录校验: 0 个空目录 === MANIFEST.csv: 1736 data rows === ZIP bytes = 14656677 MB = 13.98 WITHIN BUDGET, zip entries = 1737, zip sha256 = c325ba634280d9eee62e9e5c5eccd725b61fd2620102467bfa6c8e07cff4c8c8 === BUILD OK ==="
+        },
+        {
+          "command": "$z=Get-Item 'D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip'; \"$($z.Length) bytes / $([math]::Round($z.Length/1MB,2)) MB\"; if ($z.Length -gt 20000000) { throw 'OVER BUDGET' } else { 'WITHIN BUDGET' }",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "14656677 bytes / 13.98 MB -> WITHIN BUDGET（余量 5,343,323 字节 = 5.10 MB）。SHA-256 冻结值 c325ba634280d9eee62e9e5c5eccd725b61fd2620102467bfa6c8e07cff4c8c8，条目数 1737，暂存文件数 1737。"
+        },
+        {
+          "command": "Expand-Archive 后对成品独立复检（禁止分量 / 空目录 / 原始字节扫描 / MANIFEST 全量 SHA-256）",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "exclusions offenders = 0 ; empty dirs = 0 ; raw-byte files=1737 realTeam=0 TEAM001=0 TEAM+digits=0 ; top level = 01_source_code | 02_documentation | 03_paper_evidence | 04_raw_run_evidence | 05_simulator_logs | MANIFEST.csv | README.md ; manifest rows=1736 extracted=1737 sha_mismatch=0 ; q2/formal_artifacts = 14 files / 42057 bytes / npz=0 ; logs kept = formal-p3-1.jlog(101576) formal-p4-1.jlog(127269)"
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "subject": "Re-verify the repaired archive (raw-byte anonymisation + traceability)",
+      "description": "RE-RUN verification against the REPAIRED archive. This replaces the failed t2 attempt (7b234a3a) - do not retry that attempt.\n\nCONTEXT: t2 failed on blocker t2-B1 - the real team number 202612004018 survived in cleartext in both shipped .jlog files (\"team_no\":\"202612004018\" at byte offset 131), because the anonymiser skips NUL-containing files and only targeted the literal TEAM001. Repair task t4 removes those logs, regenerates MANIFEST.csv, corrects the README coverage claim, and consolidates agentworkspace/out to a single canonical archive. Verify the REPAIRED artifact.\n\nNote two deviations from your original t2 spec, both deliberate:\n- The repaired archive will NOT contain 05_simulator_logs (dropped rather than byte-patched, because a bytes-only edit of a signed behavior log risks producing an internally inconsistent evidence artifact). Treat its absence as CORRECT, and instead require the README to document the omission honestly. If a genuinely de-identified but internally valid log was shipped instead, verify it contains no 202612004018 and no TEAM001.\n- Files are one level shallower than my original listing assumed: `01_source_code/q3_q4_v2/recommended.py`, not `.../q3+q4_v2/recommended.py`. You already caught this; keep using the corrected paths.\n\nREQUIRED WORK:\n1. FREEZE FIRST. Snapshot the new archive with vf_freeze.py, record byte size + SHA-256, and re-verify the hash after extraction so every finding binds to fixed bytes. If the file is write-locked or drifts, report that instead of verifying.\n2. RUN THE FULL HARNESS: budget (<= 20000000, entry count == extracted file count, all CRCs valid), exclusions (0 forbidden DIRECTORY components for all nine names, exact + case-insensitive; no .exe; no B题论文*.docx), content inventory, MANIFEST integrity (row count == extracted files - 1, and independently re-hash a random sample), README quality.\n3. RAW-BYTE ANONYMISATION SCAN - the decisive check this time. Read the BYTES of every extracted file (not a text-extension whitelist, not a decode-and-skip step) and report hit counts for: `202612004018`, `TEAM001`, `TEAM[0-9]{3}` excluding TEAMXXX, the practice id `5880626762084925000`. All must be 0. Report TEAMXXX occurrences to prove the pass ran. Include binary containers (.npz/.pdf/.png/.docx/.jlog/.sqlite) explicitly.\n4. CONSOLIDATION: confirm exactly ONE archive remains in `agentworkspace\\out` with no `_v2` decoy and no spare staging tree, and that no empty directories ship.\n5. TRACEABILITY ANALYSIS - the highest-value input to t3, and the reason this task exists. Extract the archive and determine which source/evidence paths the PAPER names that DO resolve inside the archive versus which do NOT. Measured baseline from `B题论文_v0.4.docx`: `lower_bound` 56, `verification` 78, `model_checks` 0, `核对` 7, and `01_source_code`/`03_paper_evidence`/`04_raw_run_evidence` each 0; the paper also claims its appendix filenames correspond to support-material paths. Establish and report whether the paper cites `verification/` or `lower_bound` artifacts by path and whether those paths exist here. `src/q3+q4_v2/verification` was deliberately excluded, so if the paper depends on it by path, that is a t3 finding whose fix is a small targeted re-inclusion or a paper/README wording change - NOT shipping all 12.6 MB.\n\nReport every finding with the exact command and its output. Give an explicit overall pass/fail and state clearly whether the artifact is now safe to submit.",
+      "status": "failed",
+      "assignee": "verifier",
+      "dependencies": [],
+      "attempt": 1,
+      "createdAt": 1789288788040,
+      "updatedAt": 1789288956705,
+      "kind": "verification",
+      "objective": "Independently verify the REPAIRED support archive: prove the team-number exposure is gone by raw-byte scan, confirm budget/exclusions/manifest/consolidation, and establish paper-to-archive path traceability for the final compliance review.",
+      "acceptance": [
+        "先冻结新存档并用 vf_freeze.py 记录 SHA-256，之后重新校验哈希未变，全部结论绑定到该哈希",
+        "预算：新 zip 实测字节数 <= 20000000，条目数与解压后磁盘文件数一致，全部成员 CRC 校验通过",
+        "脱敏（最强项）：对解压后每个文件做原始字节扫描，202612004018 命中 0，TEAM001 命中 0；TEAMXXX 仍存在于文本文件中证明脱敏在跑",
+        "05_simulator_logs 已移除或仅含内部自洽的脱敏日志；README 的“未纳入”清单如实列出被剔除的日志及原因",
+        "exactly one 规范存档：out 下无 _v2 存档、无多余暂存树，且无空目录随包发出",
+        "MANIFEST.csv 行数与解压文件总数一致，全部行重算 SHA-256 后 0 处不匹配",
+        "追溯性分析：列出论文明示的源/证据路径中能在包内解析与不能解析的两组清单，并对不能解析者给出严重度与最小修复建议（定向补入少量文件或改论文/README 措辞，不得整包加入 12.6 MB）",
+        "对每条 acceptance 给出 passed/failed 与命令或文件路径证据"
+      ],
+      "deliverables": [
+        "agentworkspace/work/verify_support_package.md"
+      ],
+      "attemptId": "986e1d11-3a49-492a-86a6-3c5469c29fdb",
+      "reassigning": false,
+      "findings": [
+        {
+          "id": "t5-B1",
+          "severity": "blocker",
+          "problem": "The artifact drifted DURING verification, so no content verdict could be bound to a fixed hash. Four stability probes at 16:41:03-16:41:12 were byte-identical (14641607 B, sha256 7350EAB06034EE22), I snapshotted on that basis, and then between 16:41:36 and 16:41:37 the canonical archive gained 2 bytes and changed hash (14641609 B, sha256 8E7147BDFB2F2CC3). Concurrent packager activity confirms live building: package_support.ps1 rewritten 16:41:26, pkg_verify_v2.py created 16:41:27, support_stage touched 16:41:36, and repair task t4 is still [pending].",
+          "requiredFix": "Let t4 finish and confirm the writer has stopped (no change in bytes/mtime/SHA-256 across several seconds), then reassign the re-verification task. Do NOT treat my frozen hash 7350EAB06034EE22 as the deliverable hash.",
+          "file": "D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip"
+        },
+        {
+          "id": "t5-B2",
+          "severity": "blocker",
+          "problem": "The required remediation is NOT applied: the canonical archive still contains both leaking members 05_simulator_logs/formal-p3-1.jlog and 05_simulator_logs/formal-p4-1.jlog (05_simulator_logs = 2 entries out of 1723). These are the exact files whose team_no field carried the real team number in t2-B1, and the README still claims full text coverage without listing any excluded logs.",
+          "requiredFix": "Apply the chosen fix (drop the two .jlog files), then regenerate MANIFEST.csv rows and correct the README so its 未纳入 list truthfully names the excluded logs and the reason (a bytes-only edit of a signed behavior log could yield internally inconsistent evidence, which is worse than omitting an optional log).",
+          "file": "D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料.zip"
+        },
+        {
+          "id": "t5-B3",
+          "severity": "medium",
+          "problem": "A decoy archive is present in the submission directory and is NOT a valid candidate: CUMCM2026_B_支撑材料_v2.zip is 20015477 B / 2095 entries, carries 12 jlog members including the practice-id-named formal-p3-1-VUXH-728S-5QND-4JGQ.jlog, has 202612004018 in 24 files, TEAM001 in 143 files, only 25 members carrying TEAMXXX, and no MANIFEST.csv. Alongside it, support_stage_v2/ remains. So `out` holds two archives and two staging trees.",
+          "requiredFix": "Delete or move the _v2 archive and support_stage_v2/ out of agentworkspace\\out so exactly ONE canonical archive named for submission (no _v2 suffix) plus the single staging tree it was built from remains.",
+          "file": "D:\\CUMCM2026\\agentworkspace\\out\\CUMCM2026_B_支撑材料_v2.zip"
+        },
+        {
+          "id": "t5-B4",
+          "severity": "low",
+          "problem": "Informational/tooling note, not an archive defect: README.md legitimately contains the literal string TEAM001 at byte 6182 while explaining the de-identification rule (除 TEAM001 外，历史产物路径中出现过的真实队号也一并替换为 TEAMXXX). A naive requirement of zero literal TEAM001 hits therefore cannot be met by any honest README, so a literal-zero test produces a false positive on compliant packages.",
+          "requiredFix": "Use the evidence-correct check in future runs: TEAM001 must be 0 in data/code artifacts; a hit inside de-identification documentation is expected and must be adjudicated by reading its context rather than counted as a leak. Consider having the README phrase the rule without quoting the literal id, to simplify verification.",
+          "file": "README.md"
+        }
+      ],
+      "acceptanceResults": [
+        {
+          "criterion": "先冻结新存档并用 vf_freeze.py 记录 SHA-256，之后重新校验哈希未变，全部结论绑定到该哈希",
+          "status": "failed",
+          "evidence": "FAILED — the artifact drifted DURING verification, which criterion 1 explicitly says to report instead of verifying. I snapshotted with `python vf_freeze.py snapshot D:\\CUMCM2026\\agentworkspace\\out --out _vf_frozen_t5.json` -> CUMCM2026_B_支撑材料.zip 14641607 B, mtime 16:40:49, sha256 7350EAB06034EE22…. Four stability probes 16:41:03/06/09/12 were byte-identical, so I began work. Then between probe 1 (t=16:41:36, 14641607 B, 7350EAB06034EE22) and probe 2 (t=16:41:37) the file gained 2 bytes and changed hash: 14641609 B, sha256 8E7147BDFB2F2CC3. Drift timeline: 16:37:28/14641132/9BD87A28 (t2 frozen, superseded) -> 16:40:07/14641083 -> 16:40:49/14641607/7350EAB0 (t5 snapshot, now stale) -> 16:41:37/14641609/8E7147BD. Concurrent writer activity confirms live building: package_support.ps1 rewritten 16:41:26, pkg_verify_v2.py created 16:41:27, support_stage touched 16:41:36. No finding below binds to a fixed hash, so this criterion cannot pass."
+        },
+        {
+          "criterion": "预算：新 zip 实测字节数 <= 20000000，条目数与解压后磁盘文件数一致，全部成员 CRC 校验通过",
+          "status": "failed",
+          "evidence": "NOT VERIFIED — deliberately not filed against moving bytes, per criterion 1. Interim observation only, not a verdict: the frozen-but-stale snapshot had 1723 entries totalling 14641607 B (13.963 MB), i.e. well under 20000000, and the second decoy archive CUMCM2026_B_支撑材料_v2.zip is 20015477 B (19.088 MB) with 2095 entries. I did not complete extraction, the entry-vs-disk count comparison, or the CRC sweep because those would be measurements of bytes that no longer exist. Will run on the frozen repaired artifact."
+        },
+        {
+          "criterion": "脱敏（最强项）：对解压后每个文件做原始字节扫描，202612004018 命中 0，TEAM001 命中 0；TEAMXXX 仍存在于文本文件中证明脱敏在跑",
+          "status": "failed",
+          "evidence": "PARTIAL — one half PASSES and one half is NOT YET ACHIEVABLE, reported honestly rather than claimed: raw-byte scan of every in-archive member of the canonical archive (reading member bytes, no text-extension whitelist, no NUL skip) gives **202612004018 = 0 files** — the numeric real-id leak is GONE, so the redaction pass did land. TEAMXXX present in 149 members (pass ran). However **TEAM001 still appears in 1 member, README.md @byte 6182**, and I verified the context is legitimate rule documentation, not a live leak: \"本包已把全部文本文件中出现的队号串统一替换为占位符 `TEAMXXX`… 除 `TEAM001` 外，历史产物路径中出现过的真实队号也一并替换为 `TEAMXXX`\". So the archive is correct to mention TEAM001 in a de-identification note; I am flagging that a naive literal TEAM001==0 test would false-positive here, and the correct test is 0 in data/code while allowing the README's rule text. Separately the REQUIRED edit is NOT done: 05_simulator_logs/formal-p3-1.jlog and formal-p4-1.jlog are STILL PRESENT in the canonical archive, which is the exact remediation t4 was created for."
+        },
+        {
+          "criterion": "05_simulator_logs 已移除或仅含内部自洽的脱敏日志；README 的“未纳入”清单如实列出被剔除的日志及原因",
+          "status": "failed",
+          "evidence": "FAILED — 05_simulator_logs is NOT removed: the canonical archive contains exactly 2 members under it, `05_simulator_logs/formal-p3-1.jlog` and `05_simulator_logs/formal-p4-1.jlog`, confirmed by listing in-archive entries (1723 entries; jlog entries = 2). These are the very files whose `team_no` field carried the leak, so the chosen remediation (drop them) has not been applied yet. I could NOT check the README's omission disclosure because the omission itself has not happened; the README I read still claims full coverage (\"全部文本文件中出现的队号串统一替换\") and does not list any excluded logs."
+        },
+        {
+          "criterion": "exactly one 规范存档：out 下无 _v2 存档、无多余暂存树，且无空目录随包发出",
+          "status": "failed",
+          "evidence": "FAILED — `Get-ChildItem D:\\CUMCM2026\\agentworkspace\\out` at 16:41:52 shows TWO archives and TWO staging trees: CUMCM2026_B_支撑材料.zip (14641609 B) plus the `_v2` decoy CUMCM2026_B_支撑材料_v2.zip (20015477 B, rewritten 16:41:14), and support_stage/ plus support_stage_v2/. The `_v2` decoy is not a valid candidate: it carries 12 jlog members including the practice-id-named `formal-p3-1-VUXH-728S-5QND-4JGQ.jlog`, has 202612004018 in 24 files, TEAM001 in 143 files, only 25 members carrying TEAMXXX, and NO MANIFEST.csv — so treating it as the deliverable would ship the leak at scale. Neither archive is currently the finished single canonical artifact."
+        },
+        {
+          "criterion": "MANIFEST.csv 行数与解压文件总数一致，全部行重算 SHA-256 后 0 处不匹配",
+          "status": "failed",
+          "evidence": "NOT VERIFIED against a frozen artifact. Interim observation: the stale snapshot's MANIFEST.csv has header `relative_path,bytes,sha256` and 1722 data rows, which is exactly extracted_count(1723) − 1, matching the t2 pattern. The `_v2` decoy has NO MANIFEST.csv at all. I did not re-hash rows because the bytes moved mid-run; the requirement is a full recompute of ALL rows with 0 mismatches, which will be performed on the frozen repaired archive."
+        },
+        {
+          "criterion": "追溯性分析：列出论文明示的源/证据路径中能在包内解析与不能解析的两组清单，并对不能解析者给出严重度与最小修复建议（定向补入少量文件或改论文/README 措辞，不得整包加入 12.6 MB）",
+          "status": "passed",
+          "evidence": "COMPLETED in substance (delivered ahead of the freeze in my prior report, re-confirmed by re-reading the paper docx and re-resolving against an extracted tree of the previous build). RESOLVES (106/116 distinct path tokens with code extensions): every `src/...` citation maps cleanly — src/q1/code/q1_cli.py -> 01_source_code/q1/code/q1_cli.py; src/q1/code/q1_geometry.py, src/q1/code/q1_verify.py, src/q1/code/fuzz_crosscheck.py, src/q1/code/tests/test_q1.py, src/q2/Q2_CANONICAL_SYMMETRY_LEMMA.md, src/q2/code/artifacts/q2_final_evidence_config.json, and the remainder resolve by unambiguous basename. DOES NOT RESOLVE (10, with severity + minimal fix): (1) `verification/` by path — **0 occurrences**, along with `model_checks` 0, so excluding the 12.6 MB verification subtree broke NO citation; severity NONE, fix = none (do NOT re-include). (2) `lower_bound` artifacts — the 56 paper mentions are satisfied by the SHIPPED 01_source_code/q3_q4_v2/tools/lower_bound.py (3877 B, \"T >= 5N + M/5\"); the `master_lower_bound.json`/`rigorous_master_lower_bound.json` tokens are absent from BOTH archive and source, so they were never shipped files; severity NONE, fix = none. (3) `results/selection_lock.json` in 4 cited forms — lives only under an excluded results\\ path; severity LOW, fix = none required, because I proved `01_source_code/q3_q4_v2/absorbed/q4_v4/locked.py` (3445 B) INLINES all 36 parameters as a Python literal with no `open`/`read_text`/`json.load` of that file (only provenance comments), and the paper itself says the parameters are inlined so the code does not read it. (4) `src/q2/artifacts/formal/incumbent_float_reconciled.json` and `q2_global_optimality_certificate.json` — these DO exist in source (`q2/formal_artifacts/formal/...`) and are cited as formal certificates; severity MEDIUM, minimal fix = targeted re-inclusion of just these 2 small JSON files, or a one-line wording change in the paper/README; do NOT add the 12.6 MB block. (5) The remaining unresolved tokens (`V2/results/selection_lock.json`, `geometry/hand_layouts.json`, `geometry/union_layout_trials.json`, `numba/misc/coverage_support.py`, `Q3_Q4_V3/.../offline_world.py`, `.../bridge.py`) do not exist in the source tree either — they are cross-repo/composition artifacts named in prose, severity LOW, fix = none. Caveat: this list was derived against the previous build's extracted tree and must be re-confirmed against the final frozen artifact."
+        },
+        {
+          "criterion": "对每条 acceptance 给出 passed/failed 与命令或文件路径证据",
+          "status": "passed",
+          "evidence": "PASSED as a reporting requirement: each of the eight criteria above carries an explicit status plus the command or file path that produced it, and I avoided silently converting un-measurable items into passes. Overall verdict for t5 is FAILED: the artifact is mid-rebuild (hash changed during verification) and the required remediation is not applied (both leaking .jlog members still present; two archives and two staging trees in out). Nothing should be submitted from the current state, and my frozen hash 7350EAB06034EE22… must NOT be treated as the deliverable hash."
+        }
+      ],
+      "commandsRun": [
+        {
+          "command": "python vf_freeze.py snapshot D:\\CUMCM2026\\agentworkspace\\out --out _vf_frozen_t5.json",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "2 zips: CUMCM2026_B_支撑材料.zip 14641607 B 2026-09-13 16:40:49 7350eab06034ee22 ; CUMCM2026_B_支撑材料_v2.zip 20015477 B 2026-09-13 16:41:14 ca0b1e5989c3b433"
+        },
+        {
+          "command": "Get-FileHash <canonical zip> -Algorithm SHA256  # 4 stability probes 16:41:03-16:41:12",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "probes 1-4 all: bytes=14641607 mtime=16:40:49 sha=7350EAB06034EE22 (stable) -> snapshot taken"
+        },
+        {
+          "command": "Get-Item/Get-FileHash loop over both zips  # re-probe 16:41:36-16:41:46",
+          "status": "failed",
+          "exitCode": 0,
+          "evidence": "canonical: probe1 14641607/7350EAB06034EE22 ; probe2 14641609/8E7147BDFB2F2CC3 ; probe3 14641609/8E7147BDFB2F2CC3 -> DRIFTED 2 bytes during verification. _v2: 20015477/CA0B1E5989C3B433 stable across 3 probes."
+        },
+        {
+          "command": "python -c \"list in-archive entries; per-section counts; jlog presence; MANIFEST header+rows\"",
+          "status": "failed",
+          "exitCode": 0,
+          "evidence": "entries=1723; 05_simulator_logs = 2 entries (formal-p3-1.jlog, formal-p4-1.jlog) STILL PRESENT; README.md 1; MANIFEST.csv 1 with header 'relative_path,bytes,sha256' and 1722 data rows; sections 01_source_code 902 / 02_documentation 31 / 03_paper_evidence 36 / 04_raw_run_evidence 750 / 05_simulator_logs 2 / MANIFEST.csv 1 / README.md 1"
+        },
+        {
+          "command": "python -c \"raw-byte scan EVERY member of both zips for 202612004018 | TEAM001 | TEAMXXX; count jlog members\"",
+          "status": "failed",
+          "exitCode": 0,
+          "evidence": "canonical: 202612004018 = 0 files ; TEAM001 = 1 file (README.md) ; TEAMXXX = 149 files ; jlog = 2. _v2 DECOY: 202612004018 = 24 files (incl. 05_simulator_logs/formal-p3-1-VUXH-728S-5QND-4JGQ.jlog) ; TEAM001 = 143 files ; TEAMXXX = 25 files ; jlog = 12 ; no MANIFEST.csv"
+        },
+        {
+          "command": "python -c \"extract context bytes around the single TEAM001 hit in canonical README.md\"",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "README.md size=9226, hit @byte 6182, context: '本包已把全部文本文件中出现的队号串统一替换为占位符 `TEAMXXX`，源码中的 `--robot-id` 默认值即显示为 `TEAMXXX`（运行时用命令行参数传入真实队号）。除 `TEAM001` 外，历史产物路径中出现过的真实队号也一并替换为 `TEAMXXX`（例如 q3_q4_v2/baseline/evide…' -> legitimate de-identification documentation, NOT a live leak"
+        },
+        {
+          "command": "Get-ChildItem D:\\CUMCM2026\\agentworkspace\\out -Force  # consolidation check at 16:41:52",
+          "status": "failed",
+          "exitCode": 0,
+          "evidence": "TWO archives: CUMCM2026_B_支撑材料.zip 14641609 B (16:41:37) + CUMCM2026_B_支撑材料_v2.zip 20015477 B (16:41:14); TWO staging trees: support_stage (16:41:36) + support_stage_v2 (16:41:11); B题论文_v0.4.docx 11005761 B also present. Consolidation not achieved."
+        },
+        {
+          "command": "Get-ChildItem agentworkspace\\work -File | Sort LastWriteTime -Descending | Select -First 6",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "16:41:27 pkg_verify_v2.py ; 16:41:26 package_support.ps1 ; 16:41:24 vd9_k.txt ; 16:41:23 _vd9_k.py -> packager actively working, t4 still [pending]"
+        },
+        {
+          "command": "python -c \"re-derive paper keyword baseline + resolve paper-cited path tokens against extracted archive\"  # traceability",
+          "status": "passed",
+          "exitCode": 0,
+          "evidence": "paper docx: lower_bound 56, verification 78, model_checks 0, 核对 7, 01_source_code 0, 03_paper_evidence 0, 04_raw_run_evidence 0; 116 path tokens with code extensions; 106 resolve; verification/ path tokens = 0 distinct; lower_bound path tokens = 14 distinct; shipped tools/lower_bound.py 3877 B; absorbed/q4_v4/locked.py 3445 B inlines LOCKED_PARAMETERS with no file read of selection_lock.json"
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "subject": "Re-verify repaired archive: raw-byte anonymisation check and traceability",
+      "description": "Re-verification of the REPAIRED archive; supersedes the failed t2 attempt (7b234a3a) which failed on blocker t2-B1 (real team number 202612004018 in cleartext inside both shipped .jlog files). Repair task t4 removes those logs, regenerates MANIFEST.csv, corrects the README coverage claim, and consolidates agentworkspace/out to a single canonical archive.\n\nWait for t4. Then: freeze the new archive hash with vf_freeze.py and bind all findings to it; re-run the full harness (budget, exclusions, content, MANIFEST, README); add a RAW-BYTE scan of every extracted file for 202612004018 and TEAM001 (both must be 0), reading bytes rather than a text whitelist because the original miss was a binary skip; confirm exactly one archive remains with no _v2 decoy and no empty directories ship.\n\nAlso deliver the traceability analysis, which is the highest-value input to t3: which source/evidence paths the paper names resolve inside the archive versus which do not. Baseline keyword counts measured in B题论文_v0.4.docx: lower_bound 56, verification 78, model_checks 0, 核对 7, and 01_source_code/03_paper_evidence/04_raw_run_evidence each 0. src/q3+q4_v2/verification was deliberately excluded, so a paper dependency on those paths by name is a finding for t3 whose fix is a small targeted re-inclusion or a wording/README change - not shipping all 12.6 MB.",
+      "status": "cancelled",
+      "assignee": "verifier",
+      "dependencies": [
+        "t1",
+        "t4"
+      ],
+      "attempt": 0,
+      "createdAt": 1789288792437,
+      "updatedAt": 1789288834164,
+      "kind": "verification",
+      "objective": "Verify the repaired archive kills the team-number exposure and remains within budget with intact exclusions and manifest, and produce the paper-to-archive path traceability needed for the final compliance review.",
+      "acceptance": [
+        "在 t4 完成前不得开始；完成后先冻结新存档 SHA-256 再验证",
+        "判定修复是否真正消除了真实队号暴露（原始字节扫描 202612004018 = 0），并明确回答“现在能否安全提交”"
+      ],
+      "deliverables": [
+        "agentworkspace/work/verify_support_package.md"
+      ]
+    },
+    {
+      "id": "t7",
+      "subject": "VOID duplicate of t5 - do not claim, see t6 instead",
+      "description": "This is a DEAD DUPLICATE of t5 created by a double tool call. IGNORE IT - do not claim it. The correct task is t6 (Re-verify repaired archive: raw-byte anonymisation check and traceability), which carries the full specification and correctly depends on t1 + t4.\n\nDO NOT CREATE A SECOND repair task or a third verification task for this workstream. If asked, report that this task is void.",
+      "status": "pending",
+      "assignee": "verifier",
+      "dependencies": [
+        "t1",
+        "t2"
+      ],
+      "attempt": 0,
+      "createdAt": 1789288799862,
+      "updatedAt": 1789288803105,
+      "kind": "work",
+      "objective": "Voided duplicate of t5 - no work is required.",
+      "acceptance": [
+        "superseded"
+      ],
+      "deliverables": [
+        "agentworkspace/work/verify_support_package.md"
+      ],
+      "handoffId": "ab059b6d-2d4a-4f99-ac67-0c0703f62ba2",
+      "reassigning": false
+    }
+  ],
+  "taskSeq": 7,
+  "phase": "running",
+  "approvedAt": 1789288203014
+}

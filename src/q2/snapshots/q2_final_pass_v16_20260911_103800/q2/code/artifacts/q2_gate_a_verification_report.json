@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "gate": "A",
+  "status": "PASS",
+  "scope": [
+    "finite Point2, LineSegment, and unwrapped CircularArc primitives",
+    "A1 = Omega intersection first +/-1 degree wedge intersection (5,1500] radial shell",
+    "A1BoundaryRegistry isolation and active boundary construction",
+    "independent boundary-sample verification",
+    "zero-dimensional tangent A1 representation and completeness regression"
+  ],
+  "commands": [
+    "python -B -m pytest -q -p no:cacheprovider .\\src\\q2\\code\\tests\\test_gate_a.py",
+    "python -B -m pytest -q -p no:cacheprovider .\\src\\q1\\code\\tests"
+  ],
+  "results": {
+    "q2_gate_a": "10 passed",
+    "q1_regression": "10 passed"
+  },
+  "independent_checks": [
+    "Verifier A re-evaluates sampled boundary points directly against Omega, radial 5--1500 constraints, and circular bearing distance without calling A1Region.contains.",
+    "Verifier A independently derives 101 ray-boundary samples and checks that each is covered by the registry; this reverse check catches omitted boundary geometry.",
+    "six persistent fixtures pass, including the upper-wedge/Omega tangent singleton A1={T}.",
+    "500 fixed-seed nondegenerate constructions pass the independent completeness oracle.",
+    "A1BoundaryRegistry rejects a rho=1000 arc even when it is mislabeled as an Omega arc, and rejects an Omega-labeled arc with an incorrect center or radius."
+  ],
+  "hard_invariants_confirmed": [
+    "rho=1000 is absent from A1BoundaryRegistry",
+    "rho=1500 remains an A1 physical boundary only when active",
+    "a nonempty zero-dimensional A1 is registered as BoundaryPoint rather than omitted",
+    "an EMPTY A1 with checked_points=0 cannot obtain a verifier PASS without a separate independent emptiness proof",
+    "no Q1 evaluator is invoked by Gate A"
+  ],
+  "not_implemented": [
+    "Crec and CrecWitnessRegistry",
+    "near-aware angular image and circular interval union",
+    "pure Q1 adapter",
+    "inner E1--E5 maximization",
+    "outer search, baselines, figures, and final solution artifacts"
+  ],
+  "snapshot_id": "q2_gate_a_pass_v1_20260911_020726",
+  "snapshot_created_at": "2026-09-11T02:07:26+08:00",
+  "source_snapshot": null,
+  "verification_report": "code/artifacts/q2_gate_a_verification_report.json",
+  "certified_global_optimum": false
+}

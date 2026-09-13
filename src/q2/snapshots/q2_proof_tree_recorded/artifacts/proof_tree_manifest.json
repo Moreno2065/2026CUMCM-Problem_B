@@ -1,0 +1,28 @@
+{
+ "schema": "q2-proof-tree-v1",
+ "files": {
+  "proof_tree.npz": "563f626ce9fba2e3fd023a4e6a2db25c2cdc851d543c8fe7182b97c23361daa4",
+  "proof_tree_index.json": "f9c2f57e6994a9bfd31a7541d3d52f96dfe9682d14adc7e303a541a10571525c"
+ },
+ "search_engine": "float64 batch interval B&B (search only, spec s.16)",
+ "certificate_engine": "Arb proof-tree replay (proof_tree_replay.py)",
+ "old_tree_status": "OLD_TREE_NOT_REPLAYABLE: the historical runs did not record a tree; per spec s.32 the master was re-run with identical frozen cuts (9 scenarios, 20 witnesses), identical incumbent U, identical root domain and tolerance, with tree recording enabled. This is a re-recorded proof tree, not a model change.",
+ "meta": {
+  "b0": [
+   0.0,
+   2000.0,
+   -1000.0,
+   0.0
+  ],
+  "u_cert": "134.0659292484056",
+  "tol": 0.009000000000000001,
+  "round_cap": 8192,
+  "max_boxes": 10000000,
+  "witness_count": 20,
+  "scenario_count": 9,
+  "g0_anchor": [
+   1000.0,
+   0.0
+  ]
+ }
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "gate": "B",
+  "status": "PASS",
+  "frozen_definition": "Crec = intersection over G in A1 of B(G, max(1000, ||G-S1||))",
+  "scope": [
+    "nominally isolated CrecWitnessRegistry",
+    "exact three-branch radial witness reduction",
+    "finite circular-arc endpoint and antipodal candidates",
+    "finite algebraic stationary candidates for deep Omega rho_lo arcs",
+    "provenance-rich Phi(S2) and Crec membership result",
+    "independent representative-target and dense radial Verifier B"
+  ],
+  "commands": [
+    "python -B -m pytest -q -p no:cacheprovider .\\src\\q2\\code\\tests\\test_gate_a.py",
+    "python -B -m pytest -q -p no:cacheprovider .\\src\\q2\\code\\tests\\test_gate_b.py",
+    "python -B -m pytest -q -p no:cacheprovider .\\src\\q1\\code\\tests",
+    "python -B -m py_compile .\\src\\q2\\code\\geometry\\crec.py .\\src\\q2\\code\\verifier\\verify_crec.py"
+  ],
+  "results": {
+    "q2_gate_a": "10 passed",
+    "q2_gate_b": "25 passed",
+    "q1_regression": "10 passed",
+    "python_compile": "PASS",
+    "forbidden_gate_c_or_later_file_count": 0
+  },
+  "deterministic_fixtures": {
+    "count": 9,
+    "status": "PASS",
+    "ids": [
+      "B-F1_center_ordinary",
+      "B-F2_omega_outward_truncation",
+      "B-F3_wrap_359_5",
+      "B-F4_external_station",
+      "B-F5_tangent_singleton",
+      "B-F6_deep_compatible_radius_information",
+      "B-F7_antipodal_interior_maximum",
+      "B-F8_deep_omega_stationary_maximum",
+      "B-F9_internal_rho_1500_omega_tangent_singleton"
+    ]
+  },
+  "independent_verifier": {
+    "imports_crec_solver": false,
+    "reads_crec_witness_registry": false,
+    "calls_is_in_crec": false,
+    "representative_target_oracle": "PASS",
+    "dense_theta_rho_oracle": "PASS",
+    "closed_form_point_oracle": "PASS",
+    "fixed_seed_random_cases": 500,
+    "random_seed": 20260911,
+    "worst_analytic_minus_dense_gap_m": -4.547473508864641e-13,
+    "largest_observed_analytic_minus_dense_gap_m": 4.043853550683707e-06,
+    "comparison_tolerance_m": 2e-06
+  },
+  "hard_invariants_confirmed": [
+    "A1BoundaryRegistry is not CrecWitnessRegistry",
+    "rho=1000 remains illegal in A1BoundaryRegistry",
+    "rho=1500 is rejected as a deep-end Crec witness",
+    "an A1 physical registry cannot construct a CrecRegion",
+    "neutral CircularArc geometry may be shared without sharing active-label semantics",
+    "EMPTY A1 fails fast instead of producing the whole plane",
+    "POINT A1 reduces exactly to one compatible reception disk",
+    "SEGMENT A1 is explicitly blocked rather than treated as AREA",
+    "Crec registry first-station and Omega metadata must match its A1"
+  ],
+  "not_implemented": [
+    "near-aware angular image",
+    "CircularIntervalUnion Gate C business logic",
+    "pure Q1 adapter",
+    "E1-E5 inner maximizer",
+    "outer search and final S2"
+  ],
+  "snapshot_id": "q2_gate_b_pass_v2_20260911_024014",
+  "snapshot_created_at": "2026-09-11T02:40:14+08:00",
+  "source_snapshot": "q2_gate_a_pass_v1_20260911_020726",
+  "verification_report": "code/artifacts/q2_gate_b_verification_report.json",
+  "certified_global_optimum": false
+}

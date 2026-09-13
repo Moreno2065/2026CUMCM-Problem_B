@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "representative_case": {
+    "S1": [
+      0.0,
+      0.0
+    ],
+    "theta1_deg": 0.0,
+    "epsilon_deg": 1.0
+  },
+  "workers": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "workloads": {
+    "surface21": [
+      {
+        "workers": 1,
+        "wall_time_s": 17.080585299998347,
+        "unique_evaluations": 441,
+        "evaluations_per_s": 25.81878736907468,
+        "speedup": 1.0,
+        "parallel_efficiency": 1.0,
+        "peak_process_count": 1,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 2,
+        "wall_time_s": 8.776252499999828,
+        "unique_evaluations": 441,
+        "evaluations_per_s": 50.249237929288,
+        "speedup": 1.9462276524061588,
+        "parallel_efficiency": 0.9731138262030794,
+        "peak_process_count": 3,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 4,
+        "wall_time_s": 4.462511900004756,
+        "unique_evaluations": 441,
+        "evaluations_per_s": 98.82326588295035,
+        "speedup": 3.827571933193084,
+        "parallel_efficiency": 0.956892983298271,
+        "peak_process_count": 5,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 8,
+        "wall_time_s": 2.5341681000063545,
+        "unique_evaluations": 441,
+        "evaluations_per_s": 174.02160495939248,
+        "speedup": 6.740115345921811,
+        "parallel_efficiency": 0.8425144182402263,
+        "peak_process_count": 9,
+        "equivalent_to_workers_1": true
+      }
+    ],
+    "outer": [
+      {
+        "workers": 1,
+        "wall_time_s": 17.68688669999392,
+        "unique_evaluations": 605,
+        "evaluations_per_s": 34.2061330669466,
+        "speedup": 1.0,
+        "parallel_efficiency": 1.0,
+        "peak_process_count": 1,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 2,
+        "wall_time_s": 9.52043070000218,
+        "unique_evaluations": 605,
+        "evaluations_per_s": 63.54754517564646,
+        "speedup": 1.8577822009659575,
+        "parallel_efficiency": 0.9288911004829787,
+        "peak_process_count": 3,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 4,
+        "wall_time_s": 5.2876812999966205,
+        "unique_evaluations": 605,
+        "evaluations_per_s": 114.41688060897064,
+        "speedup": 3.3449229816489177,
+        "parallel_efficiency": 0.8362307454122294,
+        "peak_process_count": 5,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 8,
+        "wall_time_s": 3.314033599999675,
+        "unique_evaluations": 605,
+        "evaluations_per_s": 182.55699036969912,
+        "speedup": 5.336966619769834,
+        "parallel_efficiency": 0.6671208274712292,
+        "peak_process_count": 9,
+        "equivalent_to_workers_1": true
+      }
+    ],
+    "adaptive": [
+      {
+        "workers": 1,
+        "wall_time_s": 67.7730059999958,
+        "unique_evaluations": 1892,
+        "evaluations_per_s": 27.91671952694731,
+        "speedup": 1.0,
+        "parallel_efficiency": 1.0,
+        "peak_process_count": 1,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 2,
+        "wall_time_s": 34.00523619999876,
+        "unique_evaluations": 1892,
+        "evaluations_per_s": 55.638490168760214,
+        "speedup": 1.9930167695761594,
+        "parallel_efficiency": 0.9965083847880797,
+        "peak_process_count": 3,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 4,
+        "wall_time_s": 17.14989659999992,
+        "unique_evaluations": 1892,
+        "evaluations_per_s": 110.32136485301076,
+        "speedup": 3.951802601538491,
+        "parallel_efficiency": 0.9879506503846227,
+        "peak_process_count": 5,
+        "equivalent_to_workers_1": true
+      },
+      {
+        "workers": 8,
+        "wall_time_s": 10.177754900003492,
+        "unique_evaluations": 1892,
+        "evaluations_per_s": 185.89561436573314,
+        "speedup": 6.658934771554829,
+        "parallel_efficiency": 0.8323668464443537,
+        "peak_process_count": 9,
+        "equivalent_to_workers_1": true
+      }
+    ]
+  }
+}

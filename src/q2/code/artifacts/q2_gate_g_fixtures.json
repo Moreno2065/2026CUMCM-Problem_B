@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "gate": "G",
+  "purpose": "Reproducible Q2 baselines, numerical candidate regions, figures, and evidence-table fixtures.",
+  "source_snapshot": "q2_gate_f_pass_v1_20260911_050600",
+  "representative_case": {
+    "station1": {"x": 0.0, "y": 0.0},
+    "theta1_deg": 0.0,
+    "epsilon_deg": 1.0,
+    "case_label": "representative illustrative case",
+    "output_directory": "code/artifacts/gate_g_representative"
+  },
+  "baselines": [
+    {"method": "B0", "definition": "nearest feasible point to the Crec-derived search-box center"},
+    {
+      "method": "B1",
+      "definition": "center-ray max-min-angle heuristic",
+      "rho_a_m": 5.0,
+      "rho_b_m": 1500.0,
+      "L_m": 1495.0,
+      "reception_radius_m": 1000.0,
+      "x_star_m": 673.8963210702341,
+      "abs_y_star_m": 743.3557100464799,
+      "side": "positive_perpendicular",
+      "clamp": "componentwise_to_crec_derived_bounds"
+    },
+    {"method": "B2", "definition": "right-angle radial heuristic"},
+    {"method": "Hero", "definition": "deterministic Gate F numerical search recommendation"}
+  ],
+  "candidate_good_regions": {
+    "etas": [0.01, 0.02, 0.05, 0.10],
+    "semantics": "numerical candidate-good sets relative to qhat_star; not proof regions",
+    "qhat_star_source": "Hero numerical search"
+  },
+  "figures": {
+    "names": [
+      "q2_geometry_overview",
+      "q2_crec",
+      "q2_angular_image",
+      "q2_q_surface",
+      "q2_optimum_and_candidate_region",
+      "q2_baseline_comparison",
+      "q2_worst_case_intersection"
+    ],
+    "formats": ["svg", "pdf", "png"],
+    "data_sidecars": true,
+    "metadata": {
+      "units": "m",
+      "equal_axes": true,
+      "baseline_style": "muted",
+      "colormap": "Blues",
+      "case_label": "representative illustrative case"
+    }
+  },
+  "required_claim_boundary": [
+    "all four rows use the same frozen Q2 metric",
+    "Hero and qhat_star are numerical and input-specific",
+    "CERTIFIED_GLOBAL_OPTIMUM is false",
+    "candidate-good regions are not proof sets",
+    "no universal S2 or proved optimum claim"
+  ]
+}

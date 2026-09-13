@@ -1,0 +1,22 @@
+# HISTORICAL_FROZEN_CONFIG (v0, Addendum B.6)
+#
+# This file records the original mainline freeze (tau=0.05) for audit
+# reproducibility.  It is not the active Candidate v1 freeze.  Current
+# evaluation must use candidate_v1_FROZEN_CONFIG.yaml, which preserves the
+# selected A1+A3 switches and tau=0.15.
+#
+# 历史冻结：保留用于复核，不作为 Candidate v1 当前正式评估配置。
+# 当前冻结配置：configs/candidate_v1_FROZEN_CONFIG.yaml
+model_version: v2.1
+spec_version: v2.1+addendum
+tau: 0.05
+nbv_mode: radius
+policy: mainline
+case_set_version: tune_q3.json+tune_q4.json (seed block 100000+)
+selection_metric: Addendum B.5 primary/secondary
+selection_rule: 'B.5: clearance==100% hard constraint; min mean t_per_source_s; within
+  2% -> smaller std -> fewer measures -> smaller tau'
+freeze_time: '2026-09-11T17:04:57+08:00'
+git_commit: N/A
+frozen_config_hash: ba077aef56f5515908587b1621bdc7ecf59e67a3ad5afe93e4874edb4a49dab7
+tune_results_hash: f00bbcc652e72ae880e0c966b5725c781c3c2e5b0173256397b05795abda869f

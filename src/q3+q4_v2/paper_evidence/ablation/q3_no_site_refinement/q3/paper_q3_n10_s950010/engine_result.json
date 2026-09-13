@@ -1,0 +1,5499 @@
+{
+  "strategy": "joint_tour",
+  "cleared_count": 10,
+  "cleared_sources": [
+    {
+      "channel": 3,
+      "clear_point": [
+        82.36895564582932,
+        721.116070055711
+      ],
+      "bound_m": 19.99999900000005,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 82.94,
+            "virtual_time_s": 17.0
+          },
+          "kind": "search",
+          "sequence": 4,
+          "posterior_vertices": [
+            [
+              0.7014821732430467,
+              4.950547723295091
+            ],
+            [
+              210.47703000394046,
+              1485.392817432155
+            ],
+            [
+              158.24897487292094,
+              1491.8611410550193
+            ],
+            [
+              0.5274154372344697,
+              4.9721054852614275
+            ]
+          ],
+          "circle_center": [
+            92.51718757767561,
+            747.0239671208413
+          ],
+          "bound_m": 747.7319596856083
+        },
+        {
+          "position": [
+            125.00000000000003,
+            216.50635094610965
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 95.19,
+            "virtual_time_s": 175.0
+          },
+          "kind": "joint_probe",
+          "sequence": 22,
+          "posterior_vertices": [
+            [
+              84.08692418420738,
+              593.423962799387
+            ],
+            [
+              92.8796042858596,
+              655.4762630847356
+            ],
+            [
+              83.34765339445515,
+              785.7436384479688
+            ],
+            [
+              73.395424026642,
+              691.9209500379499
+            ]
+          ],
+          "circle_center": [
+            83.71728878933126,
+            689.5838006236779
+          ],
+          "bound_m": 96.1605482550878
+        },
+        {
+          "position": [
+            93.42568142047938,
+            665.5808047070929
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 102.18,
+            "virtual_time_s": 307.03661535497355
+          },
+          "kind": "localization",
+          "sequence": 29,
+          "posterior_vertices": [
+            [
+              91.55637541858619,
+              673.5600272069377
+            ],
+            [
+              91.38400727392248,
+              675.9156778032726
+            ],
+            [
+              78.57527441864087,
+              740.752972630875
+            ],
+            [
+              77.71497801437101,
+              732.6426971845398
+            ]
+          ],
+          "circle_center": [
+            85.06582491861353,
+            707.1564999189063
+          ],
+          "bound_m": 34.217688765881746,
+          "prior_radius_m": 96.1605482550878,
+          "max_vertex_distance_m": 120.5847140458969,
+          "conditional_probe": false
+        }
+      ],
+      "virtual_time_after_clear_s": 362.3618742962538
+    },
+    {
+      "channel": 11,
+      "clear_point": [
+        40.50750272112778,
+        716.3874884119045
+      ],
+      "bound_m": 19.999998999999995,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 87.34,
+            "virtual_time_s": 65.0
+          },
+          "kind": "search",
+          "sequence": 12,
+          "posterior_vertices": [
+            [
+              0.3196135214434664,
+              4.989774263121579
+            ],
+            [
+              95.89880870602488,
+              1497.1625899437508
+            ],
+            [
+              43.32843909222663,
+              1499.6049641836166
+            ],
+            [
+              0.14440591268831138,
+              4.997914258206182
+            ]
+          ],
+          "circle_center": [
+            34.93356375766024,
+            751.9201311132935
+          ],
+          "bound_m": 747.7319596856084
+        },
+        {
+          "position": [
+            125.00000000000003,
+            216.50635094610965
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 101.68,
+            "virtual_time_s": 193.0
+          },
+          "kind": "joint_probe",
+          "sequence": 25,
+          "posterior_vertices": [
+            [
+              38.48743761208306,
+              600.8620185496078
+            ],
+            [
+              42.05376775849344,
+              656.5392073555913
+            ],
+            [
+              22.03761198006663,
+              762.7256604770978
+            ],
+            [
+              19.764267669401814,
+              684.0448105550623
+            ]
+          ],
+          "circle_center": [
+            30.262524796074846,
+            681.7938395133529
+          ],
+          "bound_m": 81.34868674624452
+        },
+        {
+          "position": [
+            88.14206214340092,
+            691.2332404082458
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 160.25,
+            "virtual_time_s": 333.2747985899011
+          },
+          "kind": "shared_bearing",
+          "sequence": 33,
+          "posterior_vertices": [
+            [
+              31.917308728184413,
+              710.3135006592067
+            ],
+            [
+              31.465223464059065,
+              712.7118298507546
+            ],
+            [
+              20.71031205492251,
+              716.78757458229
+            ],
+            [
+              20.633890383542216,
+              714.1426069773144
+            ]
+          ],
+          "circle_center": [
+            26.31381039155346,
+            713.5505376207484
+          ],
+          "bound_m": 6.471290589906523
+        }
+      ],
+      "virtual_time_after_clear_s": 375.78740864210783
+    },
+    {
+      "channel": 20,
+      "clear_point": [
+        -114.80418895464575,
+        682.9288835558463
+      ],
+      "bound_m": 19.999998999999985,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 100.16,
+            "virtual_time_s": 119.0
+          },
+          "kind": "search",
+          "sequence": 21,
+          "posterior_vertices": [
+            [
+              -0.7955292172527779,
+              4.936307654968153
+            ],
+            [
+              -238.69548409851043,
+              1481.1201396609567
+            ],
+            [
+              -290.4973131031266,
+              1471.8368501020004
+            ],
+            [
+              -0.9681754180635862,
+              4.9053681166511245
+            ]
+          ],
+          "circle_center": [
+            -132.7799738448308,
+            740.9276050978319
+          ],
+          "bound_m": 747.7319596856083
+        },
+        {
+          "position": [
+            125.00000000000003,
+            216.50635094610965
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 119.22,
+            "virtual_time_s": 211.0
+          },
+          "kind": "joint_probe",
+          "sequence": 28,
+          "posterior_vertices": [
+            [
+              -96.03467842799593,
+              595.9010781572471
+            ],
+            [
+              -103.53810727203626,
+              642.4603149999285
+            ],
+            [
+              -140.3413293086777,
+              711.054907401099
+            ],
+            [
+              -128.66913921736608,
+              651.9164619735877
+            ]
+          ],
+          "circle_center": [
+            -118.1880038683368,
+            653.4779927791731
+          ],
+          "bound_m": 61.69174114455038
+        },
+        {
+          "position": [
+            88.14206214340092,
+            691.2332404082458
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 183.12,
+            "virtual_time_s": 351.2747985899011
+          },
+          "kind": "shared_bearing",
+          "sequence": 36,
+          "posterior_vertices": [
+            [
+              -121.59086477093169,
+              676.1074109286769
+            ],
+            [
+              -125.47369354567098,
+              683.3443060271987
+            ],
+            [
+              -134.80406247045897,
+              682.9997309374018
+            ],
+            [
+              -133.2773723383223,
+              675.2645860881681
+            ]
+          ],
+          "circle_center": [
+            -128.19746362069532,
+            679.5535709330393
+          ],
+          "bound_m": 7.451386927100619
+        }
+      ],
+      "virtual_time_after_clear_s": 412.5623672164974
+    },
+    {
+      "channel": 7,
+      "clear_point": [
+        -203.73396862129022,
+        887.229851464801
+      ],
+      "bound_m": 20.0,
+      "bound_source": "successful_clear_response",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 102.63,
+            "virtual_time_s": 41.0
+          },
+          "kind": "search",
+          "sequence": 8,
+          "posterior_vertices": [
+            [
+              -1.0075266116280854,
+              4.897437097795256
+            ],
+            [
+              -302.3044874897183,
+              1469.4571783763872
+            ],
+            [
+              -353.6581133869647,
+              1457.9500475235382
+            ],
+            [
+              -1.1786790319070888,
+              4.859085895489249
+            ]
+          ],
+          "circle_center": [
+            -164.58783537525036,
+            734.5169037515284
+          ],
+          "bound_m": 747.7319596856084
+        },
+        {
+          "position": [
+            125.00000000000003,
+            216.50635094610965
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 116.79,
+            "virtual_time_s": 181.0
+          },
+          "kind": "joint_probe",
+          "sequence": 23,
+          "posterior_vertices": [
+            [
+              -153.06126016927374,
+              744.0080342661955
+            ],
+            [
+              -170.2889280103545,
+              827.7491668771402
+            ],
+            [
+              -231.5486533114354,
+              954.5557059793482
+            ],
+            [
+              -203.84523238049704,
+              840.3487859796587
+            ]
+          ],
+          "circle_center": [
+            -192.30495674035456,
+            849.2818701227718
+          ],
+          "bound_m": 112.35055957368638
+        },
+        {
+          "position": [
+            88.14206214340092,
+            691.2332404082458
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 146.0,
+            "virtual_time_s": 321.2747985899011
+          },
+          "kind": "shared_bearing",
+          "sequence": 31,
+          "posterior_vertices": [
+            [
+              -192.3056023731622,
+              873.3232902472084
+            ],
+            [
+              -202.75940502132767,
+              894.9624753358815
+            ],
+            [
+              -220.0263428509504,
+              907.0551611097216
+            ],
+            [
+              -215.49644340075312,
+              888.3807213932329
+            ]
+          ],
+          "circle_center": [
+            -206.1659726120563,
+            890.1892256784649
+          ],
+          "bound_m": 21.830475055081582
+        }
+      ],
+      "virtual_time_after_clear_s": 462.1257563156643
+    },
+    {
+      "channel": 9,
+      "clear_point": [
+        -446.38591570148435,
+        687.3845129646387
+      ],
+      "bound_m": 19.999999000000027,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 122.96,
+            "virtual_time_s": 53.0
+          },
+          "kind": "search",
+          "sequence": 10,
+          "posterior_vertices": [
+            [
+              -2.646265227220366,
+              4.24232016085589
+            ],
+            [
+              -794.0017107677317,
+              1272.8918593251472
+            ],
+            [
+              -838.1584887143321,
+              1244.2599206092038
+            ],
+            [
+              -2.7934318446741186,
+              4.146895046798333
+            ]
+          ],
+          "circle_center": [
+            -409.52596056447396,
+            631.5795477008322
+          ],
+          "bound_m": 747.7319596856084
+        },
+        {
+          "position": [
+            125.00000000000003,
+            216.50635094610965
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 141.65,
+            "virtual_time_s": 187.0
+          },
+          "kind": "joint_probe",
+          "sequence": 24,
+          "posterior_vertices": [
+            [
+              -371.250022689111,
+              595.1638708666252
+            ],
+            [
+              -407.4097780456958,
+              653.1328369335636
+            ],
+            [
+              -480.14431519378513,
+              712.7820520202339
+            ],
+            [
+              -432.2874192743341,
+              641.7377109807743
+            ]
+          ],
+          "circle_center": [
+            -425.69716894144807,
+            653.9729614434295
+          ],
+          "bound_m": 80.14362650575629
+        },
+        {
+          "position": [
+            88.14206214340092,
+            691.2332404082458
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 180.96,
+            "virtual_time_s": 327.2747985899011
+          },
+          "kind": "shared_bearing",
+          "sequence": 32,
+          "posterior_vertices": [
+            [
+              -432.1035188260901,
+              673.3840451333936
+            ],
+            [
+              -454.38789080070325,
+              691.6593425244897
+            ],
+            [
+              -465.9217356663321,
+              691.6684011869268
+            ],
+            [
+              -453.11932241376553,
+              672.6630103071192
+            ]
+          ],
+          "circle_center": [
+            -449.0126272462111,
+            682.5262231601602
+          ],
+          "bound_m": 19.222314289296737
+        }
+      ],
+      "virtual_time_after_clear_s": 824.5182916643741
+    },
+    {
+      "channel": 15,
+      "clear_point": [
+        -659.5023406138798,
+        646.8940000659517
+      ],
+      "bound_m": 19.999998999999946,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 135.59,
+            "virtual_time_s": 89.0
+          },
+          "kind": "search",
+          "sequence": 16,
+          "posterior_vertices": [
+            [
+              -3.5098331047597435,
+              3.5610492241378204
+            ],
+            [
+              -1053.1119333853474,
+              1068.4791331606295
+            ],
+            [
+              -1089.9397300003754,
+              1030.8849534283752
+            ],
+            [
+              -3.6325735425394825,
+              3.4357545689472864
+            ]
+          ],
+          "circle_center": [
+            -537.7139396401319,
+            526.7522724838797
+          ],
+          "bound_m": 747.7319596856084
+        },
+        {
+          "position": [
+            125.00000000000003,
+            216.50635094610965
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 152.02,
+            "virtual_time_s": 199.0
+          },
+          "kind": "joint_probe",
+          "sequence": 26,
+          "posterior_vertices": [
+            [
+              -554.0335429503733,
+              562.1181005997742
+            ],
+            [
+              -620.35714652931,
+              629.4095101960045
+            ],
+            [
+              -729.2360659447978,
+              689.7248234813272
+            ],
+            [
+              -641.2573008066157,
+              606.5128965226417
+            ]
+          ],
+          "circle_center": [
+            -641.6348044475856,
+            625.9214620405508
+          ],
+          "bound_m": 108.37365891694041
+        },
+        {
+          "position": [
+            88.14206214340092,
+            691.2332404082458
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 182.58,
+            "virtual_time_s": 339.2747985899011
+          },
+          "kind": "shared_bearing",
+          "sequence": 34,
+          "posterior_vertices": [
+            [
+              -648.632244430915,
+              645.0729774425934
+            ],
+            [
+              -693.1785540356741,
+              669.7501567711552
+            ],
+            [
+              -707.6951291320922,
+              669.3510110293654
+            ],
+            [
+              -679.9516883755255,
+              643.1107567794663
+            ]
+          ],
+          "circle_center": [
+            -678.1636867815037,
+            657.2119942359793
+          ],
+          "bound_m": 31.92901213655458
+        },
+        {
+          "position": [
+            -203.73396862129022,
+            887.229851464801
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 208.18,
+            "virtual_time_s": 468.1257563156643
+          },
+          "kind": "shared_bearing",
+          "sequence": 41,
+          "posterior_vertices": [
+            [
+              -679.1508558485103,
+              643.1609304075483
+            ],
+            [
+              -648.632244430915,
+              645.0729774425934
+            ],
+            [
+              -661.5198781694222,
+              652.2122994584398
+            ]
+          ],
+          "circle_center": [
+            -663.8915501397126,
+            644.1169539250709
+          ],
+          "bound_m": 15.289224691939149
+        }
+      ],
+      "virtual_time_after_clear_s": 872.9040461016267
+    },
+    {
+      "channel": 6,
+      "clear_point": [
+        -1230.040969490229,
+        -750.1276547435097
+      ],
+      "bound_m": 19.999998999999978,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 35.0
+          },
+          "kind": "search",
+          "sequence": 7
+        },
+        {
+          "position": [
+            -749.9999999999997,
+            1299.038105676658
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 634.9457278512939
+          },
+          "kind": "search",
+          "sequence": 46
+        },
+        {
+          "position": [
+            -1500.0,
+            1.8369701987210297e-13
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 290.16,
+            "virtual_time_s": 1115.0274217823728
+          },
+          "kind": "search",
+          "sequence": 61,
+          "posterior_vertices": [
+            [
+              -1498.3593758304132,
+              -4.723171851009219
+            ],
+            [
+              -1007.7370234928701,
+              -1417.1695608496025
+            ],
+            [
+              -958.3342069835786,
+              -1399.0320121120194
+            ],
+            [
+              -1498.1947251077731,
+              -4.662722655648077
+            ]
+          ],
+          "circle_center": [
+            -1240.5765239044922,
+            -706.6142494322954
+          ],
+          "bound_m": 747.7319596856086
+        },
+        {
+          "position": [
+            -1238.3638876237828,
+            -505.2934164392911
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 272.05,
+            "virtual_time_s": 1282.8298632317953
+          },
+          "kind": "localization",
+          "sequence": 70,
+          "posterior_vertices": [
+            [
+              -1233.5908691963425,
+              -766.9618251330653
+            ],
+            [
+              -1222.7297606181148,
+              -798.2297311278679
+            ],
+            [
+              -1227.8112513033095,
+              -703.0179451480313
+            ],
+            [
+              -1235.1006756959982,
+              -684.1905829502997
+            ]
+          ],
+          "circle_center": [
+            -1228.9152181570566,
+            -741.2101570390838
+          ],
+          "bound_m": 57.35409064951159,
+          "prior_radius_m": 747.7319596856086,
+          "max_vertex_distance_m": 940.5885674424676,
+          "conditional_probe": false
+        },
+        {
+          "position": [
+            -1228.9152181570566,
+            -741.2101570390838
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 261.8,
+            "virtual_time_s": 1335.0510389265708
+          },
+          "kind": "localization",
+          "sequence": 71,
+          "posterior_vertices": [
+            [
+              -1228.9152181570564,
+              -741.2101570390827
+            ],
+            [
+              -1233.2482354331285,
+              -767.9482290734787
+            ],
+            [
+              -1232.5459024599163,
+              -769.9701664498782
+            ]
+          ],
+          "circle_center": [
+            -1230.7305603084865,
+            -755.5901617444804
+          ],
+          "bound_m": 14.494136830250412,
+          "prior_radius_m": 57.35409064951159,
+          "max_vertex_distance_m": 57.35409064951159,
+          "conditional_probe": false
+        }
+      ],
+      "virtual_time_after_clear_s": 1341.8486938586707
+    },
+    {
+      "channel": 1,
+      "clear_point": [
+        1398.5461486151178,
+        18.992453895013817
+      ],
+      "bound_m": 19.999998999999995,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 5.0
+          },
+          "kind": "search",
+          "sequence": 2
+        },
+        {
+          "position": [
+            -749.9999999999997,
+            1299.038105676658
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 610.9457278512939
+          },
+          "kind": "search",
+          "sequence": 42
+        },
+        {
+          "position": [
+            -1500.0,
+            1.8369701987210297e-13
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 1091.0274217823728
+          },
+          "kind": "search",
+          "sequence": 57
+        },
+        {
+          "position": [
+            -750.0000000000007,
+            -1299.0381056766578
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 1493.6899795815757
+          },
+          "kind": "search",
+          "sequence": 73
+        },
+        {
+          "position": [
+            750.0000000000001,
+            -1299.038105676658
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 1865.689979581576
+          },
+          "kind": "search",
+          "sequence": 85
+        },
+        {
+          "position": [
+            1500.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 171.5,
+            "virtual_time_s": 2237.689979581576
+          },
+          "kind": "search",
+          "sequence": 97,
+          "posterior_vertices": [
+            [
+              996.4393668398027,
+              84.312325385399
+            ],
+            [
+              997.8150252075034,
+              66.06932321546586
+            ],
+            [
+              1495.0427187592113,
+              0.6521983591861997
+            ],
+            [
+              1495.0686440266948,
+              0.8256683744383655
+            ]
+          ],
+          "circle_center": [
+            1245.7410427995069,
+            42.482261872292604
+          ],
+          "bound_m": 252.78662909621622
+        },
+        {
+          "position": [
+            1312.2494681407438,
+            56.95491358998645
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 335.25,
+            "virtual_time_s": 2354.929818722672
+          },
+          "kind": "localization",
+          "sequence": 110,
+          "posterior_vertices": [
+            [
+              1405.9075839703369,
+              15.754111569058123
+            ],
+            [
+              1393.2588289344635,
+              17.871921977731358
+            ],
+            [
+              1404.1702075108885,
+              12.607723949228614
+            ],
+            [
+              1416.8530801380332,
+              10.93911805107396
+            ]
+          ],
+          "circle_center": [
+            1405.0559545362485,
+            14.405520014402658
+          ],
+          "bound_m": 12.295857637255692,
+          "prior_radius_m": 252.78662909621622,
+          "max_vertex_distance_m": 316.9928202086831,
+          "conditional_probe": false
+        }
+      ],
+      "virtual_time_after_clear_s": 2378.785338240297
+    },
+    {
+      "channel": 12,
+      "clear_point": [
+        1156.0894955305043,
+        876.1113410267221
+      ],
+      "bound_m": 19.99999900000001,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 71.0
+          },
+          "kind": "search",
+          "sequence": 13
+        },
+        {
+          "position": [
+            -749.9999999999997,
+            1299.038105676658
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 652.9457278512939
+          },
+          "kind": "search",
+          "sequence": 49
+        },
+        {
+          "position": [
+            -1500.0,
+            1.8369701987210297e-13
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 1133.0274217823728
+          },
+          "kind": "search",
+          "sequence": 64
+        },
+        {
+          "position": [
+            -750.0000000000007,
+            -1299.0381056766578
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 1529.6899795815757
+          },
+          "kind": "search",
+          "sequence": 79
+        },
+        {
+          "position": [
+            750.0000000000001,
+            -1299.038105676658
+          ],
+          "response": {
+            "measure_result": "no_signal",
+            "accepted": true,
+            "virtual_time_s": 1901.689979581576
+          },
+          "kind": "search",
+          "sequence": 91
+        },
+        {
+          "position": [
+            1500.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 112.19,
+            "virtual_time_s": 2273.689979581576
+          },
+          "kind": "search",
+          "sequence": 103,
+          "posterior_vertices": [
+            [
+              1498.193097620541,
+              4.662092211776292
+            ],
+            [
+              957.8458856946198,
+              1398.8428498512844
+            ],
+            [
+              909.1165558166193,
+              1378.9666992455982
+            ],
+            [
+              1498.0306915079934,
+              4.595848568361513
+            ]
+          ],
+          "circle_center": [
+            1215.7090985045593,
+            696.9812915546244
+          ],
+          "bound_m": 747.7319596856083
+        },
+        {
+          "position": [
+            1220.6291927446252,
+            495.7084264461436
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 99.48,
+            "virtual_time_s": 2486.5522408504467
+          },
+          "kind": "localization",
+          "sequence": 112,
+          "posterior_vertices": [
+            [
+              1166.136190843642,
+              861.421116135668
+            ],
+            [
+              1140.8941944351507,
+              926.5494352986228
+            ],
+            [
+              1169.7216317887928,
+              770.7829280508389
+            ],
+            [
+              1184.9304039294902,
+              735.2896501042543
+            ]
+          ],
+          "circle_center": [
+            1162.9122991823206,
+            830.9195427014386
+          ],
+          "bound_m": 98.13191781885413,
+          "prior_radius_m": 747.7319596856083,
+          "max_vertex_distance_m": 940.5885674424676,
+          "conditional_probe": false
+        },
+        {
+          "position": [
+            1162.9122991823206,
+            830.9195427014386
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 100.82,
+            "virtual_time_s": 2559.580979560966
+          },
+          "kind": "localization",
+          "sequence": 113,
+          "posterior_vertices": [
+            [
+              1162.9122991823206,
+              830.9195427014387
+            ],
+            [
+              1150.7819039155752,
+              901.0375903395199
+            ],
+            [
+              1145.2361236048441,
+              915.3465754229433
+            ]
+          ],
+          "circle_center": [
+            1154.0742113935823,
+            873.133059062191
+          ],
+          "bound_m": 43.1287926946831,
+          "prior_radius_m": 98.13191781885413,
+          "max_vertex_distance_m": 98.13191781885413,
+          "conditional_probe": false
+        },
+        {
+          "position": [
+            1160.5050849768422,
+            863.4634887508768
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 110.25,
+            "virtual_time_s": 2571.1075501909368
+          },
+          "kind": "localization",
+          "sequence": 114,
+          "posterior_vertices": [
+            [
+              1149.4973307261457,
+              894.99369583729
+            ],
+            [
+              1150.9623704743124,
+              887.9962003544788
+            ],
+            [
+              1154.7006858697628,
+              878.385621157587
+            ],
+            [
+              1154.1164000763583,
+              881.7630031962829
+            ]
+          ],
+          "circle_center": [
+            1152.0990082979542,
+            886.6896584974386
+          ],
+          "bound_m": 8.702055063564037,
+          "prior_radius_m": 43.1287926946831,
+          "max_vertex_distance_m": 54.08323089461958,
+          "conditional_probe": false
+        }
+      ],
+      "virtual_time_after_clear_s": 2578.7868456009296
+    },
+    {
+      "channel": 16,
+      "clear_point": [
+        933.4944932761639,
+        706.1558248173277
+      ],
+      "bound_m": 19.99999900000008,
+      "bound_source": "prior_geometry",
+      "observations": [
+        {
+          "position": [
+            0.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 36.46,
+            "virtual_time_s": 95.0
+          },
+          "kind": "search",
+          "sequence": 17,
+          "posterior_vertices": [
+            [
+              4.072856751253235,
+              2.900316859201929
+            ],
+            [
+              1222.045014589793,
+              870.2289265213765
+            ],
+            [
+              1190.7707734069227,
+              912.5554051334057
+            ],
+            [
+              3.9686253172051758,
+              3.041383417400397
+            ]
+          ],
+          "circle_center": [
+            605.4005627376748,
+            447.31912108376196
+          ],
+          "bound_m": 747.7319596856084
+        },
+        {
+          "position": [
+            125.00000000000003,
+            216.50635094610965
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 31.54,
+            "virtual_time_s": 205.0
+          },
+          "kind": "joint_probe",
+          "sequence": 27,
+          "posterior_vertices": [
+            [
+              1167.9657501036702,
+              831.7186100281485
+            ],
+            [
+              1222.045014589793,
+              870.2289265213765
+            ],
+            [
+              1198.7548265763048,
+              901.7498078453648
+            ],
+            [
+              1066.7219326843601,
+              817.4897194195836
+            ],
+            [
+              808.9626993584466,
+              619.9541509897197
+            ]
+          ],
+          "circle_center": [
+            1015.5038569741198,
+            745.0915387555481
+          ],
+          "bound_m": 241.4924752576727
+        },
+        {
+          "position": [
+            88.14206214340092,
+            691.2332404082458
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 0.59,
+            "virtual_time_s": 345.2747985899011
+          },
+          "kind": "shared_bearing",
+          "sequence": 35,
+          "posterior_vertices": [
+            [
+              919.5919940968802,
+              685.2108464563918
+            ],
+            [
+              971.5014045112079,
+              715.8305534270578
+            ],
+            [
+              932.6580710054866,
+              714.748953236615
+            ],
+            [
+              894.3530789445473,
+              685.3936580534865
+            ]
+          ],
+          "circle_center": [
+            932.9272417278776,
+            700.6121057402722
+          ],
+          "bound_m": 41.467664323304916
+        },
+        {
+          "position": [
+            1500.0,
+            0.0
+          ],
+          "response": {
+            "measure_result": "direction",
+            "accepted": true,
+            "svd_deg": 128.89,
+            "virtual_time_s": 2309.689979581576
+          },
+          "kind": "shared_bearing",
+          "sequence": 109,
+          "posterior_vertices": [
+            [
+              924.6715645840743,
+              688.2071232126348
+            ],
+            [
+              951.9946803147719,
+              704.3241584577247
+            ],
+            [
+              943.6455358047014,
+              715.0549013349563
+            ],
+            [
+              932.6580710054866,
+              714.748953236615
+            ],
+            [
+              914.2660934327635,
+              700.6541342169468
+            ]
+          ],
+          "circle_center": [
+            933.1303868737677,
+            702.4891463373358
+          ],
+          "bound_m": 18.953333124025765
+        }
+      ],
+      "virtual_time_after_clear_s": 2639.7987773721557
+    }
+  ],
+  "cleared_channels": [
+    1,
+    3,
+    6,
+    7,
+    9,
+    11,
+    12,
+    15,
+    16,
+    20
+  ],
+  "observations": {
+    "1": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 5.0
+        },
+        "kind": "search",
+        "sequence": 2
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 610.9457278512939
+        },
+        "kind": "search",
+        "sequence": 42
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1091.0274217823728
+        },
+        "kind": "search",
+        "sequence": 57
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1493.6899795815757
+        },
+        "kind": "search",
+        "sequence": 73
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1865.689979581576
+        },
+        "kind": "search",
+        "sequence": 85
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 171.5,
+          "virtual_time_s": 2237.689979581576
+        },
+        "kind": "search",
+        "sequence": 97,
+        "posterior_vertices": [
+          [
+            996.4393668398027,
+            84.312325385399
+          ],
+          [
+            997.8150252075034,
+            66.06932321546586
+          ],
+          [
+            1495.0427187592113,
+            0.6521983591861997
+          ],
+          [
+            1495.0686440266948,
+            0.8256683744383655
+          ]
+        ],
+        "circle_center": [
+          1245.7410427995069,
+          42.482261872292604
+        ],
+        "bound_m": 252.78662909621622
+      },
+      {
+        "position": [
+          1312.2494681407438,
+          56.95491358998645
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 335.25,
+          "virtual_time_s": 2354.929818722672
+        },
+        "kind": "localization",
+        "sequence": 110,
+        "posterior_vertices": [
+          [
+            1405.9075839703369,
+            15.754111569058123
+          ],
+          [
+            1393.2588289344635,
+            17.871921977731358
+          ],
+          [
+            1404.1702075108885,
+            12.607723949228614
+          ],
+          [
+            1416.8530801380332,
+            10.93911805107396
+          ]
+        ],
+        "circle_center": [
+          1405.0559545362485,
+          14.405520014402658
+        ],
+        "bound_m": 12.295857637255692,
+        "prior_radius_m": 252.78662909621622,
+        "max_vertex_distance_m": 316.9928202086831,
+        "conditional_probe": false
+      }
+    ],
+    "2": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 11.0
+        },
+        "kind": "search",
+        "sequence": 3
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 616.9457278512939
+        },
+        "kind": "search",
+        "sequence": 43
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1097.0274217823728
+        },
+        "kind": "search",
+        "sequence": 58
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1499.6899795815757
+        },
+        "kind": "search",
+        "sequence": 74
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1871.689979581576
+        },
+        "kind": "search",
+        "sequence": 86
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2243.689979581576
+        },
+        "kind": "search",
+        "sequence": 98
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2735.403161800348
+        },
+        "kind": "search",
+        "sequence": 117
+      }
+    ],
+    "3": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 82.94,
+          "virtual_time_s": 17.0
+        },
+        "kind": "search",
+        "sequence": 4,
+        "posterior_vertices": [
+          [
+            0.7014821732430467,
+            4.950547723295091
+          ],
+          [
+            210.47703000394046,
+            1485.392817432155
+          ],
+          [
+            158.24897487292094,
+            1491.8611410550193
+          ],
+          [
+            0.5274154372344697,
+            4.9721054852614275
+          ]
+        ],
+        "circle_center": [
+          92.51718757767561,
+          747.0239671208413
+        ],
+        "bound_m": 747.7319596856083
+      },
+      {
+        "position": [
+          125.00000000000003,
+          216.50635094610965
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 95.19,
+          "virtual_time_s": 175.0
+        },
+        "kind": "joint_probe",
+        "sequence": 22,
+        "posterior_vertices": [
+          [
+            84.08692418420738,
+            593.423962799387
+          ],
+          [
+            92.8796042858596,
+            655.4762630847356
+          ],
+          [
+            83.34765339445515,
+            785.7436384479688
+          ],
+          [
+            73.395424026642,
+            691.9209500379499
+          ]
+        ],
+        "circle_center": [
+          83.71728878933126,
+          689.5838006236779
+        ],
+        "bound_m": 96.1605482550878
+      },
+      {
+        "position": [
+          93.42568142047938,
+          665.5808047070929
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 102.18,
+          "virtual_time_s": 307.03661535497355
+        },
+        "kind": "localization",
+        "sequence": 29,
+        "posterior_vertices": [
+          [
+            91.55637541858619,
+            673.5600272069377
+          ],
+          [
+            91.38400727392248,
+            675.9156778032726
+          ],
+          [
+            78.57527441864087,
+            740.752972630875
+          ],
+          [
+            77.71497801437101,
+            732.6426971845398
+          ]
+        ],
+        "circle_center": [
+          85.06582491861353,
+          707.1564999189063
+        ],
+        "bound_m": 34.217688765881746,
+        "prior_radius_m": 96.1605482550878,
+        "max_vertex_distance_m": 120.5847140458969,
+        "conditional_probe": false
+      }
+    ],
+    "4": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 23.0
+        },
+        "kind": "search",
+        "sequence": 5
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 622.9457278512939
+        },
+        "kind": "search",
+        "sequence": 44
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1103.0274217823728
+        },
+        "kind": "search",
+        "sequence": 59
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1505.6899795815757
+        },
+        "kind": "search",
+        "sequence": 75
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1877.689979581576
+        },
+        "kind": "search",
+        "sequence": 87
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2249.689979581576
+        },
+        "kind": "search",
+        "sequence": 99
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2741.403161800348
+        },
+        "kind": "search",
+        "sequence": 118
+      }
+    ],
+    "5": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 29.0
+        },
+        "kind": "search",
+        "sequence": 6
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 628.9457278512939
+        },
+        "kind": "search",
+        "sequence": 45
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1109.0274217823728
+        },
+        "kind": "search",
+        "sequence": 60
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1511.6899795815757
+        },
+        "kind": "search",
+        "sequence": 76
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1883.689979581576
+        },
+        "kind": "search",
+        "sequence": 88
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2255.689979581576
+        },
+        "kind": "search",
+        "sequence": 100
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2747.403161800348
+        },
+        "kind": "search",
+        "sequence": 119
+      }
+    ],
+    "6": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 35.0
+        },
+        "kind": "search",
+        "sequence": 7
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 634.9457278512939
+        },
+        "kind": "search",
+        "sequence": 46
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 290.16,
+          "virtual_time_s": 1115.0274217823728
+        },
+        "kind": "search",
+        "sequence": 61,
+        "posterior_vertices": [
+          [
+            -1498.3593758304132,
+            -4.723171851009219
+          ],
+          [
+            -1007.7370234928701,
+            -1417.1695608496025
+          ],
+          [
+            -958.3342069835786,
+            -1399.0320121120194
+          ],
+          [
+            -1498.1947251077731,
+            -4.662722655648077
+          ]
+        ],
+        "circle_center": [
+          -1240.5765239044922,
+          -706.6142494322954
+        ],
+        "bound_m": 747.7319596856086
+      },
+      {
+        "position": [
+          -1238.3638876237828,
+          -505.2934164392911
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 272.05,
+          "virtual_time_s": 1282.8298632317953
+        },
+        "kind": "localization",
+        "sequence": 70,
+        "posterior_vertices": [
+          [
+            -1233.5908691963425,
+            -766.9618251330653
+          ],
+          [
+            -1222.7297606181148,
+            -798.2297311278679
+          ],
+          [
+            -1227.8112513033095,
+            -703.0179451480313
+          ],
+          [
+            -1235.1006756959982,
+            -684.1905829502997
+          ]
+        ],
+        "circle_center": [
+          -1228.9152181570566,
+          -741.2101570390838
+        ],
+        "bound_m": 57.35409064951159,
+        "prior_radius_m": 747.7319596856086,
+        "max_vertex_distance_m": 940.5885674424676,
+        "conditional_probe": false
+      },
+      {
+        "position": [
+          -1228.9152181570566,
+          -741.2101570390838
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 261.8,
+          "virtual_time_s": 1335.0510389265708
+        },
+        "kind": "localization",
+        "sequence": 71,
+        "posterior_vertices": [
+          [
+            -1228.9152181570564,
+            -741.2101570390827
+          ],
+          [
+            -1233.2482354331285,
+            -767.9482290734787
+          ],
+          [
+            -1232.5459024599163,
+            -769.9701664498782
+          ]
+        ],
+        "circle_center": [
+          -1230.7305603084865,
+          -755.5901617444804
+        ],
+        "bound_m": 14.494136830250412,
+        "prior_radius_m": 57.35409064951159,
+        "max_vertex_distance_m": 57.35409064951159,
+        "conditional_probe": false
+      }
+    ],
+    "7": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 102.63,
+          "virtual_time_s": 41.0
+        },
+        "kind": "search",
+        "sequence": 8,
+        "posterior_vertices": [
+          [
+            -1.0075266116280854,
+            4.897437097795256
+          ],
+          [
+            -302.3044874897183,
+            1469.4571783763872
+          ],
+          [
+            -353.6581133869647,
+            1457.9500475235382
+          ],
+          [
+            -1.1786790319070888,
+            4.859085895489249
+          ]
+        ],
+        "circle_center": [
+          -164.58783537525036,
+          734.5169037515284
+        ],
+        "bound_m": 747.7319596856084
+      },
+      {
+        "position": [
+          125.00000000000003,
+          216.50635094610965
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 116.79,
+          "virtual_time_s": 181.0
+        },
+        "kind": "joint_probe",
+        "sequence": 23,
+        "posterior_vertices": [
+          [
+            -153.06126016927374,
+            744.0080342661955
+          ],
+          [
+            -170.2889280103545,
+            827.7491668771402
+          ],
+          [
+            -231.5486533114354,
+            954.5557059793482
+          ],
+          [
+            -203.84523238049704,
+            840.3487859796587
+          ]
+        ],
+        "circle_center": [
+          -192.30495674035456,
+          849.2818701227718
+        ],
+        "bound_m": 112.35055957368638
+      },
+      {
+        "position": [
+          88.14206214340092,
+          691.2332404082458
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 146.0,
+          "virtual_time_s": 321.2747985899011
+        },
+        "kind": "shared_bearing",
+        "sequence": 31,
+        "posterior_vertices": [
+          [
+            -192.3056023731622,
+            873.3232902472084
+          ],
+          [
+            -202.75940502132767,
+            894.9624753358815
+          ],
+          [
+            -220.0263428509504,
+            907.0551611097216
+          ],
+          [
+            -215.49644340075312,
+            888.3807213932329
+          ]
+        ],
+        "circle_center": [
+          -206.1659726120563,
+          890.1892256784649
+        ],
+        "bound_m": 21.830475055081582
+      }
+    ],
+    "8": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 47.0
+        },
+        "kind": "search",
+        "sequence": 9
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 640.9457278512939
+        },
+        "kind": "search",
+        "sequence": 47
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1121.0274217823728
+        },
+        "kind": "search",
+        "sequence": 62
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1517.6899795815757
+        },
+        "kind": "search",
+        "sequence": 77
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1889.689979581576
+        },
+        "kind": "search",
+        "sequence": 89
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2261.689979581576
+        },
+        "kind": "search",
+        "sequence": 101
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2753.403161800348
+        },
+        "kind": "search",
+        "sequence": 120
+      }
+    ],
+    "9": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 122.96,
+          "virtual_time_s": 53.0
+        },
+        "kind": "search",
+        "sequence": 10,
+        "posterior_vertices": [
+          [
+            -2.646265227220366,
+            4.24232016085589
+          ],
+          [
+            -794.0017107677317,
+            1272.8918593251472
+          ],
+          [
+            -838.1584887143321,
+            1244.2599206092038
+          ],
+          [
+            -2.7934318446741186,
+            4.146895046798333
+          ]
+        ],
+        "circle_center": [
+          -409.52596056447396,
+          631.5795477008322
+        ],
+        "bound_m": 747.7319596856084
+      },
+      {
+        "position": [
+          125.00000000000003,
+          216.50635094610965
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 141.65,
+          "virtual_time_s": 187.0
+        },
+        "kind": "joint_probe",
+        "sequence": 24,
+        "posterior_vertices": [
+          [
+            -371.250022689111,
+            595.1638708666252
+          ],
+          [
+            -407.4097780456958,
+            653.1328369335636
+          ],
+          [
+            -480.14431519378513,
+            712.7820520202339
+          ],
+          [
+            -432.2874192743341,
+            641.7377109807743
+          ]
+        ],
+        "circle_center": [
+          -425.69716894144807,
+          653.9729614434295
+        ],
+        "bound_m": 80.14362650575629
+      },
+      {
+        "position": [
+          88.14206214340092,
+          691.2332404082458
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 180.96,
+          "virtual_time_s": 327.2747985899011
+        },
+        "kind": "shared_bearing",
+        "sequence": 32,
+        "posterior_vertices": [
+          [
+            -432.1035188260901,
+            673.3840451333936
+          ],
+          [
+            -454.38789080070325,
+            691.6593425244897
+          ],
+          [
+            -465.9217356663321,
+            691.6684011869268
+          ],
+          [
+            -453.11932241376553,
+            672.6630103071192
+          ]
+        ],
+        "circle_center": [
+          -449.0126272462111,
+          682.5262231601602
+        ],
+        "bound_m": 19.222314289296737
+      }
+    ],
+    "10": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 59.0
+        },
+        "kind": "search",
+        "sequence": 11
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 646.9457278512939
+        },
+        "kind": "search",
+        "sequence": 48
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1127.0274217823728
+        },
+        "kind": "search",
+        "sequence": 63
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1523.6899795815757
+        },
+        "kind": "search",
+        "sequence": 78
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1895.689979581576
+        },
+        "kind": "search",
+        "sequence": 90
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2267.689979581576
+        },
+        "kind": "search",
+        "sequence": 102
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2759.403161800348
+        },
+        "kind": "search",
+        "sequence": 121
+      }
+    ],
+    "11": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 87.34,
+          "virtual_time_s": 65.0
+        },
+        "kind": "search",
+        "sequence": 12,
+        "posterior_vertices": [
+          [
+            0.3196135214434664,
+            4.989774263121579
+          ],
+          [
+            95.89880870602488,
+            1497.1625899437508
+          ],
+          [
+            43.32843909222663,
+            1499.6049641836166
+          ],
+          [
+            0.14440591268831138,
+            4.997914258206182
+          ]
+        ],
+        "circle_center": [
+          34.93356375766024,
+          751.9201311132935
+        ],
+        "bound_m": 747.7319596856084
+      },
+      {
+        "position": [
+          125.00000000000003,
+          216.50635094610965
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 101.68,
+          "virtual_time_s": 193.0
+        },
+        "kind": "joint_probe",
+        "sequence": 25,
+        "posterior_vertices": [
+          [
+            38.48743761208306,
+            600.8620185496078
+          ],
+          [
+            42.05376775849344,
+            656.5392073555913
+          ],
+          [
+            22.03761198006663,
+            762.7256604770978
+          ],
+          [
+            19.764267669401814,
+            684.0448105550623
+          ]
+        ],
+        "circle_center": [
+          30.262524796074846,
+          681.7938395133529
+        ],
+        "bound_m": 81.34868674624452
+      },
+      {
+        "position": [
+          88.14206214340092,
+          691.2332404082458
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 160.25,
+          "virtual_time_s": 333.2747985899011
+        },
+        "kind": "shared_bearing",
+        "sequence": 33,
+        "posterior_vertices": [
+          [
+            31.917308728184413,
+            710.3135006592067
+          ],
+          [
+            31.465223464059065,
+            712.7118298507546
+          ],
+          [
+            20.71031205492251,
+            716.78757458229
+          ],
+          [
+            20.633890383542216,
+            714.1426069773144
+          ]
+        ],
+        "circle_center": [
+          26.31381039155346,
+          713.5505376207484
+        ],
+        "bound_m": 6.471290589906523
+      }
+    ],
+    "12": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 71.0
+        },
+        "kind": "search",
+        "sequence": 13
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 652.9457278512939
+        },
+        "kind": "search",
+        "sequence": 49
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1133.0274217823728
+        },
+        "kind": "search",
+        "sequence": 64
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1529.6899795815757
+        },
+        "kind": "search",
+        "sequence": 79
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1901.689979581576
+        },
+        "kind": "search",
+        "sequence": 91
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 112.19,
+          "virtual_time_s": 2273.689979581576
+        },
+        "kind": "search",
+        "sequence": 103,
+        "posterior_vertices": [
+          [
+            1498.193097620541,
+            4.662092211776292
+          ],
+          [
+            957.8458856946198,
+            1398.8428498512844
+          ],
+          [
+            909.1165558166193,
+            1378.9666992455982
+          ],
+          [
+            1498.0306915079934,
+            4.595848568361513
+          ]
+        ],
+        "circle_center": [
+          1215.7090985045593,
+          696.9812915546244
+        ],
+        "bound_m": 747.7319596856083
+      },
+      {
+        "position": [
+          1220.6291927446252,
+          495.7084264461436
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 99.48,
+          "virtual_time_s": 2486.5522408504467
+        },
+        "kind": "localization",
+        "sequence": 112,
+        "posterior_vertices": [
+          [
+            1166.136190843642,
+            861.421116135668
+          ],
+          [
+            1140.8941944351507,
+            926.5494352986228
+          ],
+          [
+            1169.7216317887928,
+            770.7829280508389
+          ],
+          [
+            1184.9304039294902,
+            735.2896501042543
+          ]
+        ],
+        "circle_center": [
+          1162.9122991823206,
+          830.9195427014386
+        ],
+        "bound_m": 98.13191781885413,
+        "prior_radius_m": 747.7319596856083,
+        "max_vertex_distance_m": 940.5885674424676,
+        "conditional_probe": false
+      },
+      {
+        "position": [
+          1162.9122991823206,
+          830.9195427014386
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 100.82,
+          "virtual_time_s": 2559.580979560966
+        },
+        "kind": "localization",
+        "sequence": 113,
+        "posterior_vertices": [
+          [
+            1162.9122991823206,
+            830.9195427014387
+          ],
+          [
+            1150.7819039155752,
+            901.0375903395199
+          ],
+          [
+            1145.2361236048441,
+            915.3465754229433
+          ]
+        ],
+        "circle_center": [
+          1154.0742113935823,
+          873.133059062191
+        ],
+        "bound_m": 43.1287926946831,
+        "prior_radius_m": 98.13191781885413,
+        "max_vertex_distance_m": 98.13191781885413,
+        "conditional_probe": false
+      },
+      {
+        "position": [
+          1160.5050849768422,
+          863.4634887508768
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 110.25,
+          "virtual_time_s": 2571.1075501909368
+        },
+        "kind": "localization",
+        "sequence": 114,
+        "posterior_vertices": [
+          [
+            1149.4973307261457,
+            894.99369583729
+          ],
+          [
+            1150.9623704743124,
+            887.9962003544788
+          ],
+          [
+            1154.7006858697628,
+            878.385621157587
+          ],
+          [
+            1154.1164000763583,
+            881.7630031962829
+          ]
+        ],
+        "circle_center": [
+          1152.0990082979542,
+          886.6896584974386
+        ],
+        "bound_m": 8.702055063564037,
+        "prior_radius_m": 43.1287926946831,
+        "max_vertex_distance_m": 54.08323089461958,
+        "conditional_probe": false
+      }
+    ],
+    "13": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 77.0
+        },
+        "kind": "search",
+        "sequence": 14
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 658.9457278512939
+        },
+        "kind": "search",
+        "sequence": 50
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1139.0274217823728
+        },
+        "kind": "search",
+        "sequence": 65
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1535.6899795815757
+        },
+        "kind": "search",
+        "sequence": 80
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1907.689979581576
+        },
+        "kind": "search",
+        "sequence": 92
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2279.689979581576
+        },
+        "kind": "search",
+        "sequence": 104
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2765.403161800348
+        },
+        "kind": "search",
+        "sequence": 122
+      }
+    ],
+    "14": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 83.0
+        },
+        "kind": "search",
+        "sequence": 15
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 664.9457278512939
+        },
+        "kind": "search",
+        "sequence": 51
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1145.0274217823728
+        },
+        "kind": "search",
+        "sequence": 66
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1541.6899795815757
+        },
+        "kind": "search",
+        "sequence": 81
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1913.689979581576
+        },
+        "kind": "search",
+        "sequence": 93
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2285.689979581576
+        },
+        "kind": "search",
+        "sequence": 105
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2771.403161800348
+        },
+        "kind": "search",
+        "sequence": 123
+      }
+    ],
+    "15": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 135.59,
+          "virtual_time_s": 89.0
+        },
+        "kind": "search",
+        "sequence": 16,
+        "posterior_vertices": [
+          [
+            -3.5098331047597435,
+            3.5610492241378204
+          ],
+          [
+            -1053.1119333853474,
+            1068.4791331606295
+          ],
+          [
+            -1089.9397300003754,
+            1030.8849534283752
+          ],
+          [
+            -3.6325735425394825,
+            3.4357545689472864
+          ]
+        ],
+        "circle_center": [
+          -537.7139396401319,
+          526.7522724838797
+        ],
+        "bound_m": 747.7319596856084
+      },
+      {
+        "position": [
+          125.00000000000003,
+          216.50635094610965
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 152.02,
+          "virtual_time_s": 199.0
+        },
+        "kind": "joint_probe",
+        "sequence": 26,
+        "posterior_vertices": [
+          [
+            -554.0335429503733,
+            562.1181005997742
+          ],
+          [
+            -620.35714652931,
+            629.4095101960045
+          ],
+          [
+            -729.2360659447978,
+            689.7248234813272
+          ],
+          [
+            -641.2573008066157,
+            606.5128965226417
+          ]
+        ],
+        "circle_center": [
+          -641.6348044475856,
+          625.9214620405508
+        ],
+        "bound_m": 108.37365891694041
+      },
+      {
+        "position": [
+          88.14206214340092,
+          691.2332404082458
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 182.58,
+          "virtual_time_s": 339.2747985899011
+        },
+        "kind": "shared_bearing",
+        "sequence": 34,
+        "posterior_vertices": [
+          [
+            -648.632244430915,
+            645.0729774425934
+          ],
+          [
+            -693.1785540356741,
+            669.7501567711552
+          ],
+          [
+            -707.6951291320922,
+            669.3510110293654
+          ],
+          [
+            -679.9516883755255,
+            643.1107567794663
+          ]
+        ],
+        "circle_center": [
+          -678.1636867815037,
+          657.2119942359793
+        ],
+        "bound_m": 31.92901213655458
+      },
+      {
+        "position": [
+          -203.73396862129022,
+          887.229851464801
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 208.18,
+          "virtual_time_s": 468.1257563156643
+        },
+        "kind": "shared_bearing",
+        "sequence": 41,
+        "posterior_vertices": [
+          [
+            -679.1508558485103,
+            643.1609304075483
+          ],
+          [
+            -648.632244430915,
+            645.0729774425934
+          ],
+          [
+            -661.5198781694222,
+            652.2122994584398
+          ]
+        ],
+        "circle_center": [
+          -663.8915501397126,
+          644.1169539250709
+        ],
+        "bound_m": 15.289224691939149
+      }
+    ],
+    "16": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 36.46,
+          "virtual_time_s": 95.0
+        },
+        "kind": "search",
+        "sequence": 17,
+        "posterior_vertices": [
+          [
+            4.072856751253235,
+            2.900316859201929
+          ],
+          [
+            1222.045014589793,
+            870.2289265213765
+          ],
+          [
+            1190.7707734069227,
+            912.5554051334057
+          ],
+          [
+            3.9686253172051758,
+            3.041383417400397
+          ]
+        ],
+        "circle_center": [
+          605.4005627376748,
+          447.31912108376196
+        ],
+        "bound_m": 747.7319596856084
+      },
+      {
+        "position": [
+          125.00000000000003,
+          216.50635094610965
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 31.54,
+          "virtual_time_s": 205.0
+        },
+        "kind": "joint_probe",
+        "sequence": 27,
+        "posterior_vertices": [
+          [
+            1167.9657501036702,
+            831.7186100281485
+          ],
+          [
+            1222.045014589793,
+            870.2289265213765
+          ],
+          [
+            1198.7548265763048,
+            901.7498078453648
+          ],
+          [
+            1066.7219326843601,
+            817.4897194195836
+          ],
+          [
+            808.9626993584466,
+            619.9541509897197
+          ]
+        ],
+        "circle_center": [
+          1015.5038569741198,
+          745.0915387555481
+        ],
+        "bound_m": 241.4924752576727
+      },
+      {
+        "position": [
+          88.14206214340092,
+          691.2332404082458
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 0.59,
+          "virtual_time_s": 345.2747985899011
+        },
+        "kind": "shared_bearing",
+        "sequence": 35,
+        "posterior_vertices": [
+          [
+            919.5919940968802,
+            685.2108464563918
+          ],
+          [
+            971.5014045112079,
+            715.8305534270578
+          ],
+          [
+            932.6580710054866,
+            714.748953236615
+          ],
+          [
+            894.3530789445473,
+            685.3936580534865
+          ]
+        ],
+        "circle_center": [
+          932.9272417278776,
+          700.6121057402722
+        ],
+        "bound_m": 41.467664323304916
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 128.89,
+          "virtual_time_s": 2309.689979581576
+        },
+        "kind": "shared_bearing",
+        "sequence": 109,
+        "posterior_vertices": [
+          [
+            924.6715645840743,
+            688.2071232126348
+          ],
+          [
+            951.9946803147719,
+            704.3241584577247
+          ],
+          [
+            943.6455358047014,
+            715.0549013349563
+          ],
+          [
+            932.6580710054866,
+            714.748953236615
+          ],
+          [
+            914.2660934327635,
+            700.6541342169468
+          ]
+        ],
+        "circle_center": [
+          933.1303868737677,
+          702.4891463373358
+        ],
+        "bound_m": 18.953333124025765
+      }
+    ],
+    "17": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 101.0
+        },
+        "kind": "search",
+        "sequence": 18
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 670.9457278512939
+        },
+        "kind": "search",
+        "sequence": 52
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1151.0274217823728
+        },
+        "kind": "search",
+        "sequence": 67
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1547.6899795815757
+        },
+        "kind": "search",
+        "sequence": 82
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1919.689979581576
+        },
+        "kind": "search",
+        "sequence": 94
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2291.689979581576
+        },
+        "kind": "search",
+        "sequence": 106
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2777.403161800348
+        },
+        "kind": "search",
+        "sequence": 124
+      }
+    ],
+    "18": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 107.0
+        },
+        "kind": "search",
+        "sequence": 19
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 676.9457278512939
+        },
+        "kind": "search",
+        "sequence": 53
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1157.0274217823728
+        },
+        "kind": "search",
+        "sequence": 68
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1553.6899795815757
+        },
+        "kind": "search",
+        "sequence": 83
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1925.689979581576
+        },
+        "kind": "search",
+        "sequence": 95
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2297.689979581576
+        },
+        "kind": "search",
+        "sequence": 107
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2783.403161800348
+        },
+        "kind": "search",
+        "sequence": 125
+      }
+    ],
+    "19": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 113.0
+        },
+        "kind": "search",
+        "sequence": 20
+      },
+      {
+        "position": [
+          -749.9999999999997,
+          1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 682.9457278512939
+        },
+        "kind": "search",
+        "sequence": 54
+      },
+      {
+        "position": [
+          -1500.0,
+          1.8369701987210297e-13
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1163.0274217823728
+        },
+        "kind": "search",
+        "sequence": 69
+      },
+      {
+        "position": [
+          -750.0000000000007,
+          -1299.0381056766578
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1559.6899795815757
+        },
+        "kind": "search",
+        "sequence": 84
+      },
+      {
+        "position": [
+          750.0000000000001,
+          -1299.038105676658
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 1931.689979581576
+        },
+        "kind": "search",
+        "sequence": 96
+      },
+      {
+        "position": [
+          1500.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2303.689979581576
+        },
+        "kind": "search",
+        "sequence": 108
+      },
+      {
+        "position": [
+          642.66026415473,
+          1046.9476878220394
+        ],
+        "response": {
+          "measure_result": "no_signal",
+          "accepted": true,
+          "virtual_time_s": 2789.403161800348
+        },
+        "kind": "search",
+        "sequence": 126
+      }
+    ],
+    "20": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 100.16,
+          "virtual_time_s": 119.0
+        },
+        "kind": "search",
+        "sequence": 21,
+        "posterior_vertices": [
+          [
+            -0.7955292172527779,
+            4.936307654968153
+          ],
+          [
+            -238.69548409851043,
+            1481.1201396609567
+          ],
+          [
+            -290.4973131031266,
+            1471.8368501020004
+          ],
+          [
+            -0.9681754180635862,
+            4.9053681166511245
+          ]
+        ],
+        "circle_center": [
+          -132.7799738448308,
+          740.9276050978319
+        ],
+        "bound_m": 747.7319596856083
+      },
+      {
+        "position": [
+          125.00000000000003,
+          216.50635094610965
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 119.22,
+          "virtual_time_s": 211.0
+        },
+        "kind": "joint_probe",
+        "sequence": 28,
+        "posterior_vertices": [
+          [
+            -96.03467842799593,
+            595.9010781572471
+          ],
+          [
+            -103.53810727203626,
+            642.4603149999285
+          ],
+          [
+            -140.3413293086777,
+            711.054907401099
+          ],
+          [
+            -128.66913921736608,
+            651.9164619735877
+          ]
+        ],
+        "circle_center": [
+          -118.1880038683368,
+          653.4779927791731
+        ],
+        "bound_m": 61.69174114455038
+      },
+      {
+        "position": [
+          88.14206214340092,
+          691.2332404082458
+        ],
+        "response": {
+          "measure_result": "direction",
+          "accepted": true,
+          "svd_deg": 183.12,
+          "virtual_time_s": 351.2747985899011
+        },
+        "kind": "shared_bearing",
+        "sequence": 36,
+        "posterior_vertices": [
+          [
+            -121.59086477093169,
+            676.1074109286769
+          ],
+          [
+            -125.47369354567098,
+            683.3443060271987
+          ],
+          [
+            -134.80406247045897,
+            682.9997309374018
+          ],
+          [
+            -133.2773723383223,
+            675.2645860881681
+          ]
+        ],
+        "circle_center": [
+          -128.19746362069532,
+          679.5535709330393
+        ],
+        "bound_m": 7.451386927100619
+      }
+    ]
+  },
+  "negative_observations": {
+    "2": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "4": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "5": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "8": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "10": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "13": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "14": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "17": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "18": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ],
+    "19": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      [
+        1500.0,
+        0.0
+      ],
+      [
+        642.66026415473,
+        1046.9476878220394
+      ]
+    ]
+  },
+  "scan_visits": [
+    {
+      "position": [
+        0.0,
+        0.0
+      ],
+      "fixed_site_index": 0
+    },
+    {
+      "position": [
+        -749.9999999999997,
+        1299.038105676658
+      ],
+      "fixed_site_index": 3,
+      "sector_corners": [
+        [
+          6.062001655779399e-14,
+          990.0
+        ],
+        [
+          -857.365149746594,
+          495.00000000000034
+        ],
+        [
+          1.1021821192326178e-13,
+          1800.0
+        ],
+        [
+          -1558.8457268119894,
+          900.0000000000006
+        ]
+      ]
+    },
+    {
+      "position": [
+        -1500.0,
+        1.8369701987210297e-13
+      ],
+      "fixed_site_index": 4,
+      "sector_corners": [
+        [
+          -857.3651497465943,
+          494.99999999999994
+        ],
+        [
+          -857.3651497465944,
+          -494.9999999999997
+        ],
+        [
+          -1558.8457268119896,
+          899.9999999999999
+        ],
+        [
+          -1558.8457268119898,
+          -899.9999999999995
+        ]
+      ]
+    },
+    {
+      "position": [
+        -750.0000000000007,
+        -1299.0381056766578
+      ],
+      "fixed_site_index": 5,
+      "sector_corners": [
+        [
+          -857.3651497465944,
+          -494.9999999999997
+        ],
+        [
+          -1.8186004967338195e-13,
+          -990.0
+        ],
+        [
+          -1558.8457268119898,
+          -899.9999999999995
+        ],
+        [
+          -3.3065463576978535e-13,
+          -1800.0
+        ]
+      ]
+    },
+    {
+      "position": [
+        750.0000000000001,
+        -1299.038105676658
+      ],
+      "fixed_site_index": 6,
+      "sector_corners": [
+        [
+          -1.8186004967338195e-13,
+          -990.0
+        ],
+        [
+          857.3651497465944,
+          -494.99999999999966
+        ],
+        [
+          -3.3065463576978535e-13,
+          -1800.0
+        ],
+        [
+          1558.8457268119898,
+          -899.9999999999994
+        ]
+      ]
+    },
+    {
+      "position": [
+        1500.0,
+        0.0
+      ],
+      "fixed_site_index": 1,
+      "sector_corners": [
+        [
+          857.3651497465943,
+          -494.99999999999994
+        ],
+        [
+          857.3651497465943,
+          494.99999999999994
+        ],
+        [
+          1558.8457268119896,
+          -899.9999999999999
+        ],
+        [
+          1558.8457268119896,
+          899.9999999999999
+        ]
+      ]
+    },
+    {
+      "position": [
+        642.66026415473,
+        1046.9476878220394
+      ],
+      "fixed_site_index": 2,
+      "sector_corners": [
+        [
+          857.3651497465943,
+          494.99999999999994
+        ],
+        [
+          6.062001655779399e-14,
+          990.0
+        ],
+        [
+          1558.8457268119896,
+          899.9999999999999
+        ],
+        [
+          1.1021821192326178e-13,
+          1800.0
+        ]
+      ]
+    }
+  ],
+  "source_upper_bound_stop": false,
+  "count_inferred_absent_channels": [],
+  "average_virtual_seconds_per_cleared_source": 278.94031618003476,
+  "route_decisions": [
+    {
+      "sequence_before": 28,
+      "labels": [
+        [
+          "source",
+          3
+        ],
+        [
+          "source",
+          7
+        ],
+        [
+          "source",
+          9
+        ],
+        [
+          "source",
+          11
+        ],
+        [
+          "source",
+          15
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "source",
+          20
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          3
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        0,
+        3,
+        6,
+        1,
+        2,
+        4,
+        9,
+        8,
+        5,
+        7,
+        12,
+        11,
+        10
+      ],
+      "estimated_distance_m": 9596.300141990325
+    },
+    {
+      "sequence_before": 29,
+      "labels": [
+        [
+          "source",
+          3
+        ],
+        [
+          "source",
+          7
+        ],
+        [
+          "source",
+          9
+        ],
+        [
+          "source",
+          11
+        ],
+        [
+          "source",
+          15
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "source",
+          20
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          3
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        0,
+        3,
+        6,
+        1,
+        2,
+        4,
+        9,
+        8,
+        5,
+        7,
+        12,
+        11,
+        10
+      ],
+      "estimated_distance_m": 9170.200942313695
+    },
+    {
+      "sequence_before": 37,
+      "labels": [
+        [
+          "source",
+          7
+        ],
+        [
+          "source",
+          9
+        ],
+        [
+          "source",
+          11
+        ],
+        [
+          "source",
+          15
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "source",
+          20
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          3
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        2,
+        5,
+        0,
+        1,
+        3,
+        8,
+        7,
+        4,
+        6,
+        11,
+        10,
+        9
+      ],
+      "estimated_distance_m": 9162.389464446698
+    },
+    {
+      "sequence_before": 38,
+      "labels": [
+        [
+          "source",
+          7
+        ],
+        [
+          "source",
+          9
+        ],
+        [
+          "source",
+          15
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "source",
+          20
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          3
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        4,
+        0,
+        1,
+        2,
+        7,
+        6,
+        3,
+        5,
+        10,
+        9,
+        8
+      ],
+      "estimated_distance_m": 9120.298040518373
+    },
+    {
+      "sequence_before": 39,
+      "labels": [
+        [
+          "source",
+          7
+        ],
+        [
+          "source",
+          9
+        ],
+        [
+          "source",
+          15
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          3
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        0,
+        1,
+        2,
+        6,
+        5,
+        3,
+        4,
+        9,
+        8,
+        7
+      ],
+      "estimated_distance_m": 8949.519415162784
+    },
+    {
+      "sequence_before": 41,
+      "labels": [
+        [
+          "source",
+          9
+        ],
+        [
+          "source",
+          15
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          3
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        5,
+        0,
+        1,
+        6,
+        7,
+        8,
+        3,
+        2,
+        4
+      ],
+      "estimated_distance_m": 8670.999676730471
+    },
+    {
+      "sequence_before": 54,
+      "labels": [
+        [
+          "source",
+          9
+        ],
+        [
+          "source",
+          15
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        0,
+        1,
+        5,
+        6,
+        7,
+        3,
+        2,
+        4
+      ],
+      "estimated_distance_m": 7986.899819052322
+    },
+    {
+      "sequence_before": 55,
+      "labels": [
+        [
+          "source",
+          15
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        0,
+        4,
+        5,
+        6,
+        2,
+        1,
+        3
+      ],
+      "estimated_distance_m": 7304.321055212465
+    },
+    {
+      "sequence_before": 56,
+      "labels": [
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          4
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        3,
+        4,
+        5,
+        1,
+        0,
+        2
+      ],
+      "estimated_distance_m": 7087.725601646952
+    },
+    {
+      "sequence_before": 69,
+      "labels": [
+        [
+          "source",
+          6
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        0,
+        4,
+        5,
+        2,
+        1,
+        3
+      ],
+      "estimated_distance_m": 6049.015669591068
+    },
+    {
+      "sequence_before": 70,
+      "labels": [
+        [
+          "source",
+          6
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        0,
+        4,
+        5,
+        2,
+        1,
+        3
+      ],
+      "estimated_distance_m": 5498.423283972435
+    },
+    {
+      "sequence_before": 72,
+      "labels": [
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          5
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        3,
+        4,
+        1,
+        0,
+        2
+      ],
+      "estimated_distance_m": 5256.315151857748
+    },
+    {
+      "sequence_before": 84,
+      "labels": [
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ],
+        [
+          "site",
+          6
+        ]
+      ],
+      "order": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "estimated_distance_m": 4527.108723243223
+    },
+    {
+      "sequence_before": 96,
+      "labels": [
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          1
+        ],
+        [
+          "site",
+          2
+        ]
+      ],
+      "order": [
+        1,
+        0,
+        2
+      ],
+      "estimated_distance_m": 3027.1087232432224
+    },
+    {
+      "sequence_before": 109,
+      "labels": [
+        [
+          "source",
+          1
+        ],
+        [
+          "source",
+          12
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          2
+        ]
+      ],
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "estimated_distance_m": 1819.6287773282957
+    },
+    {
+      "sequence_before": 110,
+      "labels": [
+        [
+          "source",
+          1
+        ],
+        [
+          "source",
+          12
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          2
+        ]
+      ],
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "estimated_distance_m": 1717.104610006677
+    },
+    {
+      "sequence_before": 111,
+      "labels": [
+        [
+          "source",
+          12
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          2
+        ]
+      ],
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "estimated_distance_m": 1608.8670928978029
+    },
+    {
+      "sequence_before": 112,
+      "labels": [
+        [
+          "source",
+          12
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          2
+        ]
+      ],
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "estimated_distance_m": 1227.4065666282063
+    },
+    {
+      "sequence_before": 113,
+      "labels": [
+        [
+          "source",
+          12
+        ],
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          2
+        ]
+      ],
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "estimated_distance_m": 946.3232887135604
+    },
+    {
+      "sequence_before": 115,
+      "labels": [
+        [
+          "source",
+          16
+        ],
+        [
+          "site",
+          2
+        ]
+      ],
+      "order": [
+        0,
+        1
+      ],
+      "estimated_distance_m": 906.6121912787952
+    }
+  ],
+  "clear_attempts": [
+    {
+      "sequence": 30,
+      "channel": 3,
+      "position": [
+        88.14206214340092,
+        691.2332404082458
+      ],
+      "response": {
+        "clear_result": "no_target_in_range",
+        "accepted": true,
+        "virtual_time_s": 315.2747985899011
+      },
+      "trial": true,
+      "prior_vertices": [
+        [
+          91.55637541858619,
+          673.5600272069377
+        ],
+        [
+          91.38400727392248,
+          675.9156778032726
+        ],
+        [
+          78.57527441864087,
+          740.752972630875
+        ],
+        [
+          77.71497801437101,
+          732.6426971845398
+        ]
+      ],
+      "prior_bound_m": 50.43537753176352,
+      "posterior_vertices": [
+        [
+          77.71497801437101,
+          732.6426971845398
+        ],
+        [
+          82.8947479406327,
+          710.5326003369462
+        ],
+        [
+          84.4739757912397,
+          710.8939815568696
+        ],
+        [
+          78.57527441864087,
+          740.752972630875
+        ]
+      ],
+      "circle_center": [
+        80.73501117963679,
+        725.6427864839106
+      ],
+      "bound_m": 15.263754068796887
+    },
+    {
+      "sequence": 37,
+      "channel": 3,
+      "position": [
+        82.36895564582932,
+        721.116070055711
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 362.3618742962538
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          77.71497801437101,
+          732.6426971845398
+        ],
+        [
+          82.8947479406327,
+          710.5326003369462
+        ],
+        [
+          84.4739757912397,
+          710.8939815568696
+        ],
+        [
+          78.57527441864087,
+          740.752972630875
+        ]
+      ],
+      "prior_bound_m": 19.99999900000005
+    },
+    {
+      "sequence": 38,
+      "channel": 11,
+      "position": [
+        40.50750272112778,
+        716.3874884119045
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 375.78740864210783
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          31.917308728184413,
+          710.3135006592067
+        ],
+        [
+          31.465223464059065,
+          712.7118298507546
+        ],
+        [
+          20.71031205492251,
+          716.78757458229
+        ],
+        [
+          20.633890383542216,
+          714.1426069773144
+        ]
+      ],
+      "prior_bound_m": 19.999998999999995
+    },
+    {
+      "sequence": 39,
+      "channel": 20,
+      "position": [
+        -114.80418895464575,
+        682.9288835558463
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 412.5623672164974
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          -121.59086477093169,
+          676.1074109286769
+        ],
+        [
+          -125.47369354567098,
+          683.3443060271987
+        ],
+        [
+          -134.80406247045897,
+          682.9997309374018
+        ],
+        [
+          -133.2773723383223,
+          675.2645860881681
+        ]
+      ],
+      "prior_bound_m": 19.999998999999985
+    },
+    {
+      "sequence": 40,
+      "channel": 7,
+      "position": [
+        -203.73396862129022,
+        887.229851464801
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 462.1257563156643
+      },
+      "trial": true,
+      "prior_vertices": [
+        [
+          -192.3056023731622,
+          873.3232902472084
+        ],
+        [
+          -202.75940502132767,
+          894.9624753358815
+        ],
+        [
+          -220.0263428509504,
+          907.0551611097216
+        ],
+        [
+          -215.49644340075312,
+          888.3807213932329
+        ]
+      ],
+      "prior_bound_m": 25.660950110163053
+    },
+    {
+      "sequence": 55,
+      "channel": 9,
+      "position": [
+        -446.38591570148435,
+        687.3845129646387
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 824.5182916643741
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          -432.1035188260901,
+          673.3840451333936
+        ],
+        [
+          -454.38789080070325,
+          691.6593425244897
+        ],
+        [
+          -465.9217356663321,
+          691.6684011869268
+        ],
+        [
+          -453.11932241376553,
+          672.6630103071192
+        ]
+      ],
+      "prior_bound_m": 19.999999000000027
+    },
+    {
+      "sequence": 56,
+      "channel": 15,
+      "position": [
+        -659.5023406138798,
+        646.8940000659517
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 872.9040461016267
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          -679.1508558485103,
+          643.1609304075483
+        ],
+        [
+          -648.632244430915,
+          645.0729774425934
+        ],
+        [
+          -661.5198781694222,
+          652.2122994584398
+        ]
+      ],
+      "prior_bound_m": 19.999998999999946
+    },
+    {
+      "sequence": 72,
+      "channel": 6,
+      "position": [
+        -1230.040969490229,
+        -750.1276547435097
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 1341.8486938586707
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          -1228.9152181570564,
+          -741.2101570390827
+        ],
+        [
+          -1233.2482354331285,
+          -767.9482290734787
+        ],
+        [
+          -1232.5459024599163,
+          -769.9701664498782
+        ]
+      ],
+      "prior_bound_m": 19.999998999999978
+    },
+    {
+      "sequence": 111,
+      "channel": 1,
+      "position": [
+        1398.5461486151178,
+        18.992453895013817
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 2378.785338240297
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          1405.9075839703369,
+          15.754111569058123
+        ],
+        [
+          1393.2588289344635,
+          17.871921977731358
+        ],
+        [
+          1404.1702075108885,
+          12.607723949228614
+        ],
+        [
+          1416.8530801380332,
+          10.93911805107396
+        ]
+      ],
+      "prior_bound_m": 19.999998999999995
+    },
+    {
+      "sequence": 115,
+      "channel": 12,
+      "position": [
+        1156.0894955305043,
+        876.1113410267221
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 2578.7868456009296
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          1149.4973307261457,
+          894.99369583729
+        ],
+        [
+          1150.9623704743124,
+          887.9962003544788
+        ],
+        [
+          1154.7006858697628,
+          878.385621157587
+        ],
+        [
+          1154.1164000763583,
+          881.7630031962829
+        ]
+      ],
+      "prior_bound_m": 19.99999900000001
+    },
+    {
+      "sequence": 116,
+      "channel": 16,
+      "position": [
+        933.4944932761639,
+        706.1558248173277
+      ],
+      "response": {
+        "clear_result": "success",
+        "accepted": true,
+        "virtual_time_s": 2639.7987773721557
+      },
+      "trial": false,
+      "prior_vertices": [
+        [
+          924.6715645840743,
+          688.2071232126348
+        ],
+        [
+          951.9946803147719,
+          704.3241584577247
+        ],
+        [
+          943.6455358047014,
+          715.0549013349563
+        ],
+        [
+          932.6580710054866,
+          714.748953236615
+        ],
+        [
+          914.2660934327635,
+          700.6541342169468
+        ]
+      ],
+      "prior_bound_m": 19.99999900000008
+    }
+  ],
+  "version": "q3_joint_search_clear_route_v5",
+  "parameters": {
+    "route_mode": "joint",
+    "probe": 250,
+    "share_at_search": true,
+    "share_during": false,
+    "share_ratio": 0.7,
+    "offset": 0.1,
+    "advance": 0.25,
+    "unknown_scan": false,
+    "rotation": 0.0,
+    "exact_positive": false,
+    "info_points": false,
+    "arc_scan": 0,
+    "estimate": "circle",
+    "trial_radius": 40,
+    "trial_limit": 12,
+    "probe_count": 1,
+    "site_passes": 0,
+    "site_bonus": 0.0,
+    "planning_radius": 1500,
+    "commit": false,
+    "sweep_advance": 0.0
+  },
+  "paper_variant": "q3_no_site_refinement"
+}

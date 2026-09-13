@@ -1,0 +1,67 @@
+{
+  "record": "authorized production-path change after the absorption baseline",
+  "baseline_file": "verification/production_hashes_before.json",
+  "baseline_captured_at_utc": "2026-09-13T04:30:03.808050+00:00",
+  "authorized_by": "user",
+  "authorization_quote": "把geometry修好 / 修 --policy geometry",
+  "phase_semantics": "During the absorption phase all five named production files stayed byte-identical (see baseline). This record covers exactly one later, user-authorized change.",
+  "authorized_scope": [
+    "run.py"
+  ],
+  "still_forbidden": [
+    "production.py",
+    "runtime.py",
+    "compare.py",
+    "recommended.py",
+    "baseline/**",
+    "absorbed/**"
+  ],
+  "changes": [
+    {
+      "path": "run.py",
+      "before_sha256": "14c479355e158be2d574af500bd289de66a4a47b376ee94a00ca4a70078aa7ac",
+      "before_bytes": 66791,
+      "after_bytes": 68547,
+      "purpose": "fix pre-existing --policy geometry crash (full production kwargs forwarded to schedulers whose class chain rejects unknown keys)",
+      "method": "construct-and-retry: build with full kwargs; only on TypeError unexpected-keyword drop exactly that key and retry; routes that accept every key are untouched (learned drops 0 keys)",
+      "regression_evidence": {
+        "learned_q3": "T_total_virtual 4567.076019 vs baseline 4567.076019177168 (same to 6dp), measures=142 switches=125 cleared=10",
+        "learned_q4_mixed": "T_total_virtual 6505.989701 vs baseline 6505.989700901541, measures=358 switches=335",
+        "newly_working": [
+          "geometry q3/q4",
+          "probabilistic q3/q4",
+          "belief-rollout q3/q4",
+          "constraint-search q3",
+          "constraint-macro q3",
+          "compact-ring q3",
+          "q4-bisect q4",
+          "q4-shadow q4"
+        ],
+        "intentionally_limited": [
+          "compact-ring q4 -> run.py guard: constraint policies currently support --mode q3 only"
+        ]
+      },
+      "authorised_after_sha256": "def842f4ae28c7f878141d4e1d2904959fb91b8f25dd72e6f75c931550f1c174",
+      "after_sha256": "def842f4ae28c7f878141d4e1d2904959fb91b8f25dd72e6f75c931550f1c174"
+    }
+  ],
+  "note_for_gate": "MUST/f may treat exactly the (path,before_sha256,after_sha256) tuples listed here as authorized; every other production-path change must still FAIL.",
+  "authorised_by": "user",
+  "authorised_scope": [
+    "run.py"
+  ],
+  "when": "2026-09-13T12:59:51",
+  "schema_note": "gate reads THIS file at every run (single source of truth) and asserts the canonical keys changes[].path / before_sha256 / after_sha256 before authorising anything; missing canonical keys => FAIL. The 'authorised_*' aliases below are kept for readability only and can never substitute for the canonical keys.",
+  "_restored_by_verifier": "verifier restored changes[0].after_sha256 after a negative-schema test mutated this file in place; content is logically restored, byte layout may differ",
+  "_provenance": [
+    {
+      "event": "verifier negative-schema test mutated changes[0].after_sha256 IN PLACE and then restored it",
+      "effect": "content logically restored; byte layout differed from the original 2756 B version",
+      "lesson": "negative tests must act on a copy, never in place on another party's artifact"
+    },
+    {
+      "event": "captain corrected schema_note (it still described the gate as reading an inline registry) and recorded both edits here",
+      "effect": "content unchanged apart from this note and _provenance"
+    }
+  ]
+}

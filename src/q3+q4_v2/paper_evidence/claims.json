@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "claim_boundary": "Claims apply only to the held-out synthetic matched cases in this evidence set; they are not per-instance or global optimality guarantees.",
+  "claims": [
+    {
+      "claim_id": "paired_q3_all",
+      "status": "allowed",
+      "scope": "Q3",
+      "statement": "在 60 个共同案例上，V2 相对 V1 的每源虚拟时间平均降低 48.0%（95% bootstrap CI 46.6%–49.3%），其中 60/60 个案例更快。",
+      "source_table": "tables/paired_effects.csv",
+      "metric": "T_total_virtual / sources_total",
+      "baseline": "V1 deterministic-certificate frozen baseline",
+      "method": "V2 absorbed final engine"
+    },
+    {
+      "claim_id": "paired_q3_10",
+      "status": "allowed",
+      "scope": "Q3，10 个源",
+      "statement": "在 20 个共同案例上，V2 相对 V1 的每源虚拟时间平均降低 48.8%（95% bootstrap CI 46.6%–50.8%），其中 20/20 个案例更快。",
+      "source_table": "tables/paired_effects.csv",
+      "metric": "T_total_virtual / sources_total",
+      "baseline": "V1 deterministic-certificate frozen baseline",
+      "method": "V2 absorbed final engine"
+    },
+    {
+      "claim_id": "paired_q3_13",
+      "status": "allowed",
+      "scope": "Q3，13 个源",
+      "statement": "在 20 个共同案例上，V2 相对 V1 的每源虚拟时间平均降低 48.7%（95% bootstrap CI 46.4%–50.7%），其中 20/20 个案例更快。",
+      "source_table": "tables/paired_effects.csv",
+      "metric": "T_total_virtual / sources_total",
+      "baseline": "V1 deterministic-certificate frozen baseline",
+      "method": "V2 absorbed final engine"
+    },
+    {
+      "claim_id": "paired_q3_16",
+      "status": "allowed",
+      "scope": "Q3，16 个源",
+      "statement": "在 20 个共同案例上，V2 相对 V1 的每源虚拟时间平均降低 45.9%（95% bootstrap CI 42.9%–48.9%），其中 20/20 个案例更快。",
+      "source_table": "tables/paired_effects.csv",
+      "metric": "T_total_virtual / sources_total",
+      "baseline": "V1 deterministic-certificate frozen baseline",
+      "method": "V2 absorbed final engine"
+    },
+    {
+      "claim_id": "paired_q4_all",
+      "status": "allowed",
+      "scope": "Q4",
+      "statement": "在 60 个共同案例上，V2 相对 V1 的每源虚拟时间平均降低 59.4%（95% bootstrap CI 57.9%–60.9%），其中 60/60 个案例更快。",
+      "source_table": "tables/paired_effects.csv",
+      "metric": "T_total_virtual / sources_total",
+      "baseline": "V1 deterministic-certificate frozen baseline",
+      "method": "V2 absorbed final engine"
+    },
+    {
+      "claim_id": "paired_q4_10",
+      "status": "allowed",
+      "scope": "Q4，10 个源",
+      "statement": "在 20 个共同案例上，V2 相对 V1 的每源虚拟时间平均降低 57.7%（95% bootstrap CI 55.3%–59.9%），其中 20/20 个案例更快。",
+      "source_table": "tables/paired_effects.csv",
+      "metric": "T_total_virtual / sources_total",
+      "baseline": "V1 deterministic-certificate frozen baseline",
+      "method": "V2 absorbed final engine"
+    },
+    {
+      "claim_id": "paired_q4_13",
+      "status": "allowed",
+      "scope": "Q4，13 个源",
+      "statement": "在 20 个共同案例上，V2 相对 V1 的每源虚拟时间平均降低 58.7%（95% bootstrap CI 55.9%–61.4%），其中 20/20 个案例更快。",
+      "source_table": "tables/paired_effects.csv",
+      "metric": "T_total_virtual / sources_total",
+      "baseline": "V1 deterministic-certificate frozen baseline",
+      "method": "V2 absorbed final engine"
+    },
+    {
+      "claim_id": "paired_q4_16",
+      "status": "allowed",
+      "scope": "Q4，16 个源",
+      "statement": "在 20 个共同案例上，V2 相对 V1 的每源虚拟时间平均降低 63.0%（95% bootstrap CI 61.0%–64.9%），其中 20/20 个案例更快。",
+      "source_table": "tables/paired_effects.csv",
+      "metric": "T_total_virtual / sources_total",
+      "baseline": "V1 deterministic-certificate frozen baseline",
+      "method": "V2 absorbed final engine"
+    },
+    {
+      "claim_id": "acceptance_all_runs",
+      "status": "allowed",
+      "scope": "Q3/Q4 paired final evaluation",
+      "statement": "240/240 次运行均完成全部清除、通过 verifier 且计时账本闭合。",
+      "source_table": "tables/run_level.csv"
+    }
+  ]
+}

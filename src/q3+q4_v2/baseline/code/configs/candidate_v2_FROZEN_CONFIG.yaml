@@ -1,0 +1,37 @@
+# FROZEN_CONFIG (Addendum B.6) — 冻结后正式评估不得修改 tau
+policy: mainline
+tau: 0.08
+nbv_mode: radius
+nbv_rule: fixed_geometry
+opportunistic_reuse: true
+channel_scan_mode: sweep_all
+cert_select: gain_cost
+q4_naive: false
+q4_certificate_layout: sparse25
+q4_joint_rank: false
+cert_route_mode: greedy
+q4_residual_sparsify: true
+q3_ml_ranker: false
+q3_ml_model_path: null
+active_scan_margin_m: 0.0
+model_version: v2.1
+spec_version: v2.1+addendum
+case_set_version: e_branches_v1 tune-only Q3/Q4 (seed block 1100000)
+selection_metric: 100% clearance hard gate; minimum arithmetic mean of per-case T_j/n_j
+  across Q3 and Q4 tune sets
+selection_rule: within 2% of best mean, lower population std, then fewer measures,
+  then smaller tau
+freeze_time: '2026-09-11T22:49:09+08:00'
+git_commit: N/A
+frozen_config_hash: 932285b4f0f4b081c934aa3688db805b5fd055ff63ff28008a20af74542945ee
+tune_results_hash: 5c55326ffbc052f3240870cb05d8ad2d4b30efedd0ce90f434028c146645a269
+case_sets:
+  q3: cases/e_branches_v1/tune/tune_q3.json
+  q4: cases/e_branches_v1/tune/tune_q4.json
+case_hashes:
+  q3: 39ea6c488cd5ff989bb8a8c8e43948e3fe211c1290e0e069f6849cb007632557
+  q4: d23cf2e496857aaa314dbd7496bf460dff40dd12d363a34d9f3eeba09edc2b28
+source_hash: 7dc69616175aa8b029f31e8bc1d1183b67248a40d6d60abd30d05210badea7f7
+enabled_branches:
+- E1
+- E4

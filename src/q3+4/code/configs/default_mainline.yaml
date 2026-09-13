@@ -1,0 +1,19 @@
+# default_mainline.yaml — mainline 默认配置（Addendum B/J）
+#
+# 参数分类（Addendum B.1）：
+#   A 类（题设常量：±1°、1000/1500 m、5/20 m、5 m/s、5 s、1 s …）
+#     冻结于 geometry/constants.py，不在此暴露；
+#   B 类（在线决策变量）由策略运行时求解，不在此暴露；
+#   C 类（允许调参）当前只有 tau。
+#
+# tau: 机会式观测收益阈值（ACTIVE 模式一次观测被接受的最小 gain/cost 得分）。
+#      0.0 = 当前隐式值（任何非负收益候选均可参与 max gain/cost 竞争），
+#      与既有 mainline 行为逐字节一致。调参仅允许在 cases/tune/ 上进行。
+# nbv_mode: NBV 评价口径。"radius" = ΔR_MEC（默认，v2.1 评审第 5 点）；
+#           "diameter" = ΔD（v2.0 口径保留）。
+# policy: 策略变体标识，本阶段仅 "mainline"（A1-A4 variant 下一阶段接入）。
+# max_steps: 策略循环安全上限（可选；缺省用 runner 内置 20000）。
+
+policy: mainline
+tau: 0.0
+nbv_mode: radius

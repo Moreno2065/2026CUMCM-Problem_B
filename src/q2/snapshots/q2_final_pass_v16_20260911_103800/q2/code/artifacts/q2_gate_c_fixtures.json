@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "purpose": "Deterministic Gate C fixtures for near-aware closed angular images and independent two-path verification.",
+  "source_snapshot": "q2_gate_b_pass_v2_20260911_024014",
+  "cases": [
+    {
+      "id": "C-F1_ordinary_single_interval",
+      "station": {"x": 0.0, "y": 0.0}, "bearing_deg": 0.0,
+      "second_station": {"x": 250.0, "y": 300.0},
+      "expected_all_near": false, "expected_spatial_components": 1,
+      "expected_angular_components": 1, "expected_full_circle": false,
+      "expected_expanded_components": 1
+    },
+    {
+      "id": "C-F2_zero_360_wrap",
+      "station": {"x": 0.0, "y": 0.0}, "bearing_deg": 359.5,
+      "second_station": {"x": -500.0, "y": 0.0},
+      "expected_all_near": false, "expected_spatial_components": 1,
+      "expected_angular_components": 1, "expected_full_circle": false,
+      "expected_expanded_components": 1
+    },
+    {
+      "id": "C-F3_second_station_equals_first",
+      "station": {"x": 0.0, "y": 0.0}, "bearing_deg": 0.0,
+      "second_station": {"x": 0.0, "y": 0.0},
+      "expected_all_near": false, "expected_spatial_components": 1,
+      "expected_angular_components": 1, "expected_full_circle": false,
+      "expected_expanded_components": 1
+    },
+    {
+      "id": "C-F4_near_disk_crosses_thin_wedge",
+      "station": {"x": 0.0, "y": 0.0}, "bearing_deg": 0.0,
+      "second_station": {"x": 200.0, "y": 0.0},
+      "expected_all_near": false, "expected_spatial_components": 2,
+      "expected_angular_components": 2, "expected_full_circle": false,
+      "expected_expanded_components": 2
+    },
+    {
+      "id": "C-F5_permanent_three_spatial_components",
+      "station": {"x": -1761.0971373778152, "y": -2562.1156141107817}, "bearing_deg": 77.442,
+      "second_station": {"x": -1414.5613933607547, "y": -1106.0133123595463},
+      "expected_all_near": false, "expected_spatial_components": 3,
+      "expected_angular_components": 3, "expected_full_circle": false,
+      "expected_expanded_components": 3
+    },
+    {
+      "id": "C-F6_nondegenerate_all_near_sliver",
+      "station": {"x": 2000.0, "y": 0.0}, "bearing_deg": 114.84203276316712,
+      "second_station": {"x": 1620.0, "y": 784.6018098373212},
+      "expected_all_near": true, "expected_spatial_components": 0,
+      "expected_angular_components": 0, "expected_full_circle": false,
+      "expected_expanded_components": 0
+    },
+    {
+      "id": "C-F7_full_circle_from_actual_coverage",
+      "station": {"x": 0.0, "y": 0.0}, "bearing_deg": 0.0,
+      "second_station": {"x": 1000.0, "y": 0.0},
+      "expected_all_near": false, "expected_spatial_components": 1,
+      "expected_angular_components": 1, "expected_full_circle": true,
+      "expected_expanded_components": 1
+    },
+    {
+      "id": "C-F8_gate_a_tangent_singleton_visible",
+      "station": {"x": 2000.0, "y": 0.0}, "bearing_deg": 114.84193276316712,
+      "second_station": {"x": 1626.0, "y": 784.6018098373212},
+      "expected_all_near": false, "expected_spatial_components": 1,
+      "expected_angular_components": 1, "expected_full_circle": false,
+      "expected_expanded_components": 1
+    },
+    {
+      "id": "C-F9_interior_arc_tangent_extremum",
+      "station": {"x": 2076.7525102614745, "y": -2296.7203770041724}, "bearing_deg": 116.04544676998955,
+      "second_station": {"x": -1884.2883700881307, "y": -2565.6633451029884},
+      "expected_all_near": false, "expected_spatial_components": 1,
+      "expected_angular_components": 1, "expected_full_circle": false,
+      "expected_expanded_components": 1
+    },
+    {
+      "id": "C-F10_dilation_merges_two_intervals",
+      "station": {"x": 0.0, "y": 0.0}, "bearing_deg": 0.0,
+      "second_station": {"x": 286.45, "y": 0.0},
+      "expected_all_near": false, "expected_spatial_components": 2,
+      "expected_angular_components": 2, "expected_full_circle": false,
+      "expected_expanded_components": 1
+    }
+  ]
+}

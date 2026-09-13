@@ -1,0 +1,65 @@
+{
+ "cleared_count": 12,
+ "certified_absent_count": 8,
+ "sources_total": 12,
+ "clear_rate": 1.0,
+ "avg_localize_clear_time_s": 2941.3243416995497,
+ "near_clear_count": 0,
+ "t_per_source_s": 968.9007899983703,
+ "t_per_source_basis": "T_j/n_j per case: total virtual time of case j divided by its source count n_j",
+ "total_move_distance_m": 39914.047399902236,
+ "n_measures": 604,
+ "n_switches": 552,
+ "n_clear_attempts": 16,
+ "n_clear_success": 12,
+ "T_move": 7982.809479980445,
+ "T_measure": 3020.0,
+ "T_switch": 552.0,
+ "T_clear": 72.0,
+ "T_ledger_sum": 11626.809479980446,
+ "T_total_virtual": 11626.809479980444,
+ "ledger_minus_total": 1.8189894035458565e-12,
+ "wall_clock_s": 0.1655867099761963,
+ "reconcile_warnings": [],
+ "anomalies": [
+  "no NBV candidate for ACTIVE channels [2, 16] — forcing FALLBACK_CLEAR",
+  "FALLBACK_CLEAR channel 2: 8 points (estimate 2, region area 1605 m^2), trigger: no informative observation point left",
+  "FALLBACK_CLEAR channel 16: 5 points (estimate 1, region area 955 m^2), trigger: no informative observation point left"
+ ],
+ "fallback_records": [
+  {
+   "channel": 2,
+   "trigger": "no informative observation point left",
+   "region_area": 1604.5204111125204,
+   "estimated_points": 2,
+   "n_points": 8,
+   "used": 2,
+   "result": "resolved_externally"
+  },
+  {
+   "channel": 16,
+   "trigger": "no informative observation point left",
+   "region_area": 955.0744344191044,
+   "estimated_points": 1,
+   "n_points": 5,
+   "used": 2,
+   "result": "resolved_externally"
+  }
+ ],
+ "status_summary": {
+  "UNKNOWN": 0,
+  "ACTIVE": 0,
+  "READY": 0,
+  "CLEARED": 12,
+  "CERTIFIED_ABSENT": 8,
+  "complete": true
+ },
+ "q4_certificate_layout": "sparse25",
+ "q4_certificate_point_count": 25,
+ "joint_state_evaluations": 0,
+ "lookahead_decisions": 0,
+ "q4_certified_cells_raw": 0,
+ "q4_certified_cells_retained": 0,
+ "q4_certified_cells_pruned": 0,
+ "verifier_all_ok": true
+}

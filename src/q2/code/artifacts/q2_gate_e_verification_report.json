@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "gate": "E",
+  "status": "PASS",
+  "source_snapshot": "q2_gate_d_pass_v1_20260911_034850",
+  "scope": [
+    "deterministic E1 endpoint candidates",
+    "E2 apex events",
+    "E3 exact and legal one-sided parallel limits",
+    "E4 pair-distance stationary roots",
+    "E5 pair-pair envelope-switch roots",
+    "fixed-station q2 point provenance",
+    "independent dense-beta verification"
+  ],
+  "commands": [
+    "python -m pytest -q -p no:cacheprovider src/q2/code/tests/test_gate_e.py",
+    "python -m pytest -q -p no:cacheprovider src/q2/code/tests/test_gate_a.py src/q2/code/tests/test_gate_b.py src/q2/code/tests/test_gate_c.py src/q2/code/tests/test_gate_d.py src/q2/code/tests/test_gate_e.py",
+    "python -m pytest -q -p no:cacheprovider src/q1/code/tests",
+    "python -m ruff check src/q2/code/solver/inner_max.py src/q2/code/solver/q2_point.py src/q2/code/verifier/verify_inner.py src/q2/code/tests/test_gate_e.py"
+  ],
+  "results": {
+    "gate_e": "14 passed",
+    "q2_gate_a_to_e": "100 passed",
+    "q1_regression": "10 passed",
+    "ruff": "All checks passed",
+    "randomized_valid_admissible_cross_check": "500 passed",
+    "disconnected_wrap_gap_regression": "PASS",
+    "adaptive_root_regressions": "PASS",
+    "spec_review": "PASS",
+    "code_quality_review": "PASS after root/provenance/test hardening"
+  },
+  "independent_verifier": {
+    "imports_production_maximizer": false,
+    "calls_construct_inner_candidates": false,
+    "calls_maximize_inner": false,
+    "oracle": "independent pure-Q1 dense beta sampling with per-component adaptive refinement and strict membership filtering",
+    "fixed_seed": 20260911,
+    "valid_admissible_cases": 500,
+    "samples_per_component": 17,
+    "asserts_report_passed": true
+  },
+  "hard_invariants_confirmed": [
+    "outside Crec is rejected before angular/inner optimization",
+    "all-near bypasses the angular admissibility gate and returns Q=0",
+    "raw angular image separation uses strict > 3 epsilon",
+    "unbounded Q1 bearing returns positive infinity",
+    "E1-E5 candidates are retained even when a randomized run does not select every type",
+    "roots are deterministically adaptively isolated without the former fixed 24-cell scan or endpoint margin",
+    "winner active_geometry_labels do not overclaim inactive angular boundaries",
+    "disconnected wrap refinement never samples the forbidden gap"
+  ],
+  "not_implemented": [
+    "deterministic outer search",
+    "candidate good regions and baselines",
+    "figures and final solution artifacts",
+    "global optimality certificate"
+  ],
+  "snapshot_id": "q2_gate_e_pass_v1_20260911_042520",
+  "snapshot_created_at": "2026-09-11T04:25:20+08:00",
+  "verification_report": "code/artifacts/q2_gate_e_verification_report.json",
+  "certified_global_optimum": false
+}

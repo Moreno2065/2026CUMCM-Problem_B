@@ -1,0 +1,54 @@
+{
+  "generated_at_utc": "2026-09-11T07:47:10+00:00",
+  "tool": "src/q2/code/tools/q2_snapshot_manifest.py",
+  "root": "D:\\CUMCM2026",
+  "scope": {
+    "include": [
+      "src/q2/code/**/*.py",
+      "src/q2/code/**/*.json",
+      "src/q2/code/**/*.md",
+      "src/q1/code/**/*.py"
+    ],
+    "excluded_prefixes": [
+      "src/q2/code/artifacts/gate_g_representative/",
+      "src/q2/code/q2_verification/",
+      "src/q2/code/artifacts/_legacy_superseded_v6/",
+      "src/q2/code/artifacts/q2_release_verified_v1/",
+      "src/q2/code/artifacts/q2_round2_source_snapshot/"
+    ],
+    "excluded_path_parts": [
+      "__pycache__",
+      ".pytest_cache"
+    ]
+  },
+  "before": {
+    "manifest": "src/q2/code/artifacts/q2_round2_source_snapshot/source_before.sha256",
+    "manifest_sha256": "e55f55265dac3799d463a0e126df37299bd715e2accfa23d4db9d22628dd6196",
+    "file_count": 147
+  },
+  "after": {
+    "manifest": "src/q2/code/artifacts/q2_round2_source_snapshot/source_after.sha256",
+    "manifest_sha256": "952eab58ae0c21d2bd6d4906e4a2121e189064ebb3374bbe8dc756a965aa4aaa",
+    "file_count": 149
+  },
+  "counts": {
+    "added": 2,
+    "removed": 0,
+    "modified": 1
+  },
+  "added": [
+    "src/q2/code/tools/archive_q2_legacy_artifacts.py",
+    "src/q2/code/tools/q2_snapshot_manifest.py"
+  ],
+  "removed": [],
+  "modified": [
+    {
+      "path": "src/q2/code/solver/inner_max.py",
+      "before_sha256": "b14786e069cb42fb1cb301bab68e28633d53148b8a23f6574a0077382180504a",
+      "after_sha256": "518b72668f1525bf9a49ece0af2e76ea95150d934821f9809362aede095fce7e"
+    }
+  ],
+  "has_differences": true,
+  "verdict": "SOURCE_SNAPSHOT_DIRTY_CONCURRENT_EDITS",
+  "note": "Multiple round-2 workflows edit this tree concurrently. A non-empty 'modified'/'added' set is expected and is reported as-is. Any artifact produced while the tree differed from the frozen baseline is bound to the content it actually read, not to a single frozen snapshot."
+}

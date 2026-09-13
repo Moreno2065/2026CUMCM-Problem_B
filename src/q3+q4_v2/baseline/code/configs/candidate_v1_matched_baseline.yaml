@@ -1,0 +1,10 @@
+# Shared tau for fresh matched branch attribution.  Variants supply only their
+# declared A1/A3 overrides, so policy contributions remain paired and visible.
+policy: mainline
+tau: 0.15
+nbv_mode: radius
+nbv_rule: nbv
+opportunistic_reuse: true
+channel_scan_mode: state_aware
+cert_select: gain_cost
+q4_naive: false

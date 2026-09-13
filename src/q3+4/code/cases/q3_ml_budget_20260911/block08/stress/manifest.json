@@ -1,0 +1,84 @@
+{
+ "set": "stress",
+ "purpose": "失败模式与对抗工况（Addendum D.3 场景族全覆盖）",
+ "generated_at": "2026-09-11T21:39:15+08:00",
+ "seed_block": 1070000,
+ "seed_offset": 770000,
+ "tag": "block08",
+ "isolation": "seed blocks are pairwise disjoint; case_id 全局唯一；四集无交集",
+ "case_files": [
+  {
+   "file": "stress_q3.json",
+   "question": "q3",
+   "n_cases": 12,
+   "case_ids": [
+    "block08_stress_q3_01_random",
+    "block08_stress_q3_02_random",
+    "block08_stress_q3_03_rim",
+    "block08_stress_q3_04_dense",
+    "block08_stress_q3_05_sparse",
+    "block08_stress_q3_06_r_eff_low",
+    "block08_stress_q3_07_r_eff_high",
+    "block08_stress_q3_08_parallel_bearing",
+    "block08_stress_q3_09_near_early",
+    "block08_stress_q3_10_empty_channels",
+    "block08_stress_q3_11_random",
+    "block08_stress_q3_12_random"
+   ],
+   "scenarios": [
+    "dense",
+    "empty_channels",
+    "near_early",
+    "parallel_bearing",
+    "r_eff_high",
+    "r_eff_low",
+    "random",
+    "rim",
+    "sparse"
+   ],
+   "error_field_types": [
+    "boundary",
+    "random_fixed",
+    "structured"
+   ]
+  },
+  {
+   "file": "stress_q4.json",
+   "question": "q4",
+   "n_cases": 14,
+   "case_ids": [
+    "block08_stress_q4_01_random",
+    "block08_stress_q4_02_random",
+    "block08_stress_q4_03_rim",
+    "block08_stress_q4_04_dense",
+    "block08_stress_q4_05_sparse",
+    "block08_stress_q4_13_edge_facing",
+    "block08_stress_q4_06_r_eff_low",
+    "block08_stress_q4_07_r_eff_high",
+    "block08_stress_q4_08_parallel_bearing",
+    "block08_stress_q4_09_near_early",
+    "block08_stress_q4_10_empty_channels",
+    "block08_stress_q4_11_random",
+    "block08_stress_q4_12_random",
+    "block08_stress_q4_14_edge_facing"
+   ],
+   "scenarios": [
+    "dense",
+    "edge_facing",
+    "empty_channels",
+    "near_early",
+    "parallel_bearing",
+    "r_eff_high",
+    "r_eff_low",
+    "random",
+    "rim",
+    "sparse"
+   ],
+   "error_field_types": [
+    "boundary",
+    "random_fixed",
+    "structured"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "run_id": "q2_final_acceptance_v3",
+  "source_snapshot": "q2_gate_g_pass_v1_20260911_054813",
+  "final_snapshot": "q2_final_pass_v16_20260911_103800",
+  "created_at": "2026-09-11T10:38:00+08:00",
+  "git": "not used",
+  "manual_snapshot_protocol": "src/q2/code/MANUAL_SNAPSHOT_PROTOCOL.md",
+  "commands": [
+    "python -m pytest -q -p no:cacheprovider src/q2/code/tests",
+    "python -m pytest -q -p no:cacheprovider src/q1/code/tests",
+    "python -m ruff check src/q2/code",
+    "python -m src.q2.code.tools.benchmark_q2_batch --output src/q2/code/artifacts/q2_batch_benchmark.json",
+    "python -m pytest -q -p no:cacheprovider src/q2/code/tests/test_gate_g_prime.py",
+    "Q2_HANDOFF_ZIP=Q2_FINAL_HANDOFF.zip python -m pytest -q -p no:cacheprovider src/q2/code/tests/test_handoff_clean_room.py",
+    "source/snapshot SHA-256 audit"
+  ],
+  "results": {
+    "q2_all_tests": "148 passed, 1 skipped",
+    "q1": "11 passed",
+    "ruff": "All checks passed",
+    "gate_g_prime": "PASS",
+    "clean_room_handoff": "PASS",
+    "parallel_backend_benchmark": "PASS",
+    "final_acceptance_v3": "PASS"
+  },
+  "statuses": {
+    "GATE_G_PRIME": "PASS",
+    "CLEAN_ROOM_HANDOFF": "PASS",
+    "FINAL_ACCEPTANCE_V3": "PASS",
+    "Q2_LOOP_ENGINEERING": "COMPLETE"
+  },
+  "limitations": [
+    "CERTIFIED_GLOBAL_OPTIMUM = false",
+    "candidate-good regions are numerical sampled sets, not proof regions",
+    "figures are evidence artifacts rendered from saved JSON sidecars"
+  ]
+}

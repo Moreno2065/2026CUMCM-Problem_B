@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "purpose": "Deterministic Gate B fixtures for exact robust Crec evaluation and independent dense verification.",
+  "source_snapshot": "q2_gate_a_pass_v1_20260911_020726",
+  "cases": [
+    {
+      "id": "B-F1_center_ordinary",
+      "station": {"x": 0.0, "y": 0.0},
+      "bearing_deg": 0.0,
+      "second_station": {"x": 250.0, "y": 300.0},
+      "expected_in_crec": true,
+      "expected_max_violation_m": -185.72265395371926,
+      "expected_witness_type": "crec_rho_1000"
+    },
+    {
+      "id": "B-F2_omega_outward_truncation",
+      "station": {"x": 1700.0, "y": 0.0},
+      "bearing_deg": 0.0,
+      "second_station": {"x": 1500.0, "y": 200.0},
+      "expected_in_crec": true,
+      "expected_max_violation_m": -638.4744329375335,
+      "expected_witness_type": "crec_omega_truncated_rho_hi_below_1000"
+    },
+    {
+      "id": "B-F3_wrap_359_5",
+      "station": {"x": 0.0, "y": 0.0},
+      "bearing_deg": 359.5,
+      "second_station": {"x": -400.0, "y": 250.0},
+      "expected_in_crec": false,
+      "expected_max_violation_m": 426.6444315716449,
+      "expected_witness_type": "crec_rho_1000"
+    },
+    {
+      "id": "B-F4_external_station",
+      "station": {"x": 2000.0, "y": 0.0},
+      "bearing_deg": 180.0,
+      "second_station": {"x": 2000.0, "y": 0.0},
+      "expected_in_crec": true,
+      "expected_max_violation_m": 0.0,
+      "expected_witness_type": "crec_rho_1000"
+    },
+    {
+      "id": "B-F5_tangent_singleton",
+      "station": {"x": 2000.0, "y": 0.0},
+      "bearing_deg": 114.84193276316712,
+      "second_station": {"x": 1620.0, "y": 784.6018098373212},
+      "expected_in_crec": true,
+      "expected_max_violation_m": -1000.0,
+      "expected_witness_type": "crec_degenerate_point",
+      "tangent_offset_checks": [
+        {"offset_m": 0.0, "expected_in_crec": true},
+        {"offset_m": 999.999, "expected_in_crec": true},
+        {"offset_m": 1000.0, "expected_in_crec": true},
+        {"offset_m": 1000.001, "expected_in_crec": false}
+      ]
+    },
+    {
+      "id": "B-F6_deep_compatible_radius_information",
+      "station": {"x": 0.0, "y": 0.0},
+      "bearing_deg": 0.0,
+      "second_station": {"x": 100.0, "y": 0.0},
+      "deep_target": {"x": 1200.0, "y": 0.0},
+      "expected_in_crec": true,
+      "expected_max_violation_m": -99.98307739869597,
+      "expected_witness_type": "crec_rho_1000"
+    },
+    {
+      "id": "B-F7_antipodal_interior_maximum",
+      "station": {"x": 0.0, "y": 0.0},
+      "bearing_deg": 0.0,
+      "second_station": {"x": -500.0, "y": 0.0},
+      "expected_in_crec": false,
+      "expected_max_violation_m": 500.0,
+      "expected_witness_type": "crec_rho_1000",
+      "expected_active_witness": {"x": 1000.0, "y": 0.0}
+    },
+    {
+      "id": "B-F8_deep_omega_stationary_maximum",
+      "station": {"x": 3000.0, "y": 0.0},
+      "bearing_deg": 180.0,
+      "second_station": {"x": 4000.0, "y": 0.0},
+      "expected_in_crec": false,
+      "expected_max_violation_m": 1000.0,
+      "expected_witness_type": "crec_omega_truncated_rho_lo",
+      "expected_active_witness": {"x": 1800.0, "y": 0.0}
+    },
+    {
+      "id": "B-F9_internal_rho_1500_omega_tangent_singleton",
+      "station": {"x": 3300.0, "y": 0.0},
+      "bearing_deg": 180.5,
+      "second_station": {"x": 3300.0, "y": 0.0},
+      "expected_in_crec": true,
+      "expected_max_violation_m": 0.0,
+      "expected_witness_type": "crec_degenerate_point",
+      "expected_active_witness": {"x": 1800.0, "y": 0.0}
+    }
+  ]
+}

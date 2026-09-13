@@ -1,0 +1,9 @@
+# Candidate v1 pre-tune configuration.  tau is selected only on candidate tune data.
+policy: mainline
+tau: 0.0
+nbv_mode: radius
+nbv_rule: fixed_geometry
+opportunistic_reuse: true
+channel_scan_mode: sweep_all
+cert_select: gain_cost
+q4_naive: false

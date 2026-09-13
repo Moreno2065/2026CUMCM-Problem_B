@@ -1,0 +1,48 @@
+{
+  "schema_version": 3,
+  "status": "PASS",
+  "acceptance_label": "FINAL_ACCEPTANCE_V3=PASS",
+  "project": "2026 CUMCM 本科组 B 题 Q2 无线电干扰源的快速自动定位与清除",
+  "frozen_model_unchanged": true,
+  "source_snapshot": "q2_gate_g_pass_v1_20260911_054813",
+  "snapshot_id": "q2_final_pass_v16_20260911_103800",
+  "snapshot_created_at": "2026-09-11T10:38:00+08:00",
+  "verification_report": "code/artifacts/q2_final_verification_report.json",
+  "gate_g_prime_report": "code/artifacts/q2_gate_g_prime_verification_report.json",
+  "batch_benchmark": "code/artifacts/q2_batch_benchmark.json",
+  "clean_room_test_output": "code/artifacts/q2_clean_room_test_output.txt",
+  "results": {
+    "q2_all_tests": "148 passed, 1 skipped",
+    "q1_regression": "11 passed",
+    "ruff": "All checks passed",
+    "gate_g_prime": "PASS",
+    "clean_room_handoff": "PASS",
+    "parallel_backend_equivalence": "PASS",
+    "parallel_backend_benchmark": "PASS",
+    "hero_surface_closure": "PASS",
+    "symmetric_adaptive_refinement": "PASS",
+    "baseline_numeric_positions": "PASS",
+    "snapshot_hash_audit": "PASS"
+  },
+  "gate_status": {
+    "A": "PASS",
+    "B": "PASS",
+    "C": "PASS",
+    "D": "PASS",
+    "E": "PASS",
+    "F": "PASS",
+    "G": "PASS",
+    "G_PRIME": "PASS"
+  },
+  "manual_provenance": {
+    "protocol": "src/q2/code/MANUAL_SNAPSHOT_PROTOCOL.md",
+    "source_snapshot": "q2_gate_g_pass_v1_20260911_054813",
+    "snapshot_id": "q2_final_pass_v16_20260911_103800",
+    "git": "not used"
+  },
+  "claim_boundary": {
+    "certified_global_optimum": false,
+    "candidate_regions": "numerical non-proof sets",
+    "gate_h": "not implemented"
+  }
+}

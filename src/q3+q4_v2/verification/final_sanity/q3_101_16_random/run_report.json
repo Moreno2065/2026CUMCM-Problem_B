@@ -1,0 +1,53 @@
+{
+ "mode": "Q3",
+ "complete": true,
+ "failure": null,
+ "steps": 48,
+ "metrics": {
+  "cleared_count": 16,
+  "certified_absent_count": 4,
+  "sources_total": 16,
+  "clear_rate": 1.0,
+  "avg_localize_clear_time_s": 2502.7605051074693,
+  "near_clear_count": 0,
+  "t_per_source_s": 280.5022176603166,
+  "t_per_source_basis": "T_j/n_j per case: total virtual time of case j divided by its source count n_j",
+  "total_move_distance_m": 17325.177412825324,
+  "n_measures": 159,
+  "n_switches": 142,
+  "n_clear_attempts": 18,
+  "n_clear_success": 16,
+  "T_move": 3465.0354825650643,
+  "T_measure": 795.0,
+  "T_switch": 142.0,
+  "T_clear": 86.0,
+  "T_ledger_sum": 4488.035482565065,
+  "T_total_virtual": 4488.035482565066,
+  "ledger_minus_total": -9.094947017729282e-13,
+  "wall_clock_s": 0.07686781883239746,
+  "reconcile_warnings": [],
+  "anomalies": [
+   "clear_failure channel 8 (attempt 1)",
+   "clear_failure channel 5 (attempt 1)"
+  ],
+  "fallback_records": [],
+  "status_summary": {
+   "UNKNOWN": 0,
+   "ACTIVE": 0,
+   "READY": 0,
+   "CLEARED": 16,
+   "CERTIFIED_ABSENT": 4,
+   "complete": true
+  },
+  "q4_certificate_layout": null,
+  "q4_certificate_point_count": 0,
+  "joint_state_evaluations": 0,
+  "lookahead_decisions": 0,
+  "q4_certified_cells_raw": 0,
+  "q4_certified_cells_retained": 0,
+  "q4_certified_cells_pruned": 0,
+  "verifier_all_ok": true
+ },
+ "verifier_all_ok": true,
+ "output_dir": "D:\\CUMCM2026\\src\\q3+4_v2\\verification\\final_sanity\\q3_101_16_random"
+}

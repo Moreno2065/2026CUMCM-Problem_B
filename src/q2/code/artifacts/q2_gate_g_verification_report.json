@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "gate": "G",
+  "status": "PASS",
+  "source_snapshot": "q2_gate_f_pass_v1_20260911_050600",
+  "scope": [
+    "B0/B1/B2/Hero baselines",
+    "frozen B1 center-ray max-min-angle formula",
+    "numerical candidate-good region packaging",
+    "seven figure data sidecars and SVG/PDF/PNG outputs",
+    "evidence-table and provenance integrity",
+    "independent fresh verification and tamper rejection"
+  ],
+  "commands": [
+    "python -m pytest -q -p no:cacheprovider src/q2/code/tests/test_gate_g.py",
+    "python -m ruff check src/q2/code/solver/gate_g.py src/q2/code/verifier/verify_gate_g.py src/q2/code/tests/test_gate_g.py",
+    "python -c \"build representative evidence and call verify_gate_g\""
+  ],
+  "results": {
+    "gate_g": "11 passed in 78.61s",
+    "ruff": "All checks passed",
+    "independent_verifier": "PASS",
+    "representative_rows": 4,
+    "candidate_points_checked": 4,
+    "figure_files_checked": 21,
+    "b1_formula_regression": "PASS",
+    "artifact_tamper_regressions": "PASS",
+    "illustrative_general_input_regressions": "PASS",
+    "spec_review": "PASS",
+    "code_quality_review": "PASS"
+  },
+  "independent_verifier": {
+    "fresh_recomputes_rows": true,
+    "fresh_recomputes_hero": true,
+    "exact_compares_evidence_table": true,
+    "exact_compares_candidate_regions": true,
+    "exact_compares_eta_files": true,
+    "exact_compares_figure_sidecars_and_headers": true,
+    "checks_candidate_thresholds": true,
+    "rejects_tampering": true,
+    "rejects_certified_global_optimum_claim": true
+  },
+  "b1_frozen_formula": {
+    "rho_a_m": 5.0,
+    "rho_b_m": 1500.0,
+    "L_m": 1495.0,
+    "reception_radius_m": 1000.0,
+    "x_star_m": 673.8963210702341,
+    "abs_y_star_m": 743.3557100464799,
+    "representative_S2": [673.8963210702341, 743.3557100464799],
+    "clamp": "componentwise_to_crec_derived_bounds",
+    "feasibility_is_reported_honestly": true
+  },
+  "hard_invariants_confirmed": [
+    "all four baselines share evaluate_q2_point and the frozen Q2 metric",
+    "B1 provenance is persisted in q2_method_provenance.json and evidence table",
+    "infeasible B1/B2 rows remain infeasible rather than being replaced by Hero",
+    "candidate regions are numerical non-proof sets",
+    "seven figures each have JSON data plus SVG/PDF/PNG",
+    "figure metadata records meters, equal axes, muted baselines, and non-rainbow colormap",
+    "CERTIFIED_GLOBAL_OPTIMUM is false",
+    "no universal or proved-optimum claim is emitted"
+  ],
+  "not_implemented": [
+    "global optimality certificate",
+    "Gate H"
+  ],
+  "snapshot_id": "q2_gate_g_pass_v1_20260911_054813",
+  "snapshot_created_at": "2026-09-11T05:48:13+08:00",
+  "verification_report": "code/artifacts/q2_gate_g_verification_report.json",
+  "fixtures": "code/artifacts/q2_gate_g_fixtures.json",
+  "certified_global_optimum": false
+}

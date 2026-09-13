@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "tool": "src/q2/code/tools/resolve_q2_evidence_config.py",
+  "generated_at": "2026-09-11T15:51:28.713549+08:00",
+  "resolved_config_path": "src/q2/code/artifacts/q2_release_verified_v1/resolved_config.json",
+  "source_config_path": "src/q2/code/artifacts/q2_final_evidence_config.json",
+  "source_config_id": "q2-final-evidence-v6-dynamic-closure",
+  "source_config_sha256": "0867f992a44cd2d3618b39a0260701efcb9f6d0876ecbed2dafc68b985d18c94",
+  "legacy_generator_unavailable": true,
+  "legacy_generator_audit": {
+    "searched_root": "src/q2/code/**/*.py",
+    "legacy_config_id": "q2-final-evidence-v6-dynamic-closure",
+    "literal_config_id_hits": [],
+    "declared_config_ids": [
+      {
+        "path": "src/q2/code/solver/gate_g.py",
+        "config_id": "q2-final-evidence-v2"
+      },
+      {
+        "path": "src/q2/code/solver/gate_g.py",
+        "config_id": "q2-final-evidence-v2"
+      },
+      {
+        "path": "src/q2/code/tools/generate_q2_closure_artifacts.py",
+        "config_id": "q2-final-evidence-v5-hero-closure"
+      }
+    ],
+    "legacy_generator_unavailable": true,
+    "conclusion": "No source file under src/q2/code emits 'q2-final-evidence-v6-dynamic-closure'; the in-tree Gate G package generator declares 'q2-final-evidence-v5-hero-closure'."
+  },
+  "current_implementation": {
+    "evidence_config_id": "q2-final-evidence-v5-hero-closure",
+    "evidence_config_id_declared_in": "src/q2/code/tools/generate_q2_closure_artifacts.py",
+    "package_output_dir": "src/q2/code/artifacts/gate_g_representative",
+    "regeneration_command": "PYTHONPATH=. python src/q2/code/tools/generate_q2_closure_artifacts.py",
+    "verification_command": "cd /d/CUMCM2026 && python -m pytest src/q2/code/tests -q -p no:cacheprovider",
+    "source_sha256": {
+      "solver/gate_g.py": "0aecd9644c32c2491e8e6d95546f44907ee8cb80ca75f8f01a5c33a9a37354b7",
+      "solver/outer_search.py": "6ffd29a1a6f6c87cea75ad31abb20cab1a6c18b27b1828198b871f8371043b52",
+      "solver/candidate_regions.py": "7adc393d8854afa4221ebedf2827196c51c05b6cbb9fa8cec692a14c0b265fe9",
+      "tools/generate_q2_closure_artifacts.py": "90823bf163befce300f5f8157a732c313b6d759fd179f455fc1cf9a6f4509473"
+    }
+  },
+  "mapped_fields": [
+    {
+      "source_path": "outer_search_config.coarse_resolution",
+      "source_value": 7,
+      "target_class": "OuterSearchConfig",
+      "target_field": "coarse_resolution",
+      "resolved_value": 7,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "coarse grid resolution of the deterministic outer search"
+    },
+    {
+      "source_path": "outer_search_config.subdivision_depth",
+      "source_value": 2,
+      "target_class": "OuterSearchConfig",
+      "target_field": "subdivision_depth",
+      "resolved_value": 2,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "subdivision depth of the outer search"
+    },
+    {
+      "source_path": "outer_search_config.local_iterations",
+      "source_value": 8,
+      "target_class": "OuterSearchConfig",
+      "target_field": "local_iterations",
+      "resolved_value": 8,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "fixed-direction local refinement iterations"
+    },
+    {
+      "source_path": "outer_search_config.parallel_workers",
+      "source_value": 8,
+      "target_class": "OuterSearchConfig",
+      "target_field": "parallel_workers",
+      "resolved_value": 8,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "worker count of the outer search"
+    },
+    {
+      "source_path": "candidate_region_config.base_resolution",
+      "source_value": 21,
+      "target_class": "CandidateRegionConfig",
+      "target_field": "base_resolution",
+      "resolved_value": 21,
+      "parameter_class": "extraction_budget",
+      "mapping": "direct",
+      "note": "coarse base grid of the candidate-region extraction"
+    },
+    {
+      "source_path": "candidate_region_config.max_refinement_depth",
+      "source_value": 6,
+      "target_class": "CandidateRegionConfig",
+      "target_field": "max_refinement_depth",
+      "resolved_value": 6,
+      "parameter_class": "extraction_budget",
+      "mapping": "direct",
+      "note": "maximum adaptive refinement depth"
+    },
+    {
+      "source_path": "candidate_region_config.target_boundary_resolution_m",
+      "source_value": 5.0,
+      "target_class": "CandidateRegionConfig",
+      "target_field": "target_boundary_resolution_m",
+      "resolved_value": 5.0,
+      "parameter_class": "extraction_budget",
+      "mapping": "direct",
+      "note": "target (not achieved) boundary cell size in metres"
+    },
+    {
+      "source_path": "candidate_region_config.near_hero_cell_factor",
+      "source_value": 2.5,
+      "target_class": "CandidateRegionConfig",
+      "target_field": "near_hero_cell_factor",
+      "resolved_value": 2.5,
+      "parameter_class": "extraction_budget",
+      "mapping": "direct",
+      "note": "near-hero refinement factor"
+    },
+    {
+      "source_path": "candidate_region_config.max_refined_cells_per_level",
+      "source_value": 32,
+      "target_class": "CandidateRegionConfig",
+      "target_field": "max_refined_cells_per_level",
+      "resolved_value": 32,
+      "parameter_class": "extraction_budget",
+      "mapping": "direct",
+      "note": "per-level refinement cap; the round-2 under-resolution suspect"
+    },
+    {
+      "source_path": "parallel_workers",
+      "source_value": 8,
+      "target_class": "GateGConfig",
+      "target_field": "parallel_workers",
+      "resolved_value": 8,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "worker count of the Gate G package build"
+    },
+    {
+      "source_path": "hero_promotion.tolerance_m",
+      "source_value": 1e-09,
+      "target_class": "GateGConfig",
+      "target_field": "hero_promotion_tolerance_m",
+      "resolved_value": 1e-09,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "numerical tolerance used when promoting a closer Hero"
+    },
+    {
+      "source_path": "hero_promotion.min_crec_margin_m",
+      "source_value": 1e-06,
+      "target_class": "GateGConfig",
+      "target_field": "hero_promotion_min_crec_margin_m",
+      "resolved_value": 1e-06,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "minimum Crec margin required for a promotion"
+    },
+    {
+      "source_path": "hero_promotion.max_rounds",
+      "source_value": 3,
+      "target_class": "GateGConfig",
+      "target_field": "hero_promotion_max_rounds",
+      "resolved_value": 3,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "iteration budget of Hero promotion"
+    },
+    {
+      "source_path": "hero_promotion.max_closure_rounds",
+      "source_value": 3,
+      "target_class": "GateGConfig",
+      "target_field": "max_closure_rounds",
+      "resolved_value": 3,
+      "parameter_class": "search_budget",
+      "mapping": "direct",
+      "note": "iteration budget of the closure loop"
+    },
+    {
+      "source_path": "closure_seed_points",
+      "source_value": [],
+      "target_class": "GateGConfig",
+      "target_field": "closure_seed_points",
+      "resolved_value": [],
+      "parameter_class": "search_budget",
+      "mapping": "transformed",
+      "note": "transformed: list[list[float]] -> tuple[Point2, ...]"
+    },
+    {
+      "source_path": "gate_g_surface_config.legacy_surface_resolution",
+      "source_value": 21,
+      "target_class": "GateGConfig",
+      "target_field": "surface_resolution",
+      "resolved_value": 21,
+      "parameter_class": "extraction_budget",
+      "mapping": "direct",
+      "note": "legacy Gate G surface grid resolution"
+    },
+    {
+      "source_path": "figure_dpi",
+      "source_value": 300,
+      "target_class": "GateGConfig",
+      "target_field": "figure_dpi",
+      "resolved_value": 300,
+      "parameter_class": "plotting_only",
+      "mapping": "direct",
+      "note": "figure resolution; no effect on any reported number"
+    },
+    {
+      "source_path": "representative_case.S1",
+      "source_value": [
+        0.0,
+        0.0
+      ],
+      "target_class": "build_gate_g_case",
+      "target_field": "S1",
+      "resolved_value": [
+        0.0,
+        0.0
+      ],
+      "parameter_class": "scientific_model_parameters",
+      "mapping": "direct",
+      "note": "case anchor, passed positionally to build_gate_g_case"
+    },
+    {
+      "source_path": "representative_case.theta1_deg",
+      "source_value": 0.0,
+      "target_class": "build_gate_g_case",
+      "target_field": "theta1_deg",
+      "resolved_value": 0.0,
+      "parameter_class": "scientific_model_parameters",
+      "mapping": "direct",
+      "note": "first-observation bearing of the representative case"
+    },
+    {
+      "source_path": "representative_case.epsilon_deg",
+      "source_value": 1.0,
+      "target_class": "build_gate_g_case",
+      "target_field": "epsilon_deg",
+      "resolved_value": 1.0,
+      "parameter_class": "scientific_model_parameters",
+      "mapping": "direct",
+      "note": "angle-error bound epsilon; must agree with q2_solver_config.epsilon_deg"
+    }
+  ],
+  "unmapped_fields": [
+    {
+      "source_path": "config_id",
+      "source_value": "q2-final-evidence-v6-dynamic-closure",
+      "parameter_class": "provenance",
+      "reason": "Legacy provenance id. Deliberately NOT copied into GateGConfig.evidence_config_id: the current generator declares 'q2-final-evidence-v5-hero-closure', and reusing the v6 id would relabel fresh output as the missing v6 flow."
+    },
+    {
+      "source_path": "gate_g_surface_config.adaptive_surface",
+      "source_value": true,
+      "parameter_class": "extraction_budget",
+      "reason": "No toggle exists in the current implementation; adaptive candidate-region extraction is unconditionally enabled. Recorded, not consumed."
+    },
+    {
+      "source_path": "representative_case.case_label",
+      "source_value": "representative illustrative case",
+      "parameter_class": "plotting_only",
+      "reason": "Human-readable case label; not a solver parameter."
+    }
+  ],
+  "defaulted_target_fields": [
+    {
+      "target_class": "CandidateRegionConfig",
+      "target_field": "q_range_refinement_ratio",
+      "current_default": 0.25,
+      "source_status": "absent_from_legacy_config",
+      "reason": "the legacy config never sets this field, so the current implementation default applies"
+    }
+  ],
+  "parameter_classes": {
+    "scientific_model_parameters": {
+      "description": "Physical/statistical quantities of the model. Changing them changes the scientific claim, not the resolution.",
+      "source_paths": [
+        "representative_case.S1",
+        "representative_case.theta1_deg",
+        "representative_case.epsilon_deg"
+      ],
+      "target_fields": [
+        "build_gate_g_case.S1",
+        "build_gate_g_case.theta1_deg",
+        "build_gate_g_case.epsilon_deg"
+      ]
+    },
+    "search_budget": {
+      "description": "Outer-search and promotion budgets/tolerances. Changing them may change the incumbent but not the model.",
+      "source_paths": [
+        "outer_search_config.coarse_resolution",
+        "outer_search_config.subdivision_depth",
+        "outer_search_config.local_iterations",
+        "outer_search_config.parallel_workers",
+        "parallel_workers",
+        "hero_promotion.tolerance_m",
+        "hero_promotion.min_crec_margin_m",
+        "hero_promotion.max_rounds",
+        "hero_promotion.max_closure_rounds",
+        "closure_seed_points"
+      ],
+      "target_fields": [
+        "OuterSearchConfig.coarse_resolution",
+        "OuterSearchConfig.subdivision_depth",
+        "OuterSearchConfig.local_iterations",
+        "OuterSearchConfig.parallel_workers",
+        "GateGConfig.parallel_workers",
+        "GateGConfig.hero_promotion_tolerance_m",
+        "GateGConfig.hero_promotion_min_crec_margin_m",
+        "GateGConfig.hero_promotion_max_rounds",
+        "GateGConfig.max_closure_rounds",
+        "GateGConfig.closure_seed_points"
+      ]
+    },
+    "extraction_budget": {
+      "description": "Candidate-region extraction resolution/budget. Changing them changes only how finely the numerical region is resolved.",
+      "source_paths": [
+        "candidate_region_config.base_resolution",
+        "candidate_region_config.max_refinement_depth",
+        "candidate_region_config.target_boundary_resolution_m",
+        "candidate_region_config.near_hero_cell_factor",
+        "candidate_region_config.max_refined_cells_per_level",
+        "gate_g_surface_config.legacy_surface_resolution",
+        "gate_g_surface_config.adaptive_surface"
+      ],
+      "target_fields": [
+        "CandidateRegionConfig.base_resolution",
+        "CandidateRegionConfig.max_refinement_depth",
+        "CandidateRegionConfig.target_boundary_resolution_m",
+        "CandidateRegionConfig.near_hero_cell_factor",
+        "CandidateRegionConfig.max_refined_cells_per_level",
+        "GateGConfig.surface_resolution",
+        ".gate_g_surface_config.adaptive_surface"
+      ]
+    },
+    "plotting_only": {
+      "description": "Affects rendering only; never a reported number.",
+      "source_paths": [
+        "figure_dpi",
+        "representative_case.case_label"
+      ],
+      "target_fields": [
+        "GateGConfig.figure_dpi",
+        ".representative_case.case_label"
+      ]
+    }
+  },
+  "parameter_class_notes": [
+    "hero_promotion.* are promotion/acceptance policy, not a pure budget; they are grouped under search_budget because the mandated four classes have no dedicated policy class. Iteration limits (max_rounds, max_closure_rounds) are budget-like; tolerance_m / min_crec_margin_m are numerical tolerances.",
+    "unmapped entries keep their source-side class so a reader can see what the field would have been, even though nothing in the current code consumes it."
+  ],
+  "resolved_config": {
+    "GateGConfig": {
+      "outer_config": "see OuterSearchConfig",
+      "candidate_region_config": "see CandidateRegionConfig",
+      "evidence_config_id": "q2-final-evidence-v5-hero-closure",
+      "evidence_config_id_note": "current generator id, NOT the legacy source_config_id",
+      "surface_resolution": 21,
+      "figure_dpi": 300,
+      "parallel_workers": 8,
+      "hero_promotion_tolerance_m": 1e-09,
+      "hero_promotion_min_crec_margin_m": 1e-06,
+      "hero_promotion_max_rounds": 3,
+      "max_closure_rounds": 3,
+      "closure_seed_points": []
+    },
+    "OuterSearchConfig": {
+      "coarse_resolution": 7,
+      "subdivision_depth": 2,
+      "local_iterations": 8,
+      "parallel_workers": 8
+    },
+    "CandidateRegionConfig": {
+      "base_resolution": 21,
+      "max_refinement_depth": 6,
+      "target_boundary_resolution_m": 5.0,
+      "near_hero_cell_factor": 2.5,
+      "max_refined_cells_per_level": 32,
+      "q_range_refinement_ratio": 0.25
+    },
+    "build_gate_g_case": {
+      "S1": [
+        0.0,
+        0.0
+      ],
+      "theta1_deg": 0.0,
+      "epsilon_deg": 1.0
+    }
+  },
+  "validation": {
+    "constructs_current_config_classes": true,
+    "errors": [],
+    "classes_constructed": [
+      "src.q2.code.solver.gate_g.GateGConfig",
+      "src.q2.code.solver.outer_search.OuterSearchConfig",
+      "src.q2.code.solver.candidate_regions.CandidateRegionConfig"
+    ]
+  },
+  "cross_reference": {
+    "note": "Scientific model constants are NOT carried by the evidence config; they live in the frozen solver config / model defaults. They are listed here read-only and are not part of mapped_fields.",
+    "frozen_solver_config_path": "src/q2/code/artifacts/q2_solver_config.json",
+    "frozen_solver_config_id": "q2-frozen-config-v1",
+    "model_parameters_outside_source_config": {
+      "epsilon_deg": 1.0,
+      "omega_center_m": [
+        0.0,
+        0.0
+      ],
+      "omega_radius_m": 1800.0,
+      "radial_interval_m": [
+        5.0,
+        1500.0
+      ],
+      "near_distance_m": 5.0,
+      "reception_radius_m": 1000.0,
+      "admissibility_multiplier": 3.0,
+      "inner_candidate_families": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ]
+    },
+    "epsilon_deg_agreement": true
+  },
+  "reproduction_statement": {
+    "byte_exact_reproduction_of_v6": false,
+    "claim_forbidden": "Do not claim that this resolved config reproduces the 'q2-final-evidence-v6-dynamic-closure' flow byte-for-byte, or even re-runs it. That generator is absent from the repository.",
+    "what_is_provided_instead": "A field-by-field mapping onto the current implementation, the explicit list of unmapped fields, and the command/version that regenerates a current, verifiable Q2 Gate G package.",
+    "regeneration_command": "PYTHONPATH=. python src/q2/code/tools/generate_q2_closure_artifacts.py",
+    "regeneration_output_dir": "src/q2/code/artifacts/gate_g_representative",
+    "regeneration_config_id": "q2-final-evidence-v5-hero-closure",
+    "implementation_version": "content-addressed (no git in this repository): see current_implementation.source_sha256"
+  }
+}

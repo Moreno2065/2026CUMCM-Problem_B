@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "gate": "F",
+  "status": "PASS",
+  "source_snapshot": "q2_gate_e_pass_v1_20260911_042520",
+  "scope": [
+    "Crec-derived compact search bounds",
+    "deterministic outer spatial search",
+    "multiresolution and repeated-run stability",
+    "independent recommendation re-evaluation",
+    "dense local mesh and adversarial perturbations",
+    "explicitly non-certified optimum semantics"
+  ],
+  "commands": [
+    "python -m pytest -q -p no:cacheprovider src/q2/code/tests/test_gate_f.py",
+    "python -m pytest -q -p no:cacheprovider src/q2/code/tests/test_gate_a.py src/q2/code/tests/test_gate_b.py src/q2/code/tests/test_gate_c.py src/q2/code/tests/test_gate_d.py src/q2/code/tests/test_gate_e.py src/q2/code/tests/test_gate_f.py",
+    "python -m pytest -q -p no:cacheprovider src/q1/code/tests",
+    "python -m ruff check src/q2/code/solver/outer_search.py src/q2/code/verifier/verify_outer.py src/q2/code/tests/test_gate_f.py"
+  ],
+  "results": {
+    "gate_f": "9 passed in 158.84s",
+    "q2_gate_a_to_f": "109 passed in 210.66s",
+    "q1_regression": "10 passed in 0.33s",
+    "ruff": "All checks passed",
+    "independent_recommendation_verification": "PASS",
+    "multiresolution_stability": "PASS",
+    "general_input_demo": "PASS",
+    "spec_review": "PASS",
+    "code_quality_review": "PASS after complete-provenance and coarse-grid provenance repair"
+  },
+  "independent_verifier": {
+    "imports_outer_search": false,
+    "calls_search_outer": false,
+    "recomputes_q2_point": true,
+    "checks_all_q2_point_fields": true,
+    "rejects_forged_certificate": true,
+    "local_mesh": "5x5 plus 16 directions at radii 1e-6, 1e-3, 0.1, 1, and mesh radius",
+    "checks_no_better_local_point": true
+  },
+  "hard_invariants_confirmed": [
+    "search bounds come from compatible Crec witness disks and are not a giant arbitrary box",
+    "search seeds/layouts and refinement are deterministic",
+    "coarse_grid_best is a real coarse-grid winner or is omitted when no coarse point is valid",
+    "CERTIFIED_GLOBAL_OPTIMUM is false in module and result",
+    "no global/epsilon/proved-optimum claim is made",
+    "independent verifier rejects every forged Q2PointResult field and a true certificate flag",
+    "no Gate G implementation or scope creep exists"
+  ],
+  "not_implemented": [
+    "baselines B0/B1/B2",
+    "candidate-good regions",
+    "figures and evidence tables",
+    "final solution package"
+  ],
+  "snapshot_id": "q2_gate_f_pass_v1_20260911_050600",
+  "snapshot_created_at": "2026-09-11T05:06:00+08:00",
+  "verification_report": "code/artifacts/q2_gate_f_verification_report.json",
+  "certified_global_optimum": false
+}

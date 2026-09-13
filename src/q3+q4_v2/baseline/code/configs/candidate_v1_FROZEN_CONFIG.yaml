@@ -1,0 +1,21 @@
+# FROZEN_CONFIG (Addendum B.6) — 冻结后正式评估不得修改 tau
+policy: mainline
+tau: 0.15
+nbv_mode: radius
+nbv_rule: fixed_geometry
+opportunistic_reuse: true
+channel_scan_mode: sweep_all
+cert_select: gain_cost
+q4_naive: false
+model_version: v2.1
+spec_version: v2.1+addendum
+case_set_version: candidate_v1_tune_q3.json+candidate_v1_tune_q4.json (seed blocks
+  600000+)
+selection_metric: clearance_ratio == 100% hard constraint; then min arithmetic mean
+  of per-case t_per_source_s across Q3 and Q4
+selection_rule: within 2% of the best mean t_per_source_s, choose smaller standard
+  deviation; then fewer measures; then smaller tau
+freeze_time: '2026-09-11T18:09:53+08:00'
+git_commit: N/A
+frozen_config_hash: 36fea2d151b61ac72785909d001fe43c781e4d87d520089b80d078fbc56e76b6
+tune_results_hash: ec91c581924fd859de40583468d339eb44177dee2cc105d6544cd676b88b879c

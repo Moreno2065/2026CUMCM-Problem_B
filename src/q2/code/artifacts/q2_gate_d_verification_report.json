@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "gate": "D",
+  "status": "PASS",
+  "source_snapshot": "q2_gate_c_pass_v1_20260911_033242",
+  "scope": [
+    "pure two-bearing Q1 adapter",
+    "closed half-plane intersection with EMPTY/POINT/SEGMENT/AREA/UNBOUNDED states",
+    "ordered vertices, diameter and vertex witness provenance",
+    "independent Q1 verifier through q1_verify",
+    "import-layout isolation from ambient q1_geometry modules"
+  ],
+  "commands": [
+    "python -m pytest -q -p no:cacheprovider src/q2/code/tests/test_gate_a.py src/q2/code/tests/test_gate_b.py src/q2/code/tests/test_gate_c.py src/q2/code/tests/test_gate_d.py",
+    "python -m pytest -q -p no:cacheprovider src/q1/code/tests",
+    "python -m compileall -q src/q2/code/model/q1_adapter.py src/q2/code/verifier/verify_q1.py src/q2/code/tests/test_gate_d.py",
+    "python -m ruff check src/q2/code/model/q1_adapter.py src/q2/code/verifier/verify_q1.py src/q2/code/tests/test_gate_d.py"
+  ],
+  "results": {
+    "q2_gate_a_to_d": "86 passed",
+    "q1_regression": "10 passed",
+    "python_compile": "PASS",
+    "ruff": "All checks passed",
+    "ambient_import_isolation": "PASS"
+  },
+  "deterministic_fixtures": {
+    "count": 9,
+    "status": "PASS",
+    "ids": [
+      "D-F1_quadrilateral",
+      "D-F2_triangle",
+      "D-F3_segment",
+      "D-F4_point",
+      "D-F5_empty",
+      "D-F6_unbounded",
+      "D-F7_near_parallel",
+      "D-F8_wraparound",
+      "D-F9_both_apex_inclusion"
+    ]
+  },
+  "independent_verifier": {
+    "imports_adapter_evaluator": false,
+    "calls_evaluate_q1": false,
+    "chain": "src.q1.code.q1_verify.verify_measurements plus independent dimension, vertex, diameter, witness and provenance checks",
+    "topologies": ["EMPTY", "POINT", "SEGMENT", "AREA", "UNBOUNDED"],
+    "ambient_poison_module_regression": true,
+    "reversed_vertex_negative_test": true,
+    "forged_metadata_negative_test": true
+  },
+  "hard_invariants_confirmed": [
+    "evaluate_q1 has exactly the public signature (S1, theta1, S2, beta, epsilon)",
+    "adapter constructs exactly two Q1 measurements",
+    "adapter contains no A1, Crec, Omega, near-distance, or physical-radius constraints",
+    "verifier never calls the adapter evaluator",
+    "AREA vertex order preserves orientation up to cyclic shift and rejects reversal",
+    "diameter witness endpoints are verified vertices and reproduce the diameter",
+    "ambient q1_geometry is restored after controlled verifier import"
+  ],
+  "not_implemented": [
+    "E1-E5 exact inner maximizer",
+    "deterministic outer search",
+    "candidate regions, baselines and figures",
+    "final solution artifacts"
+  ],
+  "snapshot_id": "q2_gate_d_pass_v1_20260911_034850",
+  "snapshot_created_at": "2026-09-11T03:48:50+08:00",
+  "verification_report": "code/artifacts/q2_gate_d_verification_report.json",
+  "certified_global_optimum": false
+}

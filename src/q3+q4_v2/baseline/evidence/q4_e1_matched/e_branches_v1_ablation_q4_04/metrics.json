@@ -1,0 +1,105 @@
+{
+ "cleared_count": 10,
+ "certified_absent_count": 10,
+ "sources_total": 10,
+ "clear_rate": 1.0,
+ "avg_localize_clear_time_s": 8507.668613232101,
+ "near_clear_count": 0,
+ "t_per_source_s": 1589.4877827197556,
+ "t_per_source_basis": "T_j/n_j per case: total virtual time of case j divided by its source count n_j",
+ "total_move_distance_m": 47724.38913598759,
+ "n_measures": 1033,
+ "n_switches": 916,
+ "n_clear_attempts": 83,
+ "n_clear_success": 10,
+ "T_move": 9544.877827197506,
+ "T_measure": 5165.0,
+ "T_switch": 916.0,
+ "T_clear": 269.0,
+ "T_ledger_sum": 15894.877827197506,
+ "T_total_virtual": 15894.877827197557,
+ "ledger_minus_total": -5.093170329928398e-11,
+ "wall_clock_s": 0.35094523429870605,
+ "reconcile_warnings": [],
+ "anomalies": [
+  "no NBV candidate for ACTIVE channels [5, 7, 8, 12, 17, 18] — forcing FALLBACK_CLEAR",
+  "FALLBACK_CLEAR channel 5: 87 points (estimate 32, region area 32915 m^2), trigger: no informative observation point left",
+  "FALLBACK_CLEAR channel 7: 8 points (estimate 2, region area 1925 m^2), trigger: no informative observation point left",
+  "FALLBACK_CLEAR channel 8: 94 points (estimate 38, region area 39145 m^2), trigger: no informative observation point left",
+  "FALLBACK_CLEAR channel 12: 3 points (estimate 1, region area 716 m^2), trigger: no informative observation point left",
+  "FALLBACK_CLEAR channel 17: 3 points (estimate 1, region area 760 m^2), trigger: no informative observation point left",
+  "FALLBACK_CLEAR channel 18: 3 points (estimate 1, region area 204 m^2), trigger: no informative observation point left"
+ ],
+ "fallback_records": [
+  {
+   "channel": 5,
+   "trigger": "no informative observation point left",
+   "region_area": 32915.008034828585,
+   "estimated_points": 32,
+   "n_points": 87,
+   "used": 46,
+   "result": "resolved_externally"
+  },
+  {
+   "channel": 7,
+   "trigger": "no informative observation point left",
+   "region_area": 1924.5565117119113,
+   "estimated_points": 2,
+   "n_points": 8,
+   "used": 2,
+   "result": "resolved_externally"
+  },
+  {
+   "channel": 8,
+   "trigger": "no informative observation point left",
+   "region_area": 39144.837799401954,
+   "estimated_points": 38,
+   "n_points": 94,
+   "used": 23,
+   "result": "resolved_externally"
+  },
+  {
+   "channel": 12,
+   "trigger": "no informative observation point left",
+   "region_area": 715.6752457667608,
+   "estimated_points": 1,
+   "n_points": 3,
+   "used": 0,
+   "result": "resolved_externally"
+  },
+  {
+   "channel": 17,
+   "trigger": "no informative observation point left",
+   "region_area": 760.1707156267948,
+   "estimated_points": 1,
+   "n_points": 3,
+   "used": 1,
+   "result": "resolved_externally"
+  },
+  {
+   "channel": 18,
+   "trigger": "no informative observation point left",
+   "region_area": 204.10814828926232,
+   "estimated_points": 1,
+   "n_points": 3,
+   "used": 1,
+   "result": "resolved_externally"
+  }
+ ],
+ "status_summary": {
+  "UNKNOWN": 0,
+  "ACTIVE": 0,
+  "READY": 0,
+  "CLEARED": 10,
+  "CERTIFIED_ABSENT": 10,
+  "complete": true
+ },
+ "q4_certificate_layout": "sparse25",
+ "q4_certificate_point_count": 25,
+ "joint_state_evaluations": 0,
+ "lookahead_decisions": 0,
+ "q4_certified_cells_raw": 0,
+ "q4_certified_cells_retained": 0,
+ "q4_certified_cells_pruned": 0,
+ "verifier_all_ok": true
+}

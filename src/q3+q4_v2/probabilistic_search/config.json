@@ -1,0 +1,12 @@
+{
+  "strategy": "belief_probe_search",
+  "objective": "posterior_information_plus_probe_value_over_serial_cost",
+  "completion": "all_cleared_or_valid_absence_certificate",
+  "posterior_source_prior": "N_uniform_10_to_16_conditioned_on_observations",
+  "probe_enabled": true,
+  "short_horizon": 4,
+  "cert_route_mode": "lookahead2",
+  "q4_certificate_layout": "sparse25",
+  "q4_active_repeat_limit": 3,
+  "fallback_no_shrink_limit": {"Q3": "9→18 when center ACTIVE count ≥6", "Q4": 8}
+}

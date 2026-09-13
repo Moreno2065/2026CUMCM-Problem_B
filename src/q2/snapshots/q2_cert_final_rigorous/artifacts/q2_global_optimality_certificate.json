@@ -1,0 +1,83 @@
+{
+ "schema_version": 2,
+ "model": "frozen_q2_bounded_error_minimax",
+ "certificate_scope": "canonical_center_case",
+ "scope_statement": "certificate verifies the frozen Q2 solving framework on the canonical center case S1=O, theta1=0deg, eps=1deg, Omega=B(O,1800); general instances are solved per-instance by the same model and are NOT covered automatically",
+ "status": "CERTIFIED_GLOBAL_EPS_OPTIMUM",
+ "epsilon_deg": "1",
+ "certified_global_optimum": false,
+ "certified_epsilon_global_optimum": true,
+ "epsilon_optimality_tolerance_m": "0.01",
+ "rigorous_lower_bound_m": "134.05597622410357",
+ "rigorous_upper_bound_m": "134.0659292484056",
+ "absolute_gap_m": "0.009953024302035374",
+ "relative_gap": "7.423977410094848e-05",
+ "incumbent_symbol": "S2_hat",
+ "incumbent_S2": [
+  "805.1110506884",
+  "-599.7632926544"
+ ],
+ "incumbent_Q_enclosure_m": [
+  "134.065916938941538034959156644387",
+  "134.066009059081892473841435275975"
+ ],
+ "symmetry_lemma_analytic": true,
+ "symmetry_lemma_document": "src/q2/Q2_CANONICAL_SYMMETRY_LEMMA.md",
+ "half_domain_reduction_certified": true,
+ "proof_tree_complete": true,
+ "proof_tree_coverage_verified": true,
+ "historical_prunes_replayed": true,
+ "unverified_pruned_nodes": 0,
+ "verified_pruned_objective": 461483,
+ "verified_pruned_reception": 35706,
+ "superseded_prunes": 1880,
+ "live_leaves": 1012223,
+ "rigorous_refined_splits": 1174,
+ "precision_escalations": 68,
+ "legalized_scenarios": [
+  {
+   "scenario_index": 7,
+   "label": "seed_incumbent_worst",
+   "reason": "stored float construction on/outside the closed wedge boundary (float noise ~1e-16 deg); rotated 1e-12 rad toward the interior",
+   "rotation_rad": 1e-12
+  }
+ ],
+ "lower_bound_engine": "Arb proof-tree replay (python-flint, whole tree, s.35 Path 1)",
+ "upper_bound_engine": "Arb (256-bit re-certification, s.39)",
+ "search_engine": "float64 batch interval B&B (search only)",
+ "float_batch_engine_used_only_for_search": true,
+ "sampling_used_as_proof": false,
+ "sampling_role": "falsification only (mpmath fuzz, dense sampling, cross-engine spot checks)",
+ "unique_optimizer": "NOT_PROVEN",
+ "point_evaluator_verified": true,
+ "master_lower_bound_verified": true,
+ "certificate_replayed_independently": true,
+ "optimizer_outer_enclosure": {
+  "box_count": 1013143,
+  "x_span": [
+   546.875,
+   897.4609375
+  ],
+  "y_span": [
+   -820.3125,
+   -404.296875
+  ],
+  "max_box_diameter_m": 4.367320268554277,
+  "note": "union of the replay-surviving live leaves (each with a valid Arb lower bound) is a rigorous outer approximation of the finite-master optimizer set",
+  "boxes_file": "optimizer_live_boxes.npz"
+ },
+ "ub_recertification_256bit": {
+  "status": "CERTIFIED",
+  "q_lo_256": 134.06592067413175,
+  "q_hi_256": 134.06592958404886,
+  "crec_margin_lower_m": 8.028237730870078e-05,
+  "precision_bits": 256
+ },
+ "ub_replay_reference": {
+  "status": "CERTIFIED_GLOBAL_EPS_OPTIMUM",
+  "passed": true,
+  "wall_time_s": 779.8513450622559
+ },
+ "source_snapshot_id": "q2_cert_final_rigorous",
+ "source_sha256_manifest": "fcf0758b4ada46c61affb47af5d6f7563f699ff2bddd601579b5e9accf3b5858"
+}

@@ -1,0 +1,43 @@
+{
+ "lemma_document": "src/q2/Q2_CANONICAL_SYMMETRY_LEMMA.md",
+ "lemma_id": "Q2-CANONICAL-SYMMETRY-LEMMA-v1",
+ "status": "PROVEN_ANALYTIC",
+ "scope": {
+  "certificate_scope": "canonical_center_case",
+  "S1": ["0", "0"],
+  "Omega_center": ["0", "0"],
+  "Omega_radius_m": "1800",
+  "theta1_deg": "0",
+  "epsilon_deg": "1",
+  "mirror_operator": "R(x,y) = (x,-y)"
+ },
+ "claims": {
+  "A1_reflection_invariant": true,
+  "A1_lemma": "Lemma A1: ||RG||=||G|| and arg(RG) = -arg(G) mod 2pi, d_S(-a,0)=d_S(a,0)",
+  "Crec_reflection_invariant": true,
+  "Crec_lemma": "Lemma A2: isometry + A1 invariance + witness radius depends on ||G|| only",
+  "near_branch_invariant": true,
+  "near_branch_lemma": "Lemma A3: ||RS2-RG|| = ||S2-G|| preserves the 5 m near/bearing branch",
+  "scenario_bijection": true,
+  "scenario_bijection_lemma": "Lemma A3: (G,e) -> (RG,-e) is an involutive bijection of S_phys",
+  "measured_bearing_reflection": true,
+  "measured_bearing_lemma": "Lemma A4: beta' = -beta mod 2pi for the mirrored scenario",
+  "Q1_polygon_isometric": true,
+  "Q1_lemma": "Lemma A5/A6: R(K(S,theta)) = K(RS,-theta); R P_Q1(S2,beta) = P_Q1(RS2,-beta); diam invariant",
+  "Q_objective_invariant": true,
+  "Q_theorem": "Theorem A: Q(RS2) = Q(S2) in all three extended-value cases",
+  "half_domain_equivalent": true,
+  "half_domain_corollary": "Corollary A: inf over C_rec equals inf over C_rec ∩ {y<=0} (closed half-plane)",
+  "master_domain_validity": "master searches D_k ∩ {y<=0}; combined with C_rec ⊆ D_k and S ⊆ S_phys this yields THEOREM B (master relaxation lower bound)"
+ },
+ "proof_obligations": {
+  "numeric_tests_are_proof": false,
+  "numeric_test_role": "falsification regression for Theorem A (spec s.36)",
+  "regression_tests": [
+   "src/q2/tests_formal/test_analytic_symmetry_lemma.py",
+   "src/q2/tests_formal/test_proof_invariants.py::test_reflection_symmetry_of_Q"
+  ]
+ },
+ "half_domain_reduction_certified": true,
+ "generalization_note": "proof uses only S1=O (mirror axis through S1), theta1=0 (mirror axis = first bearing line), Omega centered at O; other instances are NOT covered by this certificate"
+}

@@ -1,0 +1,13 @@
+{
+  "strategy": "geometry_joint",
+  "objective": "bearing_shrinkage_plus_route_continuation",
+  "completion": "all_cleared_or_valid_absence_certificate",
+  "nbv_mode": "radius",
+  "opportunistic_reuse": true,
+  "cert_route_mode": "lookahead2",
+  "q4_joint_rank": true,
+  "q4_residual_sparsify": true,
+  "q4_certificate_layout": "sparse25",
+  "q4_active_repeat_limit": 2,
+  "fallback_no_shrink_limit": {"Q3": "9→18 when center ACTIVE count ≥6", "Q4": 8}
+}

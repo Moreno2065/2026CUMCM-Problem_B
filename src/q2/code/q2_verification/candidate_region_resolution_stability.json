@@ -1,0 +1,741 @@
+{
+  "schema": "q2_candidate_region_resolution_stability_v2_section6",
+  "eta": 0.05,
+  "etas": [
+    0.05
+  ],
+  "frozen": {
+    "schema": "q2_candidate_region_resolution_stability_v2_section6",
+    "S1": [
+      0.0,
+      0.0
+    ],
+    "theta1_deg": 0.0,
+    "epsilon_deg": 1.0,
+    "etas": [
+      0.05
+    ],
+    "primary_eta": 0.05,
+    "q_reference_m": 134.06854899540483,
+    "q_reference_source": "surface_update_round_2",
+    "hero_S2": [
+      803.9993907806255,
+      -601.2267689264614
+    ],
+    "thresholds_by_eta": [
+      [
+        0.05,
+        140.77197644517508
+      ]
+    ],
+    "thresholds_at_production_etas": [
+      [
+        0.01,
+        135.40923448535887
+      ],
+      [
+        0.02,
+        136.74991997531293
+      ],
+      [
+        0.05,
+        140.77197644517508
+      ],
+      [
+        0.1,
+        147.47540389494532
+      ]
+    ],
+    "bounds": [
+      0.0,
+      1004.9992384757819,
+      -982.5475935627165,
+      982.5475935627165
+    ],
+    "bounds_derivation": "safe_superset_from_subset_of_mandatory_crec_disk_boxes",
+    "shared_hero": true,
+    "shared_bounds": true,
+    "evaluator_fingerprint": "8a18e835963276bcdc24845e656942a1d7c1e7fbf0a726446c31fb138dfe6963",
+    "evaluator_fingerprint_file_count": 34,
+    "evaluator_fingerprint_roots": [
+      [
+        "src/q2/code/geometry",
+        "3d3e5f77f7c15c0cf886e22defbd4a3ddd5783c6e8f5c4c28d07ceeba68387d7"
+      ],
+      [
+        "src/q2/code/model",
+        "e1c95bd79db4c8bbec4b81de6f96b4ea9ed545e472b159952348a7eccdb3d19c"
+      ],
+      [
+        "src/q2/code/solver",
+        "a2b3b867dde3c7d70259609aa15702462e06b659a6e203d6cf63ca426a77a8fb"
+      ],
+      [
+        "src/q2/code/verifier",
+        "ec2d1b060afd81a3d50a7fe8b36047fc51d9a9c6cfd90c03d2c50a8e5c587a70"
+      ],
+      [
+        "src/q1/code",
+        "64243f066ab37dae1ac6eff33f2173aec6984bb582f3d1edab6cb69ab1d7b208"
+      ]
+    ],
+    "inner_verification_budget": [
+      [
+        "inner_verification.base_samples_per_interval",
+        65.0
+      ],
+      [
+        "inner_verification.peak_seeds",
+        2.0
+      ],
+      [
+        "inner_verification.refinement_iterations",
+        20.0
+      ],
+      [
+        "inner_verification.near_parallel_bands",
+        5.0
+      ],
+      [
+        "inner_verification.promotion_tolerance_m",
+        0.0001
+      ]
+    ],
+    "endpoint_densification_distance_rad": 1.7453292519943296e-05,
+    "geometry_constants": [
+      [
+        "geometry.inner_radius_m",
+        5.0
+      ],
+      [
+        "geometry.outer_radius_m",
+        1500.0
+      ],
+      [
+        "geometry.omega_radius_m",
+        1800.0
+      ],
+      [
+        "geometry.min_reception_radius_m",
+        1000.0
+      ],
+      [
+        "geometry.near_radius_m",
+        5.0
+      ]
+    ],
+    "reference_update_rounds": 2,
+    "reference_update_history": [
+      {
+        "round": 0,
+        "status": "reference_updated",
+        "previous_q_reference_m": 134.07676525132717,
+        "previous_hero_S2": [
+          800.1012338639696,
+          -606.388471543349
+        ],
+        "promoted_q_m": 134.06998777084848,
+        "promoted_S2": [
+          803.0857602532842,
+          602.4369288701337
+        ],
+        "reason": "a shared-registry surface point was strictly better and was revalidated by the same evaluator before the reference moved"
+      },
+      {
+        "round": 1,
+        "status": "reference_updated",
+        "previous_q_reference_m": 134.06998777084848,
+        "previous_hero_S2": [
+          803.0857602532842,
+          602.4369288701337
+        ],
+        "promoted_q_m": 134.06854899540483,
+        "promoted_S2": [
+          803.9993907806255,
+          -601.2267689264614
+        ],
+        "reason": "a shared-registry surface point was strictly better and was revalidated by the same evaluator before the reference moved"
+      }
+    ],
+    "reference_selection_rows": [
+      {
+        "source": "shared_search_outer_reference",
+        "S2": [
+          792.3025077759607,
+          -616.4786501226868
+        ],
+        "Q_m": 134.1386252082199,
+        "valid": true,
+        "selected": false
+      },
+      {
+        "source": "round1_receipt_hero",
+        "S2": [
+          800.1012338639696,
+          -606.388471543349
+        ],
+        "Q_m": 134.07676525132717,
+        "valid": true,
+        "selected": true
+      },
+      {
+        "source": "gate_g_closure_seed",
+        "S2": [
+          800.0736125053295,
+          -606.4160929019891
+        ],
+        "Q_m": 134.07805576181698,
+        "valid": true,
+        "selected": false
+      }
+    ],
+    "notes": []
+  },
+  "levels": [
+    {
+      "name": "coarse",
+      "eta": 0.05,
+      "level_index": 0,
+      "candidate_region_config": {
+        "base_resolution": 21,
+        "max_refinement_depth": 3,
+        "target_boundary_resolution_m": 40.0,
+        "near_hero_cell_factor": 2.5,
+        "max_refined_cells_per_level": 48,
+        "q_range_refinement_ratio": 0.25,
+        "boundary_bisection_steps": 8,
+        "boundary_tolerance_m": 0.5,
+        "boundary_relative_tolerance": 0.08,
+        "boundary_max_subdivision_depth": 1,
+        "boundary_probe_budget_per_cell": 48,
+        "boundary_max_cells": 128,
+        "boundary_max_probes": 2000,
+        "boundary_max_cell_diameter_factor": 2.0,
+        "seed_band_ratio": 0.25
+      },
+      "outer_config": null,
+      "outer_config_used": false,
+      "hero_S2": [
+        803.9993907806255,
+        -601.2267689264614
+      ],
+      "q_reference_m": 134.06854899540483,
+      "threshold": 140.77197644517508,
+      "thresholds_by_eta": [
+        [
+          0.05,
+          140.77197644517508
+        ]
+      ],
+      "valid_sample_count": 3002,
+      "threshold_inside_sample_count": 1610,
+      "accepted_sample_count": 1610,
+      "hero_is_in_accepted_samples": true,
+      "sampled_inside_cell_count": 2,
+      "mixed_cell_count": 94,
+      "unresolved_cell_count": 176,
+      "outside_by_samples_cell_count": 560,
+      "area_estimate_m2": 13347.3388254944,
+      "area_estimation_method": "saved_marching_triangle_fragments_plus_inside_cell_rectangles",
+      "area_role": "numerical_display_area_not_a_certified_safe_action_set",
+      "achieved_max_boundary_cell_size_m": 27.58969056719957,
+      "target_boundary_resolution_m": 40.0,
+      "boundary_polygon_count": 288,
+      "area_bearing_ring_count": 288,
+      "component_count": 2,
+      "component_method": "positive_area_or_edge_adjacency_of_saved_numerical_display_polygons",
+      "component_gate_comparable": true,
+      "area_abs_delta_vs_previous_m2": null,
+      "area_relative_delta_vs_previous": null,
+      "area_relative_delta_reference_level": null,
+      "boundary_sample_count": 312,
+      "boundary_bidirectional_distance_m": null,
+      "boundary_distance_reference_level": null,
+      "boundary_distance_method": "sampled_bidirectional_hausdorff_of_saved_boundary_polygon_rings",
+      "new_evaluation_count": 45,
+      "cache_hit_count": 18201,
+      "runtime_s": 1.4887538999901153,
+      "stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+      "refinement_stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain",
+      "boundary_stop_reason": "boundary_complete",
+      "region_status": "positive_area_numerical",
+      "region_diagnostics": {
+        "eta": 0.05,
+        "threshold": 140.77197644517508,
+        "accepted_sample_count": 1610,
+        "hero_is_in_accepted_samples": true,
+        "sampled_inside_cell_count": 2,
+        "mixed_cell_count": 94,
+        "unresolved_cell_count": 176,
+        "area_estimate_m2": 13347.3388254944,
+        "area_estimation_method": "saved_marching_triangle_fragments_plus_inside_cell_rectangles",
+        "region_status": "positive_area_numerical",
+        "stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+        "kind": "numerical_candidate_good_region_not_proof",
+        "classification_samples": "corners_plus_center",
+        "requested_refinement_count": 690,
+        "executed_refinement_count": 144,
+        "deferred_by_cap_count": 546,
+        "max_depth_hit_count": 176,
+        "refinement_cap_hit_count": 3,
+        "trigger_category_counts": [
+          [
+            "Q_threshold",
+            48
+          ],
+          [
+            "known_good_seed",
+            8
+          ],
+          [
+            "other",
+            346
+          ],
+          [
+            "validity_boundary",
+            288
+          ]
+        ],
+        "max_unresolved_boundary_cell_width_m": 0.0,
+        "max_unresolved_boundary_cell_height_m": 0.0,
+        "max_unresolved_boundary_cell_diameter_m": 0.0,
+        "achieved_max_boundary_cell_size_m": 27.58969056719957,
+        "boundary_stop_reason": "boundary_complete",
+        "boundary_attempted_cell_count": 94,
+        "boundary_resolved_cell_count": 94,
+        "boundary_unresolved_cell_count": 0,
+        "boundary_skipped_cell_count": 0,
+        "boundary_probe_count": 1302,
+        "boundary_polygon_count": 288,
+        "boundary_fragment_area_m2": 12730.17658593395,
+        "inside_cell_area_m2": 617.1622395604603,
+        "outside_by_samples_cell_count": 560,
+        "target_boundary_resolution_m": 40.0,
+        "display_region_kind": "numerical_polygons_not_certified",
+        "new_evaluation_count": 45,
+        "cache_hit_count": 18201,
+        "parallel_workers": 8,
+        "boundary_batch_call_count": 24,
+        "boundary_batch_point_count": 45,
+        "boundary_batch_max_size": 2
+      }
+    },
+    {
+      "name": "medium",
+      "eta": 0.05,
+      "level_index": 1,
+      "candidate_region_config": {
+        "base_resolution": 41,
+        "max_refinement_depth": 3,
+        "target_boundary_resolution_m": 25.0,
+        "near_hero_cell_factor": 2.5,
+        "max_refined_cells_per_level": 192,
+        "q_range_refinement_ratio": 0.25,
+        "boundary_bisection_steps": 8,
+        "boundary_tolerance_m": 0.5,
+        "boundary_relative_tolerance": 0.08,
+        "boundary_max_subdivision_depth": 1,
+        "boundary_probe_budget_per_cell": 96,
+        "boundary_max_cells": 512,
+        "boundary_max_probes": 8000,
+        "boundary_max_cell_diameter_factor": 2.0,
+        "seed_band_ratio": 0.25
+      },
+      "outer_config": null,
+      "outer_config_used": false,
+      "hero_S2": [
+        803.9993907806255,
+        -601.2267689264614
+      ],
+      "q_reference_m": 134.06854899540483,
+      "threshold": 140.77197644517508,
+      "thresholds_by_eta": [
+        [
+          0.05,
+          140.77197644517508
+        ]
+      ],
+      "valid_sample_count": 5220,
+      "threshold_inside_sample_count": 1888,
+      "accepted_sample_count": 1888,
+      "hero_is_in_accepted_samples": true,
+      "sampled_inside_cell_count": 2,
+      "mixed_cell_count": 104,
+      "unresolved_cell_count": 0,
+      "outside_by_samples_cell_count": 2472,
+      "area_estimate_m2": 14281.03025811055,
+      "area_estimation_method": "saved_marching_triangle_fragments_plus_inside_cell_rectangles",
+      "area_role": "numerical_display_area_not_a_certified_safe_action_set",
+      "achieved_max_boundary_cell_size_m": 27.58969056719967,
+      "target_boundary_resolution_m": 25.0,
+      "boundary_polygon_count": 318,
+      "area_bearing_ring_count": 318,
+      "component_count": 2,
+      "component_method": "positive_area_or_edge_adjacency_of_saved_numerical_display_polygons",
+      "component_gate_comparable": true,
+      "area_abs_delta_vs_previous_m2": 933.6914326161495,
+      "area_relative_delta_vs_previous": 0.06995337758510559,
+      "area_relative_delta_reference_level": "coarse",
+      "boundary_sample_count": 348,
+      "boundary_bidirectional_distance_m": 27.929528696644784,
+      "boundary_distance_reference_level": "coarse",
+      "boundary_distance_method": "sampled_bidirectional_hausdorff_of_saved_boundary_polygon_rings",
+      "new_evaluation_count": 12,
+      "cache_hit_count": 55870,
+      "runtime_s": 0.46837000000232365,
+      "stop_reason": "converged_no_refinement_requested+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+      "refinement_stop_reason": "converged_no_refinement_requested+refinement_cap_deferred_cells_remain",
+      "boundary_stop_reason": "boundary_complete",
+      "region_status": "positive_area_numerical",
+      "region_diagnostics": {
+        "eta": 0.05,
+        "threshold": 140.77197644517508,
+        "accepted_sample_count": 1888,
+        "hero_is_in_accepted_samples": true,
+        "sampled_inside_cell_count": 2,
+        "mixed_cell_count": 104,
+        "unresolved_cell_count": 0,
+        "area_estimate_m2": 14281.03025811055,
+        "area_estimation_method": "saved_marching_triangle_fragments_plus_inside_cell_rectangles",
+        "region_status": "positive_area_numerical",
+        "stop_reason": "converged_no_refinement_requested+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+        "kind": "numerical_candidate_good_region_not_proof",
+        "classification_samples": "corners_plus_center",
+        "requested_refinement_count": 460,
+        "executed_refinement_count": 326,
+        "deferred_by_cap_count": 134,
+        "max_depth_hit_count": 0,
+        "refinement_cap_hit_count": 1,
+        "trigger_category_counts": [
+          [
+            "Q_threshold",
+            36
+          ],
+          [
+            "known_good_seed",
+            4
+          ],
+          [
+            "other",
+            92
+          ],
+          [
+            "validity_boundary",
+            328
+          ]
+        ],
+        "max_unresolved_boundary_cell_width_m": 0.0,
+        "max_unresolved_boundary_cell_height_m": 0.0,
+        "max_unresolved_boundary_cell_diameter_m": 0.0,
+        "achieved_max_boundary_cell_size_m": 27.58969056719967,
+        "boundary_stop_reason": "boundary_complete",
+        "boundary_attempted_cell_count": 104,
+        "boundary_resolved_cell_count": 104,
+        "boundary_unresolved_cell_count": 0,
+        "boundary_skipped_cell_count": 0,
+        "boundary_probe_count": 1510,
+        "boundary_polygon_count": 318,
+        "boundary_fragment_area_m2": 13663.868018550042,
+        "inside_cell_area_m2": 617.1622395604618,
+        "outside_by_samples_cell_count": 2472,
+        "target_boundary_resolution_m": 25.0,
+        "display_region_kind": "numerical_polygons_not_certified",
+        "new_evaluation_count": 12,
+        "cache_hit_count": 55870,
+        "parallel_workers": 8,
+        "boundary_batch_call_count": 6,
+        "boundary_batch_point_count": 12,
+        "boundary_batch_max_size": 2
+      }
+    },
+    {
+      "name": "fine",
+      "eta": 0.05,
+      "level_index": 2,
+      "candidate_region_config": {
+        "base_resolution": 41,
+        "max_refinement_depth": 3,
+        "target_boundary_resolution_m": 15.0,
+        "near_hero_cell_factor": 2.5,
+        "max_refined_cells_per_level": 192,
+        "q_range_refinement_ratio": 0.25,
+        "boundary_bisection_steps": 8,
+        "boundary_tolerance_m": 0.5,
+        "boundary_relative_tolerance": 0.08,
+        "boundary_max_subdivision_depth": 1,
+        "boundary_probe_budget_per_cell": 96,
+        "boundary_max_cells": 512,
+        "boundary_max_probes": 8000,
+        "boundary_max_cell_diameter_factor": 2.0,
+        "seed_band_ratio": 0.25
+      },
+      "outer_config": null,
+      "outer_config_used": false,
+      "hero_S2": [
+        803.9993907806255,
+        -601.2267689264614
+      ],
+      "q_reference_m": 134.06854899540483,
+      "threshold": 140.77197644517508,
+      "thresholds_by_eta": [
+        [
+          0.05,
+          140.77197644517508
+        ]
+      ],
+      "valid_sample_count": 8236,
+      "threshold_inside_sample_count": 3838,
+      "accepted_sample_count": 3838,
+      "hero_is_in_accepted_samples": true,
+      "sampled_inside_cell_count": 76,
+      "mixed_cell_count": 234,
+      "unresolved_cell_count": 58,
+      "outside_by_samples_cell_count": 2964,
+      "area_estimate_m2": 14677.718218609021,
+      "area_estimation_method": "saved_marching_triangle_fragments_plus_inside_cell_rectangles",
+      "area_role": "numerical_display_area_not_a_certified_safe_action_set",
+      "achieved_max_boundary_cell_size_m": 13.79484528359986,
+      "target_boundary_resolution_m": 15.0,
+      "boundary_polygon_count": 798,
+      "area_bearing_ring_count": 798,
+      "component_count": 2,
+      "component_method": "positive_area_or_edge_adjacency_of_saved_numerical_display_polygons",
+      "component_gate_comparable": true,
+      "area_abs_delta_vs_previous_m2": 396.6879604984715,
+      "area_relative_delta_vs_previous": 0.027777264898180762,
+      "area_relative_delta_reference_level": "medium",
+      "boundary_sample_count": 852,
+      "boundary_bidirectional_distance_m": 23.742955696293865,
+      "boundary_distance_reference_level": "medium",
+      "boundary_distance_method": "sampled_bidirectional_hausdorff_of_saved_boundary_polygon_rings",
+      "new_evaluation_count": 52,
+      "cache_hit_count": 68040,
+      "runtime_s": 1.0070120000018505,
+      "stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+      "refinement_stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain",
+      "boundary_stop_reason": "boundary_complete",
+      "region_status": "positive_area_numerical",
+      "region_diagnostics": {
+        "eta": 0.05,
+        "threshold": 140.77197644517508,
+        "accepted_sample_count": 3838,
+        "hero_is_in_accepted_samples": true,
+        "sampled_inside_cell_count": 76,
+        "mixed_cell_count": 234,
+        "unresolved_cell_count": 58,
+        "area_estimate_m2": 14677.718218609021,
+        "area_estimation_method": "saved_marching_triangle_fragments_plus_inside_cell_rectangles",
+        "region_status": "positive_area_numerical",
+        "stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+        "kind": "numerical_candidate_good_region_not_proof",
+        "classification_samples": "corners_plus_center",
+        "requested_refinement_count": 1010,
+        "executed_refinement_count": 576,
+        "deferred_by_cap_count": 434,
+        "max_depth_hit_count": 216,
+        "refinement_cap_hit_count": 3,
+        "trigger_category_counts": [
+          [
+            "Q_threshold",
+            138
+          ],
+          [
+            "known_good_seed",
+            8
+          ],
+          [
+            "other",
+            174
+          ],
+          [
+            "validity_boundary",
+            690
+          ]
+        ],
+        "max_unresolved_boundary_cell_width_m": 6.281245240473709,
+        "max_unresolved_boundary_cell_height_m": 12.281844919534024,
+        "max_unresolved_boundary_cell_diameter_m": 13.79484528359986,
+        "achieved_max_boundary_cell_size_m": 13.79484528359986,
+        "boundary_stop_reason": "boundary_complete",
+        "boundary_attempted_cell_count": 234,
+        "boundary_resolved_cell_count": 230,
+        "boundary_unresolved_cell_count": 4,
+        "boundary_skipped_cell_count": 0,
+        "boundary_probe_count": 2805,
+        "boundary_polygon_count": 798,
+        "boundary_fragment_area_m2": 8814.676942784834,
+        "inside_cell_area_m2": 5863.041275824409,
+        "outside_by_samples_cell_count": 2964,
+        "target_boundary_resolution_m": 15.0,
+        "display_region_kind": "numerical_polygons_not_certified",
+        "new_evaluation_count": 52,
+        "cache_hit_count": 68040,
+        "parallel_workers": 8,
+        "boundary_batch_call_count": 11,
+        "boundary_batch_point_count": 22,
+        "boundary_batch_max_size": 2
+      }
+    }
+  ],
+  "reference_level": "fine",
+  "q_reference_relative_spread": 0.0,
+  "area_relative_spread": 0.09063938776450353,
+  "max_boundary_bidirectional_distance_m": 27.929528696644784,
+  "component_counts": [
+    2,
+    2,
+    2
+  ],
+  "criteria": {
+    "max_area_relative_delta_between_levels": 0.25,
+    "require_positive_area_at_every_level": true,
+    "require_identical_component_count": true,
+    "max_boundary_bidirectional_distance_over_target": 1.0,
+    "max_phase_area_relative_deviation": 0.25,
+    "reference_update_tolerance_m": 1e-06,
+    "max_reference_update_rounds": 2,
+    "cache_consistency_probe_count": 3,
+    "cache_consistency_tolerance_m": 1e-09
+  },
+  "grid_phase_perturbation": {
+    "applied": true,
+    "level_name": "fine",
+    "eta": 0.05,
+    "phase_fractions": [
+      0.25,
+      0.5
+    ],
+    "base_cell_size_m": [
+      25.124980961894547,
+      49.127379678135824
+    ],
+    "roi": [
+      0.0,
+      1004.9992384757819,
+      -982.5475935627165,
+      982.5475935627165
+    ],
+    "samples": [
+      {
+        "phase_fraction": 0.0,
+        "lattice_shift_m": [
+          0.0,
+          0.0
+        ],
+        "q_reference_m": 134.06854899540483,
+        "threshold": 140.77197644517508,
+        "area_estimate_m2": 14677.718218609021,
+        "raw_area_estimate_m2": 14677.718218609021,
+        "component_count": 2,
+        "accepted_sample_count": 3838,
+        "sampled_inside_cell_count": 76,
+        "mixed_cell_count": 234,
+        "area_relative_delta_vs_zero_phase": 0.0,
+        "component_delta_vs_zero_phase": 0,
+        "stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+        "runtime_s": 1.0070120000018505
+      },
+      {
+        "phase_fraction": 0.25,
+        "lattice_shift_m": [
+          6.281245240473637,
+          12.281844919533956
+        ],
+        "q_reference_m": 134.06854899540483,
+        "threshold": 140.77197644517508,
+        "area_estimate_m2": 14677.71821860908,
+        "raw_area_estimate_m2": 14677.71821860908,
+        "component_count": 2,
+        "accepted_sample_count": 4044,
+        "sampled_inside_cell_count": 76,
+        "mixed_cell_count": 234,
+        "area_relative_delta_vs_zero_phase": 3.9657159271302345e-15,
+        "component_delta_vs_zero_phase": 0,
+        "stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+        "runtime_s": 103.03848259999359
+      },
+      {
+        "phase_fraction": 0.5,
+        "lattice_shift_m": [
+          12.562490480947273,
+          24.563689839067912
+        ],
+        "q_reference_m": 134.06854899540483,
+        "threshold": 140.77197644517508,
+        "area_estimate_m2": 14677.597745972365,
+        "raw_area_estimate_m2": 14677.597745972365,
+        "component_count": 2,
+        "accepted_sample_count": 3946,
+        "sampled_inside_cell_count": 76,
+        "mixed_cell_count": 234,
+        "area_relative_delta_vs_zero_phase": 8.207858664513952e-06,
+        "component_delta_vs_zero_phase": 0,
+        "stop_reason": "max_refinement_depth_reached+refinement_cap_deferred_cells_remain|boundary:boundary_complete",
+        "runtime_s": 80.04964359999576
+      }
+    ],
+    "max_area_relative_deviation": 8.207858664513952e-06,
+    "component_counts": [
+      2,
+      2,
+      2
+    ],
+    "notes": [
+      "only the sampling-lattice origin moves; the Hero, the physical input, q_reference, the thresholds and the frozen ROI box are unchanged",
+      "shifted-lattice regions are cropped back to the frozen ROI before any area or component count is taken",
+      "cropping discards the sliver of the ROI that the shifted lattice no longer covers and keeps shifted cells whose corners fall outside the ROI, so a phase difference is an upper estimate of the phase sensitivity"
+    ]
+  },
+  "cache_consistency": {
+    "checked_count": 3,
+    "tolerance_m": 1e-09,
+    "max_abs_difference_m": 0.0,
+    "passed": true,
+    "rows": [
+      {
+        "S2": [
+          792.3025077759607,
+          -616.4786501226868
+        ],
+        "cached_Q_m": 134.1386252082199,
+        "fresh_Q_m": 134.1386252082199,
+        "abs_difference_m": 0.0
+      },
+      {
+        "S2": [
+          800.1012338639696,
+          -606.388471543349
+        ],
+        "cached_Q_m": 134.07676525132717,
+        "fresh_Q_m": 134.07676525132717,
+        "abs_difference_m": 0.0
+      },
+      {
+        "S2": [
+          800.0736125053295,
+          -606.4160929019891
+        ],
+        "cached_Q_m": 134.07805576181698,
+        "fresh_Q_m": 134.07805576181698,
+        "abs_difference_m": 0.0
+      }
+    ]
+  },
+  "converged": true,
+  "unconverged_reasons": [],
+  "observations": [
+    "schema q2_candidate_region_resolution_stability_v2_section6",
+    "shared Hero across levels: True",
+    "shared bounds/ROI across levels: True",
+    "evaluator source fingerprint: 8a18e835963276bcdc24845e656942a1d7c1e7fbf0a726446c31fb138dfe6963 over 34 files",
+    "q_reference relative spread over levels: 0.0",
+    "area relative spread over level/eta rows: 0.09063938776450353",
+    "saved-display-polygon component counts across level/eta rows: 2, 2, 2",
+    "component-count gate comparable across level/eta rows: True, True, True",
+    "declared convergence criteria: ResolutionConvergenceCriteria(max_area_relative_delta_between_levels=0.25, require_positive_area_at_every_level=True, require_identical_component_count=True, max_boundary_bidirectional_distance_over_target=1.0, max_phase_area_relative_deviation=0.25, reference_update_tolerance_m=1e-06, max_reference_update_rounds=2, cache_consistency_probe_count=3, cache_consistency_tolerance_m=1e-09)",
+    "sampled_bidirectional_hausdorff_of_saved_boundary_polygon_rings",
+    "the saved boundary polygons are numerical display geometry, not a certified set containment",
+    "a finite sample set is a lower estimate of the true level set; it is never a global-optimality certificate"
+  ],
+  "certified": false
+}

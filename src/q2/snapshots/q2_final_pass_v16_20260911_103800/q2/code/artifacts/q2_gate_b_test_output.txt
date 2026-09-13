@@ -1,0 +1,25 @@
+Gate B frozen verification output
+Recorded: 2026-09-11T02:40:14+08:00
+
+Command: python -B -m pytest -q -p no:cacheprovider .\src\q2\code\tests\test_gate_a.py
+Exit code: 0
+..........                                                               [100%]
+10 passed in 1.21s
+
+Command: python -B -m pytest -q -p no:cacheprovider .\src\q2\code\tests\test_gate_b.py
+Exit code: 0
+.......................                                                  [100%]
+25 passed in 8.20s
+
+Command: python -B -m pytest -q -p no:cacheprovider .\src\q1\code\tests
+Exit code: 0
+..........                                                               [100%]
+10 passed in 0.37s
+
+Command: python -B -m py_compile .\src\q2\code\geometry\crec.py .\src\q2\code\verifier\verify_crec.py
+Exit code: 0
+
+Gate C-or-later forbidden business files found: 0
+Supplemental fixed-seed independent analytic-vs-dense cross-check: PASS 500
+Worst analytic-minus-dense gap: -4.547473508864641e-13 m
+Independent post-fix reviewer targeted verification: 4 passed, 21 deselected

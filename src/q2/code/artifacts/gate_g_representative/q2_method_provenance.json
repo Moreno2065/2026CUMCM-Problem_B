@@ -1,0 +1,78 @@
+{
+  "B1": {
+    "heuristic": "right_angle_radial_midpoint",
+    "status": "ok",
+    "rho_m": 752.5,
+    "rho_lo_m": 5.0,
+    "rho_hi_m": 1500.0,
+    "nominal_target_m": [
+      752.5,
+      0.0
+    ],
+    "selection_rule": "min_Q_over_symmetric_sides",
+    "chosen_side": "positive_perpendicular",
+    "evaluated_sides": [
+      {
+        "side": "positive_perpendicular",
+        "unclamped_S2": [
+          752.5,
+          752.5
+        ],
+        "clamped_S2": [
+          752.5,
+          752.5
+        ],
+        "Q": null,
+        "Crec_feasible": false,
+        "admissible": false
+      },
+      {
+        "side": "negative_perpendicular",
+        "unclamped_S2": [
+          752.5,
+          -752.5
+        ],
+        "clamped_S2": [
+          752.5,
+          -752.5
+        ],
+        "Q": null,
+        "Crec_feasible": false,
+        "admissible": false
+      }
+    ],
+    "unclamped_S2": [
+      752.5,
+      752.5
+    ],
+    "S2": [
+      752.5,
+      752.5
+    ],
+    "clamp": "componentwise_to_crec_derived_bounds",
+    "clamped": false
+  },
+  "B2": {
+    "heuristic": "center_ray_max_min_angle",
+    "status": "analytic_untruncated",
+    "analytic_optimality_claimed": true,
+    "omega_truncated": false,
+    "rho_a_m": 5.0,
+    "rho_b_m": 1500.0,
+    "L_m": 1495.0,
+    "reception_radius_m": 1000.0,
+    "x_star_m": 673.8963210702341,
+    "abs_y_star_m": 743.3557100464799,
+    "side": "positive_perpendicular",
+    "unclamped_S2": [
+      673.8963210702341,
+      743.3557100464799
+    ],
+    "S2": [
+      673.8963210702341,
+      743.3557100464799
+    ],
+    "clamp": "componentwise_to_crec_derived_bounds",
+    "clamped": false
+  }
+}

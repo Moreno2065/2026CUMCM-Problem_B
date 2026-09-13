@@ -1,0 +1,38 @@
+{
+  "config_id": "q2-final-evidence-v6-dynamic-closure",
+  "outer_search_config": {
+    "coarse_resolution": 7,
+    "subdivision_depth": 2,
+    "local_iterations": 8,
+    "parallel_workers": 8
+  },
+  "candidate_region_config": {
+    "base_resolution": 21,
+    "max_refinement_depth": 6,
+    "target_boundary_resolution_m": 5.0,
+    "near_hero_cell_factor": 2.5,
+    "max_refined_cells_per_level": 32
+  },
+  "parallel_workers": 8,
+  "hero_promotion": {
+    "tolerance_m": 1e-09,
+    "min_crec_margin_m": 1e-06,
+    "max_rounds": 3,
+    "max_closure_rounds": 3
+  },
+  "closure_seed_points": [],
+  "gate_g_surface_config": {
+    "legacy_surface_resolution": 21,
+    "adaptive_surface": true
+  },
+  "figure_dpi": 300,
+  "representative_case": {
+    "S1": [
+      0.0,
+      0.0
+    ],
+    "theta1_deg": 0.0,
+    "epsilon_deg": 1.0,
+    "case_label": "representative illustrative case"
+  }
+}

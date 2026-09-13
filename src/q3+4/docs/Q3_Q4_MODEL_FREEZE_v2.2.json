@@ -1,0 +1,55 @@
+{
+  "model_version": "q3_q4_model_logic_20260911",
+  "spec_version": "2.2",
+  "created_at": "2026-09-11T16:23:16.605762+08:00",
+  "scope": "Mathematical mainline and consolidated model/policy contract only",
+  "implementation_source_of_truth": "src/q3+4/Q3_Q4_IMPLEMENTATION_SPEC_v2.2_CONSOLIDATED.md",
+  "model_contract_status": "FROZEN_WITH_STATED_ASSUMPTIONS",
+  "q3_strategy": "MEC-center chain after first direction; at most six subsequent direction measurements",
+  "q4_detection": "950 m triangular lattice, 31 points; continuous proof plus independent arithmetic/numerical checks",
+  "q4_fallback": "m=6 bounded refinement, 50-by-2 optical covering grid, at most 100 clear attempts",
+  "q4_auxiliary_no_signal": {
+    "branch": "E2",
+    "enabled_by_default": false
+  },
+  "opportunistic_observation": {
+    "tau": null,
+    "configuration_freeze_status": "PENDING_TUNING_EVIDENCE",
+    "enabled_without_verified_threshold_and_budget": false
+  },
+  "validation": {
+    "independent_mathematical_checks_passed": 19,
+    "document_consistency_checks_passed": 27,
+    "runtime_certificate_verifier": "NOT_AUDITED_IN_THIS_REVISION",
+    "production_implementation": "NOT_AUDITED_IN_THIS_REVISION",
+    "tuning_ablation_figures": "NOT_AUDITED_IN_THIS_REVISION",
+    "official_simulator": "NOT_RUN_IN_THIS_REVISION"
+  },
+  "performance_claims": {
+    "baseline_virtual_time_upper_s": 273808,
+    "baseline_conditions": "Backbone first detection anchors, m=6, candidate domain, bounded optical snake and return-to-anchor strategy; see spec sections 5,7,8",
+    "average_efficiency_optimality_proved": false,
+    "real_runtime_validated": false
+  },
+  "git_commit": null,
+  "git_commit_reason": "Workspace root is not a Git repository; file hashes identify this contract snapshot",
+  "legacy_spec_role": "Compatibility redirects; original texts archived under review/20260911/contract_merge_before",
+  "change_rule": "Reopen for counterexamples, official-rule conflicts, broken proof assumptions, or evidenced improvements with renewed certification",
+  "source_sha256": {
+    "src/q3+4/Q3_Q4_IMPLEMENTATION_SPEC_v2.0_ADDENDUM.md": "7aea37c3f26dbd08341218fce74300da584bf65c118c5a4d1ffc6ddc7caae694",
+    "src/q3+4/Q3_Q4_IMPLEMENTATION_SPEC_v2.0_AGENT_READY.md": "de5eb2eed1667ce475f7fd9ff7da9eadd79d241942e4ead2b96f637a5d8e3282",
+    "src/q3+4/Q3_Q4_IMPLEMENTATION_SPEC_v2.1_HTTP_INTERFACE.md": "69bc035c8e05e65fec95a6d5e90ecec98e887f78d486906a6c69a00c404b532e",
+    "src/q3+4/Q3_Q4_IMPLEMENTATION_SPEC_v2.2_CONSOLIDATED.md": "09410d66179304002cf84c5fcfb491e000d323bb0d6fe0b6ea3fee79f37d0cd4",
+    "src/q3+4/Q3_Q4_MODEL_REVISION_v2.1_REVIEW_ADOPTED.md": "fe8bb0aeef0658adbb72bad3baffa8345eaf42e83a22e8202fff51cc2f8c9bbc",
+    "src/q3+4/Q3_Q4_PAPER_EVIDENCE_MAP_v2.0.md": "2601f43423d76af2e5e7bfdde5968f2f7ac751af50512fd7967eddccccc54001",
+    "src/q3+4/Q3_Q4_Paper_Model_Narrative_v2.0.md": "95774d80c6edf6bf71366c50573a4e3af2a95d7ce3308a1bf117585896aa1a02",
+    "src/q3+4/Q3_Q4_TUNING_ABLATION_FIGURE_EVIDENCE_AGENT_PROMPT_v1.0.md": "836afa8041cbf4ae6bced9d04a00a78e99e8ebeef64ce726afc6c85940bb40b3",
+    "review/20260911/MODEL_LOGIC_CHECKS.md": "4099b4b75bec40ad84b0dab926ffd6496908ef2a1204485d97023aa498184e39",
+    "review/20260911/check_model_logic.py": "f9ec531fe832f0bcd6516e02502a3a82936c9f52bc20b37d5489e6939fdda371",
+    "review/20260911/model_logic_evidence.json": "a9d43e0372158ac4378b552e51d45e2b6536e2ff338364d7d70a9923a75e422e",
+    "review/20260911/contract_consistency_evidence.json": "ef238778e02903b2f4dab577a076bfe1c9881213eb11b49e2615e3f76c28c7b8",
+    "辅助材料/B题.pdf": "81c992a9bee5376308c4768b58719b177f17d6ee1f9861577a851924c5a838ca",
+    "辅助材料/附件1.docx": "20a27603ea81efa8f11658b3fa5b859a69aa3ff88fb3664d2abb80d740b47553",
+    "辅助材料/附件2.docx": "c882513d5b7e0ec50f3068570ea55fdc1b5c4a5fa2d6e9e54e79b33cf0858cb2"
+  }
+}

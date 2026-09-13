@@ -1,0 +1,237 @@
+{
+  "report_version": "task9-matched-selection-v1",
+  "generated_date": "2026-09-11",
+  "question": "q4",
+  "scope": "ablation_only",
+  "holdout_used": false,
+  "inputs": {
+    "case_file": "cases/e_branches_v1/ablation/ablation_q4.json",
+    "config_file": "configs/e_branches_matched_base.yaml",
+    "case_count": 6,
+    "case_sha256": "b2c3830a1c66c7e4bc35e75b48bc311ce1c98cc7aa2b2d48932148e07965714e",
+    "config_sha256": "fb94258dd5392c0627fbcdd88c29459a671b1ee9c79f516e857f976cf77c053b",
+    "frozen_config_hash_from_provenance": "fb94258dd5392c0627fbcdd88c29459a671b1ee9c79f516e857f976cf77c053b"
+  },
+  "commands": {
+    "single": "python cli.py experiment --suite e_single_q4 --cases cases/e_branches_v1/ablation/ablation_q4.json --config configs/e_branches_matched_base.yaml --variants mainline,e1_sparse25,e2_joint_state,e3_lookahead2,e4_residual_sparsify,e_all --output results/e_branches_v1/matched --slim",
+    "factorial": "python cli.py experiment --suite e_factorial_q4 --cases cases/e_branches_v1/ablation/ablation_q4.json --config configs/e_branches_matched_base.yaml --variants e_combo_0000,e_combo_0001,e_combo_0010,e_combo_0011,e_combo_0100,e_combo_0101,e_combo_0110,e_combo_0111,e_combo_1000,e_combo_1001,e_combo_1010,e_combo_1011,e_combo_1100,e_combo_1101,e_combo_1110,e_combo_1111 --output results/e_branches_v1/matched --slim"
+  },
+  "statistic_definition": "mean/median/std are computed over six per-case values; std is population standard deviation (divide by n). t_per_source_s is T_j/n_j.",
+  "hard_gate": {
+    "requirements": [
+      "all 6 cases complete with no run failure",
+      "all 6 metrics.verifier_all_ok=true",
+      "all 6 verifier_report.all_ok=true",
+      "clear_rate=1.0 for all 6 cases"
+    ],
+    "factorial_runs": 96,
+    "factorial_verifier_reports_scanned": 96,
+    "factorial_case_successes": 96,
+    "factorial_verifier_successes": 96,
+    "factorial_correctness_eligible_composites": 15,
+    "factorial_missing_verifier_reports": 0,
+    "factorial_case_failures": 0,
+    "factorial_clear_rate_failures": 0
+  },
+  "factor_order": ["E1", "E2", "E3", "E4"],
+  "factorial": {
+    "e_combo_0000": {
+      "mask": "0000", "factors": {"E1": false, "E2": false, "E3": false, "E4": false},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1334.028053, "median": 1373.299907, "std": 313.181768},
+        "measures": {"mean": 743.666667, "median": 758.0, "std": 166.796949},
+        "switches": {"mean": 653.5, "median": 666.0, "std": 149.437557}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_0001": {
+      "mask": "0001", "factors": {"E1": false, "E2": false, "E3": false, "E4": true},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 2674.885435, "median": 2738.392679, "std": 498.105691},
+        "measures": {"mean": 1358.5, "median": 1372.0, "std": 265.912736},
+        "switches": {"mean": 1201.166667, "median": 1214.0, "std": 247.697676}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_0010": {
+      "mask": "0010", "factors": {"E1": false, "E2": false, "E3": true, "E4": false},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1359.110976, "median": 1355.923948, "std": 274.322153},
+        "measures": {"mean": 732.0, "median": 727.5, "std": 120.109672},
+        "switches": {"mean": 629.666667, "median": 626.5, "std": 126.333773}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_0011": {
+      "mask": "0011", "factors": {"E1": false, "E2": false, "E3": true, "E4": true},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 2697.083604, "median": 2695.136122, "std": 442.734610},
+        "measures": {"mean": 1348.833333, "median": 1370.0, "std": 225.203180},
+        "switches": {"mean": 1182.666667, "median": 1178.0, "std": 217.774093}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_0100": {
+      "mask": "0100", "factors": {"E1": false, "E2": true, "E3": false, "E4": false},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1507.649891, "median": 1547.624731, "std": 344.839688},
+        "measures": {"mean": 765.666667, "median": 828.5, "std": 180.091335},
+        "switches": {"mean": 669.666667, "median": 711.5, "std": 149.905155}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_0101": {
+      "mask": "0101", "factors": {"E1": false, "E2": true, "E3": false, "E4": true},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 2762.851910, "median": 2816.030798, "std": 464.898528},
+        "measures": {"mean": 1273.0, "median": 1305.5, "std": 207.439951},
+        "switches": {"mean": 1131.333333, "median": 1174.5, "std": 202.253691}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_0110": {
+      "mask": "0110", "factors": {"E1": false, "E2": true, "E3": true, "E4": false},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1437.829783, "median": 1442.925720, "std": 364.922561},
+        "measures": {"mean": 773.166667, "median": 721.5, "std": 221.521569},
+        "switches": {"mean": 665.333333, "median": 622.0, "std": 187.931430}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_0111": {
+      "mask": "0111", "factors": {"E1": false, "E2": true, "E3": true, "E4": true},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 2801.227866, "median": 2859.931183, "std": 480.701243},
+        "measures": {"mean": 1341.5, "median": 1397.5, "std": 227.171558},
+        "switches": {"mean": 1178.166667, "median": 1227.5, "std": 204.691163}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_1000": {
+      "mask": "1000", "factors": {"E1": true, "E2": false, "E3": false, "E4": false},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1077.721939, "median": 1018.359134, "std": 312.549809},
+        "measures": {"mean": 683.0, "median": 600.5, "std": 194.661244},
+        "switches": {"mean": 608.166667, "median": 547.0, "std": 180.816128}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_1001": {
+      "mask": "1001", "factors": {"E1": true, "E2": false, "E3": false, "E4": true},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1093.053748, "median": 1064.354560, "std": 311.896276},
+        "measures": {"mean": 685.166667, "median": 607.0, "std": 193.754498},
+        "switches": {"mean": 610.333333, "median": 553.5, "std": 180.090410}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_1010": {
+      "mask": "1010", "factors": {"E1": true, "E2": false, "E3": true, "E4": false},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1188.436954, "median": 1095.985153, "std": 422.568326},
+        "measures": {"mean": 780.333333, "median": 678.5, "std": 325.447214},
+        "switches": {"mean": 676.166667, "median": 588.5, "std": 283.275142}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_1011": {
+      "mask": "1011", "factors": {"E1": true, "E2": false, "E3": true, "E4": true},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1196.519570, "median": 1120.233000, "std": 420.672194},
+        "measures": {"mean": 782.0, "median": 683.5, "std": 324.569458},
+        "switches": {"mean": 677.666667, "median": 593.0, "std": 282.626176}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_1100": {
+      "mask": "1100", "factors": {"E1": true, "E2": true, "E3": false, "E4": false},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1305.335012, "median": 1337.498271, "std": 347.470662},
+        "measures": {"mean": 737.666667, "median": 778.0, "std": 177.742010},
+        "switches": {"mean": 633.833333, "median": 664.5, "std": 166.445603}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_1101": {
+      "mask": "1101", "factors": {"E1": true, "E2": true, "E3": false, "E4": true},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1316.210690, "median": 1347.098046, "std": 351.060538},
+        "measures": {"mean": 740.666667, "median": 783.0, "std": 178.670709},
+        "switches": {"mean": 636.5, "median": 672.5, "std": 166.956831}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_1110": {
+      "mask": "1110", "factors": {"E1": true, "E2": true, "E3": true, "E4": false},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1188.436954, "median": 1095.985153, "std": 422.568326},
+        "measures": {"mean": 780.333333, "median": 678.5, "std": 325.447214},
+        "switches": {"mean": 676.166667, "median": 588.5, "std": 283.275142}
+      },
+      "correctness_eligible": true
+    },
+    "e_combo_1111": {
+      "mask": "1111", "factors": {"E1": true, "E2": true, "E3": true, "E4": true},
+      "n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0,
+      "metrics": {
+        "t_per_source_s": {"mean": 1196.519570, "median": 1120.233000, "std": 420.672194},
+        "measures": {"mean": 782.0, "median": 683.5, "std": 324.569458},
+        "switches": {"mean": 677.666667, "median": 593.0, "std": 282.626176}
+      },
+      "correctness_eligible": true
+    }
+  },
+  "single_factor_reference": {
+    "mainline": {"n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0, "t_mean": 1334.028053, "t_median": 1373.299907, "t_std": 313.181768, "measures_mean": 743.666667, "switches_mean": 653.5},
+    "e1_sparse25": {"n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0, "t_mean": 1077.721939, "t_median": 1018.359134, "t_std": 312.549809, "measures_mean": 683.0, "switches_mean": 608.166667},
+    "e2_joint_state": {"n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0, "t_mean": 1507.649891, "t_median": 1547.624731, "t_std": 344.839688, "measures_mean": 765.666667, "switches_mean": 669.666667},
+    "e3_lookahead2": {"n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0, "t_mean": 1359.110976, "t_median": 1355.923948, "t_std": 274.322153, "measures_mean": 732.0, "switches_mean": 629.666667},
+    "e4_residual_sparsify": {"n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0, "t_mean": 2674.885435, "t_median": 2738.392679, "t_std": 498.105691, "measures_mean": 1358.5, "switches_mean": 1201.166667},
+    "e_all": {"n_cases": 6, "success_count": 6, "verifier_success_count": 6, "clear_rate_min": 1.0, "t_mean": 1196.519570, "t_median": 1120.233000, "t_std": 420.672194, "measures_mean": 782.0, "switches_mean": 677.666667}
+  },
+  "selection_rule": {
+    "name": "frozen correctness-eligible composite rule",
+    "eligible_pool": "e_combo_0001 through e_combo_1111; e_combo_0000 is retained as the no-branch reference",
+    "primary": "among hard-gate eligible composites, minimize arithmetic mean of per-case t_per_source_s",
+    "tie_break": "within 2 percent of the best primary mean, minimize population std of t_per_source_s, then mean measures, then mean switches, then lexicographically smaller mask",
+    "no_holdout_peeking": true
+  },
+  "selection": {
+    "eligible_composite_count": 15,
+    "best_primary": "e_combo_1000",
+    "best_primary_mean_t_per_source_s": 1077.721939,
+    "two_percent_limit_t_per_source_s": 1099.276378,
+    "within_two_percent": [
+      {"variant": "e_combo_1000", "mean_t_per_source_s": 1077.721939, "std_t_per_source_s": 312.549809, "mean_measures": 683.0, "mean_switches": 608.166667},
+      {"variant": "e_combo_1001", "mean_t_per_source_s": 1093.053748, "std_t_per_source_s": 311.896276, "mean_measures": 685.166667, "mean_switches": 610.333333}
+    ],
+    "selected_composite": "e_combo_1001",
+    "selected_factors": {"E1": true, "E2": false, "E3": false, "E4": true},
+    "selected_metrics": {"t_per_source_s": {"mean": 1093.053748, "median": 1064.354560, "std": 311.896276}, "measures": {"mean": 685.166667, "median": 607.0, "std": 193.754498}, "switches": {"mean": 610.333333, "median": 553.5, "std": 180.090410}},
+    "selected_vs_mainline_mean_t_per_source_s_delta": -240.974305,
+    "selected_vs_mainline_mean_t_per_source_s_percent": -18.063,
+    "rationale": "e_combo_1000 has the lowest eligible mean. e_combo_1001 is within the frozen 2 percent band and has the lower t_per_source population std (311.896276 versus 312.549809), so it wins the frozen stability tie-break; its small increase in mean measures and switches is considered only after std and does not reverse the choice.",
+    "claim_boundary": "This selects an ablation composite on the six-case ablation set only; it is not a holdout or global-optimality claim and does not change mainline code/config."
+  },
+  "execution_notes": {
+    "case_failures": 0,
+    "verifier_failures": 0,
+    "all_factorial_case_dirs_complete": true,
+    "initial_full_factorial_invocation": "returned 1 after 34 cases; e_combo_0101 and the remaining cases were rerun successfully; final scanned factorial tree is 96/96 and all hard gates pass"
+  }
+}

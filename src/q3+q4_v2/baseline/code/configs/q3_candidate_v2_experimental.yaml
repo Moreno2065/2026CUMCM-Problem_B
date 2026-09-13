@@ -1,0 +1,13 @@
+# Experimental Q3 successor. Candidate v1 frozen config remains unchanged.
+policy: mainline
+tau: 0.15
+nbv_mode: radius
+nbv_rule: fixed_geometry
+opportunistic_reuse: true
+channel_scan_mode: useful_sweep
+cert_select: gain_cost
+q4_naive: false
+q4_certificate_layout: lattice31
+q4_joint_rank: false
+cert_route_mode: greedy
+q4_residual_sparsify: false

@@ -1,0 +1,88 @@
+{
+  "case_label": "representative illustrative case",
+  "certified_global_optimum": false,
+  "method_provenance": {
+    "B1": {
+      "heuristic": "center_ray_max_min_angle",
+      "rho_a_m": 5.0,
+      "rho_b_m": 1500.0,
+      "L_m": 1495.0,
+      "reception_radius_m": 1000.0,
+      "x_star_m": 673.8963210702341,
+      "abs_y_star_m": 743.3557100464799,
+      "side": "positive_perpendicular",
+      "unclamped_S2": [
+        673.8963210702341,
+        743.3557100464799
+      ],
+      "S2": [
+        673.8963210702341,
+        743.3557100464799
+      ],
+      "clamp": "componentwise_to_crec_derived_bounds"
+    }
+  },
+  "evidence_config_id": "q2-final-evidence-v6-dynamic-closure",
+  "rows": [
+    {
+      "method": "B0",
+      "S2": [
+        502.49961923789095,
+        -98.25475935627162
+      ],
+      "Q": 4409.032487941017,
+      "Crec_feasible": true,
+      "admissible": true,
+      "move_distance_m": 512.0154929983898,
+      "all_near": false,
+      "worst_beta_deg": 3.133768537633685,
+      "runtime_s": 0.14909829999669455,
+      "verification": "fresh_metric"
+    },
+    {
+      "method": "B1",
+      "S2": [
+        673.8963210702341,
+        743.3557100464799
+      ],
+      "Q": null,
+      "Crec_feasible": false,
+      "admissible": false,
+      "move_distance_m": 1003.3513657790586,
+      "all_near": false,
+      "worst_beta_deg": null,
+      "runtime_s": 0.0002018999948631972,
+      "verification": "infeasible"
+    },
+    {
+      "method": "B2",
+      "S2": [
+        752.5,
+        752.5
+      ],
+      "Q": null,
+      "Crec_feasible": false,
+      "admissible": false,
+      "move_distance_m": 1064.195705685754,
+      "all_near": false,
+      "worst_beta_deg": null,
+      "runtime_s": 0.00014929999451851472,
+      "verification": "infeasible"
+    },
+    {
+      "method": "Hero",
+      "S2": [
+        800.1012338639696,
+        -606.388471543349
+      ],
+      "Q": 134.07676525132717,
+      "Crec_feasible": true,
+      "admissible": true,
+      "move_distance_m": 1003.9267716578364,
+      "all_near": false,
+      "worst_beta_deg": 38.66762079967069,
+      "runtime_s": 29.360556599996926,
+      "verification": "fresh_metric"
+    }
+  ]
+}

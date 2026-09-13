@@ -1,0 +1,26 @@
+{
+ "figure": "fig8_certificate_progress",
+ "claim_map": [
+  "H.4"
+ ],
+ "source": "channel_state_history.jsonl per-step snapshots",
+ "resolved_definition": "status in {CLEARED, CERTIFIED_ABSENT}",
+ "equivalence_note": "a4_nearest_cert output is byte-identical to mainline; curves coincide by construction (equivalence degeneration).",
+ "panels": {
+  "q3": {
+   "n_channels": 20,
+   "t_end": 8494.080838154594,
+   "resolved_end": 1.0
+  },
+  "q4": {
+   "n_channels": 20,
+   "t_end": 31505.792906363415,
+   "resolved_end": 1.0
+  }
+ },
+ "outputs": {
+  "pdf": "D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig8_certificate_progress.pdf",
+  "png": "D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig8_certificate_progress.png",
+  "csv": "D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig8_data.csv"
+ }
+}

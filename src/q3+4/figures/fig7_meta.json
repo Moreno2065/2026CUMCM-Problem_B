@@ -1,0 +1,121 @@
+{
+ "figure": "fig7_time_decomposition",
+ "claim_map": [
+  "H.3"
+ ],
+ "sources": [
+  "D:\\CUMCM2026\\src\\q3+4\\code\\results\\ablation"
+ ],
+ "ledger_note": "stacked components are the four orthogonal ledger terms (sum == T_total_virtual); residual certificate time overlaps them by definition and is only annotated in parentheses.",
+ "by_question": {
+  "q3": {
+   "mainline": {
+    "n_cases": 24,
+    "mean_components": {
+     "T_move": 4500.336838528892,
+     "T_measure": 2752.5,
+     "T_switch": 499.3333333333333,
+     "T_clear": 56.666666666666664
+    },
+    "mean_residual_cert_s": 1618.3647778333332
+   },
+   "a1_fixed_geometry": {
+    "n_cases": 6,
+    "mean_components": {
+     "T_move": 4385.5459451049155,
+     "T_measure": 1818.3333333333333,
+     "T_switch": 329.6666666666667,
+     "T_clear": 60.166666666666664
+    },
+    "mean_residual_cert_s": 1588.8246114999997
+   },
+   "a2_no_reuse": {
+    "n_cases": 6,
+    "mean_components": {
+     "T_move": 4500.336838528892,
+     "T_measure": 2752.5,
+     "T_switch": 499.3333333333333,
+     "T_clear": 56.666666666666664
+    },
+    "mean_residual_cert_s": 1618.3647778333332
+   },
+   "a3_sweep_all": {
+    "n_cases": 6,
+    "mean_components": {
+     "T_move": 3604.2323524605354,
+     "T_measure": 1926.6666666666667,
+     "T_switch": 357.8333333333333,
+     "T_clear": 57.666666666666664
+    },
+    "mean_residual_cert_s": 1615.6863823333333
+   },
+   "a4_nearest_cert": {
+    "n_cases": 6,
+    "mean_components": {
+     "T_move": 4500.336838528892,
+     "T_measure": 2752.5,
+     "T_switch": 499.3333333333333,
+     "T_clear": 56.666666666666664
+    },
+    "mean_residual_cert_s": 1618.3647778333332
+   }
+  },
+  "q4": {
+   "mainline": {
+    "n_cases": 24,
+    "mean_components": {
+     "T_move": 8928.938569941945,
+     "T_measure": 8770.0,
+     "T_switch": 1600.0,
+     "T_clear": 309.5
+    },
+    "mean_residual_cert_s": 7751.752286666667
+   },
+   "a1_fixed_geometry": {
+    "n_cases": 6,
+    "mean_components": {
+     "T_move": 12162.777845806557,
+     "T_measure": 2981.6666666666665,
+     "T_switch": 546.0,
+     "T_clear": 558.0
+    },
+    "mean_residual_cert_s": 7791.419584333334
+   },
+   "a2_no_reuse": {
+    "n_cases": 6,
+    "mean_components": {
+     "T_move": 9502.554915224913,
+     "T_measure": 8185.0,
+     "T_switch": 1489.8333333333333,
+     "T_clear": 218.0
+    },
+    "mean_residual_cert_s": 7761.772779333333
+   },
+   "a3_sweep_all": {
+    "n_cases": 6,
+    "mean_components": {
+     "T_move": 8324.016172763619,
+     "T_measure": 7140.0,
+     "T_switch": 1314.5,
+     "T_clear": 192.0
+    },
+    "mean_residual_cert_s": 7856.923747333333
+   },
+   "a4_nearest_cert": {
+    "n_cases": 6,
+    "mean_components": {
+     "T_move": 8928.938569941945,
+     "T_measure": 8770.0,
+     "T_switch": 1600.0,
+     "T_clear": 309.5
+    },
+    "mean_residual_cert_s": 7751.752286666667
+   }
+  }
+ },
+ "outputs": {
+  "pdf": "D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig7_time_decomposition.pdf",
+  "png": "D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig7_time_decomposition.png",
+  "csv": "D:\\CUMCM2026\\src\\q3+4\\code\\figures\\fig7_data.csv"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "set": "holdout",
+ "purpose": "FROZEN_CONFIG 冻结后的最终验证；调参与消融禁止触碰",
+ "generated_at": "2026-09-11T21:38:15+08:00",
+ "seed_block": 1160000,
+ "seed_offset": 760000,
+ "tag": "block07",
+ "isolation": "seed blocks are pairwise disjoint; case_id 全局唯一；四集无交集",
+ "case_files": [
+  {
+   "file": "holdout_q3.json",
+   "question": "q3",
+   "n_cases": 6,
+   "case_ids": [
+    "block07_holdout_q3_01",
+    "block07_holdout_q3_02",
+    "block07_holdout_q3_03",
+    "block07_holdout_q3_04",
+    "block07_holdout_q3_05",
+    "block07_holdout_q3_06"
+   ],
+   "scenarios": [
+    "boundary",
+    "dense",
+    "random",
+    "sparse"
+   ],
+   "error_field_types": [
+    "random_fixed"
+   ]
+  },
+  {
+   "file": "holdout_q4.json",
+   "question": "q4",
+   "n_cases": 7,
+   "case_ids": [
+    "block07_holdout_q4_01",
+    "block07_holdout_q4_02",
+    "block07_holdout_q4_03",
+    "block07_holdout_q4_04",
+    "block07_holdout_q4_05",
+    "block07_holdout_q4_06",
+    "block07_holdout_q4_07"
+   ],
+   "scenarios": [
+    "boundary",
+    "dense",
+    "edge_facing",
+    "random",
+    "sparse"
+   ],
+   "error_field_types": [
+    "random_fixed"
+   ]
+  }
+ ]
+}

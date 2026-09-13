@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "seed": 20260911,
+  "permanent_case_groups": {
+    "A": "q2_gate_a_fixtures.json",
+    "B": "q2_gate_b_fixtures.json",
+    "C": "q2_gate_c_fixtures.json",
+    "D": "q2_gate_d_fixtures.json",
+    "E": "q2_gate_e_fixtures.json",
+    "F": "q2_gate_f_fixtures.json",
+    "G": "q2_gate_g_fixtures.json"
+  },
+  "required_randomized_checks": [
+    {"gate": "A", "count": 500, "check": "independent boundary completeness"},
+    {"gate": "B", "count": 500, "check": "analytic Phi versus dense radial oracle"},
+    {"gate": "C", "count": 500, "check": "analytic angular closure versus dense oracles"},
+    {"gate": "E", "count": 500, "check": "inner maximum versus dense beta oracle"}
+  ],
+  "adversarial_fixtures": [
+    "A1 tangent singleton",
+    "three spatial components",
+    "full-circle angular image",
+    "all-near terminal case",
+    "disconnected wrap gap",
+    "clustered/even/near-endpoint roots",
+    "forged provenance and tampered artifacts"
+  ]
+}

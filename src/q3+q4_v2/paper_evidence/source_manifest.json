@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "version_rule": "Q3_Q4_Paper_Model_Narrative_v2.0.md is V1; all other listed files under q3+q4_v2 are classified explicitly.",
+  "records": [
+    {
+      "relpath": "src/q3+q4_v2/Q3_Q4_Paper_Model_Narrative_v2.0.md",
+      "generation": "v1",
+      "role": "guarantee_narrative",
+      "sha256": "95774d80c6edf6bf71366c50573a4e3af2a95d7ce3308a1bf117585896aa1a02",
+      "size_bytes": 19135,
+      "mtime_utc": "2026-09-11T08:20:59.540711+00:00"
+    },
+    {
+      "relpath": "src/q3+4/code/configs/candidate_v1_FROZEN_CONFIG.yaml",
+      "generation": "v1",
+      "role": "frozen_baseline_config",
+      "sha256": "4921509dc19999eaa4b284fcd5fa128c8a0d82487f316ba43853689345047b01",
+      "size_bytes": 889,
+      "mtime_utc": "2026-09-11T10:09:54.002233+00:00"
+    },
+    {
+      "relpath": "src/q3+4/code/cli.py",
+      "generation": "v1",
+      "role": "baseline_entry",
+      "sha256": "8c746049eb566c4239ec471c778a0b435a6e55555db0e18557471e644e15c0ec",
+      "size_bytes": 14867,
+      "mtime_utc": "2026-09-11T14:52:53.547302+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/recommended.py",
+      "generation": "v2",
+      "role": "intermediate_policy",
+      "sha256": "0b9299e3567862b918af2b9efc6a8528b247492813b687523c98c816a6bddd46",
+      "size_bytes": 2220,
+      "mtime_utc": "2026-09-12T03:41:05+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/production.py",
+      "generation": "v2",
+      "role": "intermediate_policy",
+      "sha256": "638bce2240a56d914cd67630e65089cdd96062f76f93cd276ea8589f8945886c",
+      "size_bytes": 8396,
+      "mtime_utc": "2026-09-12T14:43:14+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/run.py",
+      "generation": "v2",
+      "role": "intermediate_entry",
+      "sha256": "def842f4ae28c7f878141d4e1d2904959fb91b8f25dd72e6f75c931550f1c174",
+      "size_bytes": 68547,
+      "mtime_utc": "2026-09-13T04:59:51.691390+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/absorbed/q3_v5/q3_optimizer_v5.py",
+      "generation": "v2",
+      "role": "final_engine",
+      "sha256": "be215589c4f911527b579f4aa4f570b1a5d99d4c190467bd88d1c8e5c582a361",
+      "size_bytes": 18214,
+      "mtime_utc": "2026-09-13T04:30:31.836008+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/absorbed/q4_v4/strategy_v4.py",
+      "generation": "v2",
+      "role": "final_engine",
+      "sha256": "eb494fcfd7035113574ef6595d3f5202c97d8372e0c3665f0481aaea95828179",
+      "size_bytes": 22963,
+      "mtime_utc": "2026-09-13T04:30:52.044438+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/absorbed/q4_v4/locked.py",
+      "generation": "v2",
+      "role": "final_engine_lock",
+      "sha256": "75dd339a707caa945ee17df3de56732794ab722ea05aec511867d20def644d5f",
+      "size_bytes": 3445,
+      "mtime_utc": "2026-09-13T04:31:20.182960+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/absorbed/q4_v4/results/selection_lock.json",
+      "generation": "v2",
+      "role": "selection_evidence",
+      "sha256": "62a9e692f58ad7251fab6665a5ef5582cdc0df331401442a5ddec038c0f898e7",
+      "size_bytes": 8432,
+      "mtime_utc": "2026-09-13T04:31:15.216521+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/absorbed/run_absorbed.py",
+      "generation": "v2",
+      "role": "final_entry",
+      "sha256": "46a8d69736c91937416740d3d44c368cbb3258208eb7e4883ff3d76196676a3f",
+      "size_bytes": 26802,
+      "mtime_utc": "2026-09-13T04:43:56.725333+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/absorbed/adapters/absorbed_verifier.py",
+      "generation": "v2",
+      "role": "independent_verifier",
+      "sha256": "9b24086e3830761cc4969fc05e79c0490e888f2e07095e5610359fbc5194a3d2",
+      "size_bytes": 31306,
+      "mtime_utc": "2026-09-13T04:43:56.705505+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/ABSORBED_SOLVERS_VERDICT.md",
+      "generation": "v2",
+      "role": "adoption_verdict",
+      "sha256": "3c29f83f9d4f70993d5c04f815a81a0a99a4de2606a10eb9202c770ebd7bdd59",
+      "size_bytes": 24334,
+      "mtime_utc": "2026-09-13T05:10:09.521189+00:00"
+    },
+    {
+      "relpath": "src/q3+q4_v2/baseline/docs/performance_comparison_report.md",
+      "generation": "v1",
+      "role": "baseline_performance_report",
+      "sha256": "0051a73743a98b46c615c5546ec38581f1b8b43a35e4c2151dddbfed62531030",
+      "size_bytes": 8479,
+      "mtime_utc": "2026-09-11T10:27:11+00:00"
+    }
+  ]
+}

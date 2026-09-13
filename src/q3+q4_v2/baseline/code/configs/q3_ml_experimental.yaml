@@ -1,0 +1,17 @@
+# Q3 ML experimental overlay; frozen Candidate v1 values are copied verbatim.
+# q3_ml_ranker remains false here so the suite registry can compare
+# mainline against q3_ml_experimental on the same base configuration.
+policy: mainline
+tau: 0.15
+nbv_mode: radius
+nbv_rule: fixed_geometry
+opportunistic_reuse: true
+channel_scan_mode: sweep_all
+cert_select: gain_cost
+q4_naive: false
+q4_certificate_layout: lattice31
+q4_joint_rank: false
+cert_route_mode: greedy
+q4_residual_sparsify: false
+q3_ml_ranker: false
+q3_ml_model_path: models/q3_ml_ranker.json

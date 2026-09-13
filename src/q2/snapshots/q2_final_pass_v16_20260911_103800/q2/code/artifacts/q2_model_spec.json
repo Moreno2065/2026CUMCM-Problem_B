@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "model_id": "CUMCM2026-Q2-frozen-v1",
+  "status": "frozen",
+  "domain": {"omega": "B((0,0),1800 m)", "epsilon_deg": 1.0},
+  "a1": {
+    "definition": "Omega intersect first bearing wedge intersect {5 < norm(G-S1) <= 1500}",
+    "dimension_states": ["EMPTY", "POINT", "SEGMENT", "AREA"],
+    "boundary_registry": "A1BoundaryRegistry"
+  },
+  "crec": {
+    "definition": "intersection over G in A1 of B(G, max(1000, norm(G-S1)))",
+    "witness_registry": "CrecWitnessRegistry",
+    "forbidden_surrogate": "intersection over G in A1 of B(G,1000)"
+  },
+  "near_aware_bearing": {
+    "actual_set": "{G in A1: norm(G-S2) > 5}",
+    "raw_image": "closure(arg(actual_set-S2))",
+    "expanded_image": "raw_image Minkowski-sum [-1 deg,+1 deg]",
+    "all_near": "A1 subset B(S2,5) implies empty image and Q=0"
+  },
+  "pure_q1": {
+    "definition": "K(S1,theta1) intersect K(S2,beta)",
+    "inputs": ["S1", "theta1", "S2", "beta", "epsilon"],
+    "forbidden_inputs": ["Omega", "A1", "Crec", "near circle", "5", "1000", "1500"]
+  },
+  "objective": {
+    "definition": "Q(S2)=max over beta in expanded_image of D_Q1(S2,beta)",
+    "admissibility": "circular distance(raw_image,theta1) > 3 epsilon",
+    "outer_solution": "numerical argmin over admissible Crec points",
+    "candidate_region": "Q(S2) <= (1+eta) qhat_star",
+    "global_certificate": false
+  },
+  "implementation_modules": {
+    "a1": "geometry/a1.py",
+    "crec": "geometry/crec.py",
+    "angular_image": "geometry/angular_image.py",
+    "q1_adapter": "model/q1_adapter.py",
+    "inner_max": "solver/inner_max.py",
+    "q2_point": "solver/q2_point.py",
+    "outer_search": "solver/outer_search.py",
+    "gate_g": "solver/gate_g.py",
+    "verifiers": "verifier/"
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "all_ok": true,
+  "scope": {
+    "mode": "Q3",
+    "sim": "synthetic",
+    "ground_truth": "available",
+    "not_applicable_checks": [],
+    "unavailable_checks": [],
+    "description": "独立复核范围：结构与协议自述、清除尝试界与认证清除几何（verify_mec_covers）、Q3 缺席覆盖（verify_q3_cover）、完成性与 rows/虚拟时间不变量；合成模式另有真值核对。不复用 GameRunner._verify（依赖 KnowledgeState）。官方 http 模式无真值 → 真值类检查 not_applicable，不会写成 ok=true。"
+  },
+  "checks": [
+    {
+      "id": "result_shape",
+      "check": "返回字典含 cleared_sources 列表",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "keys": [
+          "average_virtual_seconds_per_cleared_source",
+          "clear_attempts",
+          "cleared_channels",
+          "cleared_count",
+          "cleared_sources",
+          "count_inferred_absent_channels",
+          "negative_observations",
+          "observations",
+          "paper_variant",
+          "parameters",
+          "route_decisions",
+          "scan_visits",
+          "source_upper_bound_stop",
+          "strategy",
+          "version"
+        ],
+        "n_cleared_entries": 10
+      }
+    },
+    {
+      "id": "cleared_entries_channel_field",
+      "check": "每个 cleared_sources 记录都带 channel",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "bad_entries": [],
+        "n_bad": 0
+      }
+    },
+    {
+      "id": "cleared_count_consistent",
+      "check": "cleared_count 与 cleared_sources 条数一致",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "cleared_count": 10,
+        "entries": 10
+      }
+    },
+    {
+      "id": "cleared_count_bounds",
+      "check": "清除数落在题设区间 [10, 16]",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "cleared_count": 10
+      }
+    },
+    {
+      "id": "cleared_channels_unique",
+      "check": "已清除频道互不重复且落在 1..20",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "channels": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          11,
+          16,
+          18,
+          19,
+          20
+        ]
+      }
+    },
+    {
+      "id": "clear_attempt_bound_identity",
+      "check": "清除尝试报告的 prior_bound_m 与独立重算的 max 顶点距离一致",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_attempts": 10,
+        "n_vertices_checked": 10,
+        "n_mismatch": 0,
+        "mismatch": []
+      }
+    },
+    {
+      "id": "certified_clear_geometry",
+      "check": "bound_source=prior_geometry 的清除：可行域全部顶点落在 B(清除点, 20)",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_checked": 3,
+        "violations": []
+      }
+    },
+    {
+      "id": "q3_absence_cover",
+      "check": "Q3 几何缺席频道：no_signal 点集覆盖 Ω（verify_q3_cover 独立复算）",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_channels": 10,
+        "n_failed": 0,
+        "failed": {},
+        "all": {
+          "1": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "10": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "12": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "13": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "14": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "15": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "17": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "7": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "8": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          },
+          "9": {
+            "ok": true,
+            "uncovered_count": 0,
+            "max_min_dist": 990.0000000000001,
+            "n_points": 7
+          }
+        }
+      }
+    },
+    {
+      "id": "q3_cleared_channels_field",
+      "check": "cleared_channels 字段与 cleared_sources 一致",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "declared": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          11,
+          16,
+          18,
+          19,
+          20
+        ],
+        "entries": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          11,
+          16,
+          18,
+          19,
+          20
+        ]
+      }
+    },
+    {
+      "id": "completion_all_channels_resolved",
+      "check": "20 个频道都被清除或判定缺席（无悬空频道）",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_resolved": 20,
+        "unresolved_channels": []
+      }
+    },
+    {
+      "id": "truth_cleared_channels",
+      "check": "每个已清除频道在真值中确实存在、已清除且清除点距源 ≤ 20 m",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_cleared": 10,
+        "n_failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "id": "truth_absent_channels",
+      "check": "每个缺席频道在真值中确实不存在未清除的源",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_absent": 10,
+        "n_failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "id": "rows_present",
+      "check": "客户端动作记录非空",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_rows": 126
+      }
+    },
+    {
+      "id": "rows_reference_shape",
+      "check": "动作记录键集与源侧 offline_world 行结构一致",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "expected_keys": [
+          "sequence",
+          "path",
+          "position",
+          "channel",
+          "response",
+          "movement_s",
+          "switch_s",
+          "operation_s",
+          "virtual_before_s",
+          "virtual_after_s"
+        ],
+        "n_bad": 0,
+        "first_bad_index": null
+      }
+    },
+    {
+      "id": "virtual_time_monotonic",
+      "check": "动作记录的虚拟时间非递减",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_rows": 126,
+        "n_regressions": 0,
+        "regressions": []
+      }
+    },
+    {
+      "id": "action_cap",
+      "check": "动作数不超过引擎自带上限 550",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_rows": 126,
+        "cap": 550
+      }
+    },
+    {
+      "id": "v2_virtual_time_reconcile",
+      "check": "v2 本地虚拟时间账与服务端上报值无对账告警（容差 1e-3）",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "n_warnings": 0,
+        "warnings": []
+      }
+    },
+    {
+      "id": "socket_bindings_intact",
+      "check": "导入 vendored 引擎前后，socket/urllib 绑定未被替换",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "ok": true,
+        "needs_sockets": false
+      }
+    },
+    {
+      "id": "no_unavailable_evidence",
+      "check": "不存在「本应可跑但证据/工具缺失」的检查（unavailable 必须阻断通过）",
+      "status": "passed",
+      "ok": true,
+      "reason": null,
+      "not_applicable": false,
+      "detail": {
+        "unavailable_checks": [],
+        "not_applicable_checks": [],
+        "policy": "unavailable 一律阻断 all_ok（官方模式同样适用：非模式性缺失即视为缺陷）；not_applicable 不阻断"
+      }
+    }
+  ],
+  "counts": {
+    "total": 19,
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0
+  },
+  "not_performed": [
+    {
+      "id": "q3_continuous_cover_replay",
+      "reason": "Q3 连续覆盖证书由引擎内部判定（q3_optimizer_v4.continuous_cover）；本 verifier 不复用该判定，改用它交回的 no_signal 点集独立复算 Ω ⊆ ∪B(p, r_eff_min)（verify_q3_cover，采样第二意见）。"
+    },
+    {
+      "id": "v2_metrics_compute_metrics",
+      "reason": "baseline/code/experiment/metrics.py 的 compute_metrics 需要 KnowledgeState；吸收运行以 executor 账本重建同名字段，字段口径见 absorbed/adapters/runtime_bridge.build_metrics。"
+    }
+  ],
+  "v2_verifier_reuse": {
+    "verify_q3_cover": "used",
+    "verify_mec_covers": "used",
+    "report_line": "runtime_bridge.load_report_line（惰性）",
+    "GameRunner._verify": "not_reusable: 依赖 KnowledgeState",
+    "import_reasons": []
+  },
+  "ground_truth_available": true,
+  "unresolved_channels": [],
+  "engine_meta": {
+    "engine": "q3-v5",
+    "name": "q3_no_joint_route",
+    "version": "q3_joint_search_clear_route_v5",
+    "source": "paper_pipeline/variant_registry.json",
+    "sha256": "a0002e34ab570f60b978e68074b43391c7ddaabf503ee93c9f1aa33f4a51405c",
+    "canonical_json_bytes": 383,
+    "count": 21
+  },
+  "socket_guard": {
+    "ok": true,
+    "needs_sockets": false
+  },
+  "client_snapshot": {
+    "n_acts": 126,
+    "n_rejects": 0,
+    "entered": true,
+    "exited": true,
+    "virtual_source": "reported",
+    "on_reject": "raise",
+    "real_time_budget_s": 0.0,
+    "virtual": 3724.994260224832,
+    "rows_reference_shape_ok": true
+  }
+}

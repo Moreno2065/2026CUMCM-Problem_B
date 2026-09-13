@@ -1,0 +1,16 @@
+# effective config snapshot (Addendum E)
+policy: mainline
+tau: 0.0
+nbv_mode: radius
+nbv_rule: nbv
+opportunistic_reuse: true
+channel_scan_mode: state_aware
+cert_select: gain_cost
+q4_naive: false
+q4_certificate_layout: sparse25
+q4_joint_rank: true
+cert_route_mode: lookahead2
+q4_residual_sparsify: true
+q3_ml_ranker: false
+q3_ml_model_path: null
+active_scan_margin_m: 0.0

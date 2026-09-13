@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "config_id": "q2-frozen-config-v1",
+  "epsilon_deg": 1.0,
+  "omega_center_m": [0.0, 0.0],
+  "omega_radius_m": 1800.0,
+  "radial_interval_m": [5.0, 1500.0],
+  "near_distance_m": 5.0,
+  "reception_radius_m": 1000.0,
+  "admissibility_multiplier": 3.0,
+  "inner_candidate_families": ["E1", "E2", "E3", "E4", "E5"],
+  "outer_search": {
+    "method": "deterministic coarse grid + subdivision + fixed-direction local refinement",
+    "certified_global_optimum": false,
+    "default_coarse_resolution": 7,
+    "default_subdivision_depth": 2,
+    "default_local_iterations": 8
+  },
+  "gate_g": {
+    "candidate_eta": [0.01, 0.02, 0.05, 0.1],
+    "figure_formats": ["svg", "pdf", "png"],
+    "figure_names": ["q2_geometry_overview", "q2_crec", "q2_angular_image", "q2_q_surface", "q2_optimum_and_candidate_region", "q2_baseline_comparison", "q2_worst_case_intersection"]
+  }
+}

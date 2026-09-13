@@ -1,0 +1,474 @@
+{
+  "artifact": "local_probe_center_case",
+  "kind": "independent_local_diagnostic_not_production_verification",
+  "generated_at_utc": "2026-09-11T07:55:31.085000+00:00",
+  "tool": "src/q2/code/tools/q2_center_case_local_probe.py",
+  "tool_sha256": "490960f3d4848742141dfbd93d076c6fb840005cce3106f04cc70919609b6bcc",
+  "invocation": "cd /d/CUMCM2026 && PYTHONPATH=. python src/q2/code/tools/q2_center_case_local_probe.py",
+  "independence": {
+    "imports_repo_modules": false,
+    "repo_modules_deliberately_not_used": [
+      "src/q2/code/model/q1_adapter.py",
+      "src/q1/code/q1_geometry.py",
+      "src/q2/code/geometry/a1.py",
+      "src/q2/code/geometry/angular_image.py",
+      "src/q2/code/geometry/crec.py"
+    ],
+    "polygon_method": "four closed half-planes (two per bearing wedge) -> feasible line-pair intersections -> convex hull vertex set -> O(k^2) vertex-pair diameter",
+    "angular_image_method": "own bearing intervals per A1 boundary piece: straight radial segments (bearing monotone in the parameter) and circular arcs (monotone between point-tangency cuts from S2)",
+    "violation_method": "own sampled evaluation of |S2-G| - max(1000, |G-S1|) over the A1 angle/radius grid",
+    "third_party_dependencies": []
+  },
+  "assumptions": {
+    "S1": [
+      0.0,
+      0.0
+    ],
+    "theta1_deg": 0.0,
+    "epsilon_deg": 1.0,
+    "inner_radius_m": 5.0,
+    "outer_radius_m": 1500.0,
+    "omega_radius_m": 1800.0,
+    "a1_definition": "A1 = {S1 + rho*u(theta) : 5 < rho <= 1500, d_S(theta, theta1) <= 1 deg}",
+    "omega_truncation_active": false,
+    "omega_truncation_reason": "S1 is at the origin and rho <= 1500 < 1800, so |G| <= 1800 never binds",
+    "pure_angular_q1_intersection": "the Q1 polygon uses ONLY the two +-epsilon bearing wedges; the rho shell, the 1800 m disk and the near rule are not applied to the intersection polygon",
+    "second_bearing_expansion_deg": 1.0,
+    "admissibility_gate": "d_S(beta, theta1) > 3*epsilon",
+    "probed_points": "frozen Hero plus small offsets, far from near regions",
+    "hero_s2": [
+      800.1012338639696,
+      -606.388471543349
+    ]
+  },
+  "reference": {
+    "receipt_q_m": 134.07676525132717,
+    "threshold_eta": 0.05,
+    "threshold_m": 140.78060351389354,
+    "threshold_from_work_order_m": 140.78060351389354,
+    "threshold_abs_diff_m": 0.0
+  },
+  "per_point": [
+    {
+      "label": "(0,0)",
+      "offset_m": [
+        0,
+        0
+      ],
+      "s2": [
+        800.1012338639696,
+        -606.388471543349
+      ],
+      "s2_radius_from_s1_m": 1003.9267716578364,
+      "g_violation_m": -7.568692126369569e-07,
+      "g_active_sample": {
+        "rho_m": 5.0,
+        "theta_from_s1_deg": 1.0,
+        "point": [
+          4.999238475781956,
+          0.08726203218641757
+        ]
+      },
+      "g_in_crec_by_sampled_sign": true,
+      "finite_scan_max_diameter_m": 134.07676525132675,
+      "finite_scan_argmax_beta_deg": 38.6676207996707,
+      "angular_image_deg": [
+        39.6676207996707,
+        142.67284194222384
+      ],
+      "admissible_beta_interval_deg": [
+        38.6676207996707,
+        143.67284194222384
+      ],
+      "beta_samples": 4097,
+      "beta_samples_used": 4097,
+      "gated_beta_samples_by_3epsilon": 0,
+      "unbounded_beta_samples": 0,
+      "empty_beta_samples": 0,
+      "min_clearance_to_a1_m": 592.3324237176585,
+      "near_disk_active": false,
+      "scan_below_threshold": true,
+      "margin_to_threshold_m": 6.703838262566791,
+      "receipt_comparison": {
+        "receipt_g_violation_m": -7.56869e-07,
+        "receipt_finite_scan_max_diameter_m": 134.076765251327,
+        "g_abs_diff_m": 2.1263695694574881e-13,
+        "diameter_abs_diff_m": 2.5579538487363607e-13
+      }
+    },
+    {
+      "label": "(-1,0)",
+      "offset_m": [
+        -1,
+        0
+      ],
+      "s2": [
+        799.1012338639696,
+        -606.388471543349
+      ],
+      "s2_radius_from_s1_m": 1003.1299817987685,
+      "g_violation_m": -0.7949187001273685,
+      "g_active_sample": {
+        "rho_m": 5.0,
+        "theta_from_s1_deg": 1.0,
+        "point": [
+          4.999238475781956,
+          0.08726203218641757
+        ]
+      },
+      "g_in_crec_by_sampled_sign": true,
+      "finite_scan_max_diameter_m": 134.25931835464897,
+      "finite_scan_argmax_beta_deg": 38.627417260212965,
+      "angular_image_deg": [
+        39.627417260212965,
+        142.63806843741773
+      ],
+      "admissible_beta_interval_deg": [
+        38.627417260212965,
+        143.63806843741773
+      ],
+      "beta_samples": 4097,
+      "beta_samples_used": 4097,
+      "gated_beta_samples_by_3epsilon": 0,
+      "unbounded_beta_samples": 0,
+      "empty_beta_samples": 0,
+      "min_clearance_to_a1_m": 592.3498761240958,
+      "near_disk_active": false,
+      "scan_below_threshold": true,
+      "margin_to_threshold_m": 6.52128515924457,
+      "receipt_comparison": {
+        "receipt_g_violation_m": -0.794918700127,
+        "receipt_finite_scan_max_diameter_m": 134.259318354649,
+        "g_abs_diff_m": 3.6848302187308946e-13,
+        "diameter_abs_diff_m": 2.842170943040401e-14
+      }
+    },
+    {
+      "label": "(0,+1)",
+      "offset_m": [
+        0,
+        1
+      ],
+      "s2": [
+        800.1012338639696,
+        -605.388471543349
+      ],
+      "s2_radius_from_s1_m": 1003.32307155185,
+      "g_violation_m": -0.6061602055420963,
+      "g_active_sample": {
+        "rho_m": 5.0,
+        "theta_from_s1_deg": 1.0,
+        "point": [
+          4.999238475781956,
+          0.08726203218641757
+        ]
+      },
+      "g_in_crec_by_sampled_sign": true,
+      "finite_scan_max_diameter_m": 134.2128207195024,
+      "finite_scan_argmax_beta_deg": 38.619064527846504,
+      "angular_image_deg": [
+        39.619064527846504,
+        142.71843521476723
+      ],
+      "admissible_beta_interval_deg": [
+        38.619064527846504,
+        143.71843521476723
+      ],
+      "beta_samples": 4097,
+      "beta_samples_used": 4097,
+      "gated_beta_samples_by_3epsilon": 0,
+      "unbounded_beta_samples": 0,
+      "empty_beta_samples": 0,
+      "min_clearance_to_a1_m": 591.332576022502,
+      "near_disk_active": false,
+      "scan_below_threshold": true,
+      "margin_to_threshold_m": 6.5677827943911495,
+      "receipt_comparison": {
+        "receipt_g_violation_m": -0.606160205542,
+        "receipt_finite_scan_max_diameter_m": 134.212820719502,
+        "g_abs_diff_m": 9.625633623500107e-14,
+        "diameter_abs_diff_m": 3.979039320256561e-13
+      }
+    },
+    {
+      "label": "(-5,0)",
+      "offset_m": [
+        -5,
+        0
+      ],
+      "s2": [
+        795.1012338639696,
+        -606.388471543349
+      ],
+      "s2_radius_from_s1_m": 999.9464738238172,
+      "g_violation_m": -3.970894736313653,
+      "g_active_sample": {
+        "rho_m": 5.0,
+        "theta_from_s1_deg": 1.0,
+        "point": [
+          4.999238475781956,
+          0.08726203218641757
+        ]
+      },
+      "g_in_crec_by_sampled_sign": true,
+      "finite_scan_max_diameter_m": 134.99151253843925,
+      "finite_scan_argmax_beta_deg": 38.467281959672746,
+      "angular_image_deg": [
+        39.467281959672746,
+        142.4984196408195
+      ],
+      "admissible_beta_interval_deg": [
+        38.467281959672746,
+        143.4984196408195
+      ],
+      "beta_samples": 4097,
+      "beta_samples_used": 4097,
+      "gated_beta_samples_by_3epsilon": 0,
+      "unbounded_beta_samples": 0,
+      "empty_beta_samples": 0,
+      "min_clearance_to_a1_m": 592.4196857498449,
+      "near_disk_active": false,
+      "scan_below_threshold": true,
+      "margin_to_threshold_m": 5.789090975454286,
+      "receipt_comparison": {
+        "receipt_g_violation_m": -3.970894736314,
+        "receipt_finite_scan_max_diameter_m": 134.991512538439,
+        "g_abs_diff_m": 3.468336728928989e-13,
+        "diameter_abs_diff_m": 2.5579538487363607e-13
+      }
+    },
+    {
+      "label": "(0,+5)",
+      "offset_m": [
+        0,
+        5
+      ],
+      "s2": [
+        800.1012338639696,
+        -601.388471543349
+      ],
+      "s2_radius_from_s1_m": 1000.91462080234,
+      "g_violation_m": -3.0244530829724,
+      "g_active_sample": {
+        "rho_m": 5.0,
+        "theta_from_s1_deg": 1.0,
+        "point": [
+          4.999238475781956,
+          0.08726203218641757
+        ]
+      },
+      "g_in_crec_by_sampled_sign": true,
+      "finite_scan_max_diameter_m": 134.76354216837672,
+      "finite_scan_argmax_beta_deg": 38.42415644390722,
+      "angular_image_deg": [
+        39.42415644390722,
+        142.9013618054327
+      ],
+      "admissible_beta_interval_deg": [
+        38.42415644390722,
+        143.9013618054327
+      ],
+      "beta_samples": 4097,
+      "beta_samples_used": 4097,
+      "gated_beta_samples_by_3epsilon": 0,
+      "unbounded_beta_samples": 0,
+      "empty_beta_samples": 0,
+      "min_clearance_to_a1_m": 587.3331852418765,
+      "near_disk_active": false,
+      "scan_below_threshold": true,
+      "margin_to_threshold_m": 6.017061345516822,
+      "receipt_comparison": {
+        "receipt_g_violation_m": -3.024453082973,
+        "receipt_finite_scan_max_diameter_m": 134.763542168377,
+        "g_abs_diff_m": 5.999645225074346e-13,
+        "diameter_abs_diff_m": 2.8421709430404007e-13
+      }
+    },
+    {
+      "label": "(-10,0)",
+      "offset_m": [
+        -10,
+        0
+      ],
+      "s2": [
+        790.1012338639696,
+        -606.388471543349
+      ],
+      "s2_radius_from_s1_m": 995.9753702647703,
+      "g_violation_m": -7.932482852856538,
+      "g_active_sample": {
+        "rho_m": 5.0,
+        "theta_from_s1_deg": 1.0,
+        "point": [
+          4.999238475781956,
+          0.08726203218641757
+        ]
+      },
+      "g_in_crec_by_sampled_sign": true,
+      "finite_scan_max_diameter_m": 135.91121242179372,
+      "finite_scan_argmax_beta_deg": 38.268630308957285,
+      "angular_image_deg": [
+        39.268630308957285,
+        142.32260237130828
+      ],
+      "admissible_beta_interval_deg": [
+        38.268630308957285,
+        143.32260237130828
+      ],
+      "beta_samples": 4097,
+      "beta_samples_used": 4097,
+      "gated_beta_samples_by_3epsilon": 0,
+      "unbounded_beta_samples": 0,
+      "empty_beta_samples": 0,
+      "min_clearance_to_a1_m": 592.5069477820314,
+      "near_disk_active": false,
+      "scan_below_threshold": true,
+      "margin_to_threshold_m": 4.869391092099818,
+      "receipt_comparison": {
+        "receipt_g_violation_m": -7.932482852857,
+        "receipt_finite_scan_max_diameter_m": 135.911212421794,
+        "g_abs_diff_m": 4.627409566637652e-13,
+        "diameter_abs_diff_m": 2.8421709430404007e-13
+      }
+    },
+    {
+      "label": "(0,+10)",
+      "offset_m": [
+        0,
+        10
+      ],
+      "s2": [
+        800.1012338639696,
+        -596.388471543349
+      ],
+      "s2_radius_from_s1_m": 997.9184302439046,
+      "g_violation_m": -6.032956373929437,
+      "g_active_sample": {
+        "rho_m": 5.0,
+        "theta_from_s1_deg": 1.0,
+        "point": [
+          4.999238475781956,
+          0.08726203218641757
+        ]
+      },
+      "g_in_crec_by_sampled_sign": true,
+      "finite_scan_max_diameter_m": 135.4668518487914,
+      "finite_scan_argmax_beta_deg": 38.17897910406695,
+      "angular_image_deg": [
+        39.17897910406695,
+        143.13126858417547
+      ],
+      "admissible_beta_interval_deg": [
+        38.17897910406695,
+        144.13126858417547
+      ],
+      "beta_samples": 4097,
+      "beta_samples_used": 4097,
+      "gated_beta_samples_by_3epsilon": 0,
+      "unbounded_beta_samples": 0,
+      "empty_beta_samples": 0,
+      "min_clearance_to_a1_m": 582.3339467660946,
+      "near_disk_active": false,
+      "scan_below_threshold": true,
+      "margin_to_threshold_m": 5.3137516651021315,
+      "receipt_comparison": {
+        "receipt_g_violation_m": -6.032956373929,
+        "receipt_finite_scan_max_diameter_m": 135.466851848791,
+        "g_abs_diff_m": 4.369837824924616e-13,
+        "diameter_abs_diff_m": 3.979039320256561e-13
+      }
+    }
+  ],
+  "sampling_note": {
+    "beta_sample_count": 4097,
+    "beta_grid": "uniform inclusive grid over the epsilon-expanded angular image [image_lo - eps, image_hi + eps]",
+    "beta_gate": "samples with d_S(beta, theta1) <= 3*epsilon are dropped before any diameter is computed",
+    "violation_angle_samples": 4097,
+    "violation_candidate_radii_m": [
+      5.0,
+      1000.0,
+      1500.0
+    ],
+    "violation_radial_justification": "for rho <= 1000 the violation is a convex distance function over a convex annular sector, so its maximum is at an extreme point; for rho > 1000 the radial derivative is -u_hat.u - 1 <= 0, so the supremum is taken as rho -> 1000+.  The three candidate radii and the inclusive angle grid therefore contain the maximizer",
+    "closed_closure_note": "A1 excludes rho = 5 strictly, so the reported g(S2) is the supremum over A1, attained only in its closure",
+    "lower_bound_statement": "the finite scan maximum is the maximum over a finite beta sample: it is a sampled LOWER bound for the continuous inner supremum, not a certified upper bound",
+    "argmax_location_note": "the finite-scan maximizer sits at the left endpoint of the admissible interval (a boundary-hugging extremal), which the uniform inclusive grid evaluates exactly at its first sample",
+    "near_disk_note": "the near-aware production image subtracts the closed 5 m disk around S2; the recorded min_clearance_to_a1_m shows this disk does not reach A1 at any probed point, so the image used here matches the near-aware image at these points"
+  },
+  "extra_diagnostics": {
+    "hero_diameter_vs_receipt_m": 4.263256414560601e-13,
+    "hero_g_vs_receipt_m": 2.1263695694574881e-13,
+    "receipt_comparison_note": "work-order receipt values are quoted to 12 decimal places, so the absolute-difference columns are floored by that rounding (about 5e-13); every observed difference is at that floor, i.e. the two implementations agree to the quoted precision",
+    "dense_violation_cross_check": {
+      "radial_samples": 512,
+      "angle_samples": 4097,
+      "per_point": [
+        {
+          "label": "(0,0)",
+          "dense_value_m": -7.568692126369569e-07,
+          "candidate_set_value_m": -7.568692126369569e-07,
+          "abs_diff_m": 0.0
+        },
+        {
+          "label": "(-1,0)",
+          "dense_value_m": -0.7949187001273685,
+          "candidate_set_value_m": -0.7949187001273685,
+          "abs_diff_m": 0.0
+        },
+        {
+          "label": "(0,+1)",
+          "dense_value_m": -0.6061602055420963,
+          "candidate_set_value_m": -0.6061602055420963,
+          "abs_diff_m": 0.0
+        },
+        {
+          "label": "(-5,0)",
+          "dense_value_m": -3.970894736313653,
+          "candidate_set_value_m": -3.970894736313653,
+          "abs_diff_m": 0.0
+        },
+        {
+          "label": "(0,+5)",
+          "dense_value_m": -3.0244530829724,
+          "candidate_set_value_m": -3.0244530829724,
+          "abs_diff_m": 0.0
+        },
+        {
+          "label": "(-10,0)",
+          "dense_value_m": -7.932482852856538,
+          "candidate_set_value_m": -7.932482852856538,
+          "abs_diff_m": 0.0
+        },
+        {
+          "label": "(0,+10)",
+          "dense_value_m": -6.032956373929437,
+          "candidate_set_value_m": -6.032956373929437,
+          "abs_diff_m": 0.0
+        }
+      ],
+      "max_abs_diff_m": 0.0,
+      "note": "independent denser angle/radius grid for g(S2); it confirms the candidate radius set does not miss a larger sampled violation"
+    },
+    "inward_axis_threshold_crossing": {
+      "crossing_offset_m": 36.5,
+      "grid_step_m": 0.5,
+      "grid_max_offset_m": 60.0,
+      "bracket_m": [
+        36.0,
+        36.5
+      ],
+      "value_at_bracket_start_m": 140.77337733192118,
+      "value_at_crossing_m": 140.8681896546344,
+      "threshold_m": 140.78060351389354,
+      "note": "first sampled inward offset whose finite-scan value exceeds the threshold; sampled quantity, not a certified band boundary"
+    }
+  },
+  "disclaimers": [
+    "This finite angular scan is a sampled lower bound of the inner supremum, not a certified upper bound.",
+    "It does not prove that the whole candidate domain was found, and it does not establish the 5% candidate region or its area.",
+    "It is a locator for the extraction loss, not production verification, and must not be used as a substitute for production verification.",
+    "If the current representative config is not this exact center case, this table must not be used as verification of that config.",
+    "CERTIFIED_GLOBAL_OPTIMUM stays False; nothing here certifies a global optimum.",
+    "The receipt table is embedded for comparison only; every reported value above is computed by this independent implementation."
+  ]
+}

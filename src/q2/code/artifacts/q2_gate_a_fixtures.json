@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "purpose": "Deterministic Gate A regression inputs for frozen A1 physical geometry.",
+  "epsilon_deg": 1.0,
+  "omega": {"center": {"x": 0.0, "y": 0.0}, "radius_m": 1800.0},
+  "cases": [
+    {
+      "id": "central_east",
+      "station": {"x": 0.0, "y": 0.0},
+      "bearing_deg": 0.0,
+      "expected_active_labels": [
+        "a1_wedge_lower",
+        "a1_wedge_upper",
+        "a1_rho_5",
+        "a1_rho_1500"
+      ]
+    },
+    {
+      "id": "omega_clipped_outward",
+      "station": {"x": 1700.0, "y": 0.0},
+      "bearing_deg": 0.0,
+      "expected_active_labels": [
+        "a1_wedge_lower",
+        "a1_wedge_upper",
+        "a1_rho_5",
+        "a1_omega"
+      ]
+    },
+    {
+      "id": "wrap_at_zero",
+      "station": {"x": 0.0, "y": 0.0},
+      "bearing_deg": 359.5,
+      "expected_active_labels": [
+        "a1_wedge_lower",
+        "a1_wedge_upper",
+        "a1_rho_5",
+        "a1_rho_1500"
+      ]
+    },
+    {
+      "id": "omega_clipped_wrap",
+      "station": {"x": 1700.0, "y": 0.0},
+      "bearing_deg": 359.5,
+      "expected_active_labels": [
+        "a1_wedge_lower",
+        "a1_wedge_upper",
+        "a1_rho_5",
+        "a1_omega"
+      ]
+    },
+    {
+      "id": "external_station_enters_omega",
+      "station": {"x": 2000.0, "y": 0.0},
+      "bearing_deg": 180.0,
+      "expected_active_labels": [
+        "a1_wedge_lower",
+        "a1_wedge_upper",
+        "a1_rho_1500",
+        "a1_omega"
+      ]
+    },
+    {
+      "id": "upper_wedge_omega_tangent_singleton",
+      "station": {"x": 2000.0, "y": 0.0},
+      "bearing_deg": 114.84193276316712,
+      "expected_dimension": 0,
+      "expected_point": {"x": 1620.0, "y": 784.6018098373212},
+      "expected_active_labels": [
+        "a1_degenerate_point"
+      ]
+    }
+  ]
+}

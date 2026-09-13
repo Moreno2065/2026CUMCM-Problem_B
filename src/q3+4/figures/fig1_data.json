@@ -1,0 +1,32 @@
+{
+ "figure": "fig1_method_loop",
+ "claim": "H-section loop semantics (Addendum F.1); supports H.1-H.5 method overview",
+ "nodes": [
+  "observe",
+  "set_update",
+  "decide",
+  "clear",
+  "localization",
+  "certificate",
+  "unknown_batch_scan"
+ ],
+ "semantics": {
+  "main_task": "Clear/Localization",
+  "batch_scan": "piggyback at stops",
+  "certificate_residual": "mop-up, not discovery"
+ },
+ "anchor_runs": {
+  "q3_main": {
+   "T_total_virtual": 8494.080838154594,
+   "cleared": 10,
+   "certified_absent": 10,
+   "n_measures": 582
+  },
+  "q4_main": {
+   "T_total_virtual": 31505.792906363415,
+   "cleared": 13,
+   "certified_absent": 7,
+   "n_measures": 3271
+  }
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "stage": "robust gate frozen before holdout",
+  "development_seeds": [101, 303, 505],
+  "holdout_seeds": [91384011, 91384019, 91384027, 91384041, 91384053],
+  "counts": [10, 13, 15, 16],
+  "scenario": "random",
+  "segment_worlds": 3,
+  "segment_max_branches": 300,
+  "segment_margin_s": 100,
+  "segment_min_win_fraction": 1.0,
+  "reason": "v1 improved holdout means but regressed individual Q3/15 and Q3/16 cases by more than 10 percent",
+  "no_changes_after_holdout": true
+}

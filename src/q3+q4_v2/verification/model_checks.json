@@ -1,0 +1,163 @@
+{
+  "generated_at": "2026-09-12T17:19:07.157939+00:00",
+  "scope": "model arithmetic, local relations, copied provenance and historical ledgers",
+  "new_controller_implemented": false,
+  "new_policy_benchmarked": false,
+  "new_model_trained": false,
+  "all_checks_passed": true,
+  "check_count": 9,
+  "checks": [
+    {
+      "name": "check_snapshot",
+      "passed": true,
+      "detail": {
+        "copied_files_verified": 135,
+        "method": "SHA-256 of package copies"
+      }
+    },
+    {
+      "name": "check_history",
+      "passed": true,
+      "detail": {
+        "q3": {
+          "total_time_s": 6192.722578,
+          "cleared_count": 14,
+          "initial_source_count": null,
+          "seconds_per_cleared": 442.337327,
+          "move_fraction": 0.7138576815598938,
+          "measure_switch_fraction": 0.2748387286145276,
+          "phase_costs_s": {
+            "lifecycle": 0.0,
+            "certificate": 1997.985768,
+            "active_localization": 1744.887819,
+            "ready_clear": 2449.8489910000003
+          },
+          "mechanical_cert_deletion_per_cleared": 299.6240578571429,
+          "cert_deletion_is_executable_or_lower_bound": false
+        },
+        "q4_mean_per_case_seconds_per_source": 1077.72193937453,
+        "q4_cases": [
+          {
+            "case": "e_branches_v1_ablation_q4_01",
+            "source_count": 10,
+            "directional_count": 10,
+            "time_s": 10678.174770914382,
+            "seconds_per_source": 1067.8174770914381
+          },
+          {
+            "case": "e_branches_v1_ablation_q4_02",
+            "source_count": 12,
+            "directional_count": 12,
+            "time_s": 11626.809479980444,
+            "seconds_per_source": 968.9007899983703
+          },
+          {
+            "case": "e_branches_v1_ablation_q4_03",
+            "source_count": 10,
+            "directional_count": 10,
+            "time_s": 7321.45801408853,
+            "seconds_per_source": 732.145801408853
+          },
+          {
+            "case": "e_branches_v1_ablation_q4_04",
+            "source_count": 10,
+            "directional_count": 10,
+            "time_s": 15894.877827197557,
+            "seconds_per_source": 1589.4877827197556
+          },
+          {
+            "case": "e_branches_v1_ablation_q4_05",
+            "source_count": 10,
+            "directional_count": 10,
+            "time_s": 13636.111067204833,
+            "seconds_per_source": 1363.6111067204833
+          },
+          {
+            "case": "e_branches_v1_ablation_q4_06",
+            "source_count": 14,
+            "directional_count": 4,
+            "time_s": 10421.161496315908,
+            "seconds_per_source": 744.3686783082792
+          }
+        ]
+      }
+    },
+    {
+      "name": "check_cardinality",
+      "passed": true,
+      "detail": {
+        "enumerated_worlds": 128,
+        "DP_matches_enumeration": true,
+        "unobserved_N_prior_preserved": true,
+        "known16_outside_existence_probability": 0,
+        "known10_can_still_have_undetected_sources": true,
+        "Q4_typed_worlds_enumerated": 243,
+        "Q4_mixed_DP_matches_enumeration": true,
+        "Q4_mixed_unobserved_N_prior_preserved": true
+      }
+    },
+    {
+      "name": "check_probe",
+      "passed": true,
+      "detail": {
+        "illustrative_only": true,
+        "success_probability": 0.4444444444444444,
+        "expected_cost_s": 37.22222222222222,
+        "saving_vs_60_s": 22.77777777777778,
+        "break_even_probability_by_detour_seconds": {
+          "0": 0.05172413793103448,
+          "40": 0.7413793103448276
+        }
+      }
+    },
+    {
+      "name": "check_visibility_orientation",
+      "passed": true,
+      "detail": {
+        "blind_side_clear": true,
+        "closed_halfplane_boundary": true,
+        "orientation_marginal_fraction": 0.25,
+        "repeated_constraint_weight": 1.0,
+        "scope": "local ideal half-plane example, not posterior engine verification"
+      }
+    },
+    {
+      "name": "check_cost_sequence",
+      "passed": true,
+      "detail": {
+        "serial_example_cost_s": 65.0,
+        "switch_count": 2,
+        "ending_measurement_channel": 9
+      }
+    },
+    {
+      "name": "check_bound",
+      "passed": true,
+      "detail": {
+        "sampled_feasible_routes": 100,
+        "smallest_route_minus_bound_s": 25.277850696135204,
+        "scope": "numerical sanity check; general proof is in model section 10"
+      }
+    },
+    {
+      "name": "check_metrics_conventions",
+      "passed": true,
+      "detail": {
+        "per_case_mean_example": 75.0,
+        "pooled_ratio_example": 69.23076923076923,
+        "Q3_reference_seconds_per_source": 176.25,
+        "zero_failures_1000_one_sided_95pct_failure_upper": 0.0029912495450953314
+      }
+    },
+    {
+      "name": "check_links",
+      "passed": true,
+      "detail": {
+        "internal_links_checked": 32,
+        "extracted_input_texts": 3,
+        "legacy_document_links_excluded": true
+      }
+    }
+  ],
+  "model_sha256": "8efea2357aa58b86ba7c2da4840b5beac6e8ae190a906f3debce8a1bc5315df8"
+}

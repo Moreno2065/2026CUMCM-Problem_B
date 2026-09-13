@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "gate": "D",
+  "purpose": "Deterministic fixtures for the pure two-bearing Q1 adapter and independent verifier.",
+  "source_snapshot": "q2_gate_c_pass_v1_20260911_033242",
+  "epsilon_deg": 1.0,
+  "cases": [
+    {
+      "id": "D-F1_quadrilateral",
+      "station1": {"x": -500.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "station2": {"x": -250.0, "y": -433.0127018922193},
+      "beta_deg": 60.0,
+      "expected_status": "OK",
+      "expected_dimension": 2,
+      "expected_vertex_count": 4
+    },
+    {
+      "id": "D-F2_triangle",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 1.0,
+      "station2": {"x": 1.0, "y": 0.0},
+      "beta_deg": 180.0,
+      "expected_status": "OK",
+      "expected_dimension": 2,
+      "expected_vertex_count": 3
+    },
+    {
+      "id": "D-F3_segment",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 1.0,
+      "station2": {"x": 1.0, "y": 0.0},
+      "beta_deg": 181.0,
+      "expected_status": "OK",
+      "expected_dimension": 1,
+      "expected_vertex_count": 2
+    },
+    {
+      "id": "D-F4_point",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 1.0,
+      "station2": {"x": 0.0, "y": 0.0},
+      "beta_deg": 181.0,
+      "expected_status": "OK",
+      "expected_dimension": 0,
+      "expected_vertex_count": 1
+    },
+    {
+      "id": "D-F5_empty",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 1.0,
+      "station2": {"x": 0.0, "y": 1.0},
+      "beta_deg": 3.0,
+      "expected_status": "EMPTY",
+      "expected_dimension": null,
+      "expected_vertex_count": 0
+    },
+    {
+      "id": "D-F6_unbounded",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 37.0,
+      "station2": {"x": 10.0, "y": 0.0},
+      "beta_deg": 37.5,
+      "expected_status": "UNBOUNDED",
+      "expected_dimension": null,
+      "expected_vertex_count": 0
+    },
+    {
+      "id": "D-F7_near_parallel",
+      "station1": {"x": -500.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "station2": {"x": -499.69236034314326, "y": -17.5369613872614},
+      "beta_deg": 2.01,
+      "expected_status": "OK",
+      "expected_dimension": 2,
+      "expected_vertex_count": 4
+    },
+    {
+      "id": "D-F8_wraparound",
+      "station1": {"x": -500.0, "y": 0.0},
+      "theta1_deg": 359.5,
+      "station2": {"x": -250.0, "y": -433.0127018922193},
+      "beta_deg": 60.5,
+      "expected_equivalent_to": "D-F1_quadrilateral",
+      "expected_status": "OK",
+      "expected_dimension": 2,
+      "expected_vertex_count": 4
+    },
+    {
+      "id": "D-F9_both_apex_inclusion",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "station2": {"x": 1.0, "y": 0.0},
+      "beta_deg": 180.0,
+      "expected_apices": [{"x": 0.0, "y": 0.0}, {"x": 1.0, "y": 0.0}],
+      "expected_status": "OK",
+      "expected_dimension": 2,
+      "expected_vertex_count": 4
+    }
+  ],
+  "negative_tests": [
+    "reversed_area_vertex_order",
+    "forged_degeneracy_and_provenance",
+    "ambient_q1_geometry_module_isolation"
+  ]
+}

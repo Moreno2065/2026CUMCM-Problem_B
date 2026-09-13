@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "gate": "E",
+  "purpose": "Deterministic fixed-station inner worst-case bearing fixtures and verifier regressions.",
+  "source_snapshot": "q2_gate_d_pass_v1_20260911_034850",
+  "epsilon_deg": 1.0,
+  "cases": [
+    {
+      "id": "E-F1_endpoint_winner",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "station2": {"x": 750.0, "y": 500.0},
+      "expected_candidate_types": ["E1", "E2", "E3", "E4", "E5"],
+      "expected_winner_type": "E1",
+      "q_range_m": [160.0, 170.0]
+    },
+    {
+      "id": "E-F2_all_near_terminal",
+      "station1": {"x": 2000.0, "y": 0.0},
+      "theta1_deg": 114.84193276316712,
+      "station2": {"x": 1620.0, "y": 784.6018098373212},
+      "expected_all_near": true,
+      "expected_admissible": true,
+      "expected_Q": 0.0
+    },
+    {
+      "id": "E-F3_outside_crec",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "station2": {"x": -2000.0, "y": 0.0},
+      "expected_in_crec": false,
+      "expected_candidate_type": "OUTSIDE_CREC"
+    },
+    {
+      "id": "E-F4_strict_three_epsilon_gate",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "station2": {"x": 0.0, "y": 0.0},
+      "expected_in_crec": true,
+      "expected_admissible": false,
+      "expected_candidate_type": "INADMISSIBLE",
+      "strict_rule": "dist(raw_theta_image,theta1) > 3*epsilon"
+    },
+    {
+      "id": "E-F5_unbounded_bearing",
+      "station1": {"x": 0.0, "y": 0.0},
+      "theta1_deg": 0.0,
+      "station2": {"x": 0.0, "y": 10.0},
+      "allowed_beta_deg": [[0.0, 0.0]],
+      "expected_Q": "+inf",
+      "expected_q1_status": "UNBOUNDED"
+    },
+    {
+      "id": "E-F6_apex_and_parallel",
+      "apex_station2": {"x": 251.4671164747374, "y": -12.249266026209511},
+      "apex_allowed_beta_deg": [[113.11858929568301, 180.56982546672263]],
+      "expected_winner_type": "E2",
+      "parallel_station2": {"x": 1000.0, "y": -100.0},
+      "parallel_allowed_beta_deg": [[170.0, 190.0]],
+      "required_one_sided_types": ["left", "right", "exact"]
+    },
+    {
+      "id": "E-F7_disconnected_wrap_verifier_regression",
+      "station1": {"x": 505.34372748944406, "y": 1844.7948872935394},
+      "theta1_deg": 548.7487532975065,
+      "station2": {"x": -538.6481716855972, "y": -713.6830160537354},
+      "allowed_beta_deg": [[270.10867603837596, 426.7160974748844]],
+      "canonical_components_deg": [[0.0, 66.7160974748844], [270.10867603837596, 360.0]],
+      "expected_Q": 0.0,
+      "forbidden_gap_center_deg": 181.13,
+      "expected_verifier": "PASS"
+    },
+    {
+      "id": "E-F8_adaptive_root_regressions",
+      "root_functions": [
+        {"name": "clustered", "roots": [0.201, 0.202]},
+        {"name": "even_multiplicity", "roots": [0.4137]},
+        {"name": "near_endpoint", "roots": [0.0000000001]}
+      ],
+      "expected": "all roots isolated deterministically"
+    }
+  ],
+  "randomized_cross_check": {
+    "seed": 20260911,
+    "valid_admissible_station_count": 500,
+    "samples_per_component": 17,
+    "assertions": [
+      "independent verifier passed",
+      "worst beta belongs to expanded image",
+      "direct Q1 status and diameter match",
+      "analytic Q is not below dense observation beyond tolerance"
+    ]
+  }
+}
